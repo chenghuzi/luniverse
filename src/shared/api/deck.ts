@@ -1,5 +1,4 @@
 import type { Card } from "@/features/deck/model/types";
-import baseCards from "@/shared/api/mocks/deckCards.json";
 
 export type DeckPage = {
   cards: Card[];
@@ -11,33 +10,21 @@ type DeckPageParams = {
   limit: number;
 };
 
-const BASE_CARDS: Array<Omit<Card, "instanceId">> = baseCards;
-
-let globalInstanceSeq = 0;
-
-function mod(n: number, m: number) {
-  const r = n % m;
-  return r < 0 ? r + m : r;
-}
-
-function sleepMs(ms: number) {
-  return new Promise<void>((resolve) => setTimeout(resolve, ms));
+function isObject(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object";
 }
 
 export async function fetchDeckPage(params: DeckPageParams): Promise<DeckPage> {
   const limit = Math.max(1, Math.min(50, Math.floor(params.limit)));
-  const baseLen = BASE_CARDS.length;
-  const start = mod(Math.floor(params.cursor), baseLen);
+  const cursor = Math.floor(params.cursor);
 
-  await sleepMs(160);
+  const res = await fetch(`/api/deck?cursor=${encodeURIComponent(cursor)}&limit=${encodeURIComponent(limit)}`);
+  if (!res.ok) throw new Error(`deck request failed: ${res.status} ${res.statusText}`);
 
-  const cards: Card[] = [];
-  for (let i = 0; i < limit; i += 1) {
-    const base = BASE_CARDS[(start + i) % baseLen];
-    const instanceId = `${base.id}-${globalInstanceSeq++}`;
-    cards.push({ ...base, instanceId });
+  const data: unknown = await res.json();
+  if (!isObject(data) || !Array.isArray(data.cards) || typeof data.nextCursor !== "number") {
+    throw new Error("deck response shape is invalid");
   }
 
-  const nextCursor = mod(start + limit, baseLen);
-  return { cards, nextCursor };
+  return data as DeckPage;
 }

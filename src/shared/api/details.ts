@@ -4,25 +4,14 @@ export type CardDetail = Omit<Card, "instanceId"> & {
   episodes?: EpisodeInfo[];
 };
 
-type DetailModule = { default: CardDetail };
-
-const detailModules = import.meta.glob<DetailModule>("./mocks/details/*.json");
-
-function sleepMs(ms: number) {
-  return new Promise<void>((resolve) => setTimeout(resolve, ms));
-}
-
 export async function fetchCardDetailById(cardId: string): Promise<CardDetail> {
   const id = String(cardId ?? "").trim();
   if (id.length === 0) throw new Error("cardId is required");
 
-  await sleepMs(160);
+  const res = await fetch(`/api/cards/${encodeURIComponent(id)}`);
+  if (res.status === 404) throw new Error(`detail not found: ${id}`);
+  if (!res.ok) throw new Error(`detail request failed: ${res.status} ${res.statusText}`);
 
-  const key = `./mocks/details/${id}.json`;
-  const loader = detailModules[key];
-  if (!loader) throw new Error(`detail not found: ${id}`);
-
-  const mod = await loader();
-  return mod.default;
+  const data: unknown = await res.json();
+  return data as CardDetail;
 }
-
