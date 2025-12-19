@@ -1,0 +1,5 @@
+:8101
+
+root * /home/ubuntu/Deployed/luniverse/dist
+try_files {path} {path}/index.html /index.html
+file_server
