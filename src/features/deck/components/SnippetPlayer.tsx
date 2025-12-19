@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { getActiveWindow, getGlobalAudioElement, pauseIfActive, playWindow, seekWithinActiveWindow } from "@/shared/audio/globalAudio";
 
 type SnippetPlayerProps = {
   audioUrl: string;
@@ -26,8 +27,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const durationSec = Math.max(0, props.durationMs / 1000);
   const endSec = startSec + durationSec;
 
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  const pendingSeekRef = useRef<number | null>(null);
+  const segmentIdRef = useRef<string>("");
   const [isPlaying, setIsPlaying] = useState(false);
   const [needsUserGesture, setNeedsUserGesture] = useState(false);
   const [showUnlockOverlay, setShowUnlockOverlay] = useState(false);
@@ -41,48 +41,33 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const durationMs = Math.round(durationSec * 1000);
 
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    const audioEl: HTMLAudioElement = audio;
+    segmentIdRef.current = `${props.audioUrl}|${props.startMs}|${props.durationMs}`;
+  }, [props.audioUrl, props.durationMs, props.startMs]);
+
+  useEffect(() => {
+    const audioEl = getGlobalAudioElement();
 
     function onLoadedMetadata() {
+      const active = getActiveWindow();
+      if (!active || active.id !== segmentIdRef.current) return;
       setIsReady(true);
-      if (pendingSeekRef.current != null) {
-        try {
-          audioEl.currentTime = pendingSeekRef.current;
-        } catch {
-          // Ignore seek errors; we will try again on canplay.
-        }
-        pendingSeekRef.current = null;
-      }
     }
 
     function onCanPlay() {
-      if (pendingSeekRef.current != null) {
-        try {
-          audioEl.currentTime = pendingSeekRef.current;
-          pendingSeekRef.current = null;
-        } catch {
-          // Ignore.
-        }
-      }
+      const active = getActiveWindow();
+      if (!active || active.id !== segmentIdRef.current) return;
+      setIsReady(true);
     }
 
     function onTimeUpdate() {
-      const t = audioEl.currentTime;
-      setCurrentSec(t);
-      if (durationSec > 0 && t >= endSec) {
-        audioEl.pause();
-        setIsPlaying(false);
-        try {
-          audioEl.currentTime = startSec;
-        } catch {
-          // Ignore.
-        }
-      }
+      const active = getActiveWindow();
+      if (!active || active.id !== segmentIdRef.current) return;
+      setCurrentSec(audioEl.currentTime);
     }
 
     function onPlay() {
+      const active = getActiveWindow();
+      if (!active || active.id !== segmentIdRef.current) return;
       setIsPlaying(true);
       setNeedsUserGesture(false);
       setIsUnlocking(false);
@@ -91,10 +76,14 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     }
 
     function onPause() {
+      const active = getActiveWindow();
+      if (!active || active.id !== segmentIdRef.current) return;
       setIsPlaying(false);
     }
 
     function onError() {
+      const active = getActiveWindow();
+      if (!active || active.id !== segmentIdRef.current) return;
       const code = audioEl.error?.code;
       setIsUnlocking(false);
       setNeedsUserGesture(true);
@@ -120,9 +109,6 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   }, [durationSec, endSec, startSec]);
 
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
     setNeedsUserGesture(false);
     setShowUnlockOverlay(false);
     setIsUnlocking(false);
@@ -131,41 +117,25 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     setCurrentSec(startSec);
 
     if (!props.isActive) {
-      audio.pause();
-      try {
-        audio.currentTime = startSec;
-      } catch {
-        // Ignore.
-      }
+      pauseIfActive(segmentIdRef.current);
       return;
     }
 
-    const safeStart = Math.max(0, startSec);
-    if (audio.readyState >= 1) {
-      try {
-        audio.currentTime = safeStart;
-      } catch {
-        pendingSeekRef.current = safeStart;
-      }
-    } else {
-      pendingSeekRef.current = safeStart;
-    }
-
-    const playPromise = audio.play();
-    if (playPromise && typeof playPromise.then === "function") {
-      playPromise.catch(() => {
-        setNeedsUserGesture(true);
-        setShowUnlockOverlay(true);
-        setIsUnlocking(false);
-        setUnlockError(null);
-        setIsPlaying(false);
-      });
-    }
+    void playWindow({
+      id: segmentIdRef.current,
+      url: props.audioUrl,
+      startSec,
+      durationSec,
+    }).catch((e: unknown) => {
+      setNeedsUserGesture(true);
+      setShowUnlockOverlay(true);
+      setIsUnlocking(false);
+      setUnlockError(e instanceof Error ? e.message : null);
+      setIsPlaying(false);
+    });
   }, [props.isActive, props.audioUrl, startSec]);
 
   async function unlockAndPlayFromGesture() {
-    const audio = audioRef.current;
-    if (!audio) return;
     if (!props.isActive) return;
     if (isUnlocking) return;
 
@@ -174,21 +144,12 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     setUnlockError(null);
 
     try {
-      audio.volume = 1;
-      audio.muted = false;
-    } catch {
-      // Ignore.
-    }
-
-    const safeStart = Math.max(0, startSec);
-    try {
-      audio.currentTime = safeStart;
-    } catch {
-      // Ignore.
-    }
-
-    try {
-      await audio.play();
+      await playWindow({
+        id: segmentIdRef.current,
+        url: props.audioUrl,
+        startSec,
+        durationSec,
+      });
       setShowUnlockOverlay(false);
       setNeedsUserGesture(false);
       setIsUnlocking(false);
@@ -203,9 +164,6 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   }
 
   function togglePlay() {
-    const audio = audioRef.current;
-    if (!audio) return;
-
     if (needsUserGesture && props.isActive) {
       setShowUnlockOverlay(true);
       return;
@@ -213,38 +171,53 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
 
     setNeedsUserGesture(false);
 
-    if (audio.paused) {
-      const playPromise = audio.play();
-      if (playPromise && typeof playPromise.then === "function") {
-        playPromise.catch(() => {
-          setNeedsUserGesture(true);
-          setShowUnlockOverlay(true);
-          setIsPlaying(false);
-        });
-      }
+    const audioEl = getGlobalAudioElement();
+    const active = getActiveWindow();
+
+    if (audioEl.paused || !active || active.id !== segmentIdRef.current) {
+      void playWindow({
+        id: segmentIdRef.current,
+        url: props.audioUrl,
+        startSec,
+        durationSec,
+      }).catch((e: unknown) => {
+        setNeedsUserGesture(true);
+        setShowUnlockOverlay(true);
+        setUnlockError(e instanceof Error ? e.message : "Playback was blocked by the browser");
+        setIsPlaying(false);
+      });
       return;
     }
-    audio.pause();
+    audioEl.pause();
   }
 
   function onScrub(valueMs: number) {
-    const audio = audioRef.current;
-    if (!audio) return;
-    const next = startSec + clampNumber(valueMs, 0, durationMs) / 1000;
-    try {
-      audio.currentTime = next;
-    } catch {
-      // Ignore.
-    }
-    setCurrentSec(next);
+    const nextProgressSec = clampNumber(valueMs, 0, durationMs) / 1000;
+    seekWithinActiveWindow(nextProgressSec);
+    setCurrentSec(startSec + nextProgressSec);
   }
 
   return (
     <div className="snippetPlayer" data-active={props.isActive ? "true" : "false"}>
-      <audio ref={audioRef} src={props.isActive ? props.audioUrl : undefined} preload={props.isActive ? "auto" : "none"} />
       {props.isActive && showUnlockOverlay && typeof document !== "undefined"
         ? createPortal(
-            <div className="audioUnlockOverlay" role="dialog" aria-modal="true">
+            <div
+              className="audioUnlockOverlay"
+              role="dialog"
+              aria-modal="true"
+              onPointerDown={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              onPointerMove={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              onPointerUp={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+            >
               <div className="audioUnlockPanel">
                 <div className="audioUnlockTitle">Unlock audio</div>
                 <div className="audioUnlockSubtitle">A browser permission is required to autoplay audio.</div>
