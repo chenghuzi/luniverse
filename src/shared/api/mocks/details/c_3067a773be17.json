@@ -1,0 +1,209 @@
+{
+  "id": "c_3067a773be17",
+  "podcast": {
+    "id": "p_89aed79472cc",
+    "title": "有一家公司",
+    "authorName": "Yuzhuuu",
+    "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+    "language": "zh-cn",
+    "categories": [
+      "Business"
+    ]
+  },
+  "episode": {
+    "id": "e_f919ec78188f",
+    "title": "#13 下架、换帅、军令状：被狼性文化入侵的山姆",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6936ce0a4ef12f9fe9931779?utm_source=rss",
+    "publishedAt": "2025-12-08T23:00:00.000Z",
+    "durationSeconds": 3240,
+    "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6936ce0a4ef12f9fe9931779/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lsiHpk9UmQeEYhQLJSFHAarUxQSh.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 52408463
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_f919ec78188f",
+      "title": "#13 下架、换帅、军令状：被狼性文化入侵的山姆",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6936ce0a4ef12f9fe9931779?utm_source=rss",
+      "publishedAt": "2025-12-08T23:00:00.000Z",
+      "durationSeconds": 3240,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6936ce0a4ef12f9fe9931779/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lsiHpk9UmQeEYhQLJSFHAarUxQSh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 52408463
+      }
+    },
+    {
+      "id": "e_127e5b362bad",
+      "title": "#12 硅谷权游：OpenAI 的五日“政变”与情怀之死",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691bee7bcbba038b421178b1?utm_source=rss",
+      "publishedAt": "2025-11-18T23:00:00.000Z",
+      "durationSeconds": 3339,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/691bee7bcbba038b421178b1/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lnc6OXW7RkGOwFw2Rd2kpA8B8hwo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 80736858
+      }
+    },
+    {
+      "id": "e_4aaa0e1b71b1",
+      "title": "#11 影视飓风：被“无限进步”绑架的公司",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6900c38a740634ca47711dff?utm_source=rss",
+      "publishedAt": "2025-10-28T22:00:00.000Z",
+      "durationSeconds": 2530,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6900c38a740634ca47711dff/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lgxpGa05JlBNi-kyo-uEu7f3SbX-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61178826
+      }
+    },
+    {
+      "id": "e_7c18f65c5d2a",
+      "title": "#10 大疆，一个让美国发疯的公司是怎样炼成的",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68e8c2bb525f51df389b1763?utm_source=rss",
+      "publishedAt": "2025-10-10T08:36:28.000Z",
+      "durationSeconds": 3931,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/68e8c2bb525f51df389b1763/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lvLW1oTJvvf-tjOekjF0xjNRwACa.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 95031505
+      }
+    },
+    {
+      "id": "e_8cba9d4f796c",
+      "title": "#9 炸开舆论的烟花营销背后，那家户外公司发生了什么",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68d54266522b40626c4340ad?utm_source=rss",
+      "publishedAt": "2025-09-25T13:24:14.000Z",
+      "durationSeconds": 2745,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/68d54266522b40626c4340ad/media.xyzcdn.net/68523c2acbff0c6ba39ac006/ltwKzgV0aFriCogxccJ7NhLzGtTe.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 66358961
+      }
+    },
+    {
+      "id": "e_834c8671aba8",
+      "title": "#8 多邻国的发疯绿鸟背后，是每年上千次的反直觉测试",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ad8aa3293471fed48f98d6?utm_source=rss",
+      "publishedAt": "2025-08-26T10:24:13.000Z",
+      "durationSeconds": 2969,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/68ad8aa3293471fed48f98d6/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lt9iJnDryOzSLmlLlguntECIfSlm.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 71772700
+      }
+    },
+    {
+      "id": "e_d47af864b87f",
+      "title": "#7 娃哈哈财产纠纷背后：一场艰难的女承父业",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68908c318e06fe8de7429755?utm_source=rss",
+      "publishedAt": "2025-08-04T10:47:09.000Z",
+      "durationSeconds": 3215,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/68908c318e06fe8de7429755/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lqv1rV6UINJMR9QeT8FpB5uhN-84.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 77719230
+      }
+    },
+    {
+      "id": "e_07f5adba062a",
+      "title": "#6 昂跑：小众不怕，够怪就行",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6882028ba9dec92500f6b7a0?utm_source=rss",
+      "publishedAt": "2025-07-24T09:54:52.000Z",
+      "durationSeconds": 4063,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6882028ba9dec92500f6b7a0/media.xyzcdn.net/68523c2acbff0c6ba39ac006/liDmEZ88zsLerGFAuvpk8K6UNL5u.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 98231869
+      }
+    },
+    {
+      "id": "e_c09ad1aafa3f",
+      "title": "#5 Jellycat：贩卖可爱，保持神秘",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6867532593fd2d72b87740e9?utm_source=rss",
+      "publishedAt": "2025-07-17T03:00:00.000Z",
+      "durationSeconds": 3444,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6867532593fd2d72b87740e9/media.xyzcdn.net/68523c2acbff0c6ba39ac006/ljxIZNxHmfa6PL1M3V_iZYwGvz_l.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83271244
+      }
+    },
+    {
+      "id": "e_abce59d15872",
+      "title": "#4 一场十年豪赌，东方树叶赌赢了",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6864e12093fd2d72b8228b04?utm_source=rss",
+      "publishedAt": "2025-07-10T03:00:00.000Z",
+      "durationSeconds": 3575,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6864e12093fd2d72b8228b04/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lv5GvIpU6vjFQazVVA4SCkAJNh03.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 86431955
+      }
+    },
+    {
+      "id": "e_8f0012f380c7",
+      "title": "#3 三个关键词深度拆解，重新理解蜜雪冰城的「便宜」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/686369c760f8f77d4039010c?utm_source=rss",
+      "publishedAt": "2025-07-01T23:30:00.000Z",
+      "durationSeconds": 5458,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/686369c760f8f77d4039010c/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lqHVoRyHtsDOKZ4_mjm86O91-n6m.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 131954480
+      }
+    },
+    {
+      "id": "e_61871dbf16d5",
+      "title": "#2 奈飞：两个男人和一辆通勤车上诞生的万亿帝国",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68591e284abe6e29cb92a3c9?utm_source=rss",
+      "publishedAt": "2025-06-26T00:30:00.000Z",
+      "durationSeconds": 4551,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/68591e284abe6e29cb92a3c9/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lgzzgm4J2mBdh_cgfUK6R6FjSiEO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 110021052
+      }
+    },
+    {
+      "id": "e_2fccd2497d06",
+      "title": "#1 Labubu全球爆火，泡泡玛特凭什么能赚这个钱",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68524ad24abe6e29cbb98449?utm_source=rss",
+      "publishedAt": "2025-06-18T05:20:06.000Z",
+      "durationSeconds": 6119,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/68524ad24abe6e29cbb98449/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lgBGQ-v3gx-IgyRyEBUXCkt0IGuD.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 147916956
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_3067a773be17",
+    "title": "#13 下架、换帅、军令状：被狼性文化入侵的山姆",
+    "text": "最近山姆的管理层可能会比较闹心。辛辛苦苦向互联网靠拢的策略似乎被自己的会员给否定了。 可明明就在2-3年前，山姆还是互联网上的当红炸子鸡。多少人对他家的会员趋之若鹜，多少人又因为靠做他家的代购发家致富。现在小红书上还能检索出《XX年老会员告诉你山姆应该买什么》这类爆款帖子。怎么短短几年，风向就变了？ 今天就让我们带领大家一起，看看这个从90年代就进入中国大陆的美国高端商超经历了怎样的沉浮。作为零售巨头沃尔玛旗下的增长贡献者，山姆曾经作对了什么。以及现在又是为什么因为“沾染”上大厂的风潮而把自己推到风口浪尖的。 听完欢迎大家留言，说说你对山姆的内卷怎么看。是否依旧看好会员服务的模式。期待你们的答案。 · ▶️ 收听指南 01:24 …",
+    "snippet": {
+      "startMs": 2543000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+  }
+}

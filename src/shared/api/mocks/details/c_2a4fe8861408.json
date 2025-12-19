@@ -1,0 +1,93 @@
+{
+  "id": "c_2a4fe8861408",
+  "podcast": {
+    "id": "p_2038e99e8a72",
+    "title": "All Ears English Podcast",
+    "authorName": "Lindsay McMahon and Michelle Kaplan",
+    "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+    "language": "en",
+    "categories": [
+      "Education",
+      "Business"
+    ]
+  },
+  "episode": {
+    "id": "e_260fec91fef8",
+    "title": "AEE: The Many Ways to Have a Moment in English",
+    "link": "https://www.allearsenglish.com/fluencyscore",
+    "publishedAt": "2025-12-19T06:00:00.000Z",
+    "durationSeconds": 1237,
+    "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+    "audio": {
+      "url": "https://traffic.megaphone.fm/ALLE1362990730.mp3?updated=1764592088",
+      "mimeType": "audio/mpeg",
+      "byteLength": 0
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_260fec91fef8",
+      "title": "AEE: The Many Ways to Have a Moment in English",
+      "link": "https://www.allearsenglish.com/fluencyscore",
+      "publishedAt": "2025-12-19T06:00:00.000Z",
+      "durationSeconds": 1237,
+      "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "audio": {
+        "url": "https://traffic.megaphone.fm/ALLE1362990730.mp3?updated=1764592088",
+        "mimeType": "audio/mpeg",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "e_c00de607fd53",
+      "title": "AEE: Isn’t English Supposed to Make Sense?!",
+      "link": "https://www.allearsenglish.com/fluency",
+      "publishedAt": "2025-12-06T06:00:00.000Z",
+      "durationSeconds": 955,
+      "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "audio": {
+        "url": "https://traffic.megaphone.fm/ALLE5441887271.mp3?updated=1763693710",
+        "mimeType": "audio/mpeg",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "e_0d68dca58e20",
+      "title": "AEE 2522: What to Say When You Lose Your Train of Thought",
+      "link": "https://www.allearsenglish.com/",
+      "publishedAt": "2025-12-01T06:00:00.000Z",
+      "durationSeconds": 1054,
+      "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "audio": {
+        "url": "https://traffic.megaphone.fm/ALLE7384174621.mp3?updated=1763693024",
+        "mimeType": "audio/mpeg",
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "e_32369f622337",
+      "title": "AEE: Are You Slaying English?",
+      "link": "https://www.allearsenglish.com/blackfriday",
+      "publishedAt": "2025-11-28T06:00:00.000Z",
+      "durationSeconds": 1132,
+      "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "audio": {
+        "url": "https://traffic.megaphone.fm/ALLE6224748095.mp3?updated=1764007037",
+        "mimeType": "audio/mpeg",
+        "byteLength": 0
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_2a4fe8861408",
+    "title": "AEE: The Many Ways to Have a Moment in English",
+    "text": "Want to know your English level? Take our free English-level quiz here to find out what your current English level is. Do you love All Ears English? Try our other podcasts here: Business English Podcast: Improve your Business English with 3 episodes per week, featuring Lindsay, Michelle, and Aubrey IELTS Energy Podcas…",
+    "snippet": {
+      "startMs": 308000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)"
+  }
+}

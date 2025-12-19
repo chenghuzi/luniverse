@@ -1,0 +1,430 @@
+{
+  "id": "c_0cbefbb3dde0",
+  "podcast": {
+    "id": "p_e95b9f1f6860",
+    "title": "你才博士",
+    "authorName": "你才博士",
+    "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Arts"
+    ]
+  },
+  "episode": {
+    "id": "e_45334c92a56f",
+    "title": "Vol.038当学者开始做饭，如何在朋友圈成为烹饪哲学家-张翀/李晖/东山/思煜",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6941469c5e8cb26fdf256375?utm_source=rss",
+    "publishedAt": "2025-12-16T16:00:00.000Z",
+    "durationSeconds": 3628,
+    "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/6941469c5e8cb26fdf256375/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lvvo9t4g7vYTDvtFCmhi96eH7pGG.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 58675161
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_45334c92a56f",
+      "title": "Vol.038当学者开始做饭，如何在朋友圈成为烹饪哲学家-张翀/李晖/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6941469c5e8cb26fdf256375?utm_source=rss",
+      "publishedAt": "2025-12-16T16:00:00.000Z",
+      "durationSeconds": 3628,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/6941469c5e8cb26fdf256375/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lvvo9t4g7vYTDvtFCmhi96eH7pGG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 58675161
+      }
+    },
+    {
+      "id": "e_1bc559b3a0d0",
+      "title": "Vol.037中国名楼小史，谁是名楼界的扛把子-邹一凡/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692d6d8bba2292550faba0c0?utm_source=rss",
+      "publishedAt": "2025-12-01T16:00:00.000Z",
+      "durationSeconds": 4207,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/692d6d8bba2292550faba0c0/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lkVvehGZN7nIma34jYH-s0kJt88-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 68051490
+      }
+    },
+    {
+      "id": "e_de3e3a7f4475",
+      "title": "Vol.036冻卵是生育保险吗？关于冻卵、冻胚、冻卵巢那些事儿-六层楼/柯紫/墙墙/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691b065dcbba038b42f70b04?utm_source=rss",
+      "publishedAt": "2025-11-17T16:00:00.000Z",
+      "durationSeconds": 4389,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/691b065dcbba038b42f70b04/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lu0EwaYNhSYqBNgRDm7wMzNMoM63.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 106118436
+      }
+    },
+    {
+      "id": "e_9bce7ab7c645",
+      "title": "Vol.035晋东南国保巡礼，惊艳时光的方寸小庙-马晓军/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6908bd4e0ceab2a71c493282?utm_source=rss",
+      "publishedAt": "2025-11-03T14:41:58.000Z",
+      "durationSeconds": 3689,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/6908bd4e0ceab2a71c493282/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lsFsu3TNYg0zhpx1Gc2QSmVs-o7E.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 89189807
+      }
+    },
+    {
+      "id": "e_8c647f1e1219",
+      "title": "Vol.034颐和园小岁月，如何逛这座皇家园林-杜梨/侯磊/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f616e522654730206195f8?utm_source=rss",
+      "publishedAt": "2025-10-20T16:00:00.000Z",
+      "durationSeconds": 3480,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/68f616e522654730206195f8/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lhf5YY4zGZrTY6Dx_UJ0c-SwsRdr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 84141513
+      }
+    },
+    {
+      "id": "e_2325c10899dc",
+      "title": "Vol.033如何像古人过一个浪漫的中秋-张卫东/侯磊/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68de569c8e321a0d6fb37291?utm_source=rss",
+      "publishedAt": "2025-10-02T16:00:00.000Z",
+      "durationSeconds": 3233,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/68de569c8e321a0d6fb37291/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lhrkkX9Zv6d5zjGL0CNAwKsJ-rxy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 78165532
+      }
+    },
+    {
+      "id": "e_198dcf13c477",
+      "title": "Vol.032上海话水平测试，从入门到精通，你在第几级？-钟冠/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ce80c8a56ca3e0c4627dce?utm_source=rss",
+      "publishedAt": "2025-09-20T16:00:00.000Z",
+      "durationSeconds": 3756,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/68ce80c8a56ca3e0c4627dce/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lt_pM_LO3AdKzSmt_n782o2qPDLX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 90802357
+      }
+    },
+    {
+      "id": "e_45ee7166db5a",
+      "title": "Vol.031京西法海寺，缘何成为中国壁画三绝？-晓波/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68b9764e5faf368659052292?utm_source=rss",
+      "publishedAt": "2025-09-04T16:00:00.000Z",
+      "durationSeconds": 4637,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/68b9764e5faf368659052292/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lk9EJGfmQpEhZhy55AAgegWo4yi1.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 112089931
+      }
+    },
+    {
+      "id": "e_7ebc882b1b2c",
+      "title": "Vol.030北京极简公交史，下一站鼓楼-周天佑/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a6fa5a293471fed4c588c4?utm_source=rss",
+      "publishedAt": "2025-08-21T16:00:00.000Z",
+      "durationSeconds": 4124,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/68a6fa5a293471fed4c588c4/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lntfU_t3rtLG3wtiDiSpEqcvrm05.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 99706386
+      }
+    },
+    {
+      "id": "e_8396f65fccf0",
+      "title": "Vol.029我在中国美术馆当志愿讲解员-杨奕/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/689490cd638b01587974c7ff?utm_source=rss",
+      "publishedAt": "2025-08-07T16:00:00.000Z",
+      "durationSeconds": 3388,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/689490cd638b01587974c7ff/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lkpQfQEM_pkQxZmoDwEVtmUvta0P.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 81917746
+      }
+    },
+    {
+      "id": "e_72addb4c920e",
+      "title": "Vol.028吃了吗您内？！北京话怎么成了播客口音鄙视链底层？-张卫东/侯磊/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68821626a12f9ff06ad608fb?utm_source=rss",
+      "publishedAt": "2025-07-24T16:00:00.000Z",
+      "durationSeconds": 4207,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/68821626a12f9ff06ad608fb/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lou5VpNb32iXyzSYGkRWizKvi5w4.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 101708452
+      }
+    },
+    {
+      "id": "e_e6451935e41d",
+      "title": "Vol.027大足石刻：石窟艺术的最后巅峰-李泽龙/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/686f930c60f8f77d40d6dd48?utm_source=rss",
+      "publishedAt": "2025-07-10T16:00:00.000Z",
+      "durationSeconds": 4327,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/686f930c60f8f77d40d6dd48/media.xyzcdn.net/672b3c5adab8efe6d92babc5/luFGd4oBsEuV-W5OJ5DeB8asrt2a.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 104613430
+      }
+    },
+    {
+      "id": "e_bf046967cdb0",
+      "title": "Vol.026隰县小西天：极繁悬塑天花板-高杰/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/685d2b89bef90978ec095a61?utm_source=rss",
+      "publishedAt": "2025-06-26T16:00:00.000Z",
+      "durationSeconds": 3878,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/685d2b89bef90978ec095a61/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lu2h_9FjggMEiuO77F4FESxlK3c_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 93754692
+      }
+    },
+    {
+      "id": "e_8ee1b8b343c6",
+      "title": "Vol.025齐白石照相记：民国摄影和文人朋友圈-齐凯/侯磊/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/684aa8df574f065721cda127?utm_source=rss",
+      "publishedAt": "2025-06-12T16:00:00.000Z",
+      "durationSeconds": 4242,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/684aa8df574f065721cda127/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lu2uw3qXYZoz-IG-nkk5JmzMDYK0.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 102565088
+      }
+    },
+    {
+      "id": "e_c90788e35a14",
+      "title": "Vol.024端午宜忌：龙舟泥里埋，五毒台上演-张卫东/侯磊/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6834777838dcc57c6411030e?utm_source=rss",
+      "publishedAt": "2025-05-27T16:00:00.000Z",
+      "durationSeconds": 4405,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/6834777838dcc57c6411030e/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lh2nISfefJGhTGC0EZccQx934aF_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 106505182
+      }
+    },
+    {
+      "id": "e_d28ca330c050",
+      "title": "Vol.023不如跳舞：从罗马哑剧到K-POP韩舞-何彦霄/王一然/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/682306a2b7c8a9962cddcef2?utm_source=rss",
+      "publishedAt": "2025-05-13T16:00:00.000Z",
+      "durationSeconds": 4297,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/682306a2b7c8a9962cddcef2/media.xyzcdn.net/672b3c5adab8efe6d92babc5/ltlsO-JbhkL_WylQjhiUhwX4PGZT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 103889614
+      }
+    },
+    {
+      "id": "e_48baf6992d57",
+      "title": "Vol.022高平开化寺：北宋遗珍，壁上清明上河图-蒋雨彤/周真如/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6811beeb47ebeede7e284590?utm_source=rss",
+      "publishedAt": "2025-04-30T12:00:00.000Z",
+      "durationSeconds": 4809,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/6811beeb47ebeede7e284590/media.xyzcdn.net/672b3c5adab8efe6d92babc5/luG375XSHCmod-1M3sAwFVA1vFwT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 116266423
+      }
+    },
+    {
+      "id": "e_7c011a63601b",
+      "title": "Vol.021书法入门：不提笔的时代为什么还要写字？-潘婷/张翀/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67fe2006cdd692da15724687?utm_source=rss",
+      "publishedAt": "2025-04-15T16:00:00.000Z",
+      "durationSeconds": 4039,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67fe2006cdd692da15724687/media.xyzcdn.net/672b3c5adab8efe6d92babc5/ljlwr7ZV44Latlru1U3Xy741qtOd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 97646508
+      }
+    },
+    {
+      "id": "e_b9e4bb8e78da",
+      "title": "Vol.020清明习俗知多少：哭着上坟，笑着回家？-张卫东/侯磊/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67ebba880decaeb0943d8168?utm_source=rss",
+      "publishedAt": "2025-04-01T16:00:00.000Z",
+      "durationSeconds": 4814,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67ebba880decaeb0943d8168/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lskH9soUeinaJkuX7pIzDRgZwES0.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 116465234
+      }
+    },
+    {
+      "id": "e_2474802fac7a",
+      "title": "Vol.019去越野跑呀～去看高山大海呀～-韩宇华/谢思/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67e3c91caf5840b3337156af?utm_source=rss",
+      "publishedAt": "2025-03-26T16:00:00.000Z",
+      "durationSeconds": 3093,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67e3c91caf5840b3337156af/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lvLz8QAumRvjSeN6vVg4HE-NhcUX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 74768692
+      }
+    },
+    {
+      "id": "e_b0f941148cad",
+      "title": "Vol.018 AI来了，艺术又死了？-廖亦奇/陈乐恒/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67d9422f78103db3bd38ed3c?utm_source=rss",
+      "publishedAt": "2025-03-18T16:00:00.000Z",
+      "durationSeconds": 3769,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67d9422f78103db3bd38ed3c/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lqGTmy2UpFVBe8uuLQKNfPQE1PMd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 91121633
+      }
+    },
+    {
+      "id": "e_9aa80e7b4300",
+      "title": "Vol.017寻梦道教：外国人能不能成仙？-陶金/喻晓/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67d00621e924d4525ad8648a?utm_source=rss",
+      "publishedAt": "2025-03-11T16:00:00.000Z",
+      "durationSeconds": 3728,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67d00621e924d4525ad8648a/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lq1cEll_S63_iiZ1BHgJ3QqRPzy7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 90135398
+      }
+    },
+    {
+      "id": "e_200982377f28",
+      "title": "Vol.016什么是「好」的电子游戏，有标准吗？-韩宇华/杨云鬯/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67c80289e924d4525a6c398e?utm_source=rss",
+      "publishedAt": "2025-03-05T16:00:00.000Z",
+      "durationSeconds": 3362,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67c80289e924d4525a6c398e/media.xyzcdn.net/672b3c5adab8efe6d92babc5/luCeRGb9tF0BWeJTm7SXUw2HJTrf.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 81279539
+      }
+    },
+    {
+      "id": "e_11f6171426a8",
+      "title": "Vol.015古蜀密码：顶流三星堆保姆级讲解-张翀/苟欢/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67bda085606e5c5940c3310c?utm_source=rss",
+      "publishedAt": "2025-02-25T16:00:00.000Z",
+      "durationSeconds": 3685,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67bda085606e5c5940c3310c/media.xyzcdn.net/672b3c5adab8efe6d92babc5/llgaEO-zhzcdsWe3ulf-7MW4iJQ2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 89083092
+      }
+    },
+    {
+      "id": "e_deb53f46793a",
+      "title": "Vol.014无歌唱不文学？旧京演剧谈，堂会戏掌故-张卫东/侯磊/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67a87a56d74435e4a3091639?utm_source=rss",
+      "publishedAt": "2025-02-09T16:00:00.000Z",
+      "durationSeconds": 3945,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/67a87a56d74435e4a3091639/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lr73n8xADFLjcUC72Lhs6vV9M06q.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 95371112
+      }
+    },
+    {
+      "id": "e_b722e2ad9777",
+      "title": "Vol.013喜庆堂会，旧京风俗谈：婚丧节令，唱戏吹打，热闹如何？-张卫东/侯磊/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/679f42c7247d51713c470a1e?utm_source=rss",
+      "publishedAt": "2025-02-02T16:00:00.000Z",
+      "durationSeconds": 3746,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/679f42c7247d51713c470a1e/media.xyzcdn.net/672b3c5adab8efe6d92babc5/ltoNiRkvsFtGbtcFiQrxDnBbtT2T.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 90567631
+      }
+    },
+    {
+      "id": "e_8d270b1e7a1c",
+      "title": "Vol.012跟老北京过民国年，如何从除夕过到元宵节-张卫东/侯磊/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/679613a0d74435e4a3e0c12b?utm_source=rss",
+      "publishedAt": "2025-01-26T16:00:00.000Z",
+      "durationSeconds": 4047,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/679613a0d74435e4a3e0c12b/media.xyzcdn.net/672b3c5adab8efe6d92babc5/liCUEAWc0DTu_24slJCBpwfOGYOK.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 97844127
+      }
+    },
+    {
+      "id": "e_68396b46afba",
+      "title": "Vol.011年俗、美食大起底，如何从腊八过到年三十儿-张卫东/侯磊/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/678ccf629420ede9d1203049?utm_source=rss",
+      "publishedAt": "2025-01-19T16:00:00.000Z",
+      "durationSeconds": 5174,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/678ccf629420ede9d1203049/media.xyzcdn.net/672b3c5adab8efe6d92babc5/ljbT-6lMvXU_puqCWCFkSlNqoC57.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 125078169
+      }
+    },
+    {
+      "id": "e_a4d5688399a2",
+      "title": "Vol.010电子游戏，避难所还是发电站？-韩宇华/杨云鬯/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/677ca42ecda04ef4c1ec3b3a?utm_source=rss",
+      "publishedAt": "2025-01-07T16:00:00.000Z",
+      "durationSeconds": 3465,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/677ca42ecda04ef4c1ec3b3a/media.xyzcdn.net/lgXD87fzWczCssA58lvpEhJ2BwqD.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83760428
+      }
+    },
+    {
+      "id": "e_de162edbe9c9",
+      "title": "Vol.009红楼游戏，你最想和《红楼梦》中的谁……-昊玥/佳琪/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/677349a61e823e72d30e5727?utm_source=rss",
+      "publishedAt": "2024-12-31T16:00:00.000Z",
+      "durationSeconds": 3678,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/677349a61e823e72d30e5727/media.xyzcdn.net/loYMfCIHp0zaAB1cOc5K6QTQQjju.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 88920787
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_0cbefbb3dde0",
+    "title": "Vol.038当学者开始做饭，如何在朋友圈成为烹饪哲学家-张翀/李晖/东山/思煜",
+    "text": "【万粉福利】非常感谢各位听友们的支持和喜欢，我们的播客订阅上万啦～本期小编们为各位听友们准备了一些从三星堆、敦煌、晋博等各地博物馆带回的文创小礼物。听众朋友们可以评论区留下 「你最喜欢做的一道菜和你是因为哪期节目关注我们的」 。我们会挑选一些小伙伴的评论送出小礼物～也期待听友们给我们一些希望我们聊的选题建议，我们也会在明年的节目筹备中参考。感谢大家的一路陪伴～ 【本期嘉宾】 张翀 @中央美术学院艺术学博士，中国社会科学院古代史研究所副研究员 李晖 @职业译者，北京大学英语系博士，任教于北京语言大学 【主理人】 思煜 @北京大学艺术学院硕士 东山 @芝加哥大学艺术史博士 【你将听到】 Part One 是谁规定搞学术不能当厨子的 0…",
+    "snippet": {
+      "startMs": 1038000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+  }
+}

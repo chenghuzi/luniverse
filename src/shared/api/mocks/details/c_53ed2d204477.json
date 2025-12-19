@@ -1,0 +1,118 @@
+{
+  "id": "c_53ed2d204477",
+  "podcast": {
+    "id": "p_5d810d0019ba",
+    "title": "飞夺拉 Fedora",
+    "authorName": "飞夺拉 Fedora",
+    "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_60229d04325e",
+    "title": "FEDORA 005. 混沌少年时（下）：少年心魔，扰动一生",
+    "link": "https://www.xiaoyuzhoufm.com/episode/68ea1a6f525f51df38c767ea?utm_source=rss",
+    "publishedAt": "2025-10-11T13:00:00.000Z",
+    "durationSeconds": 5534,
+    "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/68ea1a6f525f51df38c767ea/media.xyzcdn.net/6458abd175ff0285ff93bd65/llyxlLILanujj4XLD7arvYSWUhNM.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 133788371
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_60229d04325e",
+      "title": "FEDORA 005. 混沌少年时（下）：少年心魔，扰动一生",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ea1a6f525f51df38c767ea?utm_source=rss",
+      "publishedAt": "2025-10-11T13:00:00.000Z",
+      "durationSeconds": 5534,
+      "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/68ea1a6f525f51df38c767ea/media.xyzcdn.net/6458abd175ff0285ff93bd65/llyxlLILanujj4XLD7arvYSWUhNM.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 133788371
+      }
+    },
+    {
+      "id": "e_0692d232d759",
+      "title": "FEDORA 005. 混沌少年时（上）：青春弑恋，混沌众人",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68dbd04b8e321a0d6f7f99f3?utm_source=rss",
+      "publishedAt": "2025-09-30T12:58:39.000Z",
+      "durationSeconds": 6169,
+      "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/68dbd04b8e321a0d6f7f99f3/media.xyzcdn.net/6458abd175ff0285ff93bd65/ltfZ6NyQ6YywRTpsmIYPFwJfOAnl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 149132161
+      }
+    },
+    {
+      "id": "e_eed0b6355cf4",
+      "title": "FEDORA 004. 共读萨莉·鲁尼：爱如水中月，我们如何打捞真实的亲密？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/684986a1574f065721a586fc?utm_source=rss",
+      "publishedAt": "2025-06-11T13:47:38.000Z",
+      "durationSeconds": 7107,
+      "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/684986a1574f065721a586fc/media.xyzcdn.net/6458abd175ff0285ff93bd65/lt61KTXcj4-CdgKkLLGNh7bJs4Eg.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 114952349
+      }
+    },
+    {
+      "id": "e_68cc9553145f",
+      "title": "FEDORA 003. “努力失效”时代自救指南：要工具化的玄学，还是绝对灵验的幻觉？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/679c6f31247d51713c02e760?utm_source=rss",
+      "publishedAt": "2025-01-31T07:00:39.000Z",
+      "durationSeconds": 6258,
+      "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/679c6f31247d51713c02e760/media.xyzcdn.net/6458abd175ff0285ff93bd65/ltAoUDMmKIQbky123Vxnd92eGlyf.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 101212749
+      }
+    },
+    {
+      "id": "e_e3035e1f1e78",
+      "title": "FEDORA 002. 摆摊经济复苏动向报告：“支棱”起流动的景观",
+      "link": "https://www.xiaoyuzhoufm.com/episode/668d50f18fcadceb902982d8?utm_source=rss",
+      "publishedAt": "2024-07-10T04:00:00.000Z",
+      "durationSeconds": 4374,
+      "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/668d50f18fcadceb902982d8/media.xyzcdn.net/lroAttlYa5Err1hTP8itY9mGPe54.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 70751600
+      }
+    },
+    {
+      "id": "e_dd1615f0277d",
+      "title": "FEDORA 001. 沪上音乐剧空间考现：撕开环人广剧场地图以后……",
+      "link": "https://www.xiaoyuzhoufm.com/episode/645c98377d934b85053813b8?utm_source=rss",
+      "publishedAt": "2023-05-11T07:24:38.000Z",
+      "durationSeconds": 4296,
+      "imageUrl": "https://image.xyzcdn.net/FuiRMy7_1gcQ-rMK7j2pqNgvoyfn.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6458abd175ff0285ff93bd65/645c98377d934b85053813b8/media.xyzcdn.net/liSF1mJjdcMP5OUuURo5ofydx0Sp.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 138236467
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_53ed2d204477",
+    "title": "FEDORA 005. 混沌少年时（下）：少年心魔，扰动一生",
+    "text": "在上期节目中，我们讨论了“混沌少年”所面对的外部世界——警局、校园、家庭，探寻那些塑造青少年命运的社会结构。而在本期，我们将视角转向更幽深的内部世界：Jamie如何理解杀人和死亡？他觉得自己有罪吗？ 在第三集中，Jamie与心理评估师的互动揭示了他向外寻求认可和喜爱的内在需求，也让我们看到男性认同如何在社交媒体时代塑造青少年。从Andrew Tate的“Alpha男”神话到“incel文化”的传播，我们追问：当青少年在社会结构中学习如何“做一个男人”，他们究竟学到的是什么？ 从裸照事件到行凶杀人，蓄意与激情的界限模糊，反映的不只是个体或家庭的崩塌，更是社会期待对男性气质的投射与随之而来的惩罚。本期讨论也将延伸到现实事件——如邯郸留…",
+    "snippet": {
+      "startMs": 4824000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#64748b,#0f172a)"
+  }
+}

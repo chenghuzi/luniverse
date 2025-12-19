@@ -1,0 +1,131 @@
+{
+  "id": "c_c7a09bc1fb27",
+  "podcast": {
+    "id": "p_ff3ecf7c0d28",
+    "title": "为了理想状态的生活",
+    "authorName": "理想状态",
+    "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_cae2a2c5fd71",
+    "title": "vol.007-对话刘江华：过气网红逆袭指南——看「晚清孤勇者」左宗棠如何用朋友圈撕出圈",
+    "link": "https://www.xiaoyuzhoufm.com/episode/68afb90497178f08ee05e766?utm_source=rss",
+    "publishedAt": "2025-08-28T02:08:27.000Z",
+    "durationSeconds": 7824,
+    "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/68afb90497178f08ee05e766/media.xyzcdn.net/679357f37c5fb280f53bdba2/lv2dmOt1yfiWfElnpeDE8VAyFRIo.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 189265565
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_cae2a2c5fd71",
+      "title": "vol.007-对话刘江华：过气网红逆袭指南——看「晚清孤勇者」左宗棠如何用朋友圈撕出圈",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68afb90497178f08ee05e766?utm_source=rss",
+      "publishedAt": "2025-08-28T02:08:27.000Z",
+      "durationSeconds": 7824,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/68afb90497178f08ee05e766/media.xyzcdn.net/679357f37c5fb280f53bdba2/lv2dmOt1yfiWfElnpeDE8VAyFRIo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 189265565
+      }
+    },
+    {
+      "id": "e_702200976676",
+      "title": "vol.006-对话孟勐：摊牌了！麦肯锡里没有“职场爽文”，只有“为自己的简历卷出血”的真相",
+      "link": "https://www.xiaoyuzhoufm.com/episode/686c72c060f8f77d405c211c?utm_source=rss",
+      "publishedAt": "2025-07-08T01:25:38.000Z",
+      "durationSeconds": 10313,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/686c72c060f8f77d405c211c/media.xyzcdn.net/679357f37c5fb280f53bdba2/lkHFR3RTgizHQYw85LNkNd6eaQ1w.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 249462241
+      }
+    },
+    {
+      "id": "e_5ec618877cea",
+      "title": "vol.005-对话王子燕： 中医治焦虑、MBTI算命？当代青年自救的魔幻现实主义",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6810a09547ebeede7e010192?utm_source=rss",
+      "publishedAt": "2025-04-29T09:51:42.000Z",
+      "durationSeconds": 6201,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/6810a09547ebeede7e010192/media.xyzcdn.net/679357f37c5fb280f53bdba2/lpx2CyqMFj4DjXJ2pKVZeHLEEzpT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 150005621
+      }
+    },
+    {
+      "id": "e_3f9dcc67f9da",
+      "title": "vol.004-对话鞠海：从小镇做题家到最后一个士大夫，曾国藩如何在夹缝中博取生机？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67ee37eff9578163d6c6e1f9?utm_source=rss",
+      "publishedAt": "2025-04-03T07:41:26.000Z",
+      "durationSeconds": 6068,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/67ee37eff9578163d6c6e1f9/media.xyzcdn.net/679357f37c5fb280f53bdba2/ls_tjFHa72bWQDWd8UzMPLs2mE_o.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 146793437
+      }
+    },
+    {
+      "id": "e_03f80b335400",
+      "title": "vol.003-对话侯印国：中国神仙的“职场生存指南”：哪吒教你怎么硬刚天命",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67e228e6dd11f9c8c1ed5b35?utm_source=rss",
+      "publishedAt": "2025-03-25T04:05:41.000Z",
+      "durationSeconds": 4895,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/67e228e6dd11f9c8c1ed5b35/media.xyzcdn.net/679357f37c5fb280f53bdba2/lg9nrrW0f90Gt6awxK72NxORgcBQ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 118408017
+      }
+    },
+    {
+      "id": "e_bb55fe9afc57",
+      "title": "vol.002-对话Ann、老杨：当AI开始写文、画画、作曲、当公务员，人类还剩什么不能外包？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67b69c5305a90dfd0da5c18c?utm_source=rss",
+      "publishedAt": "2025-02-20T03:29:50.000Z",
+      "durationSeconds": 7851,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/67b69c5305a90dfd0da5c18c/media.xyzcdn.net/679357f37c5fb280f53bdba2/llGvoMVqY6byMqRB127GJjaltTnk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 189909493
+      }
+    },
+    {
+      "id": "e_83d54d7dca03",
+      "title": "vol.001-对话唐山：你适合自由职业吗？打工真的耽误挣钱吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67944b03247d51713c26c80d?utm_source=rss",
+      "publishedAt": "2025-01-25T02:42:38.000Z",
+      "durationSeconds": 4920,
+      "imageUrl": "https://image.xyzcdn.net/FsH9gi-6HjnLEeeTQnPmAP3tIpKY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/679357f37c5fb280f53bdba2/67944b03247d51713c26c80d/media.xyzcdn.net/679357f37c5fb280f53bdba2/ll2o4y2wRRq6dB7DWh4Ast7L7Emy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 158391811
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_c7a09bc1fb27",
+    "title": "vol.007-对话刘江华：过气网红逆袭指南——看「晚清孤勇者」左宗棠如何用朋友圈撕出圈",
+    "text": "当我们刷着热搜里的国际纷争，突然发现：历史是一个轮回，百年前的时局今天似乎正在重演，但主角已经调换了身份——很多国际纷争的解法，其实140年前那个抬棺出征的老头，早就给过答案。 左宗棠——晚清最被低估的硬核玩家，在历史课本里只配拥有两行字，却被全球学者票选为「千年40大智慧人物」。他对新疆的收复和建设，至今仍在影响中国版图；他是“围剿沙漠”第一人，戈壁滩上的红柳还流传着他的姓名；他创办的船政局，埋下了近代海军的火种；他过手白银上亿两，却未贪一分一毫，只以种菜为乐；在那个风雨飘零的年代，他始终坚持“中国疆土”一点都不能少…… 这期节目，我们请来了研究左宗棠20年的史学家刘江华，撕开历史滤镜还原真面目： 职场启示录：从三次落榜到封疆大…",
+    "snippet": {
+      "startMs": 5826000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#a855f7,#ec4899)"
+  }
+}

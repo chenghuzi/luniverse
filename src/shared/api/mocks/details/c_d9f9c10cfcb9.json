@@ -1,0 +1,430 @@
+{
+  "id": "c_d9f9c10cfcb9",
+  "podcast": {
+    "id": "p_36650b18a6ac",
+    "title": "岩中花述",
+    "authorName": "GIADA | JustPod",
+    "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+    "language": "zh-cn",
+    "categories": [
+      "Arts"
+    ]
+  },
+  "episode": {
+    "id": "e_86f8862e1175",
+    "title": "S8E6 鲁豫对话鸟鸟｜没有魅力的人，也值得拥有世界",
+    "link": "https://www.xiaoyuzhoufm.com/episode/69416af04c65abaff352d88f?utm_source=rss",
+    "publishedAt": "2025-12-17T00:00:00.000Z",
+    "durationSeconds": 5205,
+    "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/69416af04c65abaff352d88f/media.xyzcdn.net/625635587bfca4e73e990703/lpP0InS7yMy1g7yRAtWTQ_G_AoBC.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 84178384
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_86f8862e1175",
+      "title": "S8E6 鲁豫对话鸟鸟｜没有魅力的人，也值得拥有世界",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69416af04c65abaff352d88f?utm_source=rss",
+      "publishedAt": "2025-12-17T00:00:00.000Z",
+      "durationSeconds": 5205,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/69416af04c65abaff352d88f/media.xyzcdn.net/625635587bfca4e73e990703/lpP0InS7yMy1g7yRAtWTQ_G_AoBC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 84178384
+      }
+    },
+    {
+      "id": "e_f0b33fce9f9c",
+      "title": "S8E5 鲁豫对话朱天文 | 他已登岸归家，吾独续写「巫」言",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6937f38c4ef12f9fe9be1633?utm_source=rss",
+      "publishedAt": "2025-12-10T00:00:00.000Z",
+      "durationSeconds": 5335,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6937f38c4ef12f9fe9be1633/media.xyzcdn.net/625635587bfca4e73e990703/lljTIALZuXN1DJRRWQYyZ6FCVc9X.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 86284583
+      }
+    },
+    {
+      "id": "e_4321aaea72d4",
+      "title": "S8E4 鲁豫对话黎紫书 | 飞向更高远的天空，即便空气稀薄",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691c439f6018cc2c986d297a?utm_source=rss",
+      "publishedAt": "2025-11-19T00:00:00.000Z",
+      "durationSeconds": 6140,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/691c439f6018cc2c986d297a/media.xyzcdn.net/625635587bfca4e73e990703/lpb6VBjdb6ib5f16I8qZ-Ojq6FWj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 99312203
+      }
+    },
+    {
+      "id": "e_55872daa80c2",
+      "title": "S8E3 鲁豫对话扎十一惹 | 从此我们不忧伤、不害怕",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6912de5621e6d1bd34f0c9b1?utm_source=rss",
+      "publishedAt": "2025-11-12T00:00:00.000Z",
+      "durationSeconds": 6731,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6912de5621e6d1bd34f0c9b1/media.xyzcdn.net/625635587bfca4e73e990703/lj-Ng_oI4GD7_MidDSZmh2IalweW.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 108863172
+      }
+    },
+    {
+      "id": "e_d4f69bb2384c",
+      "title": "S8E2 鲁豫对话陈慧 | 人如南瓜，可攀援亦可贴地生长",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690a0af0aaf2588eb7ee800a?utm_source=rss",
+      "publishedAt": "2025-11-05T00:00:00.000Z",
+      "durationSeconds": 4884,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/690a0af0aaf2588eb7ee800a/media.xyzcdn.net/625635587bfca4e73e990703/lk9jCXdvvCmRbIws8dhESQUu2tkR.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 78994876
+      }
+    },
+    {
+      "id": "e_83e2ba2295a6",
+      "title": "S8E1 鲁豫对话蒋胜男 | 她可以为你而死，但不会只为你而活",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6900a73a740634ca476c35dc?utm_source=rss",
+      "publishedAt": "2025-10-29T00:00:00.000Z",
+      "durationSeconds": 4945,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6900a73a740634ca476c35dc/media.xyzcdn.net/625635587bfca4e73e990703/lrOAYUfHO27zfzwoxEndzaO6Yvpu.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 79988660
+      }
+    },
+    {
+      "id": "e_f30cbad864d6",
+      "title": "【岩中花述出书啦！】200万订阅特别彩蛋",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69002468083a71a4eb902706?utm_source=rss",
+      "publishedAt": "2025-10-28T02:05:08.000Z",
+      "durationSeconds": 591,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/69002468083a71a4eb902706/media.xyzcdn.net/625635587bfca4e73e990703/ls13j0WRbNTUBndv_ISiYFFD9sb8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 19038467
+      }
+    },
+    {
+      "id": "e_fcc511aa2815",
+      "title": "【主题曲彩蛋】“在她人的故事里，遇见了自己”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/689de189759c1ff652f110d0?utm_source=rss",
+      "publishedAt": "2025-08-15T00:00:00.000Z",
+      "durationSeconds": 1302,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/689de189759c1ff652f110d0/media.xyzcdn.net/625635587bfca4e73e990703/lqtLgzmip4PQoGVQuUbpkBljhHpl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 21062439
+      }
+    },
+    {
+      "id": "e_3b4405f8fe9e",
+      "title": "S7E10 鲁豫对话王昊鹭 | 在片场与摇篮间行走，写下自由分镜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/685a3fb32a38b4d9793d37f3?utm_source=rss",
+      "publishedAt": "2025-06-25T00:00:00.000Z",
+      "durationSeconds": 4666,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/685a3fb32a38b4d9793d37f3/media.xyzcdn.net/625635587bfca4e73e990703/liyIGQ5u5MyOssUQzkomYgfqCf6L.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 75470991
+      }
+    },
+    {
+      "id": "e_65faf80144bc",
+      "title": "S7E9 鲁豫对话小帕 | 要走多少路，才能成为一个女人，答案在风中飘荡",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68512cbf2a38b4d9791824a7?utm_source=rss",
+      "publishedAt": "2025-06-18T00:00:00.000Z",
+      "durationSeconds": 4181,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/68512cbf2a38b4d9791824a7/media.xyzcdn.net/625635587bfca4e73e990703/ljWLSPug9OuBB9UKovQmuXYghB6k.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 67630237
+      }
+    },
+    {
+      "id": "e_03f739bc3e5d",
+      "title": "S7E8 鲁豫对话翟永明 | 于是谈到诗时，不再动摇",
+      "link": "https://www.xiaoyuzhoufm.com/episode/682c0ba9457b22ce0d94dd7b?utm_source=rss",
+      "publishedAt": "2025-05-21T00:00:00.000Z",
+      "durationSeconds": 4560,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/682c0ba9457b22ce0d94dd7b/media.xyzcdn.net/625635587bfca4e73e990703/lkPL2lfuwpulpf-WOvFparuDIzhf.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 73756059
+      }
+    },
+    {
+      "id": "e_6e475b4bf0da",
+      "title": "S7E7 鲁豫对话劳东燕 | 敢于面向黑暗，恰因此心光明",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6823111424f85593466016f3?utm_source=rss",
+      "publishedAt": "2025-05-14T00:00:00.000Z",
+      "durationSeconds": 4536,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6823111424f85593466016f3/media.xyzcdn.net/625635587bfca4e73e990703/lugDyoBN57PN5VEsJyp8ohiMMZwh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 73362866
+      }
+    },
+    {
+      "id": "e_df0cd9472825",
+      "title": "S7E6 鲁豫对话钱佳楠 | 现实的异乡人，文学的安定客",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6819c1c347ebeede7e05405a?utm_source=rss",
+      "publishedAt": "2025-05-07T00:00:00.000Z",
+      "durationSeconds": 4438,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6819c1c347ebeede7e05405a/media.xyzcdn.net/625635587bfca4e73e990703/lvmIWzFhakl2FmLIeWOhylphm9r3.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 71784526
+      }
+    },
+    {
+      "id": "e_4db99a9109dc",
+      "title": "叮！你有一条来自鲁豫的留言",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68106fc28aed253fa32a1ee8?utm_source=rss",
+      "publishedAt": "2025-04-30T00:00:00.000Z",
+      "durationSeconds": 73,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/68106fc28aed253fa32a1ee8/media.xyzcdn.net/625635587bfca4e73e990703/FnskelZQbV4ZaBshcoSIU6ONPUCq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 895239
+      }
+    },
+    {
+      "id": "e_1cd9203c5641",
+      "title": "S7E5 鲁豫对话陈冲 | 爱，像颤动的内脏，也似地底的岩浆",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6807718d8aed253fa3d7fc17?utm_source=rss",
+      "publishedAt": "2025-04-23T00:00:00.000Z",
+      "durationSeconds": 3985,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6807718d8aed253fa3d7fc17/media.xyzcdn.net/625635587bfca4e73e990703/lvL_mysUhz3-uh3ldewwdoRz_p3P.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 64462556
+      }
+    },
+    {
+      "id": "e_984623e05ad1",
+      "title": "S7E4 鲁豫对话Lumi刘敏 | 在音乐中散发「酷」，在生活中坚守「真」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67fe24dbcdd692da1573eb2c?utm_source=rss",
+      "publishedAt": "2025-04-16T00:00:00.000Z",
+      "durationSeconds": 4537,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/67fe24dbcdd692da1573eb2c/media.xyzcdn.net/625635587bfca4e73e990703/loLRojt2_0Izv3MjEHDkknuA2c5I.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 73386220
+      }
+    },
+    {
+      "id": "e_97dc2b4685e0",
+      "title": "S7E3 鲁豫对话李翊云 | 有些艰难无法走出，我始终与其共处",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67eb91c10decaeb094327570?utm_source=rss",
+      "publishedAt": "2025-04-02T00:00:00.000Z",
+      "durationSeconds": 4075,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/67eb91c10decaeb094327570/media.xyzcdn.net/625635587bfca4e73e990703/lnKbboLofOq5EIGk0U0yrks8qIYc.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 65916654
+      }
+    },
+    {
+      "id": "e_c3908bdb4a6d",
+      "title": "S7E2 鲁豫对话蒋方舟 | 永不做他人的缪斯，亲手写就我的故事",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67e238d8dd11f9c8c1f0b2e8?utm_source=rss",
+      "publishedAt": "2025-03-26T00:00:00.000Z",
+      "durationSeconds": 5068,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/67e238d8dd11f9c8c1f0b2e8/media.xyzcdn.net/625635587bfca4e73e990703/lmTEIPWOt4SwEgOVbfdD0sBzyTNU.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 81974609
+      }
+    },
+    {
+      "id": "e_6aa2de26b228",
+      "title": "S7E1 鲁豫对话刘乐 | 对分别的羞耻脱敏，才能更勇敢地相拥",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67d938efdd11f9c8c1669017?utm_source=rss",
+      "publishedAt": "2025-03-19T00:00:00.000Z",
+      "durationSeconds": 4268,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/67d938efdd11f9c8c1669017/media.xyzcdn.net/625635587bfca4e73e990703/lkeuK3NNIJYmZCKy96WIyMHYO7Pk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 69041035
+      }
+    },
+    {
+      "id": "e_580831af38ad",
+      "title": "S6E9 鲁豫对话陈果 | 命运无常，我有常",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67330dd543dc3a4387002af3?utm_source=rss",
+      "publishedAt": "2024-11-13T00:00:00.000Z",
+      "durationSeconds": 4968,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/67330dd543dc3a4387002af3/media.xyzcdn.net/luBjZ-vmkpYGijz3oYRBA2H9iO60.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 80347876
+      }
+    },
+    {
+      "id": "e_7ea0fd501d0c",
+      "title": "S6E8 鲁豫对话小鹿 | 爱比恨难，而笑永远有力量",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6729f066b2eb246ec4d999e1?utm_source=rss",
+      "publishedAt": "2024-11-06T00:00:00.000Z",
+      "durationSeconds": 4730,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6729f066b2eb246ec4d999e1/media.xyzcdn.net/ljuyel5zwguxmB6nFBqKKLBuFzdl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 76509294
+      }
+    },
+    {
+      "id": "e_843a0f5b6189",
+      "title": "S6E7 鲁豫对话田晓菲 | 「早慧才女」非所望，终盼人生「老更成」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67209efdcbe0e69c8b80ad89?utm_source=rss",
+      "publishedAt": "2024-10-30T00:00:00.000Z",
+      "durationSeconds": 4925,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/67209efdcbe0e69c8b80ad89/media.xyzcdn.net/loJQF7QGZioe56Bv9IgbOdoxXOj9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 79664555
+      }
+    },
+    {
+      "id": "e_82297310a11f",
+      "title": "S6E6 鲁豫对话仲树 | 不违道则无愧，而独树不能成林",
+      "link": "https://www.xiaoyuzhoufm.com/episode/670e1df70d2f24f2893feca8?utm_source=rss",
+      "publishedAt": "2024-10-16T00:00:00.000Z",
+      "durationSeconds": 4720,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/670e1df70d2f24f2893feca8/media.xyzcdn.net/ln41LomXxxwjFe3NRP8W7cgIE-Ko.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 76336519
+      }
+    },
+    {
+      "id": "e_1de539d70305",
+      "title": "S6E5 鲁豫对话俞冰夏 | 用文学理解生活，世界未必是场「无尽的玩笑」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6704c44c6c7f81778674dd0d?utm_source=rss",
+      "publishedAt": "2024-10-09T00:00:00.000Z",
+      "durationSeconds": 4772,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/6704c44c6c7f81778674dd0d/media.xyzcdn.net/lqxW8BcKBjnb0SmYLFeafqoEc4uP.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 77188888
+      }
+    },
+    {
+      "id": "e_504f4648e396",
+      "title": "S6E4 鲁豫对话袁源 | 识别认知中的不正义，创造不设限的人生",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66f765c16c7f817786a0255e?utm_source=rss",
+      "publishedAt": "2024-10-02T00:00:00.000Z",
+      "durationSeconds": 4850,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/66f765c16c7f817786a0255e/media.xyzcdn.net/lsCUzyimFhVG3pSRA3pvKgryAvxk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 78438380
+      }
+    },
+    {
+      "id": "e_d20268f1b6e0",
+      "title": "S6E3 鲁豫对话七堇年 | 壮阔与极限，在横断山脉，也在柴米油盐",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66f2b8d869b6a485e89a00ac?utm_source=rss",
+      "publishedAt": "2024-09-25T00:00:00.000Z",
+      "durationSeconds": 4450,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/66f2b8d869b6a485e89a00ac/media.xyzcdn.net/lnLDohRs1LWwa5t3DeOX315fX5UG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 71976537
+      }
+    },
+    {
+      "id": "e_0ea556b5937f",
+      "title": "S6E2 鲁豫对话吉井忍 | 从全世界回到东京八平米",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66e00c45ee04007d8885889a?utm_source=rss",
+      "publishedAt": "2024-09-11T00:00:00.000Z",
+      "durationSeconds": 4645,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/66e00c45ee04007d8885889a/media.xyzcdn.net/lkeVExVIChw4iMPJ-BvmbYlCBnHB.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 112290214
+      }
+    },
+    {
+      "id": "e_e5d37db2b8c0",
+      "title": "S6E1 鲁豫对话马薇薇 | 人这一生，不就是放多了收，收多了再放吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66d6c6ee5a91beebb37b017e?utm_source=rss",
+      "publishedAt": "2024-09-04T00:00:00.000Z",
+      "durationSeconds": 4092,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/66d6c6ee5a91beebb37b017e/media.xyzcdn.net/liry5XZ0r0Eqgibi_1UUY4f8_HVk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 66182146
+      }
+    },
+    {
+      "id": "e_59a979b40f73",
+      "title": "S5E9 鲁豫对话马伊琍 | 张凤侠，另一个平行世界里的马伊琍",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66567094efabaae3a11c7fd8?utm_source=rss",
+      "publishedAt": "2024-05-28T23:59:59.000Z",
+      "durationSeconds": 4454,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/66567094efabaae3a11c7fd8/media.xyzcdn.net/lghsdIM_P1hE5rfhDsK_fb-g5z7X.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 72046811
+      }
+    },
+    {
+      "id": "e_f9ecc9b2fdcd",
+      "title": "S5E8 鲁豫对话张春 | 要活得很久，我做了这个决定",
+      "link": "https://www.xiaoyuzhoufm.com/episode/663ac13e13426298925c9853?utm_source=rss",
+      "publishedAt": "2024-05-07T23:59:59.000Z",
+      "durationSeconds": 5136,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/663ac13e13426298925c9853/media.xyzcdn.net/lrqe-oAu2fWN8Ok0BTMlxL8fGrk4.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83075536
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_d9f9c10cfcb9",
+    "title": "S8E6 鲁豫对话鸟鸟｜没有魅力的人，也值得拥有世界",
+    "text": "– 本节目由GIADA出品，JustPod制作发行 – 【本期嘉宾】 鸟鸟，脱口秀演员，编剧，北京大学中文系硕士毕业 陈鲁豫，媒体人、主持人 【本期节目介绍】 岩中花述第八季第六期节目，鲁豫兑现了与鸟鸟的「岩中花述」之约。 和一些独生的90后女孩一样，学龄前她被双职工父母锁在家里，看《动画城》、自己打发时间，那时就大概明白了「孤独」的滋味。她自觉朋友很少，上寄宿初中时因容貌遭他人排挤，也早早懂得了「高压教育」下小孩的残忍。 大学时选了并不喜欢的「地质学」专业，却只能从文学作品中寻找坐标，于是在毕业后迎来了人生中第一次大反叛，跨学科考入北大中文，然而未来仍是混沌的，更大的世界衬得她愈发渺小，她依旧难以向社会熔炉迈出一步。 在「怀疑」…",
+    "snippet": {
+      "startMs": 4144000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#64748b,#0f172a)"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "id": "c_9ae6f0a37ae9",
+  "podcast": {
+    "id": "p_95c76fc85c70",
+    "title": "听起来不错！",
+    "authorName": "迪卡普里鑫",
+    "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Arts",
+      "Society & Culture",
+      "Music"
+    ]
+  },
+  "episode": {
+    "id": "e_aa5e2b440b60",
+    "title": "010 | 被回声塑造的人类",
+    "link": "https://www.xiaoyuzhoufm.com/episode/692f03094ef12f9fe98ee2fa?utm_source=rss",
+    "publishedAt": "2025-12-02T15:33:16.000Z",
+    "durationSeconds": 3462,
+    "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/692f03094ef12f9fe98ee2fa/media.xyzcdn.net/nncF6N0Fi-Cs19BXNt1zGfUKgP4L.mp3",
+      "mimeType": "audio/mpeg",
+      "byteLength": 55399234
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_aa5e2b440b60",
+      "title": "010 | 被回声塑造的人类",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692f03094ef12f9fe98ee2fa?utm_source=rss",
+      "publishedAt": "2025-12-02T15:33:16.000Z",
+      "durationSeconds": 3462,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/692f03094ef12f9fe98ee2fa/media.xyzcdn.net/nncF6N0Fi-Cs19BXNt1zGfUKgP4L.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 55399234
+      }
+    },
+    {
+      "id": "e_7e562a83cbb8",
+      "title": "009 | 忧郁的星期天",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6915dc92cbba038b42685b56?utm_source=rss",
+      "publishedAt": "2025-11-13T13:31:58.000Z",
+      "durationSeconds": 2007,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/6915dc92cbba038b42685b56/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/ll7L_zWV2jQM7B3BpOgb0PMo6sMH.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 32474629
+      }
+    },
+    {
+      "id": "e_0e85ddd1d0ef",
+      "title": "008| 海底\"克苏鲁\"之声",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6900e0e8740634ca477664bd?utm_source=rss",
+      "publishedAt": "2025-10-28T15:28:55.000Z",
+      "durationSeconds": 1717,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/6900e0e8740634ca477664bd/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/lr5KwYKtwZqHhC4tTzKcjHbNO_Vj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 27775317
+      }
+    },
+    {
+      "id": "e_bd488c2cc04a",
+      "title": "007 | 旅行者号金唱片",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ed3408224325ea7013e2f7?utm_source=rss",
+      "publishedAt": "2025-10-13T17:35:53.000Z",
+      "durationSeconds": 3538,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/68ed3408224325ea7013e2f7/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/lvhUA_J4oee56FuZAOhD4qyGtLno.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 57234721
+      }
+    },
+    {
+      "id": "e_c8aacac16ae7",
+      "title": "006 | 4′33″",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68cd6e30a56ca3e0c44bb170?utm_source=rss",
+      "publishedAt": "2025-09-19T14:56:50.000Z",
+      "durationSeconds": 2433,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/68cd6e30a56ca3e0c44bb170/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/llQFPSYggHnXaUtumvqdghu54GY9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 58813741
+      }
+    },
+    {
+      "id": "e_391c41ede49f",
+      "title": "005 | 座头鲸之歌",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68aa9ad5293471fed427a7fe?utm_source=rss",
+      "publishedAt": "2025-08-24T04:54:55.000Z",
+      "durationSeconds": 2671,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/68aa9ad5293471fed427a7fe/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/loxA2ZOo9peeDBrFISnReB--OQ8h.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 85944478
+      }
+    },
+    {
+      "id": "e_21f05cd5f74d",
+      "title": "004 | 噪音",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68942ac046542d8c41e9bb1e?utm_source=rss",
+      "publishedAt": "2025-08-07T10:00:00.000Z",
+      "durationSeconds": 1367,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/68942ac046542d8c41e9bb1e/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/lnCUse69SZLojGXZH8DHg8tNisxq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 22119219
+      }
+    },
+    {
+      "id": "e_b2ea08c3b923",
+      "title": "003|失眠（纯享版）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6873b74260f8f77d4048a85d?utm_source=rss",
+      "publishedAt": "2025-07-13T13:58:51.000Z",
+      "durationSeconds": 1875,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/6873b74260f8f77d4048a85d/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/lt4ZZekp1Z2OFnb1TzUGJ-WxEhV9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 30332551
+      }
+    },
+    {
+      "id": "e_d77b2c55dbde",
+      "title": "003|失眠",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6873b5f860f8f77d404863d6?utm_source=rss",
+      "publishedAt": "2025-07-13T13:51:22.000Z",
+      "durationSeconds": 1921,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/6873b5f860f8f77d404863d6/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/liPtFKQfr68aZYZkqs77H9KZ8gkr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31080226
+      }
+    },
+    {
+      "id": "e_0773fff19829",
+      "title": "002 | 沉默的作曲",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6857e2cb4abe6e29cb63d368?utm_source=rss",
+      "publishedAt": "2025-06-22T11:13:55.000Z",
+      "durationSeconds": 3422,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/6857e2cb4abe6e29cb63d368/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/lt31S0MnEO-0AkQcj-TyQ0yo9D9o.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 55351084
+      }
+    },
+    {
+      "id": "e_0eff34c62c72",
+      "title": "001 | 创作者困境 or 序言",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6857dff52a38b4d979e83fb3?utm_source=rss",
+      "publishedAt": "2025-06-22T10:58:39.000Z",
+      "durationSeconds": 2435,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/6857dff52a38b4d979e83fb3/media.xyzcdn.net/678a8c969b619eecc7bf6c1f/lkL3hQcxobbVnAOZZVHq0iGvp017.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 39390827
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_9ae6f0a37ae9",
+    "title": "010 | 被回声塑造的人类",
+    "text": "两万年前，旧石器时代的人在洞穴最黑的深处画下成群的牛、马和鹿。长期以来，学者们将它们解释为宗教崇拜或史前美术的视觉产物。然而，声学考古学揭示了一个被忽略的维度：这些壁画并非孤立的视觉图像，因为最重要、最密集的壁画，几乎都落在回声最强、共鸣最大的地方。 所以声音到底是怎样参与塑造了几万年前的洞穴壁画？那些在黑暗里画画的人，到底是在“听”什么？ 从拉斯科洞穴，圣索菲亚大教堂 11s 的混响，再到巨石阵、哥特大教堂、市政厅、图书馆和现代录音棚，人类也巧妙的利用这些建筑来制造和驯服古老的回声，而我们的听觉和大脑也都在其中被深刻的改变。回音塑造了我们的世界。 说明：为了方便理解，本期节目提到的「回声」包含「混响+回声」2层含义。 时间线 0…",
+    "snippet": {
+      "startMs": 1161000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+  }
+}

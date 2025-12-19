@@ -1,0 +1,196 @@
+{
+  "id": "c_d0ff4808878b",
+  "podcast": {
+    "id": "p_96081a9a6c72",
+    "title": "什么保险",
+    "authorName": "Mai",
+    "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_c92132768a71",
+    "title": "住院花费7万后，「西湖益联保」只报销了600元——Excuse me？",
+    "link": "https://www.xiaoyuzhoufm.com/episode/687f4a4ca12f9ff06a6fa11c?utm_source=rss",
+    "publishedAt": "2025-07-22T08:31:59.000Z",
+    "durationSeconds": 3921,
+    "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/687f4a4ca12f9ff06a6fa11c/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lqEV8DJvxmR0wKPkqs4ZFmJsdJHk.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 126237563
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_c92132768a71",
+      "title": "住院花费7万后，「西湖益联保」只报销了600元——Excuse me？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687f4a4ca12f9ff06a6fa11c?utm_source=rss",
+      "publishedAt": "2025-07-22T08:31:59.000Z",
+      "durationSeconds": 3921,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/687f4a4ca12f9ff06a6fa11c/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lqEV8DJvxmR0wKPkqs4ZFmJsdJHk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 126237563
+      }
+    },
+    {
+      "id": "e_a1119e98c6c6",
+      "title": "从「拒赔」到「全额理赔」，经纪人亲述医疗险的理赔暗战",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6870afba60f8f77d40f94b2a?utm_source=rss",
+      "publishedAt": "2025-07-11T06:33:48.000Z",
+      "durationSeconds": 3755,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/6870afba60f8f77d40f94b2a/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lm9PLXXGxDo66IkTmSWg1WsDm2P8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 120886919
+      }
+    },
+    {
+      "id": "e_c131a39709e2",
+      "title": "保险公司破产了，我们的保单怎么办？听说只赔90%？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6863797760f8f77d403bdf46?utm_source=rss",
+      "publishedAt": "2025-07-01T06:10:02.000Z",
+      "durationSeconds": 1909,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/6863797760f8f77d403bdf46/media.xyzcdn.net/675e8353d5029fd7d3c72db8/luzcy_5m8qCxw-1Nlq0dgty7HK_E.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61459153
+      }
+    },
+    {
+      "id": "e_48565be8ec77",
+      "title": "“零门槛“购买的众民保——到底是救命稻草，还是定时炸弹？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/685796992a38b4d979df166a?utm_source=rss",
+      "publishedAt": "2025-06-22T05:39:30.000Z",
+      "durationSeconds": 2288,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/685796992a38b4d979df166a/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lldjMQarlI68_E9Q66O3qeg1ytDM.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 73649582
+      }
+    },
+    {
+      "id": "e_1509a271bde6",
+      "title": "心脏支架从2万降到800元，医疗改革背后的真相是什么？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/685516d14abe6e29cb1ecd47?utm_source=rss",
+      "publishedAt": "2025-06-20T08:08:31.000Z",
+      "durationSeconds": 2822,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/685516d14abe6e29cb1ecd47/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lpEw1ZtDDCZ-SFwSBtpyFrmfuL5z.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 90836230
+      }
+    },
+    {
+      "id": "e_118233961703",
+      "title": "花了2万给猫看病后，我把市面上的「宠物保险」研究了个遍。",
+      "link": "https://www.xiaoyuzhoufm.com/episode/684c00294abe6e29cbfc5cb8?utm_source=rss",
+      "publishedAt": "2025-06-13T10:44:24.000Z",
+      "durationSeconds": 3025,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/684c00294abe6e29cbfc5cb8/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lj-mU_oinxtNICnEeKo2aOYYa291.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 97391881
+      }
+    },
+    {
+      "id": "e_15ee19a99337",
+      "title": "不出国门，也能享受国际顶尖治疗？——实地探访与揭秘海南博鳌医疗特区",
+      "link": "https://www.xiaoyuzhoufm.com/episode/684133d7219d35546fe4dedb?utm_source=rss",
+      "publishedAt": "2025-06-05T06:18:41.000Z",
+      "durationSeconds": 3425,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/684133d7219d35546fe4dedb/media.xyzcdn.net/675e8353d5029fd7d3c72db8/ljtvEPo-31AAuzbEIkIWBWb3-A0R.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 110037361
+      }
+    },
+    {
+      "id": "e_8839f094d16c",
+      "title": "中高端医疗险大揭秘：真就医生轻松找，看病随便看，费用全部报？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6837e09b31215eb5064e2614?utm_source=rss",
+      "publishedAt": "2025-05-29T04:23:20.000Z",
+      "durationSeconds": 3987,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/6837e09b31215eb5064e2614/media.xyzcdn.net/675e8353d5029fd7d3c72db8/liiQyih06Yy1b_lm2Qyx1x7djmeo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 128285001
+      }
+    },
+    {
+      "id": "e_aa18661f9178",
+      "title": "从 「蛮好的人生」 看保险行业：真实的销售、信任与养老焦虑",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6831bc7241ef875a1200e678?utm_source=rss",
+      "publishedAt": "2025-05-24T12:34:16.000Z",
+      "durationSeconds": 6143,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/6831bc7241ef875a1200e678/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lv0xxqwgYnkXVOXYwJmQTV7yaGRq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 148603909
+      }
+    },
+    {
+      "id": "e_28ad19378538",
+      "title": "「保险」为何全网差评？——95后算法工程师：保险，我只买医疗险",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6826c9f21ced30a2319bd968?utm_source=rss",
+      "publishedAt": "2025-05-16T05:16:47.000Z",
+      "durationSeconds": 3649,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/6826c9f21ced30a2319bd968/media.xyzcdn.net/675e8353d5029fd7d3c72db8/ljLOcJMHqoLhDELnGQ2fzAKmXjFk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 117472866
+      }
+    },
+    {
+      "id": "e_57ead2874104",
+      "title": "从拒赔到全额赔付：保险理赔背后的真相与反思，普通消费者又该如何避免理赔纠纷？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/681c549e61f65862806b9b3e?utm_source=rss",
+      "publishedAt": "2025-05-08T06:59:06.000Z",
+      "durationSeconds": 3135,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/681c549e61f65862806b9b3e/media.xyzcdn.net/675e8353d5029fd7d3c72db8/lsFVyHnE5J3MIrau8JKehWUbLvjL.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 100728749
+      }
+    },
+    {
+      "id": "e_fddd10d59e20",
+      "title": "新手爸妈必看！儿童保险避坑指南：重疾/医疗/意外险/教育金——全解析",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68123d4e47ebeede7e40182d?utm_source=rss",
+      "publishedAt": "2025-04-30T15:13:53.000Z",
+      "durationSeconds": 4064,
+      "imageUrl": "https://image.xyzcdn.net/Fopfq8cKIgATYqcaw4diHj6PpbEx.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/675e8353d5029fd7d3c72db8/68123d4e47ebeede7e40182d/media.xyzcdn.net/675e8353d5029fd7d3c72db8/llvuTCtjPqw4CFBWb5G0--LcMuB3.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 130823118
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_d0ff4808878b",
+    "title": "住院花费7万后，「西湖益联保」只报销了600元——Excuse me？",
+    "text": "Shownotes： 本期播客以杭州西湖益联保为核心，通过投保人Tony房颤手术的理赔经历展开——总医疗费用7万左右，自费3万多，西湖益联保仅报销600余元。 嘉宾们由此解析该普惠型商业医疗险的保障责任，包括社保内外费用的分档报销规则、起付线设置及高价值自费材料的报销限制，让你搞清楚城市惠民保险到底值不值得买。 【嘉宾介绍】 Tony 外贸公司从业者 / 跑步爱好者 / 40岁开始为自己而活 Zoe（咨询微信：zoe1509） 靠谱的保险经纪人/深刻践行分散投资 / 跟着乒乓球流浪地球 Mai（咨询微信：mysttuzi） 8年保险经纪人 / 90后百人团队长 / 猫狗双全 / 年金狂热爱好者 雨虹（咨询微信:zsc2dwxh) …",
+    "snippet": {
+      "startMs": 3658000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+  }
+}

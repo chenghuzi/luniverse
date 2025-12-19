@@ -1,0 +1,430 @@
+{
+  "id": "c_4e918d839e93",
+  "podcast": {
+    "id": "p_a908488040a0",
+    "title": "多多指教",
+    "authorName": "杨大壹",
+    "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_741d3e706f6b",
+    "title": "老马：《电影巨辩》是怎样做成的",
+    "link": "https://www.xiaoyuzhoufm.com/episode/68e64bc28e321a0d6f525b75?utm_source=rss",
+    "publishedAt": "2025-10-08T23:00:00.000Z",
+    "durationSeconds": 11584,
+    "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68e64bc28e321a0d6f525b75/media.xyzcdn.net/603ca3853443e659b4ad0486/lgrt4dijgKwz0wSsL-dqBRHxt1tx.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 187532039
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_741d3e706f6b",
+      "title": "老马：《电影巨辩》是怎样做成的",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68e64bc28e321a0d6f525b75?utm_source=rss",
+      "publishedAt": "2025-10-08T23:00:00.000Z",
+      "durationSeconds": 11584,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68e64bc28e321a0d6f525b75/media.xyzcdn.net/603ca3853443e659b4ad0486/lgrt4dijgKwz0wSsL-dqBRHxt1tx.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 187532039
+      }
+    },
+    {
+      "id": "e_6d34a83dbfbd",
+      "title": "梁鸿：我想知道孩子们怎么了",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68d49ac9b4befcf730cdf4d1?utm_source=rss",
+      "publishedAt": "2025-09-25T01:47:41.000Z",
+      "durationSeconds": 6993,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68d49ac9b4befcf730cdf4d1/media.xyzcdn.net/603ca3853443e659b4ad0486/ltSgaGa6YxobeFnSQTdnHciXSCRk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 113216951
+      }
+    },
+    {
+      "id": "e_d0c59024cc07",
+      "title": "周奇墨：悲观中带点乐观，乐观中知道任务很艰巨",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c2a7fda56ca3e0c4e91fad?utm_source=rss",
+      "publishedAt": "2025-09-11T23:30:00.000Z",
+      "durationSeconds": 7742,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68c2a7fda56ca3e0c4e91fad/media.xyzcdn.net/603ca3853443e659b4ad0486/ltc9bpUPw9NZnHoAhrDr0_g8TLCh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 125339251
+      }
+    },
+    {
+      "id": "e_cd286242dc83",
+      "title": "空山：疑似复苏的暑期档、十年电影市场回顾与精确的汉语",
+      "link": "https://www.xiaoyuzhoufm.com/episode/689864c420a2906a4dcd4679?utm_source=rss",
+      "publishedAt": "2025-08-10T23:30:00.000Z",
+      "durationSeconds": 8630,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/689864c420a2906a4dcd4679/media.xyzcdn.net/603ca3853443e659b4ad0486/ltZGrOeN0J-tLaDhKV568zEu2MmZ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 139706631
+      }
+    },
+    {
+      "id": "e_a49092284be7",
+      "title": "七堇年：人要去做看上去毫无回报的事情",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68885a4f8e06fe8de739eef1?utm_source=rss",
+      "publishedAt": "2025-08-03T23:30:00.000Z",
+      "durationSeconds": 10459,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68885a4f8e06fe8de739eef1/media.xyzcdn.net/603ca3853443e659b4ad0486/lhcD1_gAqbSlGJwG6FSMb-rPdFie.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 169318947
+      }
+    },
+    {
+      "id": "e_db42f3c288f2",
+      "title": "发发大王：做一颗顽强的种子，天儿不好，我就等天儿好",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687a12cfa9dec92500f2e8be?utm_source=rss",
+      "publishedAt": "2025-07-20T23:30:00.000Z",
+      "durationSeconds": 12758,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/687a12cfa9dec92500f2e8be/media.xyzcdn.net/603ca3853443e659b4ad0486/lod8MBNnF0Bs-VGwrAXeX8JiMnoN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 206534234
+      }
+    },
+    {
+      "id": "e_fa1aa8ff9279",
+      "title": "库索：如何在异乡重建生活",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6873313360f8f77d40370a84?utm_source=rss",
+      "publishedAt": "2025-07-13T23:30:00.000Z",
+      "durationSeconds": 9520,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6873313360f8f77d40370a84/media.xyzcdn.net/603ca3853443e659b4ad0486/lg86xy4_NJmULaUXbjAs-dHAgZEk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 154124450
+      }
+    },
+    {
+      "id": "e_d18f216b52f3",
+      "title": "蒋方舟×刘雨霖×马寅×余明锋：为什么这个时代如此“情绪密集”？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6861fec1bef90978ec8f9db9?utm_source=rss",
+      "publishedAt": "2025-06-30T03:12:44.000Z",
+      "durationSeconds": 6032,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6861fec1bef90978ec8f9db9/media.xyzcdn.net/603ca3853443e659b4ad0486/lshUJaBl0sxQKtfkLdIR9yFINVMi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 97650494
+      }
+    },
+    {
+      "id": "e_b29d77cff008",
+      "title": "杨一：我不想跟时代拧着干",
+      "link": "https://www.xiaoyuzhoufm.com/episode/682c2f56fcbc2e206bd38245?utm_source=rss",
+      "publishedAt": "2025-05-25T23:30:00.000Z",
+      "durationSeconds": 8234,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/682c2f56fcbc2e206bd38245/media.xyzcdn.net/603ca3853443e659b4ad0486/ltrBqY0kzEkl8ptjeSv3cHVIYJIL.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 133302854
+      }
+    },
+    {
+      "id": "e_4ddf2947101c",
+      "title": "良言：脱口秀，是我自己的解药",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68272340457b22ce0d087a24?utm_source=rss",
+      "publishedAt": "2025-05-18T23:30:00.000Z",
+      "durationSeconds": 8205,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68272340457b22ce0d087a24/media.xyzcdn.net/603ca3853443e659b4ad0486/lnCEG5lLLm9LYVV5iOZRj6B2Pjpp.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 132836594
+      }
+    },
+    {
+      "id": "e_11e27ad2d04f",
+      "title": "猫力：世界越快，我要越慢",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6819ecc8d8d622bb80195d0b?utm_source=rss",
+      "publishedAt": "2025-05-06T23:30:00.000Z",
+      "durationSeconds": 11981,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6819ecc8d8d622bb80195d0b/media.xyzcdn.net/603ca3853443e659b4ad0486/lv5RASV0GnOGTe42i5CauUTKOFO9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 193946999
+      }
+    },
+    {
+      "id": "e_10e6a29677eb",
+      "title": "罗新×杨潇：如何面对击碎的经验，如何重建想象的现场？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/680ae5a98aed253fa360f1b6?utm_source=rss",
+      "publishedAt": "2025-04-25T01:31:39.000Z",
+      "durationSeconds": 5572,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/680ae5a98aed253fa360f1b6/media.xyzcdn.net/603ca3853443e659b4ad0486/lmdSWFbajn0xEzB4n-qPNDxiTfLU.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 90208782
+      }
+    },
+    {
+      "id": "e_6e0b450fa4fc",
+      "title": "重轻：我不愿意再让步什么东西",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67deaa6f78103db3bd2f21b8?utm_source=rss",
+      "publishedAt": "2025-03-23T23:30:00.000Z",
+      "durationSeconds": 7671,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/67deaa6f78103db3bd2f21b8/media.xyzcdn.net/603ca3853443e659b4ad0486/lv6JXLC-p7WyBdrY7E47cZNHGhwo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 124193166
+      }
+    },
+    {
+      "id": "e_d10061a96b47",
+      "title": "东东枪：我的生活有不少困难，但没有困惑",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67b88d1c606e5c5940fe2304?utm_source=rss",
+      "publishedAt": "2025-02-23T23:30:00.000Z",
+      "durationSeconds": 11530,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/67b88d1c606e5c5940fe2304/media.xyzcdn.net/603ca3853443e659b4ad0486/lneBL9cLXy1G1y775-T2mOIawbC4.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 186481836
+      }
+    },
+    {
+      "id": "e_47b5d2564111",
+      "title": "严明：夕阳西下的时候不该赶路",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67b1bc9f606e5c5940c8ad55?utm_source=rss",
+      "publishedAt": "2025-02-16T23:30:00.000Z",
+      "durationSeconds": 3764,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/67b1bc9f606e5c5940c8ad55/media.xyzcdn.net/603ca3853443e659b4ad0486/llu-XC-gY7uDEI8jzMwdzhA3lJZC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 60937683
+      }
+    },
+    {
+      "id": "e_f6ad8e2eb51d",
+      "title": "杨素秋：世上为什么要有图书馆",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6791d61a247d51713cc7a1a5?utm_source=rss",
+      "publishedAt": "2025-01-26T23:30:00.000Z",
+      "durationSeconds": 6799,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6791d61a247d51713cc7a1a5/media.xyzcdn.net/603ca3853443e659b4ad0486/lvsQJxd8FHTXIHj3nzKDoZo1DTsX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 110062593
+      }
+    },
+    {
+      "id": "e_5ae05ebbfc75",
+      "title": "罗丹妮：做一个永远不放弃沟通的人",
+      "link": "https://www.xiaoyuzhoufm.com/episode/677e4d3ccda04ef4c14c5b24?utm_source=rss",
+      "publishedAt": "2025-01-19T23:30:00.000Z",
+      "durationSeconds": 8316,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/677e4d3ccda04ef4c14c5b24/media.xyzcdn.net/603ca3853443e659b4ad0486/lhqgWjkCtvH8TNADuKe3PIgxePiJ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 134630163
+      }
+    },
+    {
+      "id": "e_5843977e4d0e",
+      "title": "朱萧木：寒冬时，长出来的东西都会很健康",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6778a64c1e823e72d315bcd5?utm_source=rss",
+      "publishedAt": "2025-01-12T23:30:00.000Z",
+      "durationSeconds": 6193,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6778a64c1e823e72d315bcd5/media.xyzcdn.net/liELWVuxfFFwIPvO-skO8KPbVCRF.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 100256661
+      }
+    },
+    {
+      "id": "e_d9622825de31",
+      "title": "宋明蔚：那些悲情与荣耀，比山更高",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6778a30515a5fd520ee5d1ab?utm_source=rss",
+      "publishedAt": "2025-01-05T23:30:00.000Z",
+      "durationSeconds": 8882,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6778a30515a5fd520ee5d1ab/media.xyzcdn.net/lnHMAIxilITdP97I4_eXqLFPTKY8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 143782902
+      }
+    },
+    {
+      "id": "e_181b7fb885a5",
+      "title": "颜怡颜悦：我们在每个领域寻找“文学时刻”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/675a80bb84447b1bd04b69c9?utm_source=rss",
+      "publishedAt": "2024-12-15T23:30:00.000Z",
+      "durationSeconds": 6806,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/675a80bb84447b1bd04b69c9/media.xyzcdn.net/lpZsM2HSRtYOe4WiZSKyXu2n2dnZ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 110185781
+      }
+    },
+    {
+      "id": "e_d72e529e3fce",
+      "title": "刘子超：我想写出被遮蔽的、看不见的城市",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6724c091cbe0e69c8b65cab9?utm_source=rss",
+      "publishedAt": "2024-11-03T23:30:00.000Z",
+      "durationSeconds": 6369,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6724c091cbe0e69c8b65cab9/media.xyzcdn.net/lgop4E2RsULujLbVtPUktwJcFmOy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 103107078
+      }
+    },
+    {
+      "id": "e_5a6c7c1da580",
+      "title": "张悦然：不再凝视也是一种解放和自由",
+      "link": "https://www.xiaoyuzhoufm.com/episode/670e4706db2cf82757680668?utm_source=rss",
+      "publishedAt": "2024-10-20T23:30:00.000Z",
+      "durationSeconds": 8582,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/670e4706db2cf82757680668/media.xyzcdn.net/lk0fZ-gtK-4_1QgSaBbE0IJc1RR_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 138926531
+      }
+    },
+    {
+      "id": "e_d2d00b0fd392",
+      "title": "相征：我从来不怀疑自己",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66f6605c81cdab3a9374bcf9?utm_source=rss",
+      "publishedAt": "2024-09-29T23:30:00.000Z",
+      "durationSeconds": 7954,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/66f6605c81cdab3a9374bcf9/media.xyzcdn.net/lnhSqh42XrqmYs6j-bQ8tnwt0_pF.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 128769467
+      }
+    },
+    {
+      "id": "e_e39621b68437",
+      "title": "葛亮×马伯庸：个人本身就是路径",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66f030676920a36bfcdd1d3e?utm_source=rss",
+      "publishedAt": "2024-09-22T23:00:00.000Z",
+      "durationSeconds": 5127,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/66f030676920a36bfcdd1d3e/media.xyzcdn.net/liCSBuGi91ccQh6M22YOsVkqUTau.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83006089
+      }
+    },
+    {
+      "id": "e_95cc86f500d9",
+      "title": "吴越：每个人的生命，都是一场壮丽的写作",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66e3ae2d3a5ff0a0ca1e2a0b?utm_source=rss",
+      "publishedAt": "2024-09-13T03:14:51.000Z",
+      "durationSeconds": 11462,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/66e3ae2d3a5ff0a0ca1e2a0b/media.xyzcdn.net/lrX4rWmJIsB6z_QwvnQ1xHTyJN0f.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 185547951
+      }
+    },
+    {
+      "id": "e_8ad9d1c8ee77",
+      "title": "刘旸教主：喜剧不是征服，是相遇",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66d7db06d1ac091080c1cb19?utm_source=rss",
+      "publishedAt": "2024-09-06T04:00:00.000Z",
+      "durationSeconds": 11450,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/66d7db06d1ac091080c1cb19/media.xyzcdn.net/lol9YKbi9nQHSfYFMhFmQPQ5OxAo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 185358567
+      }
+    },
+    {
+      "id": "e_f35e59cc2f69",
+      "title": "童漠男：成了，也得当没成",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66c9296cead5fc3792050b65?utm_source=rss",
+      "publishedAt": "2024-08-26T00:00:00.000Z",
+      "durationSeconds": 8586,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/66c9296cead5fc3792050b65/media.xyzcdn.net/lr-KHLef1FyPMmyI2WHthFM2Pw9S.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 138993935
+      }
+    },
+    {
+      "id": "e_8657ce9b0415",
+      "title": "史炎：不存在写不出来",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6694755a37236c546e234753?utm_source=rss",
+      "publishedAt": "2024-07-28T23:00:00.000Z",
+      "durationSeconds": 7593,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/6694755a37236c546e234753/media.xyzcdn.net/lgU-mDjjEjpHqGjmaEk1TLw4c7vw.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 122919830
+      }
+    },
+    {
+      "id": "e_b976675c531d",
+      "title": "文森特：做些“异人一等”的事情",
+      "link": "https://www.xiaoyuzhoufm.com/episode/668f90628fcadceb90925443?utm_source=rss",
+      "publishedAt": "2024-07-14T23:00:00.000Z",
+      "durationSeconds": 9885,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/668f90628fcadceb90925443/media.xyzcdn.net/lmBS3mUqQcSsUlaiGXrN-PQ-4Zec.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 160023835
+      }
+    },
+    {
+      "id": "e_c41540cfea3c",
+      "title": "胡辛束：我愿意每天走20公里山路，也不想再走那60米红毯",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66812d98cdd230b23b35c9f7?utm_source=rss",
+      "publishedAt": "2024-06-30T23:00:00.000Z",
+      "durationSeconds": 8457,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/66812d98cdd230b23b35c9f7/media.xyzcdn.net/lrPgawfxtQZMwoP2GgWXAkcBO2KO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 136905279
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_4e918d839e93",
+    "title": "老马：《电影巨辩》是怎样做成的",
+    "text": "嘉宾：老马，播客《电影巨辩》主播 本期节目录制于2025年9月18日。 - 关于个人 1. 最近一次被电影感动是什么时候，看了什么？ 2. 什么时候开始接触电影的？关于电影最初的记忆画面是什么样？ 3. 电影的录像带、vcd、dvd、下载、流媒体时代，你有什么特别的记忆？技术变化给你带来了什么样的新体验？ 4. 你是怎么挑选电影的？ 5. 你会从哪几个方面评价一部电影？如何认定一部电影是杰作？ 6. 现在什么情况下你会去电影院看电影？ - 关于播客 7. 为什么会想到做《电影巨辩》？ 8. 和阿吴的合作模式是怎样的？如何制作一期《电影巨辩》？ 9. 为什么节目要那么长？你们追求的是什么？ 10. 相比文字、论坛，播客这个媒介有什么…",
+    "snippet": {
+      "startMs": 3845000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)"
+  }
+}

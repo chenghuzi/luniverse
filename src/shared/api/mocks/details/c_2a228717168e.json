@@ -1,0 +1,118 @@
+{
+  "id": "c_2a228717168e",
+  "podcast": {
+    "id": "p_337985638195",
+    "title": "爬梯登月",
+    "authorName": "ptdy",
+    "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Science"
+    ]
+  },
+  "episode": {
+    "id": "e_530c6f900341",
+    "title": "神经网络的泛化之谜：一些线索和一点猜想",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6533ad13bfd0868f2b6ed639?utm_source=rss",
+    "publishedAt": "2023-10-21T10:50:59.000Z",
+    "durationSeconds": 3221,
+    "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6533ad13bfd0868f2b6ed639/media.xyzcdn.net/lnYYDaFdMqaVbW4bDGNMwSrbjGGl.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 52144170
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_530c6f900341",
+      "title": "神经网络的泛化之谜：一些线索和一点猜想",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6533ad13bfd0868f2b6ed639?utm_source=rss",
+      "publishedAt": "2023-10-21T10:50:59.000Z",
+      "durationSeconds": 3221,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6533ad13bfd0868f2b6ed639/media.xyzcdn.net/lnYYDaFdMqaVbW4bDGNMwSrbjGGl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 52144170
+      }
+    },
+    {
+      "id": "e_ac82184e486d",
+      "title": "ChatGPT 不能做什么：注意力运算的本质和上限 & 超然于分布之外的权力关系",
+      "link": "https://www.xiaoyuzhoufm.com/episode/64a0eb8dec448b75fd8f58bf?utm_source=rss",
+      "publishedAt": "2023-07-02T03:14:21.000Z",
+      "durationSeconds": 4747,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/64a0eb8dec448b75fd8f58bf/media.xyzcdn.net/ljmHLjyVvMCkwZ1TbI2oLZphkr8q.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 76859864
+      }
+    },
+    {
+      "id": "e_562a0681b11f",
+      "title": "#Special 和GPT4的对谈：我们如何看待集体内疚和歧视",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6476a25153a5e5ea1483b5fa?utm_source=rss",
+      "publishedAt": "2023-05-31T01:26:41.000Z",
+      "durationSeconds": 1843,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6476a25153a5e5ea1483b5fa/media.xyzcdn.net/lhH_DFvDpiTmiTK2WBDobrXlAMPA.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 29840912
+      }
+    },
+    {
+      "id": "e_66fecb32e6ec",
+      "title": "ChatGPT 能做什么：不完美的分布内推理",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6456e9f17d934b8505cbafef?utm_source=rss",
+      "publishedAt": "2023-05-06T23:59:45.000Z",
+      "durationSeconds": 5056,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6456e9f17d934b8505cbafef/media.xyzcdn.net/lnMP5nnxJ4FEFDVZ38r_rWi_e2D4.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 81859021
+      }
+    },
+    {
+      "id": "e_02fec2517d68",
+      "title": "成为 Chat GPT 是什么感觉：一个编解码的隐喻",
+      "link": "https://www.xiaoyuzhoufm.com/episode/641f8819179eec5331552ec0?utm_source=rss",
+      "publishedAt": "2023-03-25T23:47:37.000Z",
+      "durationSeconds": 3664,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/641f8819179eec5331552ec0/media.xyzcdn.net/lkdQhtLrLprMy2XqabKs41jKgXmO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 59319144
+      }
+    },
+    {
+      "id": "e_6c345f85f59b",
+      "title": "爬梯登月：GPT4大语言模型会产生智能吗",
+      "link": "https://www.xiaoyuzhoufm.com/episode/641641d78aca9099d7b4a5e3?utm_source=rss",
+      "publishedAt": "2023-03-18T22:57:26.000Z",
+      "durationSeconds": 6147,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/641641d78aca9099d7b4a5e3/media.xyzcdn.net/ljTvyDKCS575GL_m98N95dGqI_DY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 148611803
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_2a228717168e",
+    "title": "神经网络的泛化之谜：一些线索和一点猜想",
+    "text": "好久没录，这次我们尝试讨论了一只深度学习房间里的大象：为什么海量参数的模型在测试集上的泛化性能依然很好，而且这种趋势并不会随着参数量增加而变化？ 下面是本期内容简介： 开场 什么是神经网络的泛化之谜？ 一些线索 三层网络的拟合能力 &amp; ReLU 网络与其的等价性 Lottery ticket hypothesis Double descent 双重下降 Linear Mode connectivity 胡乱猜想：解空间的密度决定了求解的容易程度 神经网络里的几种对称性：scaling, permutation和其他 结语 Kolmogorov Complexity, ensemble method, OpenAI首席科学家…",
+    "snippet": {
+      "startMs": 2405000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+  }
+}

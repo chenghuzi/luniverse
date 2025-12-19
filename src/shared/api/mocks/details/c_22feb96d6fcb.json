@@ -1,0 +1,391 @@
+{
+  "id": "c_22feb96d6fcb",
+  "podcast": {
+    "id": "p_bd6e9a9c8653",
+    "title": "半身在菸斗",
+    "authorName": "万俟休",
+    "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_fb272412fc2c",
+    "title": "烟斗好玩不妨碍中国手工烟斗业腐朽落后：2025年度总结",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6913407c21e6d1bd34033188?utm_source=rss",
+    "publishedAt": "2025-11-27T16:00:00.000Z",
+    "durationSeconds": 1583,
+    "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6913407c21e6d1bd34033188/media.xyzcdn.net/666e555192fcb654eac8c734/ltSXx55BUb6tnJp_BFbkI7GMJmbq.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 50942306
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_fb272412fc2c",
+      "title": "烟斗好玩不妨碍中国手工烟斗业腐朽落后：2025年度总结",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6913407c21e6d1bd34033188?utm_source=rss",
+      "publishedAt": "2025-11-27T16:00:00.000Z",
+      "durationSeconds": 1583,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6913407c21e6d1bd34033188/media.xyzcdn.net/666e555192fcb654eac8c734/ltSXx55BUb6tnJp_BFbkI7GMJmbq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 50942306
+      }
+    },
+    {
+      "id": "e_db92532f365b",
+      "title": "2025上海国际烟斗展：为何有人颗粒无收，有人一斗难求？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68bc55375faf3686595ac95e?utm_source=rss",
+      "publishedAt": "2025-09-15T13:00:00.000Z",
+      "durationSeconds": 2195,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/68bc55375faf3686595ac95e/media.xyzcdn.net/666e555192fcb654eac8c734/lnNYhCu_6AJh0iF1hY-W9S-Ql0jU.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 70632149
+      }
+    },
+    {
+      "id": "e_17d6724bd772",
+      "title": "手工烟斗互联网营销：冷启动用什么APP？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6869f2f960f8f77d400c9418?utm_source=rss",
+      "publishedAt": "2025-07-18T11:30:00.000Z",
+      "durationSeconds": 2163,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6869f2f960f8f77d400c9418/media.xyzcdn.net/666e555192fcb654eac8c734/ljXS68xW7eCrDnxrMPw4AzEn2YBY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 69609713
+      }
+    },
+    {
+      "id": "e_372cb0419fab",
+      "title": "手工烟斗圣展企划：2025美国芝加哥斗展巡游",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6834157538dcc57c64fdc6e6?utm_source=rss",
+      "publishedAt": "2025-05-30T11:30:00.000Z",
+      "durationSeconds": 2047,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6834157538dcc57c64fdc6e6/media.xyzcdn.net/666e555192fcb654eac8c734/liekCmbgJiTUGgMXuIxd7HEPwXkg.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 65860770
+      }
+    },
+    {
+      "id": "e_2ec3e0515b83",
+      "title": "手工烟斗圣展企划：八种人别去芝加哥斗展",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6829a1b3fcbc2e206b7b9ec6?utm_source=rss",
+      "publishedAt": "2025-05-18T09:09:22.000Z",
+      "durationSeconds": 1593,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6829a1b3fcbc2e206b7b9ec6/media.xyzcdn.net/666e555192fcb654eac8c734/llOj6PdQSQ7dEmtfK16fItCyMjNV.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 51279269
+      }
+    },
+    {
+      "id": "e_bb3cdfa1dcdf",
+      "title": "手工烟斗圣展企划：2025美国芝加哥斗展看点先导",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67f69969623bc78c399a3c9c?utm_source=rss",
+      "publishedAt": "2025-04-11T12:30:00.000Z",
+      "durationSeconds": 1351,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/67f69969623bc78c399a3c9c/media.xyzcdn.net/666e555192fcb654eac8c734/lnAa7zgoXYFUihvKUpgAW-7H7c3m.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 43495798
+      }
+    },
+    {
+      "id": "e_8eeeb45d0047",
+      "title": "手工烟斗销售应具有人文关怀，回归体验本质",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67caf0cb0766616acd560d99?utm_source=rss",
+      "publishedAt": "2025-03-14T11:30:00.000Z",
+      "durationSeconds": 1587,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/67caf0cb0766616acd560d99/media.xyzcdn.net/666e555192fcb654eac8c734/lgPu6OHWIzde7W2d69ByjgZiiUxy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 51064121
+      }
+    },
+    {
+      "id": "e_139812951b35",
+      "title": "手工烟斗是个怎样的行业：产、销、用场景商业观察",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67b5857b05a90dfd0d793ec7?utm_source=rss",
+      "publishedAt": "2025-02-21T11:30:00.000Z",
+      "durationSeconds": 2417,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/67b5857b05a90dfd0d793ec7/media.xyzcdn.net/666e555192fcb654eac8c734/lkTNcPsx2EPs5sHxzwsscIbRTq9G.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 77790996
+      }
+    },
+    {
+      "id": "e_f92eb011263c",
+      "title": "开年炮 | 手工烟斗这个老登行业，女性从业者身在何处，该如何自处？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67965161d74435e4a3ecea5e?utm_source=rss",
+      "publishedAt": "2025-01-28T17:30:00.000Z",
+      "durationSeconds": 988,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/67965161d74435e4a3ecea5e/media.xyzcdn.net/666e555192fcb654eac8c734/lgOW6-s1j_3DZSNrNl0dZDaeUMwG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31812071
+      }
+    },
+    {
+      "id": "e_ef480a218459",
+      "title": "「Pipe Tobacco」美国VB斗草Briar Fox石楠狐狸品吸",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67763a461e823e72d3a2a90b?utm_source=rss",
+      "publishedAt": "2025-01-02T12:00:00.000Z",
+      "durationSeconds": 787,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/67763a461e823e72d3a2a90b/media.xyzcdn.net/lu3sZava9voYT7uU7KjSuzn4Wzn4.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 25350164
+      }
+    },
+    {
+      "id": "e_bf80b2debff1",
+      "title": "馋鬼流水账 | 东京浅草、群马前桥、草津温泉、伊香保温泉吃吃喝喝，日元账单公布！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6766bce51e823e72d3a11a67?utm_source=rss",
+      "publishedAt": "2024-12-21T13:10:54.000Z",
+      "durationSeconds": 2433,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6766bce51e823e72d3a11a67/media.xyzcdn.net/liV9Yj7EpIevJVf0De_oquH3JdCt.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 78291491
+      }
+    },
+    {
+      "id": "e_65a93feee76b",
+      "title": "「Pipe Show」2024日本烟斗俱乐部会议：全日烟斗慢吸比赛暨烟具展巡游",
+      "link": "https://www.xiaoyuzhoufm.com/episode/675d72e77d8426f692100aa4?utm_source=rss",
+      "publishedAt": "2024-12-17T12:00:00.000Z",
+      "durationSeconds": 3121,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/675d72e77d8426f692100aa4/media.xyzcdn.net/luKO0Jcv794yhEEXS6XlsAIiWodM.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 100412881
+      }
+    },
+    {
+      "id": "e_dae1793e93f6",
+      "title": "「Pipe Show」2024日本烟斗俱乐部会议：全日烟斗慢吸比赛暨烟具展 | 斗圈彩蛋：猜猜是谁冒充德富的徒弟？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/675c521084447b1bd0b327c9?utm_source=rss",
+      "publishedAt": "2024-12-13T15:43:33.000Z",
+      "durationSeconds": 2032,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/675c521084447b1bd0b327c9/media.xyzcdn.net/linatNCsoBWXn35w-j_SDdmXbaWd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 65406547
+      }
+    },
+    {
+      "id": "e_c2293d8be4f4",
+      "title": "战平烟斗 | 国际知名手工斗师如何挑竹子？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/673a0738f373fe5d4d01eb0b?utm_source=rss",
+      "publishedAt": "2024-12-01T12:30:00.000Z",
+      "durationSeconds": 267,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/673a0738f373fe5d4d01eb0b/media.xyzcdn.net/lopheKtKLwravjIsgnFeN8ZSoOFN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 8623159
+      }
+    },
+    {
+      "id": "e_c5f263c0a43b",
+      "title": "斗后时光 | 对谈烟斗大博主泰勒：咖啡馆里的妙趣花絮",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6739e6a6f373fe5d4df933eb?utm_source=rss",
+      "publishedAt": "2024-11-29T12:30:00.000Z",
+      "durationSeconds": 2993,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6739e6a6f373fe5d4df933eb/media.xyzcdn.net/luU3hAr8FPWPw6K4cZK9f6ZeGFVl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 96319841
+      }
+    },
+    {
+      "id": "e_760f8b308629",
+      "title": "斗前时光 | 新入坑斗客选斗时应该重视哪些信息？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6739fd8743dc3a438755266c?utm_source=rss",
+      "publishedAt": "2024-11-26T12:30:00.000Z",
+      "durationSeconds": 1253,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6739fd8743dc3a438755266c/media.xyzcdn.net/ljHFZwTNmYvebaEJWwoHX2biC58C.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 40314896
+      }
+    },
+    {
+      "id": "e_417e898f4ab2",
+      "title": "烟斗生意经 | 对谈烟斗大博主泰勒：斗客变斗主，斗主变斗商，烟斗经营困境与拓展",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6739af6143dc3a438743656c?utm_source=rss",
+      "publishedAt": "2024-11-22T12:30:00.000Z",
+      "durationSeconds": 3105,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6739af6143dc3a438743656c/media.xyzcdn.net/luoJCF7tuS8butB_KS-S2SPRtp6P.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 99901903
+      }
+    },
+    {
+      "id": "e_9086beae33b5",
+      "title": "「Pipe Tobacco」德国VLP斗草ASHTON Artisan's Blend阿什顿工匠品吸",
+      "link": "https://www.xiaoyuzhoufm.com/episode/672e376bf373fe5d4dca7df1?utm_source=rss",
+      "publishedAt": "2024-11-16T12:30:00.000Z",
+      "durationSeconds": 364,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/672e376bf373fe5d4dca7df1/media.xyzcdn.net/ljNR2IKxmkZpQow8e0dIFx1KX3B7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 11740563
+      }
+    },
+    {
+      "id": "e_2d66aaced9bd",
+      "title": "馋鬼流水账 | 拉斯维加斯和圣迭戈吃吃喝喝，美元账单公布！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6729ec6db2eb246ec4d879ac?utm_source=rss",
+      "publishedAt": "2024-11-08T12:00:00.000Z",
+      "durationSeconds": 4731,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/6729ec6db2eb246ec4d879ac/media.xyzcdn.net/lrfsNZ3247mkqUiZ9BiCTodEei2E.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 152238129
+      }
+    },
+    {
+      "id": "e_e6405027d87c",
+      "title": "「Pipe Tobacco」德国VBP斗草Nashville County纳什维尔郡品吸",
+      "link": "https://www.xiaoyuzhoufm.com/episode/672a0fd76c53cd405a239360?utm_source=rss",
+      "publishedAt": "2024-11-05T13:17:24.000Z",
+      "durationSeconds": 281,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/672a0fd76c53cd405a239360/media.xyzcdn.net/ll2765mYUO939FOkwozBuLK-G4mg.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 9048971
+      }
+    },
+    {
+      "id": "e_682ec0b50186",
+      "title": "「Pipe Show」2024美国拉斯维加斯烟斗展：全球烟斗业女性之光&拉斯维加斯斗展巡游",
+      "link": "https://www.xiaoyuzhoufm.com/episode/671ee6b144ae79002c817b11?utm_source=rss",
+      "publishedAt": "2024-10-31T12:00:00.000Z",
+      "durationSeconds": 7266,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/671ee6b144ae79002c817b11/media.xyzcdn.net/lsj32MaM14OIcii20DF1k6_soGhu.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 233779213
+      }
+    },
+    {
+      "id": "e_157960ea1a15",
+      "title": "「Pipe Show」2024美国拉斯维加斯烟斗展：斗客休闲采购，斗师舒适社交",
+      "link": "https://www.xiaoyuzhoufm.com/episode/671def60eb46cd665509c6f3?utm_source=rss",
+      "publishedAt": "2024-10-27T12:00:00.000Z",
+      "durationSeconds": 4395,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/671def60eb46cd665509c6f3/media.xyzcdn.net/luvozuRTWCyeruoAEzQFmis1pYJK.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 141418007
+      }
+    },
+    {
+      "id": "e_f362c6c72913",
+      "title": "「Pipe Show」承德烟斗展非办不可？一年不如一年的三年对比",
+      "link": "https://www.xiaoyuzhoufm.com/episode/670264b181cdab3a930d52f1?utm_source=rss",
+      "publishedAt": "2024-10-10T09:00:00.000Z",
+      "durationSeconds": 2009,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/670264b181cdab3a930d52f1/media.xyzcdn.net/lvMDOpQxUV64cqwrCDqLew_gddDY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 64657986
+      }
+    },
+    {
+      "id": "e_a3257b930ca9",
+      "title": "被丹麦拒签后勇签美国，白本拿美签！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/670524f56c7f817786902cb1?utm_source=rss",
+      "publishedAt": "2024-10-08T12:26:28.000Z",
+      "durationSeconds": 1875,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/670524f56c7f817786902cb1/media.xyzcdn.net/lvvaRM3zaYECZCZ9qk_iq6sg0Bwv.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 60355775
+      }
+    },
+    {
+      "id": "e_26190576cad2",
+      "title": "「Pipe Show」2024承德烟斗展巡游",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66f81cae81cdab3a93bbf10b?utm_source=rss",
+      "publishedAt": "2024-09-28T15:11:41.000Z",
+      "durationSeconds": 3239,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/66f81cae81cdab3a93bbf10b/media.xyzcdn.net/lqQKFddXZuNLwOhujdV9q0fVZWfP.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 104223537
+      }
+    },
+    {
+      "id": "e_4e4f324bf23c",
+      "title": "「Pipe Show」2024承德烟斗展，崔世凯回归制斗，醉烟斗找到销售方向",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66f2dc742adfe48b832c24e3?utm_source=rss",
+      "publishedAt": "2024-09-24T15:36:19.000Z",
+      "durationSeconds": 1702,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/66f2dc742adfe48b832c24e3/media.xyzcdn.net/linxi2UrIiEBd5Zq7K1mKsEyVJUf.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 54785084
+      }
+    },
+    {
+      "id": "e_f8dfdfd814e3",
+      "title": "「Pipe Show」2024上海烟斗展，第一届即是全球最佳？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66db361fbfd7110df4cc4ed5?utm_source=rss",
+      "publishedAt": "2024-09-06T17:04:30.000Z",
+      "durationSeconds": 1478,
+      "imageUrl": "https://image.xyzcdn.net/lr7N_6lkOj2kwIjj8FOmMCbo9VgO.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/666e555192fcb654eac8c734/66db361fbfd7110df4cc4ed5/media.xyzcdn.net/loztnj4y1EU63GcwURm7JARQrJx7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 47584356
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_22feb96d6fcb",
+    "title": "烟斗好玩不妨碍中国手工烟斗业腐朽落后：2025年度总结",
+    "text": "本期内容录制于2025年11月11日 ///Show Notes 首次尝试对手工烟斗业进行年度总结和价值评价，希望能每年做下去，更希望每年看到行业发展。 ///Timeline 00:04 第二届上海烟斗展成功举办改变了烟斗营销布局 - 南北方主力经销商变化 - 承德斗展和北京云雾空间 - 沈阳云鹤烟都 - 上海斗展和烟波致爽阁 03:37 &nbsp;为什么烟斗展叫Pipe Show而不是Pipe Exhibition - 从烟斗品类和价值属性分析 - 从烟斗购买需求和渠道分析 - 从烟斗市场占比分析 - 从烟斗展历史特征沿革分析 10:35 烟斗俱乐部的野心和格局成反比 11:38 中国烟斗业的落后源于从业者思维意识的腐朽僵化…",
+    "snippet": {
+      "startMs": 310000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "id": "c_4519164ba984",
+  "podcast": {
+    "id": "p_bad7fab5d82e",
+    "title": "忽左忽右",
+    "authorName": "JustPod",
+    "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_d783ae373db1",
+    "title": "特番｜从齐柏林飞艇到迈巴赫后座：漫谈德式豪车百年技术史",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6943c29f52d4707aaa3d873d?utm_source=rss",
+    "publishedAt": "2025-12-18T09:10:46.000Z",
+    "durationSeconds": 3855,
+    "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6943c29f52d4707aaa3d873d/media.xyzcdn.net/5e4ee557418a84a0466737b7/lkNIlEmofgkZWjxBY8-c5PvhHYX2.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 62348968
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_d783ae373db1",
+      "title": "特番｜从齐柏林飞艇到迈巴赫后座：漫谈德式豪车百年技术史",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6943c29f52d4707aaa3d873d?utm_source=rss",
+      "publishedAt": "2025-12-18T09:10:46.000Z",
+      "durationSeconds": 3855,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6943c29f52d4707aaa3d873d/media.xyzcdn.net/5e4ee557418a84a0466737b7/lkNIlEmofgkZWjxBY8-c5PvhHYX2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 62348968
+      }
+    },
+    {
+      "id": "e_94f0410dc80d",
+      "title": "449 美国媒体续命2025：Netflix、派拉蒙世纪大竞购华纳",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69412a834c65abaff345a953?utm_source=rss",
+      "publishedAt": "2025-12-16T10:02:36.000Z",
+      "durationSeconds": 4150,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/69412a834c65abaff345a953/media.xyzcdn.net/5e4ee557418a84a0466737b7/lqTsSOXG5fULuDtb0kHmk1xcgBd7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 67123848
+      }
+    },
+    {
+      "id": "e_ffb97bf93793",
+      "title": "中统局往事02｜1931年国共情报战：徐恩曾、顾顺章与上海生死斗",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693bdb8b37f52a644e92ac5e?utm_source=rss",
+      "publishedAt": "2025-12-12T09:36:07.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/693bdb8b37f52a644e92ac5e/media.xyzcdn.net/FunEW3OQuRE1qObc_494vCCkOk9I.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912851
+      }
+    },
+    {
+      "id": "e_345b292ba6aa",
+      "title": "448 「扇耳光比赛」之外的通背拳：抗战时代的北平武林与国术往事",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6937ec0f3fec3166cf17cf15?utm_source=rss",
+      "publishedAt": "2025-12-09T09:41:39.000Z",
+      "durationSeconds": 4319,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6937ec0f3fec3166cf17cf15/media.xyzcdn.net/5e4ee557418a84a0466737b7/lj44W6woxs0ecgIWhqvr8BPfXnCi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 69863896
+      }
+    },
+    {
+      "id": "e_962f4d7f6766",
+      "title": "中统局往事01｜蒋家天下陈家党：陈立夫、CC系与情报王国的诞生",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6932a5893fec3166cf6f7d1c?utm_source=rss",
+      "publishedAt": "2025-12-05T09:42:05.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6932a5893fec3166cf6f7d1c/media.xyzcdn.net/FkjVaHYRlPY8iKEA-JGc-dlN8Ezt.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912834
+      }
+    },
+    {
+      "id": "e_215b4558e676",
+      "title": "447 高林谈魏玛德国的消亡：帝国顽疾、金融危机与摩登民粹的上台",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692eb23e3fec3166cfdacd01?utm_source=rss",
+      "publishedAt": "2025-12-02T09:59:05.000Z",
+      "durationSeconds": 5696,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/692eb23e3fec3166cfdacd01/media.xyzcdn.net/5e4ee557418a84a0466737b7/lrXPDE5Q1IMWUInJyYrH2N7izanP.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 92123505
+      }
+    },
+    {
+      "id": "e_6db6aeedb83d",
+      "title": "电视大战06｜回看草莽时代：从卫视合作大探索到外媒集体退潮",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69298acd0d5237d4def09270?utm_source=rss",
+      "publishedAt": "2025-11-28T12:07:33.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/69298acd0d5237d4def09270/media.xyzcdn.net/FnhTlcl2sBGYXSqNSXiMmoFmIMdu.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912957
+      }
+    },
+    {
+      "id": "e_b1332be95941",
+      "title": "午后偏见043｜当博物馆开始说话：薛茗谈展品背后的文化、权力与记忆",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69255ff5f8a9e1d16253e66a?utm_source=rss",
+      "publishedAt": "2025-11-25T08:31:52.000Z",
+      "durationSeconds": 4399,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/69255ff5f8a9e1d16253e66a/media.xyzcdn.net/5e4ee557418a84a0466737b7/llFjk42g7ENvw286I4xc17ZEmrl7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 71151668
+      }
+    },
+    {
+      "id": "e_9395834fb1b5",
+      "title": "446 苏伊士运河开凿史：法老、军阀与大实业家的埃及梦",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6920360b6018cc2c98f09404?utm_source=rss",
+      "publishedAt": "2025-11-21T10:01:04.000Z",
+      "durationSeconds": 4035,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6920360b6018cc2c98f09404/media.xyzcdn.net/5e4ee557418a84a0466737b7/lt37kioWF2DWPLgQSaZq3T6bC8xB.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 65273218
+      }
+    },
+    {
+      "id": "e_1c5c302ff931",
+      "title": "午后偏见042｜民主与革命，罗莎·卢森堡的世纪之辩",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691c320fcbba038b421e8969?utm_source=rss",
+      "publishedAt": "2025-11-18T08:55:58.000Z",
+      "durationSeconds": 5641,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/691c320fcbba038b421e8969/media.xyzcdn.net/5e4ee557418a84a0466737b7/lhnKROo3iEwVtnUbJF_CmeGrDNqT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 91237495
+      }
+    },
+    {
+      "id": "e_7514861f395f",
+      "title": "电视大战05｜后冷战时代新闻入华史：泰德·特纳、CNN与央视的深度合作",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6916fb4f6018cc2c98d4f8a0?utm_source=rss",
+      "publishedAt": "2025-11-14T11:43:00.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6916fb4f6018cc2c98d4f8a0/media.xyzcdn.net/FjR9J4RH7ZeinEUbhvKIMY7XRorV.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912890
+      }
+    },
+    {
+      "id": "e_408ecb533954",
+      "title": "445 日本将军、朝鲜太宗与大明永乐帝：康昊谈东亚三狠人的蜜月时代",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6912fd88e17fb06c42772d62?utm_source=rss",
+      "publishedAt": "2025-11-11T09:23:14.000Z",
+      "durationSeconds": 4549,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6912fd88e17fb06c42772d62/media.xyzcdn.net/5e4ee557418a84a0466737b7/lqsc8nu1qVeCrARijuOorI-9B8eR.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 73580571
+      }
+    },
+    {
+      "id": "e_0b7e8fdc09cf",
+      "title": "电视大战04｜台湾电视演义：从邵逸夫、邱复生到综艺与名嘴时代",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690dbf2fd99642be96ece34e?utm_source=rss",
+      "publishedAt": "2025-11-07T09:59:28.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/690dbf2fd99642be96ece34e/media.xyzcdn.net/Fqo5nIGwTo1qGnkJLS5yOQGX0yos.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2913028
+      }
+    },
+    {
+      "id": "e_a413c11cdce6",
+      "title": "444 古琴家与间谍：近代琴坛第一人查阜西如何策动「两航起义」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6909c109916b26deb691bf11?utm_source=rss",
+      "publishedAt": "2025-11-04T09:43:50.000Z",
+      "durationSeconds": 5275,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6909c109916b26deb691bf11/media.xyzcdn.net/5e4ee557418a84a0466737b7/ljy3FvvViwn7uflqpMpTEpaIQ2QM.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 85321505
+      }
+    },
+    {
+      "id": "e_a8faeb364c8d",
+      "title": "电视大战03｜金庸·明报·于品海：港岛大亨的大中华传媒梦",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69048d6848dbe0eb56c9088b?utm_source=rss",
+      "publishedAt": "2025-10-31T11:38:34.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/69048d6848dbe0eb56c9088b/media.xyzcdn.net/FjqLo8F6syxitA9eV0G0aj6mOypa.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912853
+      }
+    },
+    {
+      "id": "e_7072fb9b670c",
+      "title": "443 血色婆罗洲：从兰芳公司到冷战中的印尼华人游击队",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690086f0740634ca47669a46?utm_source=rss",
+      "publishedAt": "2025-10-28T09:30:35.000Z",
+      "durationSeconds": 5243,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/690086f0740634ca47669a46/media.xyzcdn.net/5e4ee557418a84a0466737b7/lg0XDLPmjTw6KaxCOz5QZ2J7P2TW.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 84795958
+      }
+    },
+    {
+      "id": "e_0f1942cf216b",
+      "title": "电视大战02｜《正大综艺》的跨海雄心：台北、曼谷与北京如何联手缔造一代国民节目",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68fb57530156720321df2ca6?utm_source=rss",
+      "publishedAt": "2025-10-24T11:02:50.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68fb57530156720321df2ca6/media.xyzcdn.net/Fs_QCVulvyQHW26YyosJWpvABhN-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912839
+      }
+    },
+    {
+      "id": "e_90d991e478c7",
+      "title": "442 渡海劫波：吴石、蔡孝乾与白色恐怖下的台海谍战",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f775d822654730209042f9?utm_source=rss",
+      "publishedAt": "2025-10-21T12:06:56.000Z",
+      "durationSeconds": 4677,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68f775d822654730209042f9/media.xyzcdn.net/5e4ee557418a84a0466737b7/lo0s5NY82otFkTzoUWvRvgmYbFJy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 75643622
+      }
+    },
+    {
+      "id": "e_2b7e090e299e",
+      "title": "电视大战01｜卫星上天，凤凰落地：默多克与刘长乐的华语媒体大冒险",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f212f4456ffec65e412213?utm_source=rss",
+      "publishedAt": "2025-10-17T10:21:02.000Z",
+      "durationSeconds": 180,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68f212f4456ffec65e412213/media.xyzcdn.net/FlqOSAEjVh3pXBAsQKU4G958KY4W.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 2912883
+      }
+    },
+    {
+      "id": "e_44dc3ab69d16",
+      "title": "午后偏见041｜与崔凯漫谈全球粮食地理与现代谷物贸易",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68edfce3224325ea702b9085?utm_source=rss",
+      "publishedAt": "2025-10-14T07:50:20.000Z",
+      "durationSeconds": 4956,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68edfce3224325ea702b9085/media.xyzcdn.net/5e4ee557418a84a0466737b7/lmLMB0tabWyALoAFSkUFWaf6iQUz.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 80158554
+      }
+    },
+    {
+      "id": "e_eb2ec279cc9c",
+      "title": "441 钛星来客：从苏联金星探测器谈冷战中的材料竞技",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68e8ca03224325ea7084ecd7?utm_source=rss",
+      "publishedAt": "2025-10-10T09:06:37.000Z",
+      "durationSeconds": 5087,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68e8ca03224325ea7084ecd7/media.xyzcdn.net/5e4ee557418a84a0466737b7/lkrQmRlIgZ3XD9mL-_WJtwjNQTX2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 82283178
+      }
+    },
+    {
+      "id": "e_3c802c0f9760",
+      "title": "440 邓南遮占领阜姆自由邦：意大利诗人的武装冒险与法西斯的先声",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68e4cdc98e321a0d6f2dc637?utm_source=rss",
+      "publishedAt": "2025-10-07T08:30:54.000Z",
+      "durationSeconds": 4206,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68e4cdc98e321a0d6f2dc637/media.xyzcdn.net/5e4ee557418a84a0466737b7/lpe-zd2gbccyICHvV9QeTQT4O2xb.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 68029274
+      }
+    },
+    {
+      "id": "e_45266a2e2c21",
+      "title": "439 卧榻之侧：张明扬谈五代十国的最后时刻",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68db9718ae9d1455fbb25812?utm_source=rss",
+      "publishedAt": "2025-09-30T08:54:33.000Z",
+      "durationSeconds": 3775,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68db9718ae9d1455fbb25812/media.xyzcdn.net/5e4ee557418a84a0466737b7/llSTuWQz-KMELxUr8F5EXtn7QOG8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61059044
+      }
+    },
+    {
+      "id": "e_9230cc0611ba",
+      "title": "438 前门·碑林·董家渡：袁凌谈二十年来拆迁报道往事",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68d65d4bb4befcf7300b7c4b?utm_source=rss",
+      "publishedAt": "2025-09-26T10:16:32.000Z",
+      "durationSeconds": 3761,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68d65d4bb4befcf7300b7c4b/media.xyzcdn.net/5e4ee557418a84a0466737b7/lsMd-u0cm7gBK9ckRggk7CK-CGBF.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 60836070
+      }
+    },
+    {
+      "id": "e_eab9ba758cd0",
+      "title": "437 吐蕃王朝千年史：从唐蕃争霸到古格王国的黄昏",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68d26822b4befcf7308b01eb?utm_source=rss",
+      "publishedAt": "2025-09-23T09:58:54.000Z",
+      "durationSeconds": 4683,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68d26822b4befcf7308b01eb/media.xyzcdn.net/5e4ee557418a84a0466737b7/lmDdBJthUS-1yAav6O0pI8flaORw.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 75746902
+      }
+    },
+    {
+      "id": "e_33552dc9d250",
+      "title": "午后偏见040｜网红保守主义、社交媒体与美国极化政治",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68cd06e2a56ca3e0c43ad2b0?utm_source=rss",
+      "publishedAt": "2025-09-19T07:46:24.000Z",
+      "durationSeconds": 3714,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68cd06e2a56ca3e0c43ad2b0/media.xyzcdn.net/5e4ee557418a84a0466737b7/lnl13pN23U45kjqB7SeeCTltwMd9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 60073346
+      }
+    },
+    {
+      "id": "e_f69cb7aeefbe",
+      "title": "436 市井·扫街·寻味：与项栋梁漫谈南粤饮食与科普写作",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c92f42a56ca3e0c4b4acfa?utm_source=rss",
+      "publishedAt": "2025-09-16T09:48:11.000Z",
+      "durationSeconds": 5184,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68c92f42a56ca3e0c4b4acfa/media.xyzcdn.net/5e4ee557418a84a0466737b7/lhdgS9RoI-z_0QFnio-k_J6MR2LS.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83853280
+      }
+    },
+    {
+      "id": "e_044d57997874",
+      "title": "435 格陵兰开拓史：从维京海盗、气象战争到当代美国的购岛奇想",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c3e8ba2c82c9dcca0635f5?utm_source=rss",
+      "publishedAt": "2025-09-12T09:53:01.000Z",
+      "durationSeconds": 4538,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68c3e8ba2c82c9dcca0635f5/media.xyzcdn.net/5e4ee557418a84a0466737b7/lrB3vrfs4Z0yPop_-S7qJN6tP_8V.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 73393443
+      }
+    },
+    {
+      "id": "e_5c974a941fd9",
+      "title": "434 茶神、嬉皮士与梦隐士：与英国作家艾礼凯漫谈「大理福尼亚」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68bfee3b2c82c9dcca7f6821?utm_source=rss",
+      "publishedAt": "2025-09-09T09:22:32.000Z",
+      "durationSeconds": 2764,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68bfee3b2c82c9dcca7f6821/media.xyzcdn.net/5e4ee557418a84a0466737b7/lue5HjB8j5ipNtkYY1um0hN9MrmZ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 44711576
+      }
+    },
+    {
+      "id": "e_377b91c589d5",
+      "title": "433 再造武德：霍元甲、旅沪广东人与精武体育会的兴起",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68baa0105faf3686592b85a8?utm_source=rss",
+      "publishedAt": "2025-09-05T08:46:43.000Z",
+      "durationSeconds": 3678,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/68baa0105faf3686592b85a8/media.xyzcdn.net/5e4ee557418a84a0466737b7/lusu6slogsmJ5zJ6-6NG2WMRmisY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 59489474
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_4519164ba984",
+    "title": "特番｜从齐柏林飞艇到迈巴赫后座：漫谈德式豪车百年技术史",
+    "text": "本期节目是由迈巴赫特别支持的《邂逅百年至臻传奇》企划系列节目之一。本次企划从文化、历史、工艺、设计美学等维度，讲述属于迈巴赫的百年传奇篇章，欢迎大家前往 《邂逅百年至臻传奇》 收听更多内容。 - 导语 - 回顾世界汽车工业的历史，德国汽车工业是绕不开的篇章。而这段历史，也是时代变迁与严谨工艺、深厚技术传承深刻互动的历史，汽车品牌迈巴赫的历史便是这种互动中最生动的体现。这段传奇，要从天才工程师威廉·迈巴赫说起，他与戴姆勒的世纪合作，如何点燃了汽车工业的星火？从齐柏林飞艇到定义豪华轿车的私密后座，迈巴赫凝练着怎样的技术传承与商业浮沉？在发动机与车身之外，迈巴赫还实现了哪些跨界技术输出？当二十世纪下半叶大规模生产兴起，顶尖技术又将如何传…",
+    "snippet": {
+      "startMs": 92000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+  }
+}

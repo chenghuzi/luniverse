@@ -1,0 +1,157 @@
+{
+  "id": "c_8a470c63ce60",
+  "podcast": {
+    "id": "p_1339796c8e55",
+    "title": "三粒米RiceTalking",
+    "authorName": "Molly小莫",
+    "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_bcb61f661796",
+    "title": "Vol.9 三位直男关于女权的对话，暴露了什么？他们很少反思自己，我们却过度反思",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6932607a3fec3166cf61a0e0?utm_source=rss",
+    "publishedAt": "2025-12-14T16:00:00.000Z",
+    "durationSeconds": 3375,
+    "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/6932607a3fec3166cf61a0e0/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lvmW9ZDcJecSm3p3yXYrWKVpHY4T.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 54648696
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_bcb61f661796",
+      "title": "Vol.9 三位直男关于女权的对话，暴露了什么？他们很少反思自己，我们却过度反思",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6932607a3fec3166cf61a0e0?utm_source=rss",
+      "publishedAt": "2025-12-14T16:00:00.000Z",
+      "durationSeconds": 3375,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/6932607a3fec3166cf61a0e0/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lvmW9ZDcJecSm3p3yXYrWKVpHY4T.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 54648696
+      }
+    },
+    {
+      "id": "e_de87f43f32ba",
+      "title": "Vol.8 这些生活物件用起来好幸福：家用好物与废物篇（下）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6935c0923fec3166cfc57f85?utm_source=rss",
+      "publishedAt": "2025-12-10T06:31:25.000Z",
+      "durationSeconds": 2735,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/6935c0923fec3166cfc57f85/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lowLz182lS0eZoKQB5zidRtNYZww.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 44277895
+      }
+    },
+    {
+      "id": "e_95d8c3432aa1",
+      "title": "Vol.7 这些生活物件用起来好幸福：家用好物篇（上）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69226090cbba038b42d2b867?utm_source=rss",
+      "publishedAt": "2025-12-07T16:06:30.000Z",
+      "durationSeconds": 2274,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/69226090cbba038b42d2b867/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lizMLm-gf1aOkQ-LdkUR80QlcMOp.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 36812375
+      }
+    },
+    {
+      "id": "e_ab093f57ba2e",
+      "title": "Vol.6 冰岛暴风雪惊魂记：三人推车自救，差点被风吹走的生死时速",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69290234f2b167179822902f?utm_source=rss",
+      "publishedAt": "2025-12-03T16:00:06.000Z",
+      "durationSeconds": 3615,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/69290234f2b167179822902f/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lg8PoYPtnnhI2KIBV5XV8rRoi8G5.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 58527019
+      }
+    },
+    {
+      "id": "e_00de679f29a4",
+      "title": "Vol.5 在疯智与真师之间：他就像完美镜子，映照出我所有的恐惧和弱点",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690c4fd3d99642be96ba3916?utm_source=rss",
+      "publishedAt": "2025-11-21T08:00:00.000Z",
+      "durationSeconds": 4865,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/690c4fd3d99642be96ba3916/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lurWpc4ty4cTXlpqqDq7Y-dtnpk3.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31549457
+      }
+    },
+    {
+      "id": "e_95e35977da38",
+      "title": "Vol.4 养猫前也没人和我说要半夜洗被子啊！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6907fc4843a4f4a98498694b?utm_source=rss",
+      "publishedAt": "2025-11-14T08:00:00.000Z",
+      "durationSeconds": 4417,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/6907fc4843a4f4a98498694b/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lvBTGNDegZ-9rbOoHoF9rd1ap7NX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 52871694
+      }
+    },
+    {
+      "id": "e_09f336e3a937",
+      "title": "Vol.3 从独生女到单亲妈妈：东北女孩的底气与爱",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68fe51e201567203212287ba?utm_source=rss",
+      "publishedAt": "2025-11-07T08:00:00.000Z",
+      "durationSeconds": 2815,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/68fe51e201567203212287ba/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/luUtNsE4_DkeNzRyxhpRAvsRKVGZ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 17901690
+      }
+    },
+    {
+      "id": "e_5a92a688a306",
+      "title": "Vol.2 相亲筛选潜规则大起底！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68fbaf96083a71a4eb1fb713?utm_source=rss",
+      "publishedAt": "2025-10-31T08:00:00.000Z",
+      "durationSeconds": 2996,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/68fbaf96083a71a4eb1fb713/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lu-CaBQcXPyS8cxZc8v5ftauH4KD.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 17774936
+      }
+    },
+    {
+      "id": "e_b057e8ffe6c0",
+      "title": "Vol.1 陌生人递来的冰棒，你敢吃吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68faf4f4083a71a4eb04425e?utm_source=rss",
+      "publishedAt": "2025-10-24T03:43:22.000Z",
+      "durationSeconds": 2724,
+      "imageUrl": "https://image.xyzcdn.net/lkppzkIkeUuBl3e4ZXyxF_7_VSLy.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66d636d44ff9cfd78966b2b5/68faf4f4083a71a4eb04425e/media.xyzcdn.net/66d636d44ff9cfd78966b2b5/lrH2eDUi6pUL7fCQFs822cVNeisW.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 18807472
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_8a470c63ce60",
+    "title": "Vol.9 三位直男关于女权的对话，暴露了什么？他们很少反思自己，我们却过度反思",
+    "text": "这一期是在听完@徐徐的 第 59 期播客《和三个直男聊完女权后我吐了》之后，我和Chency聊的听后感。 相信很多女性听众在听完那一期之后，情绪会非常相似：无奈、困惑、气笑、想叹气，又忍不住继续听下去——当然，也有人是直接听不下去的。 三位男嘉宾的表达，以及随后的网上评论，让我突然意识到一件非常重要、甚至有点刺痛的事情： 如果我们真的想认真谈“青少年的性教育”，那我们首先必须承认：当代中国的成年人，正在经历一种巨大的性教育匮乏。匮乏在哪些方面——成年人对“性同意”、界限、权利、亲密欲望、乃至女权的理解。 换句话说，如果一个成年人从未真正学过什么是健康的亲密、什么是尊重、什么是界限，那么他们所谓“给下一代的性教育”，永远都只是空洞的…",
+    "snippet": {
+      "startMs": 1385000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#a855f7,#ec4899)"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "id": "c_93581e367267",
+  "podcast": {
+    "id": "p_49f59804d6ac",
+    "title": "澜朋友的派对",
+    "authorName": "澜朋友-阿澜",
+    "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_76f7a58ebb38",
+    "title": "Vol.10 在现实的土壤里，种下浪漫的种子",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6944470de5ac0b31c9c55727?utm_source=rss",
+    "publishedAt": "2025-12-18T22:30:00.000Z",
+    "durationSeconds": 3804,
+    "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/6944470de5ac0b31c9c55727/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lmW4Q55hkxiXwGsIUcoGGC3I2Nqf.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 61582554
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_76f7a58ebb38",
+      "title": "Vol.10 在现实的土壤里，种下浪漫的种子",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6944470de5ac0b31c9c55727?utm_source=rss",
+      "publishedAt": "2025-12-18T22:30:00.000Z",
+      "durationSeconds": 3804,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/6944470de5ac0b31c9c55727/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lmW4Q55hkxiXwGsIUcoGGC3I2Nqf.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61582554
+      }
+    },
+    {
+      "id": "e_72ab316f0f3f",
+      "title": "Vol.09 看见比说教重要，陪伴比要求有效",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692974bcba2292550f383f03?utm_source=rss",
+      "publishedAt": "2025-11-28T10:11:24.000Z",
+      "durationSeconds": 2338,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/692974bcba2292550f383f03/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lvQ4Ldiju5LT_FjVroiidET4w0qj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 39531134
+      }
+    },
+    {
+      "id": "e_9a7fb5f9dfc1",
+      "title": "Vol.08 如何对待生活中的“蝇蝇队长”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691ebcc76018cc2c98be54e1?utm_source=rss",
+      "publishedAt": "2025-11-20T11:30:00.000Z",
+      "durationSeconds": 2210,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/691ebcc76018cc2c98be54e1/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lgCFp1G2n6yaUExRr9S1aampTBGo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 37409663
+      }
+    },
+    {
+      "id": "e_9acb5da43726",
+      "title": "07.串台大互動下：你会盘手机嘛？吃了泻药再吃安眠药会怎么样？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ff4506083a71a4eb775d40?utm_source=rss",
+      "publishedAt": "2025-10-28T09:30:00.000Z",
+      "durationSeconds": 3426,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/68ff4506083a71a4eb775d40/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lsFvLawp0ahkmklmxXb_7hhQuB0I.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 55417782
+      }
+    },
+    {
+      "id": "e_01efef379d64",
+      "title": "06.串台大互動上：三个脑洞炸穿大气层！笑到拍桌子！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ff2f1701567203213d258c?utm_source=rss",
+      "publishedAt": "2025-10-27T23:00:00.000Z",
+      "durationSeconds": 3531,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/68ff2f1701567203213d258c/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lmn6edy0SHXruo04tuYqoPLhkthy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 56720000
+      }
+    },
+    {
+      "id": "e_657f5723dc48",
+      "title": "05.對談：乐高到人生：聊聊鲁豫、窦文涛与我们的 “得中” 之道",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68e8f7fe224325ea708c5bdd?utm_source=rss",
+      "publishedAt": "2025-10-11T01:00:00.000Z",
+      "durationSeconds": 4745,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/68e8f7fe224325ea708c5bdd/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lsDshGHDCqkyP7Rtdt43lKvZf7ls.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 78190606
+      }
+    },
+    {
+      "id": "e_9c73019587f9",
+      "title": "04.对谈：当滤镜消失后——我们对爱情、友情和世界祛魅",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68cf06512c82c9dcca62613e?utm_source=rss",
+      "publishedAt": "2025-09-21T01:00:00.000Z",
+      "durationSeconds": 4690,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/68cf06512c82c9dcca62613e/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lokCe3FBTogWSV9QLJWaBYUwN-oY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 78445587
+      }
+    },
+    {
+      "id": "e_9c6085bca63a",
+      "title": "Vol.3 对谈：亲密关系中边界、自我让渡与道德背离感",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68be179e5faf36865982f9cb?utm_source=rss",
+      "publishedAt": "2025-09-08T03:53:26.000Z",
+      "durationSeconds": 4490,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/68be179e5faf36865982f9cb/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lq6pRBN4m7TSi4Bh4SYtBACAuTiY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 75694783
+      }
+    },
+    {
+      "id": "e_c8b3e57a2849",
+      "title": "Vol.02 澜朋友的碎碎念-恋爱磨合期",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67dbaca7dd11f9c8c1e33607?utm_source=rss",
+      "publishedAt": "2025-03-20T10:00:00.000Z",
+      "durationSeconds": 6039,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/67dbaca7dd11f9c8c1e33607/media.xyzcdn.net/67ca8b28eb85a0cee1001487/ltC9Tgz_sjl0fwzV-BDgHXQZejjq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 97674795
+      }
+    },
+    {
+      "id": "e_f87e5c521f7c",
+      "title": "Vol 01·澜朋友的碎碎念-好的伴侣是否有标准",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67ce8bfd0766616acddd5d6d?utm_source=rss",
+      "publishedAt": "2025-03-10T09:35:09.000Z",
+      "durationSeconds": 3471,
+      "imageUrl": "https://image.xyzcdn.net/FjsWeWxQMvW5c8359AHjXu_Hwa3Y.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67ca8b28eb85a0cee1001487/67ce8bfd0766616acddd5d6d/media.xyzcdn.net/67ca8b28eb85a0cee1001487/lreJ8ZsHTs3KxRplFD0pEt6wsRd_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 56148323
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_93581e367267",
+    "title": "Vol.10 在现实的土壤里，种下浪漫的种子",
+    "text": "本期播客如约是对刘擎&amp;毕胜杰《为什么现代人的爱情，越来越像一场交易》及视频中提及的阿兰巴迪欧《爱的多重奏》的读观后感。 00:30 播前碎碎念 02:34 女性进步是progressive，不能算aggressive。 03:15 进步都会有一个由某一个事情发生后的矫正过度。 04:04 结婚当天她跳了下去 05:19 换个人会不会有不一样的结果？ 07:22 &nbsp;高考就像电击一样，你就像块磁铁，电一下，你就应该会两级反转，从不会到会。 12:37 爱情里有交易的元素是天生的 13:22 爱情到底是坟墓还是奠基石 14:21 爱情的目的是什么？ 17:23 爱情里的忠诚是什么？ 19:25 爱情中的恋爱脑对不对？ …",
+    "snippet": {
+      "startMs": 3192000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#64748b,#0f172a)"
+  }
+}

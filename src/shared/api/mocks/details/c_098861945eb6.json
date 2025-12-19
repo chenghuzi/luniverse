@@ -1,0 +1,145 @@
+{
+  "id": "c_098861945eb6",
+  "podcast": {
+    "id": "p_ac0a0b548413",
+    "title": "⌜核磁共振⌟",
+    "authorName": "Akiiiiiii",
+    "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure",
+      "TV & Film"
+    ]
+  },
+  "episode": {
+    "id": "e_0c78f60bb472",
+    "title": "『共振008』《酱园弄.悬案》（5.1分）：喜欢佳音被你发现~",
+    "link": "https://www.xiaoyuzhoufm.com/episode/68a826a542cc2798e7de2876?utm_source=rss",
+    "publishedAt": "2025-08-22T08:19:00.000Z",
+    "durationSeconds": 5356,
+    "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/68a826a542cc2798e7de2876/media.xyzcdn.net/686e3045222ae2de214f0837/llVzykbIVuKkf4TQuHANbLlK5BTc.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 172344049
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_0c78f60bb472",
+      "title": "『共振008』《酱园弄.悬案》（5.1分）：喜欢佳音被你发现~",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a826a542cc2798e7de2876?utm_source=rss",
+      "publishedAt": "2025-08-22T08:19:00.000Z",
+      "durationSeconds": 5356,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/68a826a542cc2798e7de2876/media.xyzcdn.net/686e3045222ae2de214f0837/llVzykbIVuKkf4TQuHANbLlK5BTc.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 172344049
+      }
+    },
+    {
+      "id": "e_60735846c24a",
+      "title": "『共振007』《芭蕾杀姬》（6.0分）：杀死那个伊芙！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a8252d293471fed4ec11d3?utm_source=rss",
+      "publishedAt": "2025-08-22T08:11:22.000Z",
+      "durationSeconds": 4835,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/68a8252d293471fed4ec11d3/media.xyzcdn.net/686e3045222ae2de214f0837/lga390Wbr7_iQ0ZikaOi-iPiOKST.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 155644106
+      }
+    },
+    {
+      "id": "e_8b6576d96e39",
+      "title": "『共振006』《碟中谍8：最终清算》（4.9分）：本可以体面地老去",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a8239f293471fed4ebbb5e?utm_source=rss",
+      "publishedAt": "2025-08-22T08:10:12.000Z",
+      "durationSeconds": 8220,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/68a8239f293471fed4ebbb5e/media.xyzcdn.net/686e3045222ae2de214f0837/lk1yiHoQQB8vaFlA36rXgJwNP5r6.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 198844513
+      }
+    },
+    {
+      "id": "e_b11fad3127bc",
+      "title": "『共振005』《神奇四侠：初露锋芒》（4.8分）：魔童降世兵马俑，流浪地球陈塘关",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6887b0c4edf3fa32d5f51d87?utm_source=rss",
+      "publishedAt": "2025-07-28T22:00:00.000Z",
+      "durationSeconds": 5148,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/6887b0c4edf3fa32d5f51d87/media.xyzcdn.net/686e3045222ae2de214f0837/ljavAw3V1tif5yWid5YoIje_w0Fd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 165718967
+      }
+    },
+    {
+      "id": "e_0c89d4f4562d",
+      "title": "『共振004』《长安的荔枝》（6.1分）：一骑红尘妻子笑，无人知是木棉来",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68812976a9dec92500d88d2b?utm_source=rss",
+      "publishedAt": "2025-07-23T23:30:00.000Z",
+      "durationSeconds": 6762,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/68812976a9dec92500d88d2b/media.xyzcdn.net/686e3045222ae2de214f0837/ln4nm1oGgIwB6lXtKcaqlsXN4hqF.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 217655907
+      }
+    },
+    {
+      "id": "e_90f2bfad03de",
+      "title": "『共振003』《侏罗纪世界：重生》（4.1分）本手、妙手、驯龙低手",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6877ea8ca9dec92500a7da09?utm_source=rss",
+      "publishedAt": "2025-07-16T18:22:35.000Z",
+      "durationSeconds": 4930,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/6877ea8ca9dec92500a7da09/media.xyzcdn.net/686e3045222ae2de214f0837/lic4PnQ4BD4voqLlBR6ErfEu97pn.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 158717642
+      }
+    },
+    {
+      "id": "e_45b4c716b60c",
+      "title": "『共振002』《超人》（4.1分）：好一朵丑陋的白莲花",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687411ce60f8f77d4051677e?utm_source=rss",
+      "publishedAt": "2025-07-14T00:30:00.000Z",
+      "durationSeconds": 8695,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/687411ce60f8f77d4051677e/media.xyzcdn.net/686e3045222ae2de214f0837/lmDpDCJocMQnW9Bf8Eea_h_ntUNY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 279899175
+      }
+    },
+    {
+      "id": "e_9e383fc6c5ca",
+      "title": "『共振001』《F1：狂飙飞车》（6.4分）：重夺对“速度”与“激情”的定义权",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6872866093fd2d72b8daa709?utm_source=rss",
+      "publishedAt": "2025-07-13T04:57:48.000Z",
+      "durationSeconds": 8028,
+      "imageUrl": "https://image.xyzcdn.net/Fv5HTmMRLlx0_3AK08PEwp1GuqHI.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686e3045222ae2de214f0837/6872866093fd2d72b8daa709/media.xyzcdn.net/686e3045222ae2de214f0837/ljA8ZbT7ighKGHC6uv56ZxMZ9hpM.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 258415970
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_098861945eb6",
+    "title": "『共振008』《酱园弄.悬案》（5.1分）：喜欢佳音被你发现~",
+    "text": "陈可辛这招太狠了。 （本期为【镜面计划】下架节目重发） ⌜核磁共振⌟是一档关注银幕之中、之外，以及与观众席之间一切事物的节目。 本台内容分为三个栏目: 『共振』聚焦时下热门电影； 『争鸣』包含两位主播对于一切和电影相关议题的思考与争论； 『号角』内含我们对于近一周内电影新闻的汇总与探讨… 主播 ：lava Aki（按出场顺序排列） 剪辑 ：西红是番茄 文案 ：Aki 时间轴 ： 00:00~00:25： 序言 00:25~06:06： 一周（旧闻）红黑榜——红榜 泡泡玛特成立影视部制作Labubu影视剧 凯瑟琳.碧格萝新作《炸裂白宫》 温子仁、雷.沃纳尔重聚首制作《电锯惊魂》续集 06:06~20:00： 一周（旧闻）红黑榜——黑…",
+    "snippet": {
+      "startMs": 2157000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "c_18f2c85a925e",
+  "podcast": {
+    "id": "p_3082c359c3e2",
+    "title": "意义无异议",
+    "authorName": "云美小助手",
+    "imageUrl": "https://image.xyzcdn.net/FkB0wX53I42De1uu7ytcKqZA2D3O.png",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure",
+      "Business",
+      "Society & Culture",
+      "Religion & Spirituality",
+      "Education"
+    ]
+  },
+  "episode": {
+    "id": "e_67cb0b9d060b",
+    "title": "E03 海归&北大学霸辞去最好的工作跑去开农场，8个月就盈亏平衡？",
+    "link": "https://www.xiaoyuzhoufm.com/episode/693253843fec3166cf5f3704?utm_source=rss",
+    "publishedAt": "2025-12-09T00:00:00.000Z",
+    "durationSeconds": 5181,
+    "imageUrl": "https://image.xyzcdn.net/FkB0wX53I42De1uu7ytcKqZA2D3O.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/690af3b5fea352f619aaf77e/693253843fec3166cf5f3704/media.xyzcdn.net/690af3b5fea352f619aaf77e/lnaR9WSmEY54Jwd1SXWgPd8fFAU9.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 83795038
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_67cb0b9d060b",
+      "title": "E03 海归&北大学霸辞去最好的工作跑去开农场，8个月就盈亏平衡？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693253843fec3166cf5f3704?utm_source=rss",
+      "publishedAt": "2025-12-09T00:00:00.000Z",
+      "durationSeconds": 5181,
+      "imageUrl": "https://image.xyzcdn.net/FkB0wX53I42De1uu7ytcKqZA2D3O.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/690af3b5fea352f619aaf77e/693253843fec3166cf5f3704/media.xyzcdn.net/690af3b5fea352f619aaf77e/lnaR9WSmEY54Jwd1SXWgPd8fFAU9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83795038
+      }
+    },
+    {
+      "id": "e_14244d9fbef9",
+      "title": "E02 从李智慧到卡坦新能源：桌游如何成为社会创新的秘密武器",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692447ba4c49bc580f614dec?utm_source=rss",
+      "publishedAt": "2025-11-25T00:00:00.000Z",
+      "durationSeconds": 4401,
+      "imageUrl": "https://image.xyzcdn.net/FkB0wX53I42De1uu7ytcKqZA2D3O.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/690af3b5fea352f619aaf77e/692447ba4c49bc580f614dec/media.xyzcdn.net/690af3b5fea352f619aaf77e/ln58RoAKNiJ2F-WRAg9XeVqC-wtJ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 106386955
+      }
+    },
+    {
+      "id": "e_2922c9cae88e",
+      "title": "E01 那个疏通下水被坑了700块的女孩，组建了一支“女师傅队”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69118d44af4fc00da7016b15?utm_source=rss",
+      "publishedAt": "2025-11-12T00:00:00.000Z",
+      "durationSeconds": 4503,
+      "imageUrl": "https://image.xyzcdn.net/FkB0wX53I42De1uu7ytcKqZA2D3O.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/690af3b5fea352f619aaf77e/69118d44af4fc00da7016b15/media.xyzcdn.net/690af3b5fea352f619aaf77e/lncYl1K_mRhR4Ub4rYorTc-CBcrN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 108862628
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_18f2c85a925e",
+    "title": "E03 海归&北大学霸辞去最好的工作跑去开农场，8个月就盈亏平衡？",
+    "text": "🐎劈柴喂马不是诗和远方，是每天的劳动。 今天这期节目，是给所有向往田园生活的人的电子乌托邦。我们邀请到了在北京密云的两位农场主，一方和P橙，她们带着海归和北大学霸的身份标签，辞去了高大上的国际环保组织工作，举家把生活搬到了农场之上，没有商业背景也不是农业出身的她们，却成功地经营着一家有机生态农场，带动村民就业，还能给村里分红。最让我羡慕的，是她们创造出了自己享受的生活，在农场里劳作，脚踏实地，内心充盈。 最近一两个月，我接连被好几个朋友安利这片农场，于是在一个深秋下着雨的周五，我带着好奇心，走进了飞鸟与鸣虫。P橙给我们准备了自己耕种的食物当午餐，端来了自己烤的香茅面包配上他们特制的花生酱和苹果酱，我见到了农场里的自由自在的小动物…",
+    "snippet": {
+      "startMs": 1921000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#a855f7,#ec4899)"
+  }
+}

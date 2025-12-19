@@ -1,0 +1,197 @@
+{
+  "id": "c_3b1423a4e0d8",
+  "podcast": {
+    "id": "p_d8d749050478",
+    "title": "峰话连篇",
+    "authorName": "西峰秀色",
+    "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure",
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_5051ba9c95c5",
+    "title": "012-凝视深渊：吴谢宇弑母案的探讨",
+    "link": "https://www.xiaoyuzhoufm.com/episode/693701cb3fec3166cff8130a?utm_source=rss",
+    "publishedAt": "2025-12-08T17:06:54.000Z",
+    "durationSeconds": 5442,
+    "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/693701cb3fec3166cff8130a/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lqbL21p-kujwrW-ULy7ts1DT43up.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 88010669
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_5051ba9c95c5",
+      "title": "012-凝视深渊：吴谢宇弑母案的探讨",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693701cb3fec3166cff8130a?utm_source=rss",
+      "publishedAt": "2025-12-08T17:06:54.000Z",
+      "durationSeconds": 5442,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/693701cb3fec3166cff8130a/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lqbL21p-kujwrW-ULy7ts1DT43up.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 88010669
+      }
+    },
+    {
+      "id": "e_65a09480d2d3",
+      "title": "011-老司机带带我",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691b2a776018cc2c9848cadb?utm_source=rss",
+      "publishedAt": "2025-11-17T14:19:26.000Z",
+      "durationSeconds": 8621,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/691b2a776018cc2c9848cadb/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lqhlDblSZgSTNn7nQusLoqHW_kIj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 208409243
+      }
+    },
+    {
+      "id": "e_713992e8585c",
+      "title": "010-树洞—守望相助",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68fa2b360156720321bafe31?utm_source=rss",
+      "publishedAt": "2025-10-23T13:33:08.000Z",
+      "durationSeconds": 5608,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/68fa2b360156720321bafe31/media.xyzcdn.net/67e661bad9bfbf03dfea522f/ljrMAocg_Sq8o7892V6EdtOzotW7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 135574489
+      }
+    },
+    {
+      "id": "e_adfd50a5085d",
+      "title": "好戏从来细思量",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a0130f293471fed4e12299?utm_source=rss",
+      "publishedAt": "2025-08-16T05:13:35.000Z",
+      "durationSeconds": 5697,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/68a0130f293471fed4e12299/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lkaaNb0jgNGYGd6-wVT4hYTfe3oF.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 137721412
+      }
+    },
+    {
+      "id": "e_d6ca6ab1613d",
+      "title": "008-如何保持爱好的热情",
+      "link": "https://www.xiaoyuzhoufm.com/episode/688b96d78e06fe8de7b4620c?utm_source=rss",
+      "publishedAt": "2025-07-31T16:44:27.000Z",
+      "durationSeconds": 5521,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/688b96d78e06fe8de7b4620c/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lllUlbWmxy5hGRakxLBBjkxtc6u1.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 133482009
+      }
+    },
+    {
+      "id": "e_d7d4f514b3c1",
+      "title": "007-一场《猫鱼》开启的思想操练",
+      "link": "https://www.xiaoyuzhoufm.com/episode/681a433ddb57cd35f7dd10b9?utm_source=rss",
+      "publishedAt": "2025-05-12T16:00:00.000Z",
+      "durationSeconds": 3923,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/681a433ddb57cd35f7dd10b9/media.xyzcdn.net/67e661bad9bfbf03dfea522f/llTOPnlbKNntm_3e9zM3VgQ6mqxW.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 63460778
+      }
+    },
+    {
+      "id": "e_4197418afc10",
+      "title": "006-从《英格力士》到陈冲，再到马克·吐温",
+      "link": "https://www.xiaoyuzhoufm.com/episode/680faa277a449ae85841c5b0?utm_source=rss",
+      "publishedAt": "2025-05-04T21:00:00.000Z",
+      "durationSeconds": 3811,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/680faa277a449ae85841c5b0/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lhwprz5AO3EeHWewt94GJAo70Y3D.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61650008
+      }
+    },
+    {
+      "id": "e_c83967ab0f2b",
+      "title": "005-乐与怒（下）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68068ceccdd692da15d0d9e5?utm_source=rss",
+      "publishedAt": "2025-04-27T19:30:00.000Z",
+      "durationSeconds": 4592,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/68068ceccdd692da15d0d9e5/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lgmDKsP9HeIFGO1G0qQpCdr_QuvZ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 74266074
+      }
+    },
+    {
+      "id": "e_0b04d4c167fd",
+      "title": "004-工作与离职漫谈",
+      "link": "https://www.xiaoyuzhoufm.com/episode/680523301f1db84a56806134?utm_source=rss",
+      "publishedAt": "2025-04-20T21:00:48.000Z",
+      "durationSeconds": 4001,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/680523301f1db84a56806134/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lld8KgNLgTwgNKOGBfswBoOmHGU0.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 64722958
+      }
+    },
+    {
+      "id": "e_0bc9a413caed",
+      "title": "003-乐与怒（上）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67f620b30decaeb094e8054e?utm_source=rss",
+      "publishedAt": "2025-04-09T07:44:09.000Z",
+      "durationSeconds": 4822,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/67f620b30decaeb094e8054e/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lvkmYnu6ImuHOdJRepgSwpeedOEw.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 77991381
+      }
+    },
+    {
+      "id": "e_8b4bc0c44982",
+      "title": "002-《读库2502》阅读心得",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67f61f9bf9578163d6fec6ca?utm_source=rss",
+      "publishedAt": "2025-04-09T07:39:13.000Z",
+      "durationSeconds": 4185,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/67f61f9bf9578163d6fec6ca/media.xyzcdn.net/67e661bad9bfbf03dfea522f/lgv-6wcvrMibIA-mSYiZmkGBEn1g.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 67686427
+      }
+    },
+    {
+      "id": "e_c7671b022c24",
+      "title": "001-峰话连篇-首播-小试牛刀",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67f618400decaeb094e57b6d?utm_source=rss",
+      "publishedAt": "2025-04-09T07:11:04.000Z",
+      "durationSeconds": 908,
+      "imageUrl": "https://image.xyzcdn.net/FqCLOQieh8e80UFnGFFefmW94OOT.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67e661bad9bfbf03dfea522f/67f618400decaeb094e57b6d/media.xyzcdn.net/67e661bad9bfbf03dfea522f/ltQDe42B81R59OKI23tj5jNypshX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 14693847
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_3b1423a4e0d8",
+    "title": "012-凝视深渊：吴谢宇弑母案的探讨",
+    "text": "大家好，我是西峰秀色。这期节目我们来探讨轰动全国的“吴谢宇弑母案“ 基于最新出版的一本书《人性的深渊：吴谢宇刹母案》来展开探讨。 并且我请来了《不太保险》的播客主播阿福以及他的搭挡爱德华来到我的书房，共同录制。 而且他们这次还带来了先进的录音设备，形成三个独立的音轨，这给我剪辑音频带来新的尝试和挑战，不得不说，在剪辑过程中，确实非常方便，每条音轨清晰流畅，可以分别处置，让我的剪辑技术更加娴熟。对我来说是一次不错的锻炼机会。 本期节目及其涉及到的案件，相信有不少朋友已经了解，我们的探讨更多的是基于三联生活周刊的记者所整理出来的资料，深度的分析与总结的论述，结合自身成长历程与观察到的种种关于教育、亲子关系、职场生活、面对不确定性的社会…",
+    "snippet": {
+      "startMs": 1770000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)"
+  }
+}

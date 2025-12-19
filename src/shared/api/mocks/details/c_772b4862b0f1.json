@@ -1,0 +1,248 @@
+{
+  "id": "c_772b4862b0f1",
+  "podcast": {
+    "id": "p_4377a9376307",
+    "title": "你好，陌生人 HelloStranger",
+    "authorName": "三联中读",
+    "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_8ffd831edc6e",
+    "title": "14 一堂不一样的艺术课，如何读懂陌生人？",
+    "link": "https://www.xiaoyuzhoufm.com/episode/69423c944c65abaff36bcbcc?utm_source=rss",
+    "publishedAt": "2025-12-17T10:00:00.000Z",
+    "durationSeconds": 3976,
+    "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/69423c944c65abaff36bcbcc/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/ltTMqK87GvbCVj9zcug2e8HB7Uee.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 64309679
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_8ffd831edc6e",
+      "title": "14 一堂不一样的艺术课，如何读懂陌生人？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69423c944c65abaff36bcbcc?utm_source=rss",
+      "publishedAt": "2025-12-17T10:00:00.000Z",
+      "durationSeconds": 3976,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/69423c944c65abaff36bcbcc/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/ltTMqK87GvbCVj9zcug2e8HB7Uee.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 64309679
+      }
+    },
+    {
+      "id": "e_66ad2d014778",
+      "title": "13 项飙×梁鸿：面对“关着房门”的孩子，我们弄丢了什么？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691d8c3a6018cc2c989977c8?utm_source=rss",
+      "publishedAt": "2025-11-19T23:00:00.000Z",
+      "durationSeconds": 5131,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/691d8c3a6018cc2c989977c8/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/ltdrfkHgTCO0PDAYI_wEf9xpu4PV.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 82982943
+      }
+    },
+    {
+      "id": "e_8dc2cf390630",
+      "title": "12 吴琪×项飙（下）：为什么社会成了年轻人“跨不过的大山”？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6901b6ea558113deb7fe9c0a?utm_source=rss",
+      "publishedAt": "2025-10-29T11:30:00.000Z",
+      "durationSeconds": 3540,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/6901b6ea558113deb7fe9c0a/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/lkfKB_BKJsLASvdE5yriSzPMFmgH.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 85586231
+      }
+    },
+    {
+      "id": "e_ff1312382080",
+      "title": "11 吴琪×项飙（上）:深聊“吴谢宇案”，我们都在怕变成 “陌生的自己”？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68fcb6a2083a71a4eb32d16b?utm_source=rss",
+      "publishedAt": "2025-10-25T23:00:00.000Z",
+      "durationSeconds": 3844,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/68fcb6a2083a71a4eb32d16b/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/lkv5e0S9DNfx-uETAzoEWgeRVyk1.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 92926701
+      }
+    },
+    {
+      "id": "e_f20091ed0489",
+      "title": "10 把生活“作为一个项目”，如何打破陌生人的边界感？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68cd5f9f2c82c9dcca3d213b?utm_source=rss",
+      "publishedAt": "2025-09-19T23:00:00.000Z",
+      "durationSeconds": 2907,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/68cd5f9f2c82c9dcca3d213b/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/liek0RPIpLXs67fclsgSvyNbZsLD.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 70282806
+      }
+    },
+    {
+      "id": "e_ea4f3cd32b2a",
+      "title": "09 社会越来越 “透明不透气”？《你好，陌生人》全阵容作者拆解陌生化",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68b1580997178f08ee42ce5d?utm_source=rss",
+      "publishedAt": "2025-08-30T10:00:00.000Z",
+      "durationSeconds": 4359,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/68b1580997178f08ee42ce5d/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/lujfdBRlmc4B5ZG_Kr5aflrA53EH.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 105371818
+      }
+    },
+    {
+      "id": "e_dfb62ad3cc75",
+      "title": "08 项飙×慢来生活：比成功更重要的，是 “生活之余” 的力量",
+      "link": "https://www.xiaoyuzhoufm.com/episode/689c045720a2906a4d4ae6df?utm_source=rss",
+      "publishedAt": "2025-08-13T11:00:00.000Z",
+      "durationSeconds": 2439,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/689c045720a2906a4d4ae6df/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/lqQYfXI6dUHhF-XUCwrPDJHheAyp.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 58965158
+      }
+    },
+    {
+      "id": "e_528799de6101",
+      "title": "07 项飙×戴锦华×吴琦：世界与我，谁出了问题？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/686e90a760f8f77d40b506fa?utm_source=rss",
+      "publishedAt": "2025-07-09T23:00:00.000Z",
+      "durationSeconds": 5354,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/686e90a760f8f77d40b506fa/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/lnmk5_xEmMxbrUWP6X9LCNrRnirH.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 86590640
+      }
+    },
+    {
+      "id": "e_0d144acf0bc0",
+      "title": "项飙×三联人文城市播客《你好，陌生人》第二季来啦！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/686d19d460f8f77d407cafd7?utm_source=rss",
+      "publishedAt": "2025-07-08T13:16:09.000Z",
+      "durationSeconds": 342,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/686d19d460f8f77d407cafd7/media.xyzcdn.net/63eb573be99bdef7d3b1c6e1/lrF7Zw5-SzLDCQEoON_ad3UY-XOL.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 8285947
+      }
+    },
+    {
+      "id": "e_c73ec425fff1",
+      "title": "06 项飙请回答丨看见陌生人是一个把手，让生活更丰满",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6439613f66e4c00c6a1cd871?utm_source=rss",
+      "publishedAt": "2023-04-14T14:20:47.000Z",
+      "durationSeconds": 954,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/6439613f66e4c00c6a1cd871/media.xyzcdn.net/llwcQjgYgo1toxsIlc07qIPBd_8K.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 23082453
+      }
+    },
+    {
+      "id": "e_a21ddf28e947",
+      "title": "05 项飙×沈志军：在动物园看动物，其实也是在看自己",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6418666d179eec5331e07f3e?utm_source=rss",
+      "publishedAt": "2023-03-20T13:58:05.000Z",
+      "durationSeconds": 5667,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/6418666d179eec5331e07f3e/media.xyzcdn.net/lqFU7kTq5atG3jLfQMJU5lNdnSM2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 91662332
+      }
+    },
+    {
+      "id": "e_89afdacd1c6f",
+      "title": "04 项飙×刘悦来：为什么陌生的花园会带给我们喜悦？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/640f36d88be5d40013068a7d?utm_source=rss",
+      "publishedAt": "2023-03-13T14:44:40.000Z",
+      "durationSeconds": 6334,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/640f36d88be5d40013068a7d/media.xyzcdn.net/lmC1aZ-RSWwHoe2qXg-_ozuFEuff.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 102438025
+      }
+    },
+    {
+      "id": "e_c20d4c91f010",
+      "title": "03 项飙×李一凡：流水线上没有历史，杀马特才有",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6405f7212b769b7327c93a4c?utm_source=rss",
+      "publishedAt": "2023-03-06T14:22:24.000Z",
+      "durationSeconds": 5008,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/6405f7212b769b7327c93a4c/media.xyzcdn.net/num4MmRbF6Qq1dAl6OAXCFmMgxlP.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 80153167
+      }
+    },
+    {
+      "id": "e_8e141dea0811",
+      "title": "02 项飙×何袜皮：我们因何恐惧，亲密关系还是陌生人？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/63fcad003d8df2f7e9ce97ca?utm_source=rss",
+      "publishedAt": "2023-02-27T13:15:42.000Z",
+      "durationSeconds": 5328,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/63fcad003d8df2f7e9ce97ca/media.xyzcdn.net/lrZrhnn3zJTyTVydhOjY44t35q4Q.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 86184005
+      }
+    },
+    {
+      "id": "e_b2bbf93da9a4",
+      "title": "01 项飙×刘小东：看人不是看相，看的是内在的生活感",
+      "link": "https://www.xiaoyuzhoufm.com/episode/63f369a251a4e4150ae3c915?utm_source=rss",
+      "publishedAt": "2023-02-20T12:37:53.000Z",
+      "durationSeconds": 4797,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/63f369a251a4e4150ae3c915/media.xyzcdn.net/llzVw1hgdjrdeUVpEgUlPUrA9uUN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 77584286
+      }
+    },
+    {
+      "id": "e_3ac0e2b5c296",
+      "title": "【预告】人类学家项飙的系列对谈节目，来了！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/63eb80310d7e8eaa729f4592?utm_source=rss",
+      "publishedAt": "2023-02-14T12:36:01.000Z",
+      "durationSeconds": 405,
+      "imageUrl": "https://image.xyzcdn.net/FrIqxGmw0HY0TQ4_Qd0k_tLEzNNI.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63eb573be99bdef7d3b1c6e1/63eb80310d7e8eaa729f4592/media.xyzcdn.net/liuZycA4hjmSQbwTv4E1IsUmRLUn.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 9809253
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_772b4862b0f1",
+    "title": "14 一堂不一样的艺术课，如何读懂陌生人？",
+    "text": "本期阵容： 项飙：人类学家，德国马克斯•普朗克社会人类学研究所所长 段志鹏：设计师，马克斯·普朗克社会人类学研究所博士后研究员 黄几，中国美术学院博士，现任教于广州美术学院中国画学院 对于身边陌生人的关注有何种教育的效果？不仅仅对学生也对老师。 在本期节目中，项飙老师与我们节目的老朋友段志鹏来到广州美术学院，与中国画学院的黄几老师展开对话，对话从课堂里发生事情开始。 2025 年，在广美整体通识课程改革的背景下，学校开设了“方法与实践”，这门面向大一学生的基础课程。课程的主要思路是鼓励学生和老师从身边具体现象出发，仔细观看和感受具体的人事物，来进行艺术创作。在黄几老师的课堂上，五名学生注意到了一个在美术学院周围卖自己制作的毛笔的晏…",
+    "snippet": {
+      "startMs": 2298000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#a855f7,#ec4899)"
+  }
+}

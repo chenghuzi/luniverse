@@ -1,0 +1,342 @@
+{
+  "id": "c_a1b126d07544",
+  "podcast": {
+    "id": "p_757a0614c582",
+    "title": "苦口无心",
+    "authorName": "项苦苦",
+    "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture",
+      "Leisure",
+      "Fiction",
+      "Technology"
+    ]
+  },
+  "episode": {
+    "id": "e_d81fe9f65fa3",
+    "title": "国内航司如何应对全球紧急停飞空客A320（强烈太阳耀斑直射致使ELAC升降舵副翼计算机故障 或为SEC单粒子翻转",
+    "link": "https://www.xiaoyuzhoufm.com/episode/692b9fd7ba2292550f6a486d?utm_source=rss",
+    "publishedAt": "2025-11-30T01:38:21.000Z",
+    "durationSeconds": 295,
+    "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/692b9fd7ba2292550f6a486d/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/liiIfPySaJ0kM1PBDi6onwKYtQq8.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 9502536
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_d81fe9f65fa3",
+      "title": "国内航司如何应对全球紧急停飞空客A320（强烈太阳耀斑直射致使ELAC升降舵副翼计算机故障 或为SEC单粒子翻转",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692b9fd7ba2292550f6a486d?utm_source=rss",
+      "publishedAt": "2025-11-30T01:38:21.000Z",
+      "durationSeconds": 295,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/692b9fd7ba2292550f6a486d/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/liiIfPySaJ0kM1PBDi6onwKYtQq8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 9502536
+      }
+    },
+    {
+      "id": "e_d1d11a4b98ec",
+      "title": "香港机场波音747坠海空难原因（跑道偏离 初步调查报告分析",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691c752fcbba038b4229e01f?utm_source=rss",
+      "publishedAt": "2025-11-18T13:33:26.000Z",
+      "durationSeconds": 401,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/691c752fcbba038b4229e01f/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/ljAPlOfUstAlH6ZfiqXSf4N8w9HU.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 12932961
+      }
+    },
+    {
+      "id": "e_a35c0080dc0e",
+      "title": "整活？影视飓风tim回应相亲争议的视频让我倍感不适（人不是工具 也不该是工具",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6919d8fccbba038b42cdf148?utm_source=rss",
+      "publishedAt": "2025-11-16T14:21:44.000Z",
+      "durationSeconds": 1019,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/6919d8fccbba038b42cdf148/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lsqjiObKNXfEghIEWs2QVaOuknNm.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 32817721
+      }
+    },
+    {
+      "id": "e_c8fa5973e5b6",
+      "title": "又到一年招飞季（民航飞行员还是好的选择吗？学飞需要什么？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6917fe276018cc2c98eb84aa?utm_source=rss",
+      "publishedAt": "2025-11-15T04:15:40.000Z",
+      "durationSeconds": 808,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/6917fe276018cc2c98eb84aa/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lsoUJQrDQ8XxSLyR0NfUdv7tBiTi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 26016618
+      }
+    },
+    {
+      "id": "e_a89e0ff54416",
+      "title": "紧急停飞所有MD11（UPS空难之后 FAA要求 波音建议",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6910957bd99642be9633a678?utm_source=rss",
+      "publishedAt": "2025-11-09T13:24:04.000Z",
+      "durationSeconds": 858,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/6910957bd99642be9633a678/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/liEq8IGp2waV5BKmkTMymfkCs2qA.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 27637684
+      }
+    },
+    {
+      "id": "e_7e0b7f4a2ce3",
+      "title": "压垮民航飞行员的竟然还可以是停飞保险（避雷泰康在线安云随心飞 终身停飞后拒绝赔付",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6904739448dbe0eb56c47954?utm_source=rss",
+      "publishedAt": "2025-10-31T08:33:15.000Z",
+      "durationSeconds": 1095,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/6904739448dbe0eb56c47954/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lrnSr8KQHZNOGerjYAT9vKXs5d3A.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 35246367
+      }
+    },
+    {
+      "id": "e_846ffaf4254f",
+      "title": "苹果智能音箱HomePod2过保后无法正常使用",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68d65f34b4befcf7300bc757?utm_source=rss",
+      "publishedAt": "2025-09-26T09:42:23.000Z",
+      "durationSeconds": 661,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/68d65f34b4befcf7300bc757/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lmf675iFAFJ2lUNULczYL4qXCweo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 21270734
+      }
+    },
+    {
+      "id": "e_14d939cac4b5",
+      "title": "职场霸凌下的民航机长（停飞！处分！谁在让飞行员走投无路？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68adc46342cc2798e78ab990?utm_source=rss",
+      "publishedAt": "2025-08-26T14:40:50.000Z",
+      "durationSeconds": 3987,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/68adc46342cc2798e78ab990/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lsNF2HW2q-v2EaOZT-vuTHuT7dAY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 128286871
+      }
+    },
+    {
+      "id": "e_7815a9720a02",
+      "title": "没有人会爱完全的我（生来支离破碎 唯有孤独永恒",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a1fb4c42cc2798e7075c83?utm_source=rss",
+      "publishedAt": "2025-08-17T15:55:25.000Z",
+      "durationSeconds": 1415,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/68a1fb4c42cc2798e7075c83/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/ltQNXjjxkH2wIN6b5bwOos7gmxih.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 45539112
+      }
+    },
+    {
+      "id": "e_2b205b3d56da",
+      "title": "「考研的七种选择」在职研究生：要不要辞职卷全日制？和非全日制的区别大不大？同等学力申硕怎么样？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a1b63b42cc2798e7fc6f1c?utm_source=rss",
+      "publishedAt": "2025-08-17T11:00:39.000Z",
+      "durationSeconds": 983,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/68a1b63b42cc2798e7fc6f1c/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lodJ2e7DRf7KR66vild0SIH_npkV.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31647855
+      }
+    },
+    {
+      "id": "e_32bea8418647",
+      "title": "有必要考大学英语四六级吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a08a13293471fed4ef14c7?utm_source=rss",
+      "publishedAt": "2025-08-16T13:41:45.000Z",
+      "durationSeconds": 286,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/68a08a13293471fed4ef14c7/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lisIkW_SOwSV3B1VgBJeiX0G2_bT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 9232791
+      }
+    },
+    {
+      "id": "e_969165bbbdbe",
+      "title": "苦苦日常分享：浪浪山小妖怪/大疆Flip/同等学力申硕",
+      "link": "https://www.xiaoyuzhoufm.com/episode/689773cb20a2906a4db8b965?utm_source=rss",
+      "publishedAt": "2025-08-09T16:21:57.000Z",
+      "durationSeconds": 931,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/689773cb20a2906a4db8b965/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lsY9tkM176JAIyj6kz83w_K-fUKz.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 29957328
+      }
+    },
+    {
+      "id": "e_f9a41cd5cb20",
+      "title": "看完南京照相馆 聊聊最近停更的原因",
+      "link": "https://www.xiaoyuzhoufm.com/episode/688cd66fedf3fa32d5a8da00?utm_source=rss",
+      "publishedAt": "2025-08-01T15:07:57.000Z",
+      "durationSeconds": 990,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/688cd66fedf3fa32d5a8da00/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lj76ZqjlHF_i6gddP8IViT0V0WZW.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31863743
+      }
+    },
+    {
+      "id": "e_bc88beee1ebe",
+      "title": "韩国公布务安空难原因（飞行员关错发动机以致济州航空737双发失效",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687e4fc2a12f9ff06a4f2c0b?utm_source=rss",
+      "publishedAt": "2025-07-21T14:35:44.000Z",
+      "durationSeconds": 849,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/687e4fc2a12f9ff06a4f2c0b/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lr8vpFiPoI8HyL9lTEdz0B8yCdTf.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 27332244
+      }
+    },
+    {
+      "id": "e_706bb5b768c7",
+      "title": "印度航空空难大概率是因为机长误操作以致双发失效（起飞离地后误断787双发燃油",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687346de93fd2d72b8e80eeb?utm_source=rss",
+      "publishedAt": "2025-07-13T05:46:02.000Z",
+      "durationSeconds": 1000,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/687346de93fd2d72b8e80eeb/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lqproGGuLV5VPqgjc-chRV-K45iU.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 32186514
+      }
+    },
+    {
+      "id": "e_4aae5b67dd90",
+      "title": "南航吉林持刀伤人事件（理性是有局限的 要警惕科学的自负和决定论的危险",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68668cbf93fd2d72b86351df?utm_source=rss",
+      "publishedAt": "2025-07-03T14:30:42.000Z",
+      "durationSeconds": 804,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/68668cbf93fd2d72b86351df/media.xyzcdn.net/63b24723e4a4a9d5e912f4db/lllyvN4bHb7vXd0o6O_sAhqHVTDd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 25876202
+      }
+    },
+    {
+      "id": "e_25a352d7aa32",
+      "title": "其实每个人都可以尝试自媒体（羊毛月塌房有感",
+      "link": "https://www.xiaoyuzhoufm.com/episode/674d92a0c3b2a2f3341d3a0b?utm_source=rss",
+      "publishedAt": "2024-12-02T11:49:24.000Z",
+      "durationSeconds": 1426,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/674d92a0c3b2a2f3341d3a0b/media.xyzcdn.net/lhZpVnoZLTUesJm5oVz-2x8ixvfn.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 45907423
+      }
+    },
+    {
+      "id": "e_9b498f111ba1",
+      "title": "高考只是应试教育的阶段性结束而已",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66611bd863c334a2fbaf8d03?utm_source=rss",
+      "publishedAt": "2024-06-06T02:15:52.000Z",
+      "durationSeconds": 756,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/66611bd863c334a2fbaf8d03/media.xyzcdn.net/lnSUkJ0U_Jk9srSY_3SBB_2CK21l.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 24333550
+      }
+    },
+    {
+      "id": "e_b41412228e84",
+      "title": "播放时长已经被b站放弃了？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6655af62790e136fcb435357?utm_source=rss",
+      "publishedAt": "2024-05-28T10:18:10.000Z",
+      "durationSeconds": 1160,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/6655af62790e136fcb435357/media.xyzcdn.net/lmFw_BAP-95Bx9Ky6zSZrw1PXUvq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 37368064
+      }
+    },
+    {
+      "id": "e_522a58610881",
+      "title": "b站吹了快一年的播放时长终于腹死胎中（请细品腹与胎",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6654280a4efbc0c3dc507f22?utm_source=rss",
+      "publishedAt": "2024-05-27T06:28:26.000Z",
+      "durationSeconds": 1724,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/6654280a4efbc0c3dc507f22/media.xyzcdn.net/lmuxaIZxGfGZU7DTx3UczKzwhken.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 55509919
+      }
+    },
+    {
+      "id": "e_6c0892464ad4",
+      "title": "成年人的崩溃往往只在一瞬间",
+      "link": "https://www.xiaoyuzhoufm.com/episode/664419bd82b428eafda777d4?utm_source=rss",
+      "publishedAt": "2024-05-15T02:11:09.000Z",
+      "durationSeconds": 922,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/664419bd82b428eafda777d4/media.xyzcdn.net/loCg6z66aGZjS87WZMvpKBQS-nu7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 15272996
+      }
+    },
+    {
+      "id": "e_9429e07febb5",
+      "title": "我为什么想拍播客？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/65e9cc852d96b6aa80676354?utm_source=rss",
+      "publishedAt": "2024-03-07T14:17:41.000Z",
+      "durationSeconds": 1930,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/65e9cc852d96b6aa80676354/media.xyzcdn.net/lp54XzFjYE_Ht7qAE2jbMXdoqfca.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 62140411
+      }
+    },
+    {
+      "id": "e_8c867d23d234",
+      "title": "因为硬刚黑产恶意冲奖，我被B站官方封禁了7天",
+      "link": "https://www.xiaoyuzhoufm.com/episode/656f211f54f87fe00fb026ec?utm_source=rss",
+      "publishedAt": "2023-12-05T13:09:51.000Z",
+      "durationSeconds": 916,
+      "imageUrl": "https://image.xyzcdn.net/FqR01o539_51glg9OyGTS9YPMCDa.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/63b24723e4a4a9d5e912f4db/656f211f54f87fe00fb026ec/media.xyzcdn.net/ltB63PyDy0vdrEZ8FhHG12NyhjTt.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 14830654
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_a1b126d07544",
+    "title": "国内航司如何应对全球紧急停飞空客A320（强烈太阳耀斑直射致使ELAC升降舵副翼计算机故障 或为SEC单粒子翻转",
+    "text": "国内航司如何应对全球紧急停飞6000架——存量一半以上的空客A320 强烈太阳耀斑直射致使ELAC升降舵副翼计算机故障 或为SEC单粒子翻转 这两天真的辛苦各位机务大哥了 再次感谢各位小伙伴的善意与支持 恶意加倍反弹 心脏的人看什么都脏 目之所及皆为自己丑陋的投射 人类唯有先敬畏自然才有机会敬畏生命 敬畏自然包含但不仅限于：尊重科学 尊重事实 尊重逻辑 尊重自然规律 尊重智人只不过是一种有情绪会生病更容易犯错的普通碳基生命",
+    "snippet": {
+      "startMs": 218000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+  }
+}

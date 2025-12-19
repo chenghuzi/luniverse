@@ -1,0 +1,183 @@
+{
+  "id": "c_0c6c7fd9fb6e",
+  "podcast": {
+    "id": "p_db0242c89c90",
+    "title": "世界这七天",
+    "authorName": "Talk2Fay",
+    "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "News"
+    ]
+  },
+  "episode": {
+    "id": "e_5d1f411c4acc",
+    "title": "ep.11 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！李开复：中美大模型竞争如同苹果与安卓之争",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6941b5514c65abaff35ac854?utm_source=rss",
+    "publishedAt": "2025-12-16T19:45:28.000Z",
+    "durationSeconds": 1146,
+    "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/6941b5514c65abaff35ac854/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lpZQwEJaj4b2PIIA5Ock-8kRKQL-.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 18507360
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_5d1f411c4acc",
+      "title": "ep.11 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！李开复：中美大模型竞争如同苹果与安卓之争",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6941b5514c65abaff35ac854?utm_source=rss",
+      "publishedAt": "2025-12-16T19:45:28.000Z",
+      "durationSeconds": 1146,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/6941b5514c65abaff35ac854/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lpZQwEJaj4b2PIIA5Ock-8kRKQL-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 18507360
+      }
+    },
+    {
+      "id": "e_4e08f9903e91",
+      "title": "ep.10 奈飞收购华纳幕后：特朗普在重磅交易中有私交，暗示交易将受阻；“中国版英伟达”摩尔线程上市首秀暴涨425%",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693785013fec3166cf013be5?utm_source=rss",
+      "publishedAt": "2025-12-09T02:15:36.000Z",
+      "durationSeconds": 1214,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/693785013fec3166cf013be5/media.xyzcdn.net/67f6a2563fd23887ec1234b7/ltD_AfZTXf3i1ipXlfbxZaMiaO8y.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 19589365
+      }
+    },
+    {
+      "id": "e_1bec58b9db86",
+      "title": "ep.9 500亿打水漂，解读阿里最新财报：利润骤减之下，当下和未来该如何平衡？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692e4e280d5237d4de7b8908?utm_source=rss",
+      "publishedAt": "2025-12-02T02:32:23.000Z",
+      "durationSeconds": 1403,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/692e4e280d5237d4de7b8908/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lqIDxP3_bEwOZNwDenolaY9m1rfD.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 22651654
+      }
+    },
+    {
+      "id": "e_a3a3598fe6bd",
+      "title": "ep.8 中国加大对日经济施压，高市早苗推首个重大财政举措：1350亿美元刺激计划",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6925f9be0084e2631dba4d03?utm_source=rss",
+      "publishedAt": "2025-11-25T18:51:12.000Z",
+      "durationSeconds": 1201,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/6925f9be0084e2631dba4d03/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lklWcxrJ_K7KyIXZYZQ01c0Gps2I.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 19382916
+      }
+    },
+    {
+      "id": "e_8064bf1a2180",
+      "title": "ep.7 性萧条时代到来！美国人性生活频率降至有史以来最低",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6920ce0ccbba038b42b32fd1?utm_source=rss",
+      "publishedAt": "2025-11-21T20:42:59.000Z",
+      "durationSeconds": 1363,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/6920ce0ccbba038b42b32fd1/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lq6CKJqCICOV2bOcZS56eXj8dcuG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 21997476
+      }
+    },
+    {
+      "id": "e_6245fd8ccf5d",
+      "title": "ep.6 马云妻子张瑛以1950万英镑买下伦敦豪宅；马德里竞技被美国资本25亿欧元收购；印尼考虑发行熊猫债",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691b789d6018cc2c9850aecc?utm_source=rss",
+      "publishedAt": "2025-11-17T19:38:27.000Z",
+      "durationSeconds": 1160,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/691b789d6018cc2c9850aecc/media.xyzcdn.net/67f6a2563fd23887ec1234b7/ls31hu0Q3t7TsE2e6CHBuKmpKURN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 18728670
+      }
+    },
+    {
+      "id": "e_0562c57373ac",
+      "title": "ep.5 史上最高！特斯拉批准马斯克万亿美元薪酬方案；贫富分化加剧，全球中产为何下沉",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6913a89d21e6d1bd340b7b73?utm_source=rss",
+      "publishedAt": "2025-11-11T21:41:11.000Z",
+      "durationSeconds": 1447,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/6913a89d21e6d1bd340b7b73/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lgprSgDeVoPhmU5obnpCB0X2BhwY.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 23354447
+      }
+    },
+    {
+      "id": "e_6de70edc4b17",
+      "title": "ep.4 星巴克出售中国业务60%股权；中美达成一年期贸易停战；伊朗总统提议建设新首都",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690bf05722132f771847bba4?utm_source=rss",
+      "publishedAt": "2025-11-06T00:57:41.000Z",
+      "durationSeconds": 1321,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/690bf05722132f771847bba4/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lnsj48z7lvFon-HvrsCzuILxb4UG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 21317672
+      }
+    },
+    {
+      "id": "e_186a2804999c",
+      "title": "ep.3 宗馥莉心腹离职；英伟达成为世界首家市值突破5万亿美元的公司；二十届四中全会公报的四大信号",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69050c0343a4f4a984579ced?utm_source=rss",
+      "publishedAt": "2025-10-31T19:24:25.000Z",
+      "durationSeconds": 1225,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/69050c0343a4f4a984579ced/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lp-9x9KsXDcvVNg_ysqsToRpPqB_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 19772171
+      }
+    },
+    {
+      "id": "e_88091ca21d38",
+      "title": "ep.2 经济增长到底来自哪里？详解2025诺贝尔经济学奖得主的经济主张",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f7e35d22654730209c5c82?utm_source=rss",
+      "publishedAt": "2025-10-21T20:44:07.000Z",
+      "durationSeconds": 906,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/68f7e35d22654730209c5c82/media.xyzcdn.net/67f6a2563fd23887ec1234b7/ltJkqIVol4m1LnTWXYdUpcmqHbMX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 14631338
+      }
+    },
+    {
+      "id": "e_a4fcda20046c",
+      "title": "ep.1 拉斯维加斯赌场大亨如何帮助NBA重返中国",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68efe8222265473020b3c1e6?utm_source=rss",
+      "publishedAt": "2025-10-15T19:45:55.000Z",
+      "durationSeconds": 940,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/68efe8222265473020b3c1e6/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lpyHvJzlpnY-_WTaq0IsEqqB_DNy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 15172436
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_0c6c7fd9fb6e",
+    "title": "ep.11 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！李开复：中美大模型竞争如同苹果与安卓之争",
+    "text": "（上图：内蒙古乌兰察布一座在建的数据中心） (上图：位于乌兰察布的华为数据中心) 00:00 特朗普允许英伟达向中国出口H200芯片 01:21 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！ 12:45 李开复：中国开源AI具有独特优势，中美大模型竞争如同苹果与安卓之争 16:59 全球股市涨跌互现，本周将迎来超级央行周 ps. 各位听友，主播本周仍然感冒未愈，声音状况不佳，尽请包涵🫶 pps. 本节目已建立听友群，加入方法在节目公告中 ❤️",
+    "snippet": {
+      "startMs": 570000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+  }
+}

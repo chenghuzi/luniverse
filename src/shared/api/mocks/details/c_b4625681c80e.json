@@ -1,0 +1,131 @@
+{
+  "id": "c_b4625681c80e",
+  "podcast": {
+    "id": "p_8f44e90487a0",
+    "title": "取景框",
+    "authorName": "七堇年official",
+    "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_6343076cf6a4",
+    "title": "EP01：七堇年心理学专题—偶然性的艺术",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6900dd2f558113deb7e5b7b3?utm_source=rss",
+    "publishedAt": "2025-10-28T23:00:00.000Z",
+    "durationSeconds": 2957,
+    "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/6900dd2f558113deb7e5b7b3/media.xyzcdn.net/686239dcb3f4482c80c6da0c/lpN_3nUB72q3yII1jui3dqf-zvbh.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 71499659
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_6343076cf6a4",
+      "title": "EP01：七堇年心理学专题—偶然性的艺术",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6900dd2f558113deb7e5b7b3?utm_source=rss",
+      "publishedAt": "2025-10-28T23:00:00.000Z",
+      "durationSeconds": 2957,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/6900dd2f558113deb7e5b7b3/media.xyzcdn.net/686239dcb3f4482c80c6da0c/lpN_3nUB72q3yII1jui3dqf-zvbh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 71499659
+      }
+    },
+    {
+      "id": "e_6294bd1d364a",
+      "title": "V006：七堇年XAlex绝对是个妞儿X胡辛束-爬不动了，就歇会儿！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f5dd40456ffec65e9e8f74?utm_source=rss",
+      "publishedAt": "2025-10-21T23:00:00.000Z",
+      "durationSeconds": 4862,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/68f5dd40456ffec65e9e8f74/media.xyzcdn.net/686239dcb3f4482c80c6da0c/ltm_nBjjsMgd3amv2NRpHF12LdC5.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 117543264
+      }
+    },
+    {
+      "id": "e_bb9378a24f69",
+      "title": "V005：七堇年-不想做人，只想当猴｜《巧克力与佛》新书上市特别篇",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c2613ea56ca3e0c4dc61bf?utm_source=rss",
+      "publishedAt": "2025-09-14T23:00:00.000Z",
+      "durationSeconds": 1367,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/68c2613ea56ca3e0c4dc61bf/media.xyzcdn.net/686239dcb3f4482c80c6da0c/liyW7srq_XgCCZW7WzS1uFUQxNDm.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 33063099
+      }
+    },
+    {
+      "id": "e_e9689860a6f0",
+      "title": "V004:杨大壹X七堇年-看似毫无回报的事情，带给我们最多的乐趣",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6892b62246542d8c41b1631c?utm_source=rss",
+      "publishedAt": "2025-08-07T00:00:00.000Z",
+      "durationSeconds": 10263,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/6892b62246542d8c41b1631c/media.xyzcdn.net/686239dcb3f4482c80c6da0c/ltOZWsIyU6a-_2psBRESywtHKjPj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 248084225
+      }
+    },
+    {
+      "id": "e_51f14cd3ad50",
+      "title": "V003：七堇年对谈张诺娅-徒步穿越万里荒野，却仍在找回属于自己的附近",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6882f376a9dec9250011013d?utm_source=rss",
+      "publishedAt": "2025-07-29T00:00:00.000Z",
+      "durationSeconds": 4130,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/6882f376a9dec9250011013d/media.xyzcdn.net/686239dcb3f4482c80c6da0c/lsJU19QYJXlunMhFaRbKQ-R8X5JK.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 99854635
+      }
+    },
+    {
+      "id": "e_1672e82ee3a6",
+      "title": "V002：七堇年对谈李亮辰—从“有一块青苔很明显”，到“每一个悉达多”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687856a9a12f9ff06a8c9db7?utm_source=rss",
+      "publishedAt": "2025-07-17T02:10:53.000Z",
+      "durationSeconds": 5461,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/687856a9a12f9ff06a8c9db7/media.xyzcdn.net/686239dcb3f4482c80c6da0c/lllg7awMyBQryVzC76ZFxz3fBqGr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 132028196
+      }
+    },
+    {
+      "id": "e_bbac300db3b7",
+      "title": "V001：七堇年对谈颜怡颜悦—干了这只幽默的量杯，喝到可以被冒犯的程度",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68691ea193fd2d72b8ac05b1?utm_source=rss",
+      "publishedAt": "2025-07-07T23:00:00.000Z",
+      "durationSeconds": 3092,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/68691ea193fd2d72b8ac05b1/media.xyzcdn.net/686239dcb3f4482c80c6da0c/ll7PXhck4W9zEhxx_9PyG95xKD2g.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 74749456
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_b4625681c80e",
+    "title": "EP01：七堇年心理学专题—偶然性的艺术",
+    "text": "你现在正在收听的是取景框心理学专题系列的第一期节目，它源自英文播客「Hidden Brain」。 这是我非常想要推荐分享的宝藏播客 ，它是一档由美国知名记者、作家Shankar Vedantam主持的心理学与社会科学类播客。它的核心目标是探索“人类行为背后的隐秘驱动力”，即那些我们常常没有意识到、却深刻影响着思维、决策和人际关系的心理机制，我称它为「隐藏的大脑」。 目前他们已有五百多期节目，我将从中精选出最有价值的几期翻译分享给大家。也希望大家能订阅他们的官方播客了解原文：podcast、小宇宙搜索「 Hidden brain 」 【节目介绍】 本期节目搬运自《隐藏大脑》T he Art of Unknown 这一期。 你是不是也…",
+    "snippet": {
+      "startMs": 1613000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+  }
+}

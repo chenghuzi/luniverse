@@ -1,0 +1,158 @@
+{
+  "id": "c_bdd16c095405",
+  "podcast": {
+    "id": "p_c7ecd382f8f5",
+    "title": "不如茶歇",
+    "authorName": "Yanz1",
+    "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure",
+      "Religion & Spirituality"
+    ]
+  },
+  "episode": {
+    "id": "e_f394c0f6d5bd",
+    "title": "09.爱你老己：送上冬日身心养护指南，这个冬天不再难熬！",
+    "link": "https://www.xiaoyuzhoufm.com/episode/69440bdb038062bdbca58605?utm_source=rss",
+    "publishedAt": "2025-12-18T15:37:22.000Z",
+    "durationSeconds": 2586,
+    "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/69440bdb038062bdbca58605/media.xyzcdn.net/689cc4d70ce9434d9874372e/lkJAl0Iqk0Z0ctigieFUL9EIj1Wc.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 41828617
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_f394c0f6d5bd",
+      "title": "09.爱你老己：送上冬日身心养护指南，这个冬天不再难熬！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69440bdb038062bdbca58605?utm_source=rss",
+      "publishedAt": "2025-12-18T15:37:22.000Z",
+      "durationSeconds": 2586,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/69440bdb038062bdbca58605/media.xyzcdn.net/689cc4d70ce9434d9874372e/lkJAl0Iqk0Z0ctigieFUL9EIj1Wc.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 41828617
+      }
+    },
+    {
+      "id": "e_7d2bd471cfe9",
+      "title": "08.再见爱人5：人为何总在爱里孤独，再见“不爱的人”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6930495a4ef12f9fe9bf6264?utm_source=rss",
+      "publishedAt": "2025-12-04T04:00:02.000Z",
+      "durationSeconds": 3155,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/6930495a4ef12f9fe9bf6264/media.xyzcdn.net/689cc4d70ce9434d9874372e/ltgpKLLgd3aV10LFXXEyA8O4he59.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 45312021
+      }
+    },
+    {
+      "id": "e_96860ce51a82",
+      "title": "07.从裁员聊起，面对挫折，摆烂和抗争都是解药",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691f1ddfcbba038b4283cfba?utm_source=rss",
+      "publishedAt": "2025-11-20T13:58:03.000Z",
+      "durationSeconds": 2496,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/691f1ddfcbba038b4283cfba/media.xyzcdn.net/689cc4d70ce9434d9874372e/lpHKDtSc3le9L5BH_ZuJrNZvWNub.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 60336844
+      }
+    },
+    {
+      "id": "e_1d8522b6c706",
+      "title": "06.从无话不说到无话可说，昔日好友终将渐行渐远吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6915ea60cbba038b426aa4f7?utm_source=rss",
+      "publishedAt": "2025-11-13T14:28:23.000Z",
+      "durationSeconds": 2760,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/6915ea60cbba038b426aa4f7/media.xyzcdn.net/689cc4d70ce9434d9874372e/lhaW1vyFBNesj4CzCdhk9sNxzBRc.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 39238964
+      }
+    },
+    {
+      "id": "e_1b1af510e18e",
+      "title": "05.亲测有效，我靠打扮“逆天改命”？打扮起来运气真的会变好！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690239f9dbb266ad733d471a?utm_source=rss",
+      "publishedAt": "2025-10-29T16:31:15.000Z",
+      "durationSeconds": 2373,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/690239f9dbb266ad733d471a/media.xyzcdn.net/689cc4d70ce9434d9874372e/lgRp1P8N7Y0VKditsrDluW0R8Ueo.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 57374963
+      }
+    },
+    {
+      "id": "e_85c9b95e4143",
+      "title": "04.闲聊：台风天之一面试就发疯，这病能治吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68dd35618e321a0d6f9ea389?utm_source=rss",
+      "publishedAt": "2025-10-01T14:18:29.000Z",
+      "durationSeconds": 2464,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/68dd35618e321a0d6f9ea389/media.xyzcdn.net/689cc4d70ce9434d9874372e/lsbtJ3sGdQgoUUtSgVaTyfZky7Fw.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 79282858
+      }
+    },
+    {
+      "id": "e_449a53233c52",
+      "title": "03.在合群与自我之间：我们为何戴上社交面具？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c98c45a56ca3e0c4c5c329?utm_source=rss",
+      "publishedAt": "2025-09-16T22:30:00.000Z",
+      "durationSeconds": 2782,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/68c98c45a56ca3e0c4c5c329/media.xyzcdn.net/689cc4d70ce9434d9874372e/lsA9gsYJVuGtIDDBAP4speAwDC_G.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 45004097
+      }
+    },
+    {
+      "id": "e_aead5dc4abff",
+      "title": "02.那些尘封在霉霉 (Taylor Swift) 歌曲里的情愫、成长、自我丧失与重建",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68b710b897178f08eef7c5b1?utm_source=rss",
+      "publishedAt": "2025-09-02T23:00:00.000Z",
+      "durationSeconds": 3458,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/68b710b897178f08eef7c5b1/media.xyzcdn.net/689cc4d70ce9434d9874372e/lvdZKsmyhLH0VRNsctwnHvkvKD1t.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 55928441
+      }
+    },
+    {
+      "id": "e_138a86fec104",
+      "title": "01.母胎solo与\"恋爱小天才\"的姐妹真心话：原来恋爱不是必修课",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a49ff842cc2798e766d0c0?utm_source=rss",
+      "publishedAt": "2025-08-19T17:11:38.000Z",
+      "durationSeconds": 2914,
+      "imageUrl": "https://image.xyzcdn.net/FsZpHcKIxFhUZ69lrtSYnCnqb67Z.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/689cc4d70ce9434d9874372e/68a49ff842cc2798e766d0c0/media.xyzcdn.net/689cc4d70ce9434d9874372e/lq8DSeyAYeqDkLQdp1PEoXLRSQKi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 70460226
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_bdd16c095405",
+    "title": "09.爱你老己：送上冬日身心养护指南，这个冬天不再难熬！",
+    "text": "两个非专业但积极实践的养生爱好者分享食物、身体和低能量和解的冬日生存指南，探讨如何顺应“冬藏”节律，通过饮食调整、身体保暖、适度运动和心态管理四个维度，找回身心的平衡与舒适。 0:00 到底冬天为什么又懒又馋啊？ 4:30 身体信号：痛经、压力与养护基础 08:31情绪与肠胃如何相互影响；进食焦虑vs. 进食障碍 22:35一日之计在于晨起蛋白质 32:40 没啥用的保暖指南，跳了吧 34:40 冬天怎么哄自己去健身房？ 37:14 年底焦虑？放宽心！一天一事，即是圆满。 提到的作品： 《黄帝内经》 《控糖革命》 BGM： Silver Sable - Cigarettes After Sex",
+    "snippet": {
+      "startMs": 558000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+  }
+}

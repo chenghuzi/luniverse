@@ -1,0 +1,197 @@
+{
+  "id": "c_2eb688fa35a2",
+  "podcast": {
+    "id": "p_a46535b4dd26",
+    "title": "烧木佛",
+    "authorName": "林象",
+    "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture",
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_035590f3df88",
+    "title": "12. 俄国游记：教堂，窥见权力与自我认知的变迁",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6940eeeb2a383da1675edd07?utm_source=rss",
+    "publishedAt": "2025-12-16T10:30:00.000Z",
+    "durationSeconds": 3915,
+    "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/6940eeeb2a383da1675edd07/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lm4GLU05CIT0MiU3M25H4Ha8rJsQ.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 63385124
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_035590f3df88",
+      "title": "12. 俄国游记：教堂，窥见权力与自我认知的变迁",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6940eeeb2a383da1675edd07?utm_source=rss",
+      "publishedAt": "2025-12-16T10:30:00.000Z",
+      "durationSeconds": 3915,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/6940eeeb2a383da1675edd07/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lm4GLU05CIT0MiU3M25H4Ha8rJsQ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 63385124
+      }
+    },
+    {
+      "id": "e_dcaacd4663f4",
+      "title": "11. 刘家琨，地震，历史与现实；我们该如何度过一生？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691a30956018cc2c9820c930?utm_source=rss",
+      "publishedAt": "2025-11-16T20:52:11.000Z",
+      "durationSeconds": 5327,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/691a30956018cc2c9820c930/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lubaZd0awMuT3BnLR5PAnUL9DeBd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 128852976
+      }
+    },
+    {
+      "id": "e_9050a19000f2",
+      "title": "10. 从西村大院聊到公共空间的难题",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691624386018cc2c98baf6c1?utm_source=rss",
+      "publishedAt": "2025-11-13T19:41:56.000Z",
+      "durationSeconds": 1823,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/691624386018cc2c98baf6c1/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lps_4GD--7CYBEPGbnByjCM_MYBJ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 44106389
+      }
+    },
+    {
+      "id": "e_dd3ea185496c",
+      "title": "09. 资本与情怀，西村大院的前世今生",
+      "link": "https://www.xiaoyuzhoufm.com/episode/691371e6e17fb06c428973c5?utm_source=rss",
+      "publishedAt": "2025-11-11T19:45:53.000Z",
+      "durationSeconds": 4512,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/691371e6e17fb06c428973c5/media.xyzcdn.net/66beca50db5e6d6bf9aff779/ljU0P1sNGZRcXjJ_m1hrHsW6KAhm.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 109154540
+      }
+    },
+    {
+      "id": "e_b9d295ecb3f9",
+      "title": "08. 建筑设计是否只是一种巧言令色？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6863424bbef90978ecbd712c?utm_source=rss",
+      "publishedAt": "2025-07-01T11:30:00.000Z",
+      "durationSeconds": 1963,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/6863424bbef90978ecbd712c/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lkGTEhTHG5zwgFBVCjJeLatH_hiN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 47503935
+      }
+    },
+    {
+      "id": "e_7d84d7ba2e94",
+      "title": "07. 普利兹克建筑奖，变化的世界与权力结构",
+      "link": "https://www.xiaoyuzhoufm.com/episode/685e0d3a08d8fd85863b9a4f?utm_source=rss",
+      "publishedAt": "2025-06-27T09:30:00.000Z",
+      "durationSeconds": 4101,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/685e0d3a08d8fd85863b9a4f/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lq9urVQHm9q3EKRu6cL1JIqWGLKV.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 99197830
+      }
+    },
+    {
+      "id": "e_357789fd5e26",
+      "title": "06. 什么是建筑？学术与市场的分野和困境",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6848fcf41c45a6323298351e?utm_source=rss",
+      "publishedAt": "2025-06-11T09:30:00.000Z",
+      "durationSeconds": 3597,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/6848fcf41c45a6323298351e/media.xyzcdn.net/66beca50db5e6d6bf9aff779/liIy5rrNc-jvrylyuu65yDX2mADZ.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 87007728
+      }
+    },
+    {
+      "id": "e_aaba77927a9a",
+      "title": "05. 李诞小卖部会如何回复祥林嫂的来信？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/674abc31c3b2a2f33492b13a?utm_source=rss",
+      "publishedAt": "2024-11-30T07:36:18.000Z",
+      "durationSeconds": 2746,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/674abc31c3b2a2f33492b13a/media.xyzcdn.net/lqzUcjeLek7RJj-ehmQ2kao-13fr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 66432277
+      }
+    },
+    {
+      "id": "e_a3ff67cfbdfb",
+      "title": "04. 喜剧综艺与演员的人生：相亲相爱，不破不立",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6734390ef373fe5d4de898fb?utm_source=rss",
+      "publishedAt": "2024-11-13T05:39:20.000Z",
+      "durationSeconds": 3436,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/6734390ef373fe5d4de898fb/media.xyzcdn.net/lkaHmuhylkjQLRH1LqCpkZvyCfkW.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83072750
+      }
+    },
+    {
+      "id": "e_03bd7a9c3e02",
+      "title": "03. 女性喜剧演员，她们的多元世界",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67313f0743dc3a43878b01c7?utm_source=rss",
+      "publishedAt": "2024-11-11T01:10:12.000Z",
+      "durationSeconds": 3960,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/67313f0743dc3a43878b01c7/media.xyzcdn.net/lvrAxkZzjMrG3wtybgBtgTGKoROG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 95731309
+      }
+    },
+    {
+      "id": "e_a1370565c209",
+      "title": "02. 舞剧《咏春》：传承应至天地与众生",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6706f40e81cdab3a93e3c5f1?utm_source=rss",
+      "publishedAt": "2024-10-10T04:30:00.000Z",
+      "durationSeconds": 2073,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/6706f40e81cdab3a93e3c5f1/media.xyzcdn.net/luphZlpK3IDde5C3oCdmrdJhiAv2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 50123269
+      }
+    },
+    {
+      "id": "e_b0b429fd8f78",
+      "title": "01. 门罗事件，那些逃离的与未能逃离的女性",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66fddd3c81cdab3a938c15ce?utm_source=rss",
+      "publishedAt": "2024-10-03T10:45:21.000Z",
+      "durationSeconds": 6116,
+      "imageUrl": "https://image.xyzcdn.net/Fgb2iacQQsoZts2VidqqMMmBfD90.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/66beca50db5e6d6bf9aff779/66fddd3c81cdab3a938c15ce/media.xyzcdn.net/66beca50db5e6d6bf9aff779/lux6JaukZY4XrC0ck-6s1msYPkbO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 147842306
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_2eb688fa35a2",
+    "title": "12. 俄国游记：教堂，窥见权力与自我认知的变迁",
+    "text": "在旅行途中，从建筑设计的角度略览俄罗斯历史，理解这场已经持续三百年的自我撕扯。 ⊹ 时间轴 06:25 外形相似的两座教堂，为何内部的感觉完全不同？ 23:03 把莫斯科的教堂炸了，改成游泳池，又改回教堂 49:15 我为圣彼得堡最宏伟的教堂感到难过 ⊹ 相关内容 圣瓦西里教堂 Храм Василия Блаженного 滴血教堂 Храм Спаса на Крови 基督救世主教堂 Храм Христа Спасителя 莫斯科游泳池 Москва бассейн 圣以撒教堂 Исаакиевский собор 喀山教堂 Казанский собор 独树不成林 234. 让俄国成为世界强国的彼得大帝是一个怎样的统…",
+    "snippet": {
+      "startMs": 1067000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)"
+  }
+}

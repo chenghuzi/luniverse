@@ -1,0 +1,289 @@
+{
+  "id": "c_3c03c01a4d4b",
+  "podcast": {
+    "id": "p_e28731b3aa30",
+    "title": "北雍ECC｜中国视野趣谈世界",
+    "authorName": "Tianshu17",
+    "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture",
+      "Arts",
+      "Technology"
+    ]
+  },
+  "episode": {
+    "id": "e_721dc071d3f1",
+    "title": "【北雍读书】被“私营”出来的世界版图（一）：“清洗”香料群岛｜荷兰东印度公司VOC",
+    "link": "https://www.xiaoyuzhoufm.com/episode/693a403d2a383da1677db16f?utm_source=rss",
+    "publishedAt": "2025-12-11T09:00:00.000Z",
+    "durationSeconds": 722,
+    "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/693a403d2a383da1677db16f/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/liklxotJL9ywS_-dbGryH2CdVade.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 11679294
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_721dc071d3f1",
+      "title": "【北雍读书】被“私营”出来的世界版图（一）：“清洗”香料群岛｜荷兰东印度公司VOC",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693a403d2a383da1677db16f?utm_source=rss",
+      "publishedAt": "2025-12-11T09:00:00.000Z",
+      "durationSeconds": 722,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/693a403d2a383da1677db16f/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/liklxotJL9ywS_-dbGryH2CdVade.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 11679294
+      }
+    },
+    {
+      "id": "e_aedc491d0a40",
+      "title": "13-和B站up主“把画说透”畅聊：「艺术何以为艺术」和「面向大众的(魔性)传播」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692006fd6018cc2c98e731fc?utm_source=rss",
+      "publishedAt": "2025-11-21T06:57:42.000Z",
+      "durationSeconds": 7017,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/692006fd6018cc2c98e731fc/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/ltXWifR0k91guM55tLnGDPot3aRu.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 169621711
+      }
+    },
+    {
+      "id": "e_50d4ddfc7b04",
+      "title": "【北雍读书】AI下半场 The Second Half（作者：姚顺宇）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690da291d99642be96e75a5a?utm_source=rss",
+      "publishedAt": "2025-11-07T08:02:30.000Z",
+      "durationSeconds": 1705,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/690da291d99642be96e75a5a/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lnrOAPdqJ8kO86kmIwvSCrjTAfFd.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 41235328
+      }
+    },
+    {
+      "id": "e_0bb43bb8c9e6",
+      "title": "12-从清华、哈佛到“奇观计划”：一位建筑师的全球视野与本土突围",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f1b7d02265473020e944e3?utm_source=rss",
+      "publishedAt": "2025-10-17T04:01:11.000Z",
+      "durationSeconds": 5841,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/68f1b7d02265473020e944e3/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lkGSCFc8X7i4U_sJTKBe5nNA7PMw.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 141203980
+      }
+    },
+    {
+      "id": "e_3d8c95987473",
+      "title": "11 - 真假莫“辩”，直面作品：读徐小虎《被遗忘的真迹：吴镇书画重鉴》",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c03c752c82c9dcca8c5e8c?utm_source=rss",
+      "publishedAt": "2025-09-10T23:30:00.000Z",
+      "durationSeconds": 3103,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/68c03c752c82c9dcca8c5e8c/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lp_s82U9z65sRiUy0obYV04WRpZi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 50194545
+      }
+    },
+    {
+      "id": "e_020ae8edf718",
+      "title": "【北雍读书】大语言模型架构对比",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ad762342cc2798e77d0562?utm_source=rss",
+      "publishedAt": "2025-08-27T23:30:00.000Z",
+      "durationSeconds": 1171,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/68ad762342cc2798e77d0562/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/ljlK7k3FYgh4MnPF67-nDLrqyrD-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 37699565
+      }
+    },
+    {
+      "id": "e_a3790510205e",
+      "title": "【北雍读书】从 GPT-2 到 GPT-OSS：架构演进深度解析",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68acde3042cc2798e762edaf?utm_source=rss",
+      "publishedAt": "2025-08-26T23:30:00.000Z",
+      "durationSeconds": 1276,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/68acde3042cc2798e762edaf/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lsQhLn0gtBfiiLLAPBjtc-NAlVJe.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 41072456
+      }
+    },
+    {
+      "id": "e_c1e5a6fbc1e6",
+      "title": "10-你行你上，自洽的音乐人！高雅的钢琴在工人阶级文化生活中的生根、开花、结果",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68941c39638b0158795dc6f4?utm_source=rss",
+      "publishedAt": "2025-08-07T03:33:47.000Z",
+      "durationSeconds": 5722,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/68941c39638b0158795dc6f4/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/llXX7uXexXph1W6B4L6WU23TQga6.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 92553227
+      }
+    },
+    {
+      "id": "e_7461e84c2930",
+      "title": "9-从科举到高考：中国选拔制度的演进和当代启示",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6878c436a9dec92500c50d9e?utm_source=rss",
+      "publishedAt": "2025-07-17T09:57:08.000Z",
+      "durationSeconds": 7772,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/6878c436a9dec92500c50d9e/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lsYERsyeA_Z92COVY55hBji-kDTi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 125701377
+      }
+    },
+    {
+      "id": "e_160dc67002e4",
+      "title": "8-艺术为人民之「为什么真人演的电影没有一个动画电影票房高？」",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68525fec2a38b4d97942351f?utm_source=rss",
+      "publishedAt": "2025-06-18T07:15:30.000Z",
+      "durationSeconds": 7697,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/68525fec2a38b4d97942351f/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/loGiinhl-Pp5N8hOWz8CgByWjx1t.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 124483268
+      }
+    },
+    {
+      "id": "e_32aff8096c0a",
+      "title": "7-古今文科：与文科博士探讨文科的底层逻辑和当代困境",
+      "link": "https://www.xiaoyuzhoufm.com/episode/681c8dd3b7c8a9962c1644f6?utm_source=rss",
+      "publishedAt": "2025-05-08T11:25:36.000Z",
+      "durationSeconds": 7347,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/681c8dd3b7c8a9962c1644f6/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lmX-Jc3qJESQ3bnJCTy02JpxOBWk.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 116865136
+      }
+    },
+    {
+      "id": "e_344ebc8d5ed9",
+      "title": "【北雍读书】DeepSeek-R1推理模型解读（英文）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67d803c2dd11f9c8c1297a82?utm_source=rss",
+      "publishedAt": "2025-03-17T11:17:26.000Z",
+      "durationSeconds": 1188,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/67d803c2dd11f9c8c1297a82/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lgkSjnjZdK0jRydohGG-3Aiqwaq_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 14406161
+      }
+    },
+    {
+      "id": "e_cb13546219d7",
+      "title": "6 - 中央音乐学院青年指挥棒下的东西交响：一场关于「艺术x时代x文化烙印」的破界对话",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67c28a2fb0167b8db9bca037?utm_source=rss",
+      "publishedAt": "2025-03-01T04:40:08.000Z",
+      "durationSeconds": 4587,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/67c28a2fb0167b8db9bca037/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lqIjz36u9C26Yjq8rKx8L0WxkrVz.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 74188824
+      }
+    },
+    {
+      "id": "e_5a025447076c",
+      "title": "【北雍读书】DeepSeek V3 技术报告（英文）",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67b3cab305a90dfd0d2109a0?utm_source=rss",
+      "publishedAt": "2025-02-18T00:08:01.000Z",
+      "durationSeconds": 2409,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/67b3cab305a90dfd0d2109a0/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lv21jm8kyv7ZAjD_zTBf1zb2Xhfq.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31264711
+      }
+    },
+    {
+      "id": "e_942e8d2f5e84",
+      "title": "5 - 和NYU发育生物学博士生浅谈干细胞、医美、胚胎研究伦理；以及关于「意识」的一些初步思考",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67ad3bb52faa72d7a82dcca4?utm_source=rss",
+      "publishedAt": "2025-02-13T00:40:33.000Z",
+      "durationSeconds": 3807,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/67ad3bb52faa72d7a82dcca4/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lvyPi5gdCzSjJ6Yq3RTy5SHwZoSI.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61576362
+      }
+    },
+    {
+      "id": "e_4a76ed2c7eca",
+      "title": "4 - 洛杉矶山火，万物私有化，小红书对账，格陵兰岛",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6797a84ad74435e4a31c8d60?utm_source=rss",
+      "publishedAt": "2025-01-27T16:19:31.000Z",
+      "durationSeconds": 4212,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/6797a84ad74435e4a31c8d60/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/llN9z2UCLr3KULFtpHWXZQSZ9Z3L.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 68127134
+      }
+    },
+    {
+      "id": "e_aac6b57661ec",
+      "title": "3 - 书画收藏中八卦：从徐小虎、王季迁和《画语录》聊起",
+      "link": "https://www.xiaoyuzhoufm.com/episode/677fab81cda04ef4c19389e2?utm_source=rss",
+      "publishedAt": "2025-01-09T12:02:37.000Z",
+      "durationSeconds": 2551,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/677fab81cda04ef4c19389e2/media.xyzcdn.net/654f26aa500b3ef49a4d30fe/lmROnObmhtSaEEvlmN0xpca_2CGn.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 41272065
+      }
+    },
+    {
+      "id": "e_bcefe9552f36",
+      "title": "2 - 构建“生命之树”：与美国自然历史博物馆博士后探讨恐龙和宏演化",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6764049615a5fd520ef8c1ac?utm_source=rss",
+      "publishedAt": "2024-12-19T13:16:14.000Z",
+      "durationSeconds": 3171,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/6764049615a5fd520ef8c1ac/media.xyzcdn.net/lri8OjSawaqenNe03YErPqDaySSR.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 51300315
+      }
+    },
+    {
+      "id": "e_86010f02cdb7",
+      "title": "1 - 地理与政治，气候与文明：跟大气与海洋科学博士生从云梦泽聊到澜沧江",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6751da8fa314b553c67a9a82?utm_source=rss",
+      "publishedAt": "2024-12-06T01:50:28.000Z",
+      "durationSeconds": 6589,
+      "imageUrl": "https://image.xyzcdn.net/FgI6oi1L9BYc-EaUsXh7LkdYFbzo.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/654f26aa500b3ef49a4d30fe/6751da8fa314b553c67a9a82/media.xyzcdn.net/lj3F5fNdm2vra3XK_IA0ZJS_v-2H.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 106576812
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_3c03c01a4d4b",
+    "title": "【北雍读书】被“私营”出来的世界版图（一）：“清洗”香料群岛｜荷兰东印度公司VOC",
+    "text": "北雍读书推出新一系列：《被“私营”出来的世界版图》，此为“北雍商业史”导读部分。 我们习惯于认为，历史是由威严的国家机器书写的。我们想象中的殖民扩张，是皇家海军整齐的线列舰，是沙皇近卫军的马刀。但真相往往更荒诞，也更冷酷。 在1600年到1900年这三个世纪里，真正重塑全球地缘政治格局的，往往不是坐在皇宫里的君主，而是一群游离在体制边缘的“私营人士”。 他们是股份公司的经理人，是拿着极低薪水却富可敌国的办事员，是草原上寻找毛皮的雇佣兵。对于欧洲皇室而言，他们是完美的“白手套”：国家通过特许状将海外探险的巨大风险转嫁给私人资本，而当这些私营主体成功建立据点或打通商路后，国家再通过国有化或行政兼并的方式，坐享地缘政治的红利。 这是一部…",
+    "snippet": {
+      "startMs": 604000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)"
+  }
+}

@@ -1,0 +1,433 @@
+{
+  "id": "c_7e71982dc5ae",
+  "podcast": {
+    "id": "p_2b08edfe6167",
+    "title": "实验之外",
+    "authorName": "Moonpie_TZF2",
+    "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+    "language": "zh-cn",
+    "categories": [
+      "Education",
+      "Leisure",
+      "Science",
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_5f7ea6afb9f6",
+    "title": "EP33 - 放弃学术界到工业界：我的澳洲职场初体验",
+    "link": "https://www.xiaoyuzhoufm.com/episode/693cdde62a383da167d6fe9d?utm_source=rss",
+    "publishedAt": "2025-12-14T23:30:00.000Z",
+    "durationSeconds": 2419,
+    "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/693cdde62a383da167d6fe9d/media.xyzcdn.net/67f9b1800fda196570975551/lgXijI_2mE6sIKrupm8vq3xuj6Q9.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 39129173
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_5f7ea6afb9f6",
+      "title": "EP33 - 放弃学术界到工业界：我的澳洲职场初体验",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693cdde62a383da167d6fe9d?utm_source=rss",
+      "publishedAt": "2025-12-14T23:30:00.000Z",
+      "durationSeconds": 2419,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/693cdde62a383da167d6fe9d/media.xyzcdn.net/67f9b1800fda196570975551/lgXijI_2mE6sIKrupm8vq3xuj6Q9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 39129173
+      }
+    },
+    {
+      "id": "e_a51464af8a6b",
+      "title": "EP32 - 长大以后，离别成了必修课",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6932c9433fec3166cf7500f5?utm_source=rss",
+      "publishedAt": "2025-12-07T23:30:00.000Z",
+      "durationSeconds": 1701,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/6932c9433fec3166cf7500f5/media.xyzcdn.net/67f9b1800fda196570975551/low6pqvWUrOZaGE5H22gsvjORmPK.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 27520946
+      }
+    },
+    {
+      "id": "e_f21c12d11979",
+      "title": "EP31 - 从“学术蝗虫”到敢搭讪大牛：硕博生学术会议指南",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69251c0ee09dc0297abc71dc?utm_source=rss",
+      "publishedAt": "2025-11-30T23:30:00.000Z",
+      "durationSeconds": 1608,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/69251c0ee09dc0297abc71dc/media.xyzcdn.net/67f9b1800fda196570975551/lh_VaYSL7iG8X6Lf7NLP67wP9IpC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 51737914
+      }
+    },
+    {
+      "id": "e_db39f11c7277",
+      "title": "EP30 - 停止自证：你没义务让每个人满意",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69167a156018cc2c98be8c88?utm_source=rss",
+      "publishedAt": "2025-11-23T20:30:00.000Z",
+      "durationSeconds": 2180,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/69167a156018cc2c98be8c88/media.xyzcdn.net/67f9b1800fda196570975551/lppQEcjkzm5ttTvfkww_IEXmH6hw.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 70142771
+      }
+    },
+    {
+      "id": "e_df668d795f1e",
+      "title": "EP29 - 和课题组同门相处，比科研本身还难一点",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69156c92cbba038b4254f776?utm_source=rss",
+      "publishedAt": "2025-11-16T20:30:00.000Z",
+      "durationSeconds": 1752,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/69156c92cbba038b4254f776/media.xyzcdn.net/67f9b1800fda196570975551/lrE481Oi902NWi8waZ07Mip_aco2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 56373304
+      }
+    },
+    {
+      "id": "e_3ce9cdc15d75",
+      "title": "EP28 - 别让期待绑住你！当代硕博生自洽指南",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690d58c8d99642be96d9aed5?utm_source=rss",
+      "publishedAt": "2025-11-09T20:30:00.000Z",
+      "durationSeconds": 3312,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/690d58c8d99642be96d9aed5/media.xyzcdn.net/67f9b1800fda196570975551/lqCHjS3RMTHXkxY-Dc_1nRv-YT2f.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 106574479
+      }
+    },
+    {
+      "id": "e_bc486656aa03",
+      "title": "EP27 - 澳洲10年老留子的回国真实感受",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6906838c43a4f4a98475458c?utm_source=rss",
+      "publishedAt": "2025-11-02T20:30:00.000Z",
+      "durationSeconds": 3104,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/6906838c43a4f4a98475458c/media.xyzcdn.net/67f9b1800fda196570975551/lsrrH_NRFCZBMC85E3DJWCTSAJYT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 75049266
+      }
+    },
+    {
+      "id": "e_9207fc59cfe2",
+      "title": "EP26 - 全球“人才计划”动荡，底层科研人怎样破局？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f9c17c083a71a4ebdefc68?utm_source=rss",
+      "publishedAt": "2025-10-26T20:30:00.000Z",
+      "durationSeconds": 2028,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68f9c17c083a71a4ebdefc68/media.xyzcdn.net/67f9b1800fda196570975551/lnyie0oLxCPUmCiBcEs6VbnfmRpS.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 49038880
+      }
+    },
+    {
+      "id": "e_476a3a377e27",
+      "title": "EP25 - 城市很美，动物却迷路了：聊聊“生态陷阱”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68f07dea456ffec65e0ad362?utm_source=rss",
+      "publishedAt": "2025-10-19T20:30:00.000Z",
+      "durationSeconds": 1397,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68f07dea456ffec65e0ad362/media.xyzcdn.net/67f9b1800fda196570975551/lsFJggxGZTROj1StSbAwhCZNhiv6.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 33790560
+      }
+    },
+    {
+      "id": "e_a3bc60e7d455",
+      "title": "EP24 - 当出生的人越来越少，我们聊“轮回”与“被记住”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68eb35a0224325ea70cb6af7?utm_source=rss",
+      "publishedAt": "2025-10-12T20:30:00.000Z",
+      "durationSeconds": 1578,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68eb35a0224325ea70cb6af7/media.xyzcdn.net/67f9b1800fda196570975551/lhrqSh-fhETEGScg0M2dxZ1mgbXR.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 38168564
+      }
+    },
+    {
+      "id": "e_db532195613c",
+      "title": "EP23 - 高校招聘冻结，天坑专业博士如何上岸北美教职",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68df22f18e321a0d6fc074e6?utm_source=rss",
+      "publishedAt": "2025-10-05T20:30:00.000Z",
+      "durationSeconds": 2337,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68df22f18e321a0d6fc074e6/media.xyzcdn.net/67f9b1800fda196570975551/lnGbWx5rD2m2o_w91Cxy29LYSuev.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 56500001
+      }
+    },
+    {
+      "id": "e_78104e11d196",
+      "title": "EP22 - 当“勤奋”被过度消费，我们选择摸鱼和躺平",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68d7d300522b40626c8660dd?utm_source=rss",
+      "publishedAt": "2025-09-28T21:30:00.000Z",
+      "durationSeconds": 1649,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68d7d300522b40626c8660dd/media.xyzcdn.net/67f9b1800fda196570975551/livwY_chrLyVIyWoTMifqmpvmqB-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 39863690
+      }
+    },
+    {
+      "id": "e_d7842304ea5e",
+      "title": "EP21 - 都读到博士了，还会抑郁？聊聊学术与职场低谷的自救",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ca061c2c82c9dccac08283?utm_source=rss",
+      "publishedAt": "2025-09-21T21:30:00.000Z",
+      "durationSeconds": 4100,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68ca061c2c82c9dccac08283/media.xyzcdn.net/67f9b1800fda196570975551/lrBhsTeViFvwhU5Mlusf4KfcZSSX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 99112039
+      }
+    },
+    {
+      "id": "e_71f95c3fc279",
+      "title": "EP20 - 环境博士告诉你：海平面上升、污染加剧，地球还能住吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c65fc5a56ca3e0c44dccd0?utm_source=rss",
+      "publishedAt": "2025-09-14T21:30:00.000Z",
+      "durationSeconds": 2065,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68c65fc5a56ca3e0c44dccd0/media.xyzcdn.net/67f9b1800fda196570975551/lhtc3Qpjvu3FXCgTr1DV_XRtwDns.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 49921239
+      }
+    },
+    {
+      "id": "e_dfce5040a9f2",
+      "title": "EP19 - 张维伊董璇的婚礼，让我们重新思考：婚礼究竟是给谁办的？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68bcf17697178f08eea4409b?utm_source=rss",
+      "publishedAt": "2025-09-07T21:30:00.000Z",
+      "durationSeconds": 1713,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68bcf17697178f08eea4409b/media.xyzcdn.net/67f9b1800fda196570975551/lhf6S_X_GtHEGGFUQMSSykJTn0UA.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 41424591
+      }
+    },
+    {
+      "id": "e_fead3b2ffc56",
+      "title": "EP18 - 如何不被坑？留学生租房生存指南",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68b502cb97178f08eea19d8b?utm_source=rss",
+      "publishedAt": "2025-09-01T02:22:12.000Z",
+      "durationSeconds": 1828,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68b502cb97178f08eea19d8b/media.xyzcdn.net/67f9b1800fda196570975551/lohLr8xNIh1jJASm9RJFKnMAphn8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 44196122
+      }
+    },
+    {
+      "id": "e_2f27c09f5967",
+      "title": "EP17 - 告别校园，回望青春：那些经历如何决定了今天的我们",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68abacb8293471fed443e15b?utm_source=rss",
+      "publishedAt": "2025-08-25T00:22:37.000Z",
+      "durationSeconds": 2532,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68abacb8293471fed443e15b/media.xyzcdn.net/67f9b1800fda196570975551/lpogBuYySslNag48EqqOdjq_4456.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 61210987
+      }
+    },
+    {
+      "id": "e_728656ce7461",
+      "title": "EP16 - 考公热&编制梦 | 秋招在即，这届硕博生还能靠铁饭碗安身立命吗？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a2726d42cc2798e70d784d?utm_source=rss",
+      "publishedAt": "2025-08-18T00:42:34.000Z",
+      "durationSeconds": 2227,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68a2726d42cc2798e70d784d/media.xyzcdn.net/67f9b1800fda196570975551/lkoH2uMb2rqDIXMzpWDG-ZZ461PS.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 53852966
+      }
+    },
+    {
+      "id": "e_39fdd5ef0eab",
+      "title": "EP15 - 在国内累，在国外孤单｜硕博留子的放松文化冲击",
+      "link": "https://www.xiaoyuzhoufm.com/episode/689ab2de20a2906a4d1920f4?utm_source=rss",
+      "publishedAt": "2025-08-12T03:28:16.000Z",
+      "durationSeconds": 2432,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/689ab2de20a2906a4d1920f4/media.xyzcdn.net/67f9b1800fda196570975551/lv4hyzT8fr3MaU_xog_ilr8JW8Q7.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 58795162
+      }
+    },
+    {
+      "id": "e_8b69cde59078",
+      "title": "EP14 - 要不要生？适育女博士的生育焦虑与选择",
+      "link": "https://www.xiaoyuzhoufm.com/episode/688dbb2f8e06fe8de7ed912f?utm_source=rss",
+      "publishedAt": "2025-08-02T07:17:00.000Z",
+      "durationSeconds": 2143,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/688dbb2f8e06fe8de7ed912f/media.xyzcdn.net/67f9b1800fda196570975551/lleukViDlHDzP3OTI1pCu09_M1_k.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 51816662
+      }
+    },
+    {
+      "id": "e_2a26933dabe2",
+      "title": "EP13 - 生成式AI入侵实验室：独立思考的终结，还是新起点？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6886c13fa9dec925007a7483?utm_source=rss",
+      "publishedAt": "2025-07-28T21:00:00.000Z",
+      "durationSeconds": 2007,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/6886c13fa9dec925007a7483/media.xyzcdn.net/67f9b1800fda196570975551/lsMhNKO2gDazyrWkptC44voyT8Nr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 48535445
+      }
+    },
+    {
+      "id": "e_d9dd51936f07",
+      "title": "EP12 - 总觉得导师难搞？你可能需要练习“向上管理”| 当代硕博生的必修课：如何不委屈自己，也能好好沟通",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687ee4c0a9dec925007de721?utm_source=rss",
+      "publishedAt": "2025-07-22T01:10:48.000Z",
+      "durationSeconds": 2313,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/687ee4c0a9dec925007de721/media.xyzcdn.net/67f9b1800fda196570975551/lrrUgc91a5z7MYJkAcZVe_IYJSRI.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 55919647
+      }
+    },
+    {
+      "id": "e_6635b34e7984",
+      "title": "EP11 - 我重生了：富二代？官二代？不，我选学二代！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/687850caa9dec92500ad5b05?utm_source=rss",
+      "publishedAt": "2025-07-17T01:26:24.000Z",
+      "durationSeconds": 1729,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/687850caa9dec92500ad5b05/media.xyzcdn.net/67f9b1800fda196570975551/lohxXi1drdvuWtn8_QpRtogRoeSr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 41805150
+      }
+    },
+    {
+      "id": "e_7102c2de663d",
+      "title": "EP10 - 出世之心，入世科研：在高压环境中，如何修一颗安定的心 | 一位全职博士后的寺院义工之路",
+      "link": "https://www.xiaoyuzhoufm.com/episode/686dcdaa93fd2d72b83d7478?utm_source=rss",
+      "publishedAt": "2025-07-09T02:51:56.000Z",
+      "durationSeconds": 2817,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/686dcdaa93fd2d72b83d7478/media.xyzcdn.net/67f9b1800fda196570975551/llb7RgQ5eKe60u2X8LWHL3hfzuAs.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 68106864
+      }
+    },
+    {
+      "id": "e_057dadc0c3a5",
+      "title": "EP9 - 科研人注定与孤独同行？从拒稿信中重生：同行评议之外，科研人如何自我疗愈？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68611763bef90978ec758c32?utm_source=rss",
+      "publishedAt": "2025-06-30T21:00:00.000Z",
+      "durationSeconds": 3517,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68611763bef90978ec758c32/media.xyzcdn.net/67f9b1800fda196570975551/liZSu2mtzJaDZow6FqQK-5Q2uYej.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 85032341
+      }
+    },
+    {
+      "id": "e_54660cabc0ad",
+      "title": "EP8 - 硬核干货｜海外博士申请全攻略：国家选择、时间规划与各种奖学金实操指南 —— 顺利上岸，从这期开始！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68568cc54abe6e29cb44a7c2?utm_source=rss",
+      "publishedAt": "2025-06-23T21:00:00.000Z",
+      "durationSeconds": 4402,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/68568cc54abe6e29cb44a7c2/media.xyzcdn.net/67f9b1800fda196570975551/lpweVJr3M3W3b5b5y6HkYwlATKpX.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 106418916
+      }
+    },
+    {
+      "id": "e_d15df10bfc57",
+      "title": "EP7 - “女博士不好嫁”？高学历女性的亲密关系“困境”",
+      "link": "https://www.xiaoyuzhoufm.com/episode/684e9c474abe6e29cb385ed5?utm_source=rss",
+      "publishedAt": "2025-06-16T21:00:00.000Z",
+      "durationSeconds": 3447,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/684e9c474abe6e29cb385ed5/media.xyzcdn.net/67f9b1800fda196570975551/ll5s325bmsXvTtz4QQBpEUhCyJhy.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 83346633
+      }
+    },
+    {
+      "id": "e_c6b2d17c7e98",
+      "title": "EP6 - 博士与佛陀的距离：科学的尽头是玄学？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/684934ea1c45a63232a3cb75?utm_source=rss",
+      "publishedAt": "2025-06-11T21:00:00.000Z",
+      "durationSeconds": 3075,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/684934ea1c45a63232a3cb75/media.xyzcdn.net/67f9b1800fda196570975551/loPorHj9zoO3s6zvLx0u7Gmjm6cD.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 74333155
+      }
+    },
+    {
+      "id": "e_3d213091bbb6",
+      "title": "EP5 - 顶级课题组 vs. 家庭召唤：女博士为何转身投向国内事业编，向博后offer say NO！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/683d076431215eb506d99d0f?utm_source=rss",
+      "publishedAt": "2025-06-02T21:00:00.000Z",
+      "durationSeconds": 4593,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/683d076431215eb506d99d0f/media.xyzcdn.net/67f9b1800fda196570975551/lhQe-vjn8jIrX_UZbGEoVAod4PEA.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 111026927
+      }
+    },
+    {
+      "id": "e_54ea77ce90dd",
+      "title": "EP4 - 选错专业毁一生？那我们已经毁完了｜天坑博士亲述志愿填报那些坑",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6833c8f841ef875a1231f42a?utm_source=rss",
+      "publishedAt": "2025-05-26T21:30:00.000Z",
+      "durationSeconds": 2819,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/6833c8f841ef875a1231f42a/media.xyzcdn.net/67f9b1800fda196570975551/lisnGpT-UQn8J9R6A9kcrveWjsp9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 68157796
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_7e71982dc5ae",
+    "title": "EP33 - 放弃学术界到工业界：我的澳洲职场初体验",
+    "text": "🔔 温馨提示：这一期tina录音设备发生了故障， 建议大家外放～ 🎙“这期我们聊聊 从学术界跳到工业界 的真实感受：在澳洲找工作到底难在哪？学术的“难题”到了职场会变成什么？” 👩‍🦰【本期主播】 Tina 转转 👀 “学位是门票，但不是方向盘：真正决定你走到哪的，是你对自己想要什么越来越清楚” 生活愉快！(●'◡'●) 📜Show Notes： 00:55 留学生在澳洲找工作，真的难！ 03:27 国内 vs 澳洲：哪些专业更“好上岸”？ 05:50 读博之后去工业界，会更轻松吗？ 06:40 澳洲 STEM 职场初体验 10:00 学术的难题 vs 职场的难题：解题方式完全不同 13:00 职场沟通会不会更消耗？ …",
+    "snippet": {
+      "startMs": 177000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+  }
+}

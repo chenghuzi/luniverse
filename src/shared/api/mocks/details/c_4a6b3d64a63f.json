@@ -1,0 +1,119 @@
+{
+  "id": "c_4a6b3d64a63f",
+  "podcast": {
+    "id": "p_0eaaf97a1cce",
+    "title": "华人生意经",
+    "authorName": "华人燃生意",
+    "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+    "language": "zh-cn",
+    "categories": [
+      "Business",
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_969b3d4c4df8",
+    "title": "6.书亦全球化总经理王璞：奶茶九国扩张背后的秘密故事",
+    "link": "https://www.xiaoyuzhoufm.com/episode/6741d30d11045e78e550673d?utm_source=rss",
+    "publishedAt": "2024-11-23T13:11:45.000Z",
+    "durationSeconds": 3088,
+    "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/6741d30d11045e78e550673d/media.xyzcdn.net/lj6rRi-npBTtynrlm0Ughx2SbPTO.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 74789713
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_969b3d4c4df8",
+      "title": "6.书亦全球化总经理王璞：奶茶九国扩张背后的秘密故事",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6741d30d11045e78e550673d?utm_source=rss",
+      "publishedAt": "2024-11-23T13:11:45.000Z",
+      "durationSeconds": 3088,
+      "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/6741d30d11045e78e550673d/media.xyzcdn.net/lj6rRi-npBTtynrlm0Ughx2SbPTO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 74789713
+      }
+    },
+    {
+      "id": "e_02c35138ca56",
+      "title": "5.印尼食品创业Ryan：10年欧洲私募，7国旅居，多元文化下的商业选择",
+      "link": "https://www.xiaoyuzhoufm.com/episode/671d15dbeb46cd6655f04216?utm_source=rss",
+      "publishedAt": "2024-10-27T00:44:18.000Z",
+      "durationSeconds": 5926,
+      "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/671d15dbeb46cd6655f04216/media.xyzcdn.net/luIvWH9GxhJtXxTyIlpGLfLbld8_.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 145235587
+      }
+    },
+    {
+      "id": "e_be33ecfbf16e",
+      "title": "4.前加多宝高管胡昊：以饮料为代表，看印尼消费创业的系统性机会",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66e473d63a5ff0a0ca4d1654?utm_source=rss",
+      "publishedAt": "2024-09-14T02:00:00.000Z",
+      "durationSeconds": 3461,
+      "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/66e473d63a5ff0a0ca4d1654/media.xyzcdn.net/lvtenAdj1erfdUZAVJrHG0tED1Ca.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 56030022
+      }
+    },
+    {
+      "id": "e_a22e415386b8",
+      "title": "3.澳洲按摩连锁白宗津：如何从80元收入到拥有15家连锁店",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6651a98f4efbc0c3dcf576f4?utm_source=rss",
+      "publishedAt": "2024-05-25T09:04:14.000Z",
+      "durationSeconds": 1219,
+      "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/6651a98f4efbc0c3dcf576f4/media.xyzcdn.net/ljjsgB8G3cZSMVDkXREBbMHGlUZ6.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 29711213
+      }
+    },
+    {
+      "id": "e_7f6997f779d5",
+      "title": "2.Safe Harbor基金高翔：东南亚，中国消费出海第一站",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6646d4e082b428eafd314086?utm_source=rss",
+      "publishedAt": "2024-05-17T03:54:06.000Z",
+      "durationSeconds": 3486,
+      "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/6646d4e082b428eafd314086/media.xyzcdn.net/lq-NF_op1O-yhywwsXrPx6Y_zZOr.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 97975790
+      }
+    },
+    {
+      "id": "e_d45955340684",
+      "title": "1.库无忧Anson：富二代勇闯坦桑，打造服饰帝国",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6635b1f84b7d3b5d3beee372?utm_source=rss",
+      "publishedAt": "2024-05-04T03:56:39.000Z",
+      "durationSeconds": 1110,
+      "imageUrl": "https://image.xyzcdn.net/FjFMsI9lC8WNND1rUyetmXC_3MNZ.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6621d34548c40e2fb047f330/6635b1f84b7d3b5d3beee372/media.xyzcdn.net/lhEZvftL_Ef2tIyty5Og8LEXGWpO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 27052146
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_4a6b3d64a63f",
+    "title": "6.书亦全球化总经理王璞：奶茶九国扩张背后的秘密故事",
+    "text": "hello大家好，欢迎收听华人生意经。 奶茶出海是这两年非常火热的话题。王璞是长沙餐饮界的大哥，他两年前临危受命，接受书亦全球出海的重任，负责9个国家地区的海外业务。 本期节目中，书亦全球化总经理王璞分享了他在九个国家拓展业务的经历，探讨了不同市场的商业环境差异和应对策略。他讲述了东南亚市场的机遇与挑战，特别是如何适应当地消费者的习惯和需求、跨文化经营的经验与教训。这些深入的见解不仅揭示了餐饮行业出海的复杂性，也引发了对于未来市场布局的思考。想知道他们如何克服困难、成功运营？让我们一探究竟。 【嘉宾介绍】 王璞，2010年加入绝味鸭脖工作7年，2017年加入绝味旗下的cvc投资机构网聚资本，担任网聚投资副总裁。书亦烧仙草是网聚资本…",
+    "snippet": {
+      "startMs": 425000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+  }
+}

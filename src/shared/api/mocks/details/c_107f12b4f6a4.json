@@ -1,0 +1,172 @@
+{
+  "id": "c_107f12b4f6a4",
+  "podcast": {
+    "id": "p_303a6cea05dd",
+    "title": "新影迷频道",
+    "authorName": "新影迷频道",
+    "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+    "language": "zh-cn",
+    "categories": [
+      "Arts",
+      "TV & Film",
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_07fbf0ab69c0",
+    "title": "Vol.10 香港电影的历史转折",
+    "link": "https://www.ximalaya.com/sound/916737856",
+    "publishedAt": "2025-10-08T04:50:00.000Z",
+    "durationSeconds": 4627,
+    "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+    "audio": {
+      "url": "https://jt.ximalaya.com//GKwRIUEMsqsjAjum-AQac49c.m4a?channel=rss&album_id=96342740&track_id=916737856&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/a905-audiofreehighqps/EB/2F/GKwRIUEMsqsjAjum-AQac49c.m4a",
+      "mimeType": "audio/x-m4a",
+      "byteLength": 185117846
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_07fbf0ab69c0",
+      "title": "Vol.10 香港电影的历史转折",
+      "link": "https://www.ximalaya.com/sound/916737856",
+      "publishedAt": "2025-10-08T04:50:00.000Z",
+      "durationSeconds": 4627,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIUEMsqsjAjum-AQac49c.m4a?channel=rss&album_id=96342740&track_id=916737856&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/a905-audiofreehighqps/EB/2F/GKwRIUEMsqsjAjum-AQac49c.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 185117846
+      }
+    },
+    {
+      "id": "e_4eb762c439e7",
+      "title": "Vol.09 姗姗来迟的暑期档回顾",
+      "link": "https://www.ximalaya.com/sound/915153389",
+      "publishedAt": "2025-09-26T09:20:00.000Z",
+      "durationSeconds": 9284,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIasMq8R0BHrEoQQXKQdK.m4a?channel=rss&album_id=96342740&track_id=915153389&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/a715-audiofreehighqps/4D/BE/GKwRIasMq8R0BHrEoQQXKQdK.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 371384660
+      }
+    },
+    {
+      "id": "e_9e7d5c9c792e",
+      "title": "Vol.8 迷影日记 第三章（成年篇）",
+      "link": "https://www.ximalaya.com/sound/909483156",
+      "publishedAt": "2025-09-09T11:29:00.000Z",
+      "durationSeconds": 6877,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GAqhntAMlbWEACAAAAQL2xgy.mp3.m4a?channel=rss&album_id=96342740&track_id=909483156&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/d913-audiofreehighqps/AB/6B/GAqhntAMlbWEACAAAAQL2xgy.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 275124481
+      }
+    },
+    {
+      "id": "e_31a785f38892",
+      "title": "Vol.07 电影是一场始于误会的体验",
+      "link": "https://www.ximalaya.com/sound/904316922",
+      "publishedAt": "2025-08-27T13:12:35.000Z",
+      "durationSeconds": 8995,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIJIMhMa-ACAAAAQCH0VB.mp3.m4a?channel=rss&album_id=96342740&track_id=904316922&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/8add-audiofreehighqps/8F/99/GKwRIJIMhMa-ACAAAAQCH0VB.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 359849404
+      }
+    },
+    {
+      "id": "e_4b446a8205ee",
+      "title": "Vol.06 迷影日记 第二章（青春篇）",
+      "link": "https://www.ximalaya.com/sound/899922626",
+      "publishedAt": "2025-08-17T07:55:00.000Z",
+      "durationSeconds": 5985,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIW4MdUN4ACAAAAP5MklC.mp3.m4a?channel=rss&album_id=96342740&track_id=899922626&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/e6c9-audiofreehighqps/A1/59/GKwRIW4MdUN4ACAAAAP5MklC.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 239437009
+      }
+    },
+    {
+      "id": "e_1d11dc60686c",
+      "title": "Vol.05 迷影日记 第一章（童年篇）",
+      "link": "https://www.ximalaya.com/sound/898565145",
+      "publishedAt": "2025-08-12T07:00:46.000Z",
+      "durationSeconds": 5004,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GAqh4zIMcKg9ACAAAAP2iYXF.mp3.m4a?channel=rss&album_id=96342740&track_id=898565145&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/dfcb-audiofreehighqps/C9/27/GAqh4zIMcKg9ACAAAAP2iYXF.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 200201328
+      }
+    },
+    {
+      "id": "e_b22788371d40",
+      "title": "Vol.04 从《神奇四侠》到漫威电影的过去与未来",
+      "link": "https://www.ximalaya.com/sound/894365841",
+      "publishedAt": "2025-08-01T09:00:00.000Z",
+      "durationSeconds": 7965,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIW4MYduEA9fgCAPucNSH.m4a?channel=rss&album_id=96342740&track_id=894365841&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/f651-audiofreehighqps/56/E6/GKwRIW4MYduEA9fgCAPucNSH.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 318623415
+      }
+    },
+    {
+      "id": "e_b6acee38973f",
+      "title": "Vol.03 DC再度迎重启，看完不是很欢喜——闲话《超人》",
+      "link": "https://www.ximalaya.com/sound/888356451",
+      "publishedAt": "2025-07-16T10:30:00.000Z",
+      "durationSeconds": 6938,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIJEMTR_3ACAAAAPja3eE.mp3.m4a?channel=rss&album_id=96342740&track_id=888356451&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/f755-audiofreehighqps/0F/E5/GKwRIJEMTR_3ACAAAAPja3eE.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 277549954
+      }
+    },
+    {
+      "id": "e_57108616b385",
+      "title": "Vol.02 一颗荔枝鲜 大唐变了天——闲话《长安的荔枝》（下）",
+      "link": "https://www.ximalaya.com/sound/885290769",
+      "publishedAt": "2025-07-12T01:30:00.000Z",
+      "durationSeconds": 3384,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GAqh9sAMRTvZACAAAAPesyHj.mp3.m4a?channel=rss&album_id=96342740&track_id=885290769&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/0c91-audiofreehighqps/82/5F/GAqh9sAMRTvZACAAAAPesyHj.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 135360086
+      }
+    },
+    {
+      "id": "e_6abc448594fc",
+      "title": "Vol.01 一颗荔枝鲜 大唐变了天——闲话《长安的荔枝》（上）",
+      "link": "https://www.ximalaya.com/sound/883726979",
+      "publishedAt": "2025-07-08T01:16:38.000Z",
+      "durationSeconds": 2993,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/1300-audiofreehighqps/9D/0F/GKwRIMAMQjfkAAsJNgPcievr.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GAqhntAMQjObACAAAAPch2SQ.mp3.m4a?channel=rss&album_id=96342740&track_id=883726979&uid=551874255&jt=https://aod.cos.tx.xmcdn.com/storages/a749-audiofreehighqps/54/21/GAqhntAMQjObACAAAAPch2SQ.mp3",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 119758166
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_107f12b4f6a4",
+    "title": "Vol.10 香港电影的历史转折",
+    "text": "从历史的尺度来讲，香港电影从辉煌到谷底，可谓是瞬间发生之事。90年代初港片还顶着东方好莱坞的光环，在亚洲市场大杀特杀，转眼间却被片商和观众集体抛弃。港影的绚烂过于摄人心魄，难以忘怀，作为一种地域制作、一种题材文本，通过新浪潮这把铁铲，在类型片里挖掘出的美学风格和文化个性，三十年间引无数影迷的追忆。当年的香港电影到底发生了什么？导致她的命运会有如此重大的转折，并就此一蹶不振？ 主播：王写写 陈聊聊 开场曲：邓丽君 - 漫步人生路 背景乐（按序）： 陈光荣 - 英雄泪 黄英华 - 之小巴上的邂逅 张国荣 - 当年情 陈勋奇 - 天地孤影任我行 顾嘉辉 - The Dragon’s Legend(Medley) 黄霑 - 流水浮灯 许冠…",
+    "snippet": {
+      "startMs": 4548000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+  }
+}

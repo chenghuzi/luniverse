@@ -1,0 +1,354 @@
+{
+  "id": "c_85a7999545f7",
+  "podcast": {
+    "id": "p_9a4604d1cdbe",
+    "title": "碎碎念～",
+    "authorName": "比目鱼_Zj6X",
+    "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "TV & Film",
+      "Leisure",
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_a2b7e696fc5f",
+    "title": "从“飞沙走石”到“邦邦两拳”：喜人2如何“拿捏”我们的笑点与社交？",
+    "link": "https://www.xiaoyuzhoufm.com/episode/692d3f450d5237d4de55c9b2?utm_source=rss",
+    "publishedAt": "2025-12-01T07:42:24.000Z",
+    "durationSeconds": 3163,
+    "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/692d3f450d5237d4de55c9b2/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lqQdoFCufSpr0QaHFL2i0jjCW2sH.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 51166605
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_a2b7e696fc5f",
+      "title": "从“飞沙走石”到“邦邦两拳”：喜人2如何“拿捏”我们的笑点与社交？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692d3f450d5237d4de55c9b2?utm_source=rss",
+      "publishedAt": "2025-12-01T07:42:24.000Z",
+      "durationSeconds": 3163,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/692d3f450d5237d4de55c9b2/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lqQdoFCufSpr0QaHFL2i0jjCW2sH.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 51166605
+      }
+    },
+    {
+      "id": "e_097e4cf3c8de",
+      "title": "2025金鸡奖终极预言：《好东西》与《志愿军》谁能突围？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6915ac7b6018cc2c98ab98d1?utm_source=rss",
+      "publishedAt": "2025-11-13T10:10:12.000Z",
+      "durationSeconds": 3754,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/6915ac7b6018cc2c98ab98d1/media.xyzcdn.net/658d2a5847b4bee8ceecb051/ljMCN8V8XwQUF1zLubCgq_ispBJC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 120807943
+      }
+    },
+    {
+      "id": "e_d3a3984fd70d",
+      "title": "85花的“花期”与蜕变：见证内娱流量的崛起与转型阵痛",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690472b7591bf018d75dfabe?utm_source=rss",
+      "publishedAt": "2025-10-31T08:36:03.000Z",
+      "durationSeconds": 3838,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/690472b7591bf018d75dfabe/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lrzogKcWPpc2sOamcdrjGQA0B8dj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 123500979
+      }
+    },
+    {
+      "id": "e_b368fc41389f",
+      "title": "那些年我们一起追过的台湾偶像剧，谁的DNA动了！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68da9b75b4befcf730854154?utm_source=rss",
+      "publishedAt": "2025-09-29T23:00:00.000Z",
+      "durationSeconds": 4700,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/68da9b75b4befcf730854154/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lqLgV5UuJ9IokJdiR4fWXwl01iTH.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 151239421
+      }
+    },
+    {
+      "id": "e_c636839aabb4",
+      "title": "情绪价值：当代人的情感饥渴与自救指南",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68c3d6c0a56ca3e0c40ea93c?utm_source=rss",
+      "publishedAt": "2025-09-12T08:20:11.000Z",
+      "durationSeconds": 4520,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/68c3d6c0a56ca3e0c40ea93c/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lhyzzqcPvozyCRxF3RAh-74_6-4P.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 145437106
+      }
+    },
+    {
+      "id": "e_f88087f8fe4f",
+      "title": "暑期档电视剧大盘点：我的电子榨菜怎么不香了？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68aa9958293471fed4277594?utm_source=rss",
+      "publishedAt": "2025-08-24T23:00:00.000Z",
+      "durationSeconds": 3744,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/68aa9958293471fed4277594/media.xyzcdn.net/658d2a5847b4bee8ceecb051/loRvKKzGYeI05JK63Vv5bos0CrbO.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 120473983
+      }
+    },
+    {
+      "id": "e_5f85b5fef290",
+      "title": "暑期档电影的冰与火：《南京照相馆》如何在市场低迷中逆袭",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68a208e042cc2798e7091c31?utm_source=rss",
+      "publishedAt": "2025-08-17T23:00:00.000Z",
+      "durationSeconds": 3859,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/68a208e042cc2798e7091c31/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lmgx4A3Giq0CfyLD8CLSs3ANuteS.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 124180050
+      }
+    },
+    {
+      "id": "e_469718d6b26a",
+      "title": "校规、贞操与流量：大连工业大学拟开除事件背后的三重拷问",
+      "link": "https://www.xiaoyuzhoufm.com/episode/688c3723edf3fa32d58ee59f?utm_source=rss",
+      "publishedAt": "2025-08-01T08:30:00.000Z",
+      "durationSeconds": 2474,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/688c3723edf3fa32d58ee59f/media.xyzcdn.net/658d2a5847b4bee8ceecb051/ltzlHTxN7gtdRyKzQC1CHrD_W8ES.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 79609321
+      }
+    },
+    {
+      "id": "e_99a6525d1b0c",
+      "title": "当代社交图鉴：解码桃花坞的尴尬与治愈",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6879b3fda9dec92500e047be?utm_source=rss",
+      "publishedAt": "2025-07-18T08:30:00.000Z",
+      "durationSeconds": 4045,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/6879b3fda9dec92500e047be/media.xyzcdn.net/658d2a5847b4bee8ceecb051/libLouF29pQOftydroQmDYORvtIC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 130141524
+      }
+    },
+    {
+      "id": "e_93e844ecfa19",
+      "title": "当热爱变高烧：饭圈刺客如何杀死体育精神？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/685e52ddbef90978ec2fa1c7?utm_source=rss",
+      "publishedAt": "2025-06-27T08:16:23.000Z",
+      "durationSeconds": 2974,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/685e52ddbef90978ec2fa1c7/media.xyzcdn.net/658d2a5847b4bee8ceecb051/llDzquAskQihAuHcFR5LNqgioHqn.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 95712541
+      }
+    },
+    {
+      "id": "e_d3006e92222a",
+      "title": "健身新浪潮：从八段锦到AI教练，我们如何重新定义运动？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6838157631215eb506586113?utm_source=rss",
+      "publishedAt": "2025-05-29T08:28:06.000Z",
+      "durationSeconds": 2612,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/6838157631215eb506586113/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lsmbNBHfk-5fu3_2290ZCs5VHps8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 84063916
+      }
+    },
+    {
+      "id": "e_f282aca20909",
+      "title": "【母亲节特辑】《苦尽柑来遇见你》：是妈妈更是她自己",
+      "link": "https://www.xiaoyuzhoufm.com/episode/681f5b90b7c8a9962c69964c?utm_source=rss",
+      "publishedAt": "2025-05-10T22:00:00.000Z",
+      "durationSeconds": 4666,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/681f5b90b7c8a9962c69964c/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lunKdtm6J90aGz9vOgWms0AaVF7t.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 150124790
+      }
+    },
+    {
+      "id": "e_4e7bfc654446",
+      "title": "【世界读书日特辑】从《世上为什么要有图书馆》探寻阅读的意义",
+      "link": "https://www.xiaoyuzhoufm.com/episode/680795ef8aed253fa3df3d01?utm_source=rss",
+      "publishedAt": "2025-04-22T22:00:00.000Z",
+      "durationSeconds": 4448,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/680795ef8aed253fa3df3d01/media.xyzcdn.net/658d2a5847b4bee8ceecb051/llKjwc1uWA6ZURY0RaQfNvui_dJ9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 143125056
+      }
+    },
+    {
+      "id": "e_43e5cb88b8a8",
+      "title": "亲密关系必修课：从自我完整到双向成长的电影说明书💌",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67f8d5ae623bc78c39fb07e0?utm_source=rss",
+      "publishedAt": "2025-04-11T08:51:40.000Z",
+      "durationSeconds": 4708,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67f8d5ae623bc78c39fb07e0/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lp4mOqmDVraeeiKKaW8uqRrbqTTG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 151488965
+      }
+    },
+    {
+      "id": "e_8d22262a6af8",
+      "title": "Deepseek时代下的温情困境：当AI恋人开始填补你的情感空洞",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67dd178f78103db3bdf98324?utm_source=rss",
+      "publishedAt": "2025-03-21T07:54:47.000Z",
+      "durationSeconds": 3559,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67dd178f78103db3bdf98324/media.xyzcdn.net/658d2a5847b4bee8ceecb051/luYYYYJb38mCywe6m1ZFlIcM9dYi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 114517808
+      }
+    },
+    {
+      "id": "e_1570fcdf876c",
+      "title": "【妇女节特辑】“她”浪潮下影视佳作、奥运风姿与社会觉醒的力量",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67caad01e924d4525af1f3a0?utm_source=rss",
+      "publishedAt": "2025-03-07T09:18:48.000Z",
+      "durationSeconds": 5032,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67caad01e924d4525af1f3a0/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lmxyythHsn4ZNvchCOKYjA0WI_Wj.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 161919834
+      }
+    },
+    {
+      "id": "e_eaf5dcfadfe9",
+      "title": "25年春节档票房杀疯了！《哪吒2》凭什么吊打群雄？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67bbffde05a90dfd0d73454e?utm_source=rss",
+      "publishedAt": "2025-02-24T05:25:51.000Z",
+      "durationSeconds": 3742,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67bbffde05a90dfd0d73454e/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lmJbcJsrjjtxztFbzjXIhfu7bwE6.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 120423173
+      }
+    },
+    {
+      "id": "e_7b830792bdde",
+      "title": "春晚大赏：当我们谈论春晚时，我们在谈论什么",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67a8d63e247d51713c9ee44b?utm_source=rss",
+      "publishedAt": "2025-02-09T20:48:31.000Z",
+      "durationSeconds": 4085,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67a8d63e247d51713c9ee44b/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lgWdf_XmwImiFoYABIwy9uN1YD4a.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 131443546
+      }
+    },
+    {
+      "id": "e_59462f8a3b93",
+      "title": "年终总结｜用数据量化生活，你想活出怎样的人生",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67912752a2c8d144a7de21f3?utm_source=rss",
+      "publishedAt": "2025-01-22T19:33:44.000Z",
+      "durationSeconds": 2334,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67912752a2c8d144a7de21f3/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lokSAO58Hj4B7P75lihLpqhCgkAT.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 75106151
+      }
+    },
+    {
+      "id": "e_1d77e5be8218",
+      "title": "《再见爱人》：疯狂星期四，这盛世如我所愿",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67878742b21f1c0fb316e7d3?utm_source=rss",
+      "publishedAt": "2025-01-15T10:59:51.000Z",
+      "durationSeconds": 1454,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67878742b21f1c0fb316e7d3/media.xyzcdn.net/658d2a5847b4bee8ceecb051/lg9M0UMDuiV2lgqI17SmXYn6bOco.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 46794066
+      }
+    },
+    {
+      "id": "e_a7e6d3b15e52",
+      "title": "电影《好东西》：爱它便是~",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67514ce6a314b553c653d6e9?utm_source=rss",
+      "publishedAt": "2024-12-05T07:18:22.000Z",
+      "durationSeconds": 992,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/67514ce6a314b553c653d6e9/media.xyzcdn.net/ljcF018EwlBPs39jEwtXGWQdLBby.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31935397
+      }
+    },
+    {
+      "id": "e_e1dacecb291d",
+      "title": "《小巷人家》：从小巷窥见大时代；群像剧中的女性情谊",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6740348e11045e78e50d90a4?utm_source=rss",
+      "publishedAt": "2024-11-22T08:01:59.000Z",
+      "durationSeconds": 2131,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/6740348e11045e78e50d90a4/media.xyzcdn.net/ls1nIo5lOWaydZd-CM6Km4t3nCfB.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 28324545
+      }
+    },
+    {
+      "id": "e_65cb627f77bb",
+      "title": "春日歌单：假期路上有好歌相伴~",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6632470c4b7d3b5d3b9c10a9?utm_source=rss",
+      "publishedAt": "2024-05-01T13:43:38.000Z",
+      "durationSeconds": 2623,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/6632470c4b7d3b5d3b9c10a9/media.xyzcdn.net/lvlbqfRM9rI1K_fonFxKZQAy415a.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 84410694
+      }
+    },
+    {
+      "id": "e_52bc5863b8d2",
+      "title": "《恋爱兄妹》：看兄妹如何捅破恋综天花板；《沙丘2》：“权谋花路”走的这么简单？！",
+      "link": "https://www.xiaoyuzhoufm.com/episode/66139dbb4f66d1c1dabfad86?utm_source=rss",
+      "publishedAt": "2024-04-08T12:00:00.000Z",
+      "durationSeconds": 1076,
+      "imageUrl": "https://image.xyzcdn.net/Fo21FWU8FLmIO65pgbrmqsI9oMyd.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/658d2a5847b4bee8ceecb051/66139dbb4f66d1c1dabfad86/media.xyzcdn.net/llY8Cc9V4s_hog2bGkVW6HFE65CK.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 34650120
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_85a7999545f7",
+    "title": "从“飞沙走石”到“邦邦两拳”：喜人2如何“拿捏”我们的笑点与社交？",
+    "text": "「为什么一档喜剧节目能引发如此两极的评价？」 「喜剧创作应该追求意义还是纯粹快乐？」 「在这个追求流量的时代，喜剧演员该如何平衡艺术与商业？」 《喜人奇妙夜2》作为现象级喜剧综艺，从开播就掀起热议狂潮。神经病赛道、技能五子棋等作品疯狂出圈的同时，豆瓣评分却从8.6跌至6.6，观众评价呈现惊人分化。这种现象折射出当代喜剧创作的深层困境——当短视频时代解构了传统喜剧逻辑，当「无意义快乐」成为新的流量密码，我们究竟需要什么样的喜剧？在本期节目中，主播小鱼和魏魏将从节目热梗、演员表现到创作理念，深入探讨这场关于喜剧的全民论战。 【本期对话】 主播：小鱼、魏什么魏 【收听指南】 第一部分 &nbsp;《喜人奇妙夜》的热度和争议 01:49 …",
+    "snippet": {
+      "startMs": 1145000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "c_7a32acdc7469",
+  "podcast": {
+    "id": "p_585cbffa0170",
+    "title": "冷雾逆旅",
+    "authorName": "冷雾逆旅",
+    "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+    "language": "zh-cn",
+    "categories": [
+      "History"
+    ]
+  },
+  "episode": {
+    "id": "e_147e8256d1ed",
+    "title": "Vol.05《大航海时代｜哥伦布：一个人的朝圣》",
+    "link": "https://www.xiaoyuzhoufm.com/episode/693d6c442a383da167ea6eaa?utm_source=rss",
+    "publishedAt": "2025-12-13T13:41:45.000Z",
+    "durationSeconds": 2651,
+    "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/688ba96cdd2a67ab17adc270/693d6c442a383da167ea6eaa/media.xyzcdn.net/688ba96cdd2a67ab17adc270/lqXrNcWBykkEryRBHrnKFEWDzmdS.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 42920366
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_147e8256d1ed",
+      "title": "Vol.05《大航海时代｜哥伦布：一个人的朝圣》",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693d6c442a383da167ea6eaa?utm_source=rss",
+      "publishedAt": "2025-12-13T13:41:45.000Z",
+      "durationSeconds": 2651,
+      "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/688ba96cdd2a67ab17adc270/693d6c442a383da167ea6eaa/media.xyzcdn.net/688ba96cdd2a67ab17adc270/lqXrNcWBykkEryRBHrnKFEWDzmdS.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 42920366
+      }
+    },
+    {
+      "id": "e_b1c5f2e369d3",
+      "title": "Vol.04《大航海时代｜哥伦布：伟大的首航》",
+      "link": "https://www.xiaoyuzhoufm.com/episode/690c9aaad99642be96c7667d?utm_source=rss",
+      "publishedAt": "2025-11-06T13:01:11.000Z",
+      "durationSeconds": 2374,
+      "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/688ba96cdd2a67ab17adc270/690c9aaad99642be96c7667d/media.xyzcdn.net/688ba96cdd2a67ab17adc270/lryHthNmTtAP5rtJIHpx-_Zd4TBz.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 28936777
+      }
+    },
+    {
+      "id": "e_1b417f7f2ed1",
+      "title": "Vol.03《大航海时代｜哥伦布：向西即向东！》",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68da4f5bb4befcf7307a7806?utm_source=rss",
+      "publishedAt": "2025-10-02T13:30:00.000Z",
+      "durationSeconds": 1966,
+      "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/688ba96cdd2a67ab17adc270/68da4f5bb4befcf7307a7806/media.xyzcdn.net/688ba96cdd2a67ab17adc270/lkANkWSrrc8Ts-kZ2oeyjqnnPt2V.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 23966077
+      }
+    },
+    {
+      "id": "e_168cc21e754d",
+      "title": "Vol.02《大航海时代｜恩里克：世界航向谁来定？》",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68ac6bef42cc2798e75a2250?utm_source=rss",
+      "publishedAt": "2025-09-04T13:30:00.000Z",
+      "durationSeconds": 1934,
+      "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/688ba96cdd2a67ab17adc270/68ac6bef42cc2798e75a2250/media.xyzcdn.net/688ba96cdd2a67ab17adc270/lmqd63ZSiaaLpj1pPACDyPIqppa8.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 23584065
+      }
+    },
+    {
+      "id": "e_81714ab3989b",
+      "title": "Vol.01《大航海时代｜恩里克：王子的远眺与破局》",
+      "link": "https://www.xiaoyuzhoufm.com/episode/688c8e15edf3fa32d59eb51b?utm_source=rss",
+      "publishedAt": "2025-08-01T09:55:30.000Z",
+      "durationSeconds": 1941,
+      "imageUrl": "https://image.xyzcdn.net/Fi5KBn_LYgrNlUAlQUmiK_1DAnEH.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/688ba96cdd2a67ab17adc270/688c8e15edf3fa32d59eb51b/media.xyzcdn.net/688ba96cdd2a67ab17adc270/lr981dl8oQ1mRYqVDwt7bsDGaVJE.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 23658981
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_7a32acdc7469",
+    "title": "Vol.05《大航海时代｜哥伦布：一个人的朝圣》",
+    "text": "📒 本期预览： 第一次航行的至高荣耀，掩盖不了留下的致命悬念。当哥伦布重返新大陆，迎接他的却是圣诞城的静默和一场席卷全岛的暴乱。这位海上之王，在陆地上为何举步维艰，一步步走向低谷？从建立残酷的贡金制度，到在生命的绝境中癫狂追寻“伊甸园”，再落到戴着镣铐被押回西班牙——本期，我们将直面他令人唏嘘的后半生。「一个人的朝圣」，究竟意味着什么？是什么力量驱动着这位一生都活在自己“错误”里的传奇人物？ 航行再出发： 海上的绝对王者 荣耀的反面： 废墟与新城 总督的独裁： 宣誓、叛乱、镇压、贡金 伊甸园的幻梦 历史定格： 戴着镣铐返航的司令 终极豪赌： 殉道之行 终章： 那个有关佛光的故事 💬 轻松聊聊： 现在，你对哥伦布有新的认识或思考…",
+    "snippet": {
+      "startMs": 1685000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "id": "c_be61be92c335",
+  "podcast": {
+    "id": "p_edd74c0c62e1",
+    "title": "野路子姐妹会",
+    "authorName": "野路子姐妹会",
+    "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+    "language": "zh-cn",
+    "categories": [
+      "Leisure"
+    ]
+  },
+  "episode": {
+    "id": "e_259f2ba98c32",
+    "title": "【EP05】博主的人生会比普通人更痛苦吗?",
+    "link": "https://www.xiaoyuzhoufm.com/episode/683eb08a31215eb50614501c?utm_source=rss",
+    "publishedAt": "2025-06-03T08:22:22.000Z",
+    "durationSeconds": 2125,
+    "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+    "audio": {
+      "url": "https://dts-api.xiaoyuzhoufm.com/track/67cf00eba97df5faf731915e/683eb08a31215eb50614501c/media.xyzcdn.net/67cf00eba97df5faf731915e/llTB4EUlz8D2hionpjSY-79YKnFz.m4a",
+      "mimeType": "audio/mp4",
+      "byteLength": 34371944
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_259f2ba98c32",
+      "title": "【EP05】博主的人生会比普通人更痛苦吗?",
+      "link": "https://www.xiaoyuzhoufm.com/episode/683eb08a31215eb50614501c?utm_source=rss",
+      "publishedAt": "2025-06-03T08:22:22.000Z",
+      "durationSeconds": 2125,
+      "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67cf00eba97df5faf731915e/683eb08a31215eb50614501c/media.xyzcdn.net/67cf00eba97df5faf731915e/llTB4EUlz8D2hionpjSY-79YKnFz.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 34371944
+      }
+    },
+    {
+      "id": "e_a552202d6da8",
+      "title": "【EP04】和阿斯伯格谈恋爱好像教哈士奇做人",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68288683fcbc2e206b6342d0?utm_source=rss",
+      "publishedAt": "2025-05-17T12:53:16.000Z",
+      "durationSeconds": 2048,
+      "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67cf00eba97df5faf731915e/68288683fcbc2e206b6342d0/media.xyzcdn.net/67cf00eba97df5faf731915e/lv1hTxPxIjICYm-NwJgdAPptKUEU.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 33138056
+      }
+    },
+    {
+      "id": "e_48330284ad30",
+      "title": "【EP03】好想打开回避型依恋的脑子看看他们到底在想什么",
+      "link": "https://www.xiaoyuzhoufm.com/episode/680f8ac28aed253fa30e3323?utm_source=rss",
+      "publishedAt": "2025-04-28T14:13:31.000Z",
+      "durationSeconds": 2263,
+      "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67cf00eba97df5faf731915e/680f8ac28aed253fa30e3323/media.xyzcdn.net/67cf00eba97df5faf731915e/ltlOy1splKrG6rneR8MDLuyaGhSN.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 36605868
+      }
+    },
+    {
+      "id": "e_92989a64b191",
+      "title": "【EP02】我从来没有战胜过容貌焦虑",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67f4cddb0decaeb094a72bdc?utm_source=rss",
+      "publishedAt": "2025-04-08T08:05:41.000Z",
+      "durationSeconds": 1772,
+      "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67cf00eba97df5faf731915e/67f4cddb0decaeb094a72bdc/media.xyzcdn.net/67cf00eba97df5faf731915e/loc_2FMkCbBYbOcVFFCTPS8bCdBi.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 28660240
+      }
+    },
+    {
+      "id": "e_81daccfe1ec2",
+      "title": "【EP01】恋爱里女生主动真的爽死了",
+      "link": "https://www.xiaoyuzhoufm.com/episode/67cff542e924d4525ad3d782?utm_source=rss",
+      "publishedAt": "2025-03-11T08:55:28.000Z",
+      "durationSeconds": 1943,
+      "imageUrl": "https://image.xyzcdn.net/FmBs937y9JJINuOA0mjvzmC5qxNZ.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67cf00eba97df5faf731915e/67cff542e924d4525ad3d782/media.xyzcdn.net/67cf00eba97df5faf731915e/lvXpVZ7y4l4HbWtaXw5pFqzkbXTh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 31436922
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_be61be92c335",
+    "title": "【EP05】博主的人生会比普通人更痛苦吗?",
+    "text": "嗨，大家好！这里是《野路子姐妹会》，我是你的赛博闺蜜野女人！ 带你沉浸式体验我的离谱约会修罗场、环球旅行迷惑行为大赏、和父母吵架真实案例。没有正能量鸡汤，只有真实到脚趾抠地的成长故事。 今天我们邀请到了全网40万粉丝的博主——拔冰鱼，她最早在南非的孔子学院做汉语老师，做视频就火了，最近呢转行做旅游，刚刚结束第一个在南非的全女旅行团。我们来聊一聊当博主的生活。",
+    "snippet": {
+      "startMs": 1520000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+  }
+}

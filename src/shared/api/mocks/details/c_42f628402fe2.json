@@ -1,0 +1,315 @@
+{
+  "id": "c_42f628402fe2",
+  "podcast": {
+    "id": "p_4d7b1cfdc23a",
+    "title": "101 Weekly",
+    "authorName": "Valley101,Inc",
+    "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+    "language": "zh-cn",
+    "categories": [
+      "Technology",
+      "Business",
+      "News"
+    ]
+  },
+  "episode": {
+    "id": "e_42df034d6776",
+    "title": "杠杆、垄断和泡沫：解析硅谷万亿资本闭环｜20251014",
+    "link": "https://101weekly.fireside.fm/22",
+    "publishedAt": "2025-10-14T08:00:00.000Z",
+    "durationSeconds": 953,
+    "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+    "audio": {
+      "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/bbb62726-38c0-42c7-be9f-93b336ef8189.mp3",
+      "mimeType": "audio/mpeg",
+      "byteLength": 15375018
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_42df034d6776",
+      "title": "杠杆、垄断和泡沫：解析硅谷万亿资本闭环｜20251014",
+      "link": "https://101weekly.fireside.fm/22",
+      "publishedAt": "2025-10-14T08:00:00.000Z",
+      "durationSeconds": 953,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/bbb62726-38c0-42c7-be9f-93b336ef8189.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 15375018
+      }
+    },
+    {
+      "id": "e_cfcdc1c25987",
+      "title": "Github的十字路口：并入微软AI，是开源精神的终结吗？｜20250825",
+      "link": "https://101weekly.fireside.fm/21",
+      "publishedAt": "2025-08-25T02:00:00.000Z",
+      "durationSeconds": 778,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/71cbcfe5-9e87-40e6-bbef-fe9b196a61f6.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 12462142
+      }
+    },
+    {
+      "id": "e_7c72ed3198e8",
+      "title": "Roblox狂飙背后：是元宇宙奇迹，还是儿童安全噩梦？｜20250819",
+      "link": "https://101weekly.fireside.fm/20",
+      "publishedAt": "2025-08-19T03:00:00.000Z",
+      "durationSeconds": 1108,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/e4f4913d-a6fb-491d-b9fb-b1056280c327.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 17886700
+      }
+    },
+    {
+      "id": "e_20d0e3a27351",
+      "title": "GE Vernova：从“没落帝国”剥离，到AI电力危机下的大赢家 | 20250815",
+      "link": "https://101weekly.fireside.fm/19",
+      "publishedAt": "2025-08-15T03:00:00.000Z",
+      "durationSeconds": 1018,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/c0c2b7d9-c5ae-4284-b449-a2981ba2d04c.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 16373286
+      }
+    },
+    {
+      "id": "e_d0b48f9ba07f",
+      "title": "散户疯狂、科技巨头分化，AI推动的美股牛市到顶了吗？丨20250805",
+      "link": "https://101weekly.fireside.fm/18",
+      "publishedAt": "2025-08-05T04:45:00.000Z",
+      "durationSeconds": 849,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/39b55842-5542-41c0-a72a-9b2d799c5982.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 13736794
+      }
+    },
+    {
+      "id": "e_b2f7c8be6715",
+      "title": "股价腰斩，跌落神坛的诺和诺德错在哪一步？｜20250804",
+      "link": "https://101weekly.fireside.fm/17",
+      "publishedAt": "2025-08-04T05:00:00.000Z",
+      "durationSeconds": 803,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/da689e6e-88b9-4198-9d8d-b25cf4a70a89.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 12957100
+      }
+    },
+    {
+      "id": "e_99974b66ca56",
+      "title": "AI拿下奥数IMO金牌，但数学界的AlphaGo时刻还没来 | 20250730",
+      "link": "https://101weekly.fireside.fm/16",
+      "publishedAt": "2025-07-30T03:00:00.000Z",
+      "durationSeconds": 772,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/ff4c2d81-dd11-4840-9ccb-9b4be3d2e5d8.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 12461115
+      }
+    },
+    {
+      "id": "e_e483f2ace2b7",
+      "title": "星际之门的烂尾危机：盟友分歧、融资困局与工程死结｜20250728",
+      "link": "https://101weekly.fireside.fm/15",
+      "publishedAt": "2025-07-28T05:30:00.000Z",
+      "durationSeconds": 650,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/902c82ce-a0f4-4f5f-a6bf-61e57e4ffb92.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 10576906
+      }
+    },
+    {
+      "id": "e_58a58159f996",
+      "title": "明星AI独角兽Windsurf被瓜分的背后：资本拉锯、背刺与共识破灭｜20250723",
+      "link": "https://101weekly.fireside.fm/14",
+      "publishedAt": "2025-07-23T07:00:00.000Z",
+      "durationSeconds": 723,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/3e9f5fac-c731-4d6e-b620-994e314f37ee.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 11686714
+      }
+    },
+    {
+      "id": "e_126ea65fa2f7",
+      "title": "瑞幸进军星巴克老家：$1.99的生椰拿铁能卷赢美国吗？｜20250722",
+      "link": "https://101weekly.fireside.fm/13",
+      "publishedAt": "2025-07-22T04:00:00.000Z",
+      "durationSeconds": 627,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/6602b2fa-4bad-46e4-87b2-c93498f627e2.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 10102980
+      }
+    },
+    {
+      "id": "e_9161dade802b",
+      "title": "国际投行的困惑：中国新一轮千亿外卖大战“值得打”吗？｜20250721",
+      "link": "https://101weekly.fireside.fm/12",
+      "publishedAt": "2025-07-21T08:00:00.000Z",
+      "durationSeconds": 481,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/f780855b-95a2-4f3e-bb17-05fc2a9ff28d.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 7783146
+      }
+    },
+    {
+      "id": "e_5e81e39abe3b",
+      "title": "不争总统争“未来”：马斯克“美国党”想振兴的不止美国｜20250715",
+      "link": "https://101weekly.fireside.fm/11",
+      "publishedAt": "2025-07-16T04:00:00.000Z",
+      "durationSeconds": 884,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/db126fa3-d15a-45f5-92d6-46a9b50d34e6.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 14269923
+      }
+    },
+    {
+      "id": "e_7d27d4f866d5",
+      "title": "2025最大科技股IPO：Figma的逆袭与不成熟的AI故事｜20250714",
+      "link": "https://101weekly.fireside.fm/10",
+      "publishedAt": "2025-07-15T04:00:00.000Z",
+      "durationSeconds": 630,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/28475fd7-8a4a-48b1-9fc4-c4bdb0ab32f5.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 10168292
+      }
+    },
+    {
+      "id": "e_287633742a83",
+      "title": "抢夺全球热钱：美股代币化的新“阳谋”与争议 | 20250713",
+      "link": "https://101weekly.fireside.fm/9",
+      "publishedAt": "2025-07-14T05:45:00.000Z",
+      "durationSeconds": 701,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/5357de4b-46da-4bf5-8ca7-5412543cb23d.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 11403492
+      }
+    },
+    {
+      "id": "e_b48340fd29ac",
+      "title": "扎克伯格的“天才名单”：上亿重金能砸出Meta的AI未来吗？｜20250708",
+      "link": "https://101weekly.fireside.fm/8",
+      "publishedAt": "2025-07-09T09:00:00.000Z",
+      "durationSeconds": 938,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/4f7d60de-f140-476c-a1d6-034df9aa79f1.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 15122878
+      }
+    },
+    {
+      "id": "e_6e0a64c151aa",
+      "title": "时尚女魔头Anna Wintour卸任：数字时代崩塌的时尚权威与“帝王式主编”神话破灭 | 20250707",
+      "link": "https://101weekly.fireside.fm/7",
+      "publishedAt": "2025-07-08T04:30:00.000Z",
+      "durationSeconds": 519,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/40f8d5ce-16b8-4536-8ffa-0e96521e8d5f.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 8397942
+      }
+    },
+    {
+      "id": "e_41ba93173ed5",
+      "title": "“大而美”法案落地，美元、黄金、美股将迎巨变？｜20250706",
+      "link": "https://101weekly.fireside.fm/6",
+      "publishedAt": "2025-07-07T04:00:00.000Z",
+      "durationSeconds": 593,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/de4e57a0-3d37-4f32-bcda-dc0a630344cd.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 9618267
+      }
+    },
+    {
+      "id": "e_0f40df42a550",
+      "title": "“AI作弊”公司融资千万：2025年过半，焦虑的资本开始饥不择食了？| 20250701",
+      "link": "https://101weekly.fireside.fm/5",
+      "publishedAt": "2025-07-07T00:45:00.000Z",
+      "durationSeconds": 891,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/e94975f1-f759-479e-92e6-d7301e61e7fa.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 14829739
+      }
+    },
+    {
+      "id": "e_63181afb2bb5",
+      "title": "“百镜大战”的尴尬真相：AI成花瓶，拍照才是真刚需？｜20250630",
+      "link": "https://101weekly.fireside.fm/4",
+      "publishedAt": "2025-07-07T00:30:00.000Z",
+      "durationSeconds": 448,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/63b59254-1743-49ec-a0d1-d69f0647f51c.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 7641431
+      }
+    },
+    {
+      "id": "e_ce3207a94baf",
+      "title": "马斯克Robotaxi新梦想四部曲：正现金流、吊打Waymo、颠覆Uber及“卖里程”霸主 | 20250629",
+      "link": "https://101weekly.fireside.fm/3",
+      "publishedAt": "2025-07-06T13:00:00.000Z",
+      "durationSeconds": 780,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cf7c1b2e-3297-44d7-b9b0-cb5334a0a8cb.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 12910340
+      }
+    },
+    {
+      "id": "e_7c9785d8b085",
+      "title": "【101 Weekly】开播啦！",
+      "link": "https://101weekly.fireside.fm/2",
+      "publishedAt": "2025-07-06T12:45:00.000Z",
+      "durationSeconds": 101,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/bce99215-7c25-4ee1-bc63-fa128153de3b.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 2455240
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_42f628402fe2",
+    "title": "杠杆、垄断和泡沫：解析硅谷万亿资本闭环｜20251014",
+    "text": "在硅谷，一场规模空前的资本循环正在悄然成形，先是英伟达投资OpenAI，OpenAI购买甲骨文的算力，而后甲骨文又向英伟达购买芯片。紧接着，OpenAI还与英伟达的竞争对手AMD签署协议，通过购买AMD芯片获得了其10%的股份，除此之外，这场循环交易还涉及了众多其他科技公司，就在我们视频发布前一天，OpenAI又宣布和博通签订类似协议。有批评者指出，这一切更像是建立在未来收入幻想之上的资本表演，而非真实需求。这期视频我们将梳理硅谷AI资本之间错综复杂的关系，并试图解析，这场环环相扣的资本游戏，会是泡沫吗的开端吗？ 【主播】 Yiwen，硅谷101研究员 【嘉宾】 刘沁东（Bruce Liu），美国Esoterica Capital…",
+    "snippet": {
+      "startMs": 815000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#a855f7,#ec4899)"
+  }
+}

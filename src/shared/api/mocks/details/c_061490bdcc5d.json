@@ -1,0 +1,432 @@
+{
+  "id": "c_061490bdcc5d",
+  "podcast": {
+    "id": "p_b5289df36b5a",
+    "title": "双重意识DoubleConsciousness",
+    "authorName": "双重意识",
+    "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+    "language": "zh-cn",
+    "categories": [
+      "Society & Culture",
+      "Technology",
+      "Society & Culture"
+    ]
+  },
+  "episode": {
+    "id": "e_25c383aff6e8",
+    "title": "33. 每一个人作为灾难的感知器：用社交媒体数据进行灾害管理",
+    "link": "https://www.ximalaya.com/sound/605834727",
+    "publishedAt": "2023-01-20T12:00:00.000Z",
+    "durationSeconds": 2965,
+    "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+    "audio": {
+      "url": "https://jt.ximalaya.com//GKwRINsHoAPRAW4_ygHu87hp.m4a?channel=rss&album_id=43408864&track_id=605834727&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/b4d0-audiofreehighqps/C0/FE/GKwRINsHoAPRAW4_ygHu87hp.m4a",
+      "mimeType": "audio/x-m4a",
+      "byteLength": 71171990
+    }
+  },
+  "episodes": [
+    {
+      "id": "e_25c383aff6e8",
+      "title": "33. 每一个人作为灾难的感知器：用社交媒体数据进行灾害管理",
+      "link": "https://www.ximalaya.com/sound/605834727",
+      "publishedAt": "2023-01-20T12:00:00.000Z",
+      "durationSeconds": 2965,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRINsHoAPRAW4_ygHu87hp.m4a?channel=rss&album_id=43408864&track_id=605834727&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/b4d0-audiofreehighqps/C0/FE/GKwRINsHoAPRAW4_ygHu87hp.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 71171990
+      }
+    },
+    {
+      "id": "e_dd1e19ee5dfa",
+      "title": "32. 疾病与医药：文化如何塑造我们对医学的理解？",
+      "link": "https://www.ximalaya.com/sound/589558957",
+      "publishedAt": "2022-11-21T02:13:57.000Z",
+      "durationSeconds": 3851,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRINsHUKJAAdu7zwHQtxsK-aacv2-48K.m4a?channel=rss&album_id=43408864&track_id=589558957&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/bc72-audiofreehighqps/C5/DA/GKwRINsHUKJAAdu7zwHQtxsK-aacv2-48K.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 92445135
+      }
+    },
+    {
+      "id": "e_092f93899011",
+      "title": "31. 公共舆论中的社交机器人：假账号是否有真舆论？",
+      "link": "https://www.ximalaya.com/sound/568234275",
+      "publishedAt": "2022-09-12T01:00:00.000Z",
+      "durationSeconds": 3579,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIMAG8nPhAbozVQGfL4H6-aacv2-48K.m4a?channel=rss&album_id=43408864&track_id=568234275&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/6dd0-audiofreehighqps/A0/4B/GKwRIMAG8nPhAbozVQGfL4H6-aacv2-48K.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 85927958
+      }
+    },
+    {
+      "id": "e_c0ce8d44902a",
+      "title": "30. 国家的形成与建构",
+      "link": "https://www.ximalaya.com/sound/496789422",
+      "publishedAt": "2022-01-27T11:00:00.000Z",
+      "durationSeconds": 2587,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIUEFx-dWAT-RqgERt36G.m4a?channel=rss&album_id=43408864&track_id=496789422&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/13bf-audiofreehighqps/16/92/GKwRIUEFx-dWAT-RqgERt36G.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 62097948
+      }
+    },
+    {
+      "id": "e_57db4706daba",
+      "title": "29. 跨年特辑：畅聊学术与生活",
+      "link": "https://www.ximalaya.com/sound/488177511",
+      "publishedAt": "2022-01-01T00:50:00.000Z",
+      "durationSeconds": 2038,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIasFpUZ-APvX3gEI6aHG.m4a?channel=rss&album_id=43408864&track_id=488177511&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/20e2-audiofreehighqps/E9/0E/GKwRIasFpUZ-APvX3gEI6aHG.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 48937938
+      }
+    },
+    {
+      "id": "e_6d9728de9688",
+      "title": "28. 非洲基建项目中的博弈：合同如何体现社会关系",
+      "link": "https://www.ximalaya.com/sound/477105189",
+      "publishedAt": "2021-11-28T22:00:00.000Z",
+      "durationSeconds": 4220,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIJEFeXNYAglP-wD8ZkSr.m4a?channel=rss&album_id=43408864&track_id=477105189&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/a518-audiofreehighqps/A5/90/GKwRIJEFeXNYAglP-wD8ZkSr.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 101299555
+      }
+    },
+    {
+      "id": "e_254e8834f540",
+      "title": "27. 从环球影城到横店群演：影视超现实外的复杂现实和价值创造",
+      "link": "https://www.ximalaya.com/sound/459381542",
+      "publishedAt": "2021-10-04T23:31:13.000Z",
+      "durationSeconds": 3210,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIUEFMVIGAYyiGADpdj7L.m4a?channel=rss&album_id=43408864&track_id=459381542&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/4991-audiofreehighqps/E9/B9/CKwRIUEFMVIGAYyiGADpdj7L.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 77074662
+      }
+    },
+    {
+      "id": "e_19315eb07f98",
+      "title": "26. 性资本与职场应酬：“所有事都关乎性，而性关乎权力。”",
+      "link": "https://www.ximalaya.com/sound/450838816",
+      "publishedAt": "2021-09-05T22:40:00.000Z",
+      "durationSeconds": 3197,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIUEFCutAAYr2yADgLCMA.m4a?channel=rss&album_id=43408864&track_id=450838816&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/fec1-audiofreehighqps/27/44/CKwRIUEFCutAAYr2yADgLCMA.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 76746712
+      }
+    },
+    {
+      "id": "e_29abb09dea26",
+      "title": "25. 建筑的生命力：当建筑超越功能与规则",
+      "link": "https://www.ximalaya.com/sound/438457285",
+      "publishedAt": "2021-07-30T01:19:26.000Z",
+      "durationSeconds": 3876,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIasE2RcAAd7aoQDP1WrV.m4a?channel=rss&album_id=43408864&track_id=438457285&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/acaf-audiofreehighqps/25/2C/CKwRIasE2RcAAd7aoQDP1WrV.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 93049723
+      }
+    },
+    {
+      "id": "e_0ee4ca4f5eca",
+      "title": "24. 市场参与权力分配：经济学如何解释男女不平等？",
+      "link": "https://www.ximalaya.com/sound/435071641",
+      "publishedAt": "2021-07-19T04:53:39.000Z",
+      "durationSeconds": 2418,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRINsEysipASqyCADKI4S4.m4a?channel=rss&album_id=43408864&track_id=435071641&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/c1e2-audiofreehighqps/98/9E/CKwRINsEysipASqyCADKI4S4.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 58041606
+      }
+    },
+    {
+      "id": "e_90dbcf462d89",
+      "title": "22. 虚拟游戏的现实价值：游戏如何改变玩家？",
+      "link": "https://www.ximalaya.com/sound/430273119",
+      "publishedAt": "2021-07-04T02:05:31.000Z",
+      "durationSeconds": 3710,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIJIEttrAAcpI1QDCoWuC.m4a?channel=rss&album_id=43408864&track_id=430273119&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/f75e-audiofreehighqps/8E/24/CKwRIJIEttrAAcpI1QDCoWuC.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 89049349
+      }
+    },
+    {
+      "id": "e_e1391e351af8",
+      "title": "21. 磕拉快乐的背后：CP、耽美、“泥塑”中的性别想象",
+      "link": "https://www.ximalaya.com/sound/411530406",
+      "publishedAt": "2021-05-02T16:39:29.000Z",
+      "durationSeconds": 4180,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIW4EZJlLAgRs4ACl4szt.m4a?channel=rss&album_id=43408864&track_id=411530406&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/1391-audiofreehighqps/E2/EA/CKwRIW4EZJlLAgRs4ACl4szt.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 100347754
+      }
+    },
+    {
+      "id": "e_5f81e834a846",
+      "title": "20. 双重意识×日知录：科学家也是人呀",
+      "link": "https://www.ximalaya.com/sound/405133881",
+      "publishedAt": "2021-04-13T04:40:30.000Z",
+      "durationSeconds": 3938,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIUEESuQZAeaF7gCd8vaL.m4a?channel=rss&album_id=43408864&track_id=405133881&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/698f-audiofreehighqps/57/1A/CKwRIUEESuQZAeaF7gCd8vaL.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 94528640
+      }
+    },
+    {
+      "id": "e_cd2de9dc3323",
+      "title": "19. 粉丝的反叛与顺从 —— 饭圈冲突的权力真相",
+      "link": "https://www.ximalaya.com/sound/403460540",
+      "publishedAt": "2021-04-08T08:40:00.000Z",
+      "durationSeconds": 3581,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIDoERF3bAbpviQCcBEr6.m4a?channel=rss&album_id=43408864&track_id=403460540&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/714e-audiofreehighqps/54/B3/CKwRIDoERF3bAbpviQCcBEr6.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 85977469
+      }
+    },
+    {
+      "id": "e_6461dc68f590",
+      "title": "18. 历史想象中的现代性：屠龙少年如何不变成恶龙？",
+      "link": "https://www.ximalaya.com/sound/400808362",
+      "publishedAt": "2021-03-31T06:02:35.000Z",
+      "durationSeconds": 4105,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIRwEOdP7AfsdnACY4zDu.m4a?channel=rss&album_id=43408864&track_id=400808362&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/4b69-audiofreehighqps/55/5F/CKwRIRwEOdP7AfsdnACY4zDu.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 98591622
+      }
+    },
+    {
+      "id": "e_117689081d31",
+      "title": "17. 神经科学研究中的人、狗与小鼠｜生命科学系列之四",
+      "link": "https://www.ximalaya.com/sound/395247108",
+      "publishedAt": "2021-03-15T04:51:32.000Z",
+      "durationSeconds": 2520,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIDoEJKswATdPHwCSYzL8.m4a?channel=rss&album_id=43408864&track_id=395247108&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/9664-audiofreehighqps/74/E5/CKwRIDoEJKswATdPHwCSYzL8.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 60491978
+      }
+    },
+    {
+      "id": "e_740863ba8a89",
+      "title": "16. 科学江湖的精神内核：如何练就科研和科普的武侠修为｜生命科学系列之三",
+      "link": "https://www.ximalaya.com/sound/390477286",
+      "publishedAt": "2021-02-28T21:10:00.000Z",
+      "durationSeconds": 3680,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIW4EEZKgAcaruACM4paR.m4a?channel=rss&album_id=43408864&track_id=390477286&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/cd3b-audiofreehighqps/33/69/CKwRIW4EEZKgAcaruACM4paR.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 88351689
+      }
+    },
+    {
+      "id": "e_67ebfe1dc5ba",
+      "title": "15. 带走记忆的阿尔茨海默病：药物，护理及衰老｜生命科学系列之二",
+      "link": "https://www.ximalaya.com/sound/387846729",
+      "publishedAt": "2021-02-21T01:01:56.000Z",
+      "durationSeconds": 3400,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIJEEB3RXAaP9jgCJ3NzR.m4a?channel=rss&album_id=43408864&track_id=387846729&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/9624-audiofreehighqps/5D/1E/CKwRIJEEB3RXAaP9jgCJ3NzR.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 81612090
+      }
+    },
+    {
+      "id": "e_3a1d7d1d11c4",
+      "title": "14. 资本市场里的数字解读 —— 会计准则如何影响社会资源配置？",
+      "link": "https://www.ximalaya.com/sound/383676228",
+      "publishedAt": "2021-02-07T03:34:31.000Z",
+      "durationSeconds": 3453,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CKwRIaID9SMSAaqWQQCFDIak.m4a?channel=rss&album_id=43408864&track_id=383676228&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/2301-audiofreehighqps/74/A6/CKwRIaID9SMSAaqWQQCFDIak.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 82890753
+      }
+    },
+    {
+      "id": "e_e34b23c2153d",
+      "title": "13. 生命科学系列之一：癌症药物的研发与上市",
+      "link": "https://www.ximalaya.com/sound/381191481",
+      "publishedAt": "2021-02-01T00:18:46.000Z",
+      "durationSeconds": 3600,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSYD7Qw-AbyyHgCCKpbt.m4a?channel=rss&album_id=43408864&track_id=381191481&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/4985-audiofreehighqps/01/24/CMCoOSYD7Qw-AbyyHgCCKpbt.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 86407813
+      }
+    },
+    {
+      "id": "e_fac623b1034c",
+      "title": "12. 「越烤越糊」的「双重意识」：我们为什么想做播客？",
+      "link": "https://www.ximalaya.com/sound/377691258",
+      "publishedAt": "2021-01-23T03:04:57.000Z",
+      "durationSeconds": 4021,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSED4VWpAfDKcAB-zAWd.m4a?channel=rss&album_id=43408864&track_id=377691258&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/e2f8-audiofreehighqps/68/6F/CMCoOSED4VWpAfDKcAB-zAWd.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 96531029
+      }
+    },
+    {
+      "id": "e_c81b48e76f4f",
+      "title": "04. 单身女性赴美冻卵 —— 实现生育自由还是加剧生育焦虑？",
+      "link": "https://www.ximalaya.com/sound/376181518",
+      "publishedAt": "2021-01-18T23:03:37.000Z",
+      "durationSeconds": 3348,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSUD29cFAZ2YRAB9MKAH.m4a?channel=rss&album_id=43408864&track_id=376181518&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/2904-audiofreehighqps/10/EF/CMCoOSUD29cFAZ2YRAB9MKAH.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 61833007
+      }
+    },
+    {
+      "id": "e_53ef3ac59483",
+      "title": "11. 打工人如何快乐打工：「健康的」企业员工管理是什么样的？",
+      "link": "https://www.ximalaya.com/sound/375158150",
+      "publishedAt": "2021-01-15T23:00:01.000Z",
+      "durationSeconds": 3553,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSUD1526AbbrZgB8JqRf.m4a?channel=rss&album_id=43408864&track_id=375158150&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/5b00-audiofreehighqps/6A/D6/CMCoOSUD1526AbbrZgB8JqRf.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 85287734
+      }
+    },
+    {
+      "id": "e_5d98a3426f2d",
+      "title": "10. 语言的社会性 —— 如何通过分析语言数据理解社会关系？",
+      "link": "https://www.ximalaya.com/sound/372966294",
+      "publishedAt": "2021-01-09T02:52:33.000Z",
+      "durationSeconds": 3574,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSUDzt3GAbmL8gB5wj4z.m4a?channel=rss&album_id=43408864&track_id=372966294&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/7156-audiofreehighqps/42/3D/CMCoOSUDzt3GAbmL8gB5wj4z.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 85805001
+      }
+    },
+    {
+      "id": "e_4952625bd32c",
+      "title": "2021，双重意识想听听你的建议",
+      "link": "https://www.ximalaya.com/sound/371359346",
+      "publishedAt": "2021-01-03T22:52:13.000Z",
+      "durationSeconds": 132,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSIDyA2fABBiGgB32ovm.m4a?channel=rss&album_id=43408864&track_id=371359346&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/d371-audiofreehighqps/DB/8E/CMCoOSIDyA2fABBiGgB32ovm.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 3176768
+      }
+    },
+    {
+      "id": "e_c5df5460f6bf",
+      "title": "09. 作为社会性书写的虚构/非虚构作品——文学如何参与社会生活？",
+      "link": "https://www.ximalaya.com/sound/366524893",
+      "publishedAt": "2020-12-19T01:22:30.000Z",
+      "durationSeconds": 3642,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSYDsxkoAcHwQgBywfnw.m4a?channel=rss&album_id=43408864&track_id=366524893&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/2788-audiofreehighqps/7F/17/CMCoOSYDsxkoAcHwQgBywfnw.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 87427486
+      }
+    },
+    {
+      "id": "e_1b18730c018b",
+      "title": "08. 感谢特辑 —— 聊聊制作播客给我们带来的独特体验",
+      "link": "https://www.ximalaya.com/sound/364862257",
+      "publishedAt": "2020-12-13T22:12:49.000Z",
+      "durationSeconds": 1493,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOR8DrFUCALiGUgBxANhl.m4a?channel=rss&album_id=43408864&track_id=364862257&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/8286-audiofreehighqps/84/84/CMCoOR8DrFUCALiGUgBxANhl.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 35857459
+      }
+    },
+    {
+      "id": "e_c76ba47e8210",
+      "title": "07. 人工智能的未来 —— 由海量数据构建的理想社会生活？",
+      "link": "https://www.ximalaya.com/sound/362271626",
+      "publishedAt": "2020-12-06T01:23:01.000Z",
+      "durationSeconds": 3105,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSQDodrwAX-eOABuXg1z.m4a?channel=rss&album_id=43408864&track_id=362271626&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/a02d-audiofreehighqps/06/80/CMCoOSQDodrwAX-eOABuXg1z.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 74543666
+      }
+    },
+    {
+      "id": "e_c776e4b882f6",
+      "title": "06. 互联网谣言/冲突/暴力，乌托邦式的线上讨论可能存在吗？",
+      "link": "https://www.ximalaya.com/sound/359982653",
+      "publishedAt": "2020-11-29T00:36:02.000Z",
+      "durationSeconds": 3584,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSUDmLBDAbrMEQBr7tjv.m4a?channel=rss&album_id=43408864&track_id=359982653&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/caa1-audiofreehighqps/39/D0/CMCoOSUDmLBDAbrMEQBr7tjv.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 86042930
+      }
+    },
+    {
+      "id": "e_9e9b499dea6a",
+      "title": "05. 广州外贸大厦里的中非相遇 —— 在田野调查中理解国际关系",
+      "link": "https://www.ximalaya.com/sound/357669704",
+      "publishedAt": "2020-11-22T00:07:06.000Z",
+      "durationSeconds": 4062,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/8500-audiofreehighqps/19/39/CMCoOScDgIQBAAJG6wBluA4q.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//CMCoOSYDj28eAfXGggBpZCJP.m4a?channel=rss&album_id=43408864&track_id=357669704&uid=188447600&jt=https://aod.cos.tx.xmcdn.com/storages/2c0f-audiofreehighqps/9E/A3/CMCoOSYDj28eAfXGggBpZCJP.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 97502048
+      }
+    }
+  ],
+  "highlight": {
+    "id": "h_061490bdcc5d",
+    "title": "33. 每一个人作为灾难的感知器：用社交媒体数据进行灾害管理",
+    "text": "本期节目的嘉宾是我们的朋友凌尧。凌尧目前是密歇根大学的信息学院的博士后，他研究的方向是计算社会科学。 我们对于灾害的记忆在过去的几年中不断的被刷新。灾害的发生切实的影响着社会中的每一个个体。社交媒体往往成为了灾害中人们第一时间交流，互助，思考的重要渠道。与此同时，社交媒体上所记录下来的数据也可以成为机构和组织进行灾害管理和救援的重要信息途径。灾害管理包含哪些方面？社交媒体可以从哪些角度辅助灾害的管理和评估？和传统方法相比，利用社交媒体数据进行灾害管理又有哪些利弊？ 从灾害管理的目的与内容开始，凌尧在本期的节目中从计算社会科学的角度讨论了灾害中社交媒体上信息传播的趋势，社交媒体信息在灾害管理中的角色，以及利用社交媒体信息进行灾害管理…",
+    "snippet": {
+      "startMs": 827000,
+      "durationMs": 30000
+    }
+  },
+  "ui": {
+    "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+  }
+}
