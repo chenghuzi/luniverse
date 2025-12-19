@@ -128,25 +128,6 @@ export function CardStack(props: CardStackProps) {
             .reverse()
         )}
       </div>
-
-      <div className="deckControls">
-        <button
-          className="controlButton controlNope"
-          type="button"
-          disabled={!hasTop}
-          onClick={() => controller.forceDecision("nope")}
-        >
-          Nope
-        </button>
-        <button
-          className="controlButton controlLike"
-          type="button"
-          disabled={!hasTop}
-          onClick={() => controller.forceDecision("like")}
-        >
-          Like
-        </button>
-      </div>
     </div>
   );
 }

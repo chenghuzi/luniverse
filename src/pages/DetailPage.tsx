@@ -110,14 +110,16 @@ export function DetailPage() {
 
   return (
     <div className="page pageNoWindowScroll">
-      <button
-        className="detailBackButton"
-        type="button"
-        onClick={() => navigate("/")}
-        aria-label="Back to deck"
-      >
-        ‹
-      </button>
+      {!chat.open ? (
+        <button
+          className="detailBackButton"
+          type="button"
+          onClick={() => navigate("/")}
+          aria-label="Back to deck"
+        >
+          ‹
+        </button>
+      ) : null}
       <main className="content">
         <div className="detailCard">
           <div className="detailHeader">

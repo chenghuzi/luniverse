@@ -40,9 +40,7 @@ export function DeckPage() {
     <div className="page pageNoWindowScroll">
       <header className="header">
         <div className="title">Deck</div>
-        <div className="subtitle">
-          Swipe left/right or use buttons. Pointer Events are used for input.
-        </div>
+        <div className="subtitle">Swipe left/right. Use arrow keys on desktop.</div>
       </header>
 
       <main className="content">

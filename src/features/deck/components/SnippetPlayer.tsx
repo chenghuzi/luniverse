@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { getActiveWindow, getGlobalAudioElement, pauseIfActive, playWindow, seekWithinActiveWindow } from "@/shared/audio/globalAudio";
+import { getActiveWindow, getGlobalAudioElement, pauseIfActive, playWindow } from "@/shared/audio/globalAudio";
 
 type SnippetPlayerProps = {
   audioUrl: string;
@@ -186,40 +186,6 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     }
   }
 
-  function togglePlay() {
-    if (needsUserGesture && props.isActive) {
-      setShowUnlockOverlay(true);
-      return;
-    }
-
-    setNeedsUserGesture(false);
-
-    const audioEl = getGlobalAudioElement();
-    const active = getActiveWindow();
-
-    if (audioEl.paused || !active || active.id !== segmentIdRef.current) {
-      void playWindow({
-        id: segmentIdRef.current,
-        url: props.audioUrl,
-        startSec,
-        durationSec,
-      }).catch((e: unknown) => {
-        setNeedsUserGesture(true);
-        setShowUnlockOverlay(true);
-        setUnlockError(isAutoplayBlockedError(e) ? null : e instanceof Error ? e.message : "Playback was blocked by the browser");
-        setIsPlaying(false);
-      });
-      return;
-    }
-    audioEl.pause();
-  }
-
-  function onScrub(valueMs: number) {
-    const nextProgressSec = clampNumber(valueMs, 0, durationMs) / 1000;
-    seekWithinActiveWindow(nextProgressSec);
-    setCurrentSec(startSec + nextProgressSec);
-  }
-
   return (
     <div className="snippetPlayer" data-active={props.isActive ? "true" : "false"}>
       {props.isActive && showUnlockOverlay && typeof document !== "undefined"
@@ -253,9 +219,6 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
             document.body,
           )
         : null}
-      <button className="snippetButton" type="button" onClick={togglePlay} disabled={!props.isActive}>
-        {needsUserGesture ? "Tap to play" : isPlaying ? "Pause" : "Play"}
-      </button>
       <input
         className="snippetRange"
         type="range"
