@@ -6,6 +6,8 @@ import { useMicrophoneSession } from "@/features/chat/hooks/useMicrophoneSession
 import { useTencentRtAsrSession } from "@/features/asr/hooks/useTencentRtAsrSession";
 import { createDashscopeLlmClient } from "@/features/llm/dashscope/DashscopeLlmClient";
 import type { LlmMessage, LlmStreamHandle } from "@/features/llm/types";
+import type { PromptContext } from "@/features/llm/prompts/types";
+import { composeSystemPrompt } from "@/features/llm/prompts/injectors";
 
 export type VoiceChatContext =
   | {
@@ -13,6 +15,7 @@ export type VoiceChatContext =
       podcastId: string;
       podcastTitle: string;
       coverUrl?: string | null;
+      promptContext?: PromptContext;
     }
   | {
       kind: "episode";
@@ -21,6 +24,7 @@ export type VoiceChatContext =
       episodeId: string;
       episodeTitle: string;
       coverUrl?: string | null;
+      promptContext?: PromptContext;
     };
 
 type VoiceChatOverlayProps = {
@@ -80,6 +84,7 @@ const MIN_VOICE_SEND_MS = 450;
 const MAX_CONTEXT_MESSAGES = 18;
 
 function buildSystemPrompt(context: VoiceChatContext | null): string {
+  if (context?.promptContext) return composeSystemPrompt(context.promptContext);
   if (!context) return "You are a helpful voice assistant. Be concise and actionable.";
   if (context.kind === "podcast") {
     return `You are a helpful voice assistant for the podcast "${context.podcastTitle}". Be concise and actionable.`;

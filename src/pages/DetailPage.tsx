@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
 import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
 import { pauseGlobalAudio } from "@/shared/audio/globalAudio";
+import { buildPromptContextForEpisodeChat, buildPromptContextForPodcastChat } from "@/features/llm/prompts/buildPromptContext";
 
 function formatDuration(totalSeconds?: number) {
   if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds)) return "-";
@@ -94,6 +95,7 @@ export function DetailPage() {
         podcastId: card.podcast.id,
         podcastTitle: card.podcast.title,
         coverUrl,
+        promptContext: buildPromptContextForPodcastChat(card),
       },
     });
   }
@@ -109,6 +111,7 @@ export function DetailPage() {
         episodeId: episode.id,
         episodeTitle: episode.title,
         coverUrl,
+        promptContext: buildPromptContextForEpisodeChat(card, episode.id),
       },
     });
   }

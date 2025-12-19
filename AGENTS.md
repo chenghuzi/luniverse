@@ -132,3 +132,29 @@ Vite 只会暴露以 `VITE_` 开头的 env 给前端代码。
 - 上线：改为后端签发短期 token / 后端代理 `/chat/completions`，前端只拿一个 session token 或直接请求自家后端。
 
 这样 `VoiceChatOverlay` 的消息流式更新逻辑可以保持不变。
+
+## System Prompt 注入（Podcast vs Episode）
+
+为了让“播客 chat”和“单集 chat”能把对应内容注入到 system prompt，同时保持后续可迭代，我们把注入拆成两层：
+
+1) `PromptContext`：稳定的结构化上下文（来自 `CardDetail`），由页面在“点击 Chat”时构建。
+2) `PromptInjectors`：可插拔的 prompt 拼接器，把 `PromptContext` 变成最终 system prompt。
+
+### 关键文件
+
+- `src/features/llm/prompts/types.ts`
+  - `PromptContext` / `PromptInjector` 类型。
+- `src/features/llm/prompts/buildPromptContext.ts`
+  - `buildPromptContextForPodcastChat(card)`：播客 chat 注入 podcast + current episode + recent 2 episodes + highlight。
+  - `buildPromptContextForEpisodeChat(card, episodeId)`：单集 chat 注入 podcast + target episode + highlight。
+- `src/features/llm/prompts/injectors.ts`
+  - `composeSystemPrompt(ctx, injectors)`：按 injector pipeline 拼接；默认包含 persona + JSON context。
+- `src/pages/DetailPage.tsx`
+  - 点击 Chat 时把 promptContext 填进 `VoiceChatContext`。
+- `src/features/chat/components/VoiceChatOverlay.tsx`
+  - 优先使用 `context.promptContext` 生成 system prompt；否则 fallback 到简单 title prompt。
+
+### 后续怎么改注入内容（推荐方式）
+
+- 改“注入哪些字段”：只动 `buildPromptContext.ts`（比如改 recent episodes 数量、加入 show notes、加入更多 episode 元信息等）。
+- 改“怎么写进 prompt”：只动 `injectors.ts`（比如从 JSON block 改成更强的指令模板、增加 RAG 注入器等）。
