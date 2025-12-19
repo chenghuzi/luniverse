@@ -112,6 +112,7 @@ export function CardStack(props: CardStackProps) {
                 <Card
                   key={card.instanceId}
                   card={card}
+                  isTop={isTop}
                   className={isTop ? "card cardTopLayer" : "card"}
                   style={{
                     x: isTop ? controller.motion.x : undefined,

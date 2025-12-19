@@ -1,9 +1,11 @@
 import type React from "react";
 import { motion, type MotionValue } from "framer-motion";
 import type { Card as CardType } from "@/features/deck/model/types";
+import { SnippetPlayer } from "@/features/deck/components/SnippetPlayer";
 
 type CardProps = {
   card: CardType;
+  isTop?: boolean;
   style?: {
     x?: MotionValue<number>;
     y?: MotionValue<number>;
@@ -20,7 +22,7 @@ type CardProps = {
   };
 };
 
-export function Card({ card, style, className, pointerBind }: CardProps) {
+export function Card({ card, isTop, style, className, pointerBind }: CardProps) {
   const subtitleParts = [
     card.podcast.title,
     card.episode.title ? `• ${card.episode.title}` : undefined,
@@ -30,6 +32,9 @@ export function Card({ card, style, className, pointerBind }: CardProps) {
   const coverAlt = card.episode.title
     ? `${card.podcast.title} - ${card.episode.title}`
     : `${card.podcast.title} cover`;
+
+  const snippet = card.highlight.snippet;
+  const hasSnippet = Boolean(snippet && Number.isFinite(snippet.startMs) && Number.isFinite(snippet.durationMs));
 
   return (
     <motion.div
@@ -60,6 +65,14 @@ export function Card({ card, style, className, pointerBind }: CardProps) {
                 draggable={false}
               />
             </div>
+          ) : null}
+          {hasSnippet ? (
+            <SnippetPlayer
+              audioUrl={card.episode.audio.url}
+              startMs={snippet!.startMs}
+              durationMs={snippet!.durationMs}
+              isActive={Boolean(isTop)}
+            />
           ) : null}
         </div>
         <div className="cardHint">Swipe left / right</div>
