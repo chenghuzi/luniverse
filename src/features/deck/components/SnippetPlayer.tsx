@@ -9,6 +9,28 @@ type SnippetPlayerProps = {
   isActive: boolean;
 };
 
+function isAutoplayBlockedError(err: unknown) {
+  const e = err as { name?: unknown; message?: unknown } | null;
+  const name = typeof e?.name === "string" ? e.name.toLowerCase() : "";
+  const message = typeof e?.message === "string" ? e.message.toLowerCase() : "";
+
+  if (name === "notallowederror") return true;
+  if (name === "securityerror") return true;
+
+  if (message.includes("didn't interact with the document")) return true;
+  if (message.includes("did not interact with the document")) return true;
+  if (message.includes("user didn't interact with the document")) return true;
+  if (message.includes("user did not interact with the document")) return true;
+
+  if (message.includes("not allowed by the user agent")) return true;
+  if (message.includes("not allowed by the user-agent")) return true;
+  if (message.includes("the request is not allowed")) return true;
+  if (message.includes("request is not allowed")) return true;
+  if (message.includes("the operation is not allowed")) return true;
+
+  return false;
+}
+
 function clampNumber(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
@@ -39,6 +61,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const progressSec = useMemo(() => clampNumber(currentSec - startSec, 0, durationSec), [currentSec, startSec, durationSec]);
   const progressMs = Math.round(progressSec * 1000);
   const durationMs = Math.round(durationSec * 1000);
+  const showUnlockError = Boolean(unlockError && !isAutoplayBlockedError({ message: unlockError }));
 
   useEffect(() => {
     segmentIdRef.current = `${props.audioUrl}|${props.startMs}|${props.durationMs}`;
@@ -130,7 +153,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
       setIsUnlocking(false);
-      setUnlockError(e instanceof Error ? e.message : null);
+      setUnlockError(isAutoplayBlockedError(e) ? null : e instanceof Error ? e.message : null);
       setIsPlaying(false);
     });
   }, [props.isActive, props.audioUrl, startSec]);
@@ -154,11 +177,11 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setNeedsUserGesture(false);
       setIsUnlocking(false);
       setUnlockError(null);
-    } catch {
+    } catch (e: unknown) {
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
       setIsUnlocking(false);
-      setUnlockError("Playback was blocked by the browser");
+      setUnlockError(isAutoplayBlockedError(e) ? null : "Playback was blocked by the browser");
       setIsPlaying(false);
     }
   }
@@ -183,7 +206,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       }).catch((e: unknown) => {
         setNeedsUserGesture(true);
         setShowUnlockOverlay(true);
-        setUnlockError(e instanceof Error ? e.message : "Playback was blocked by the browser");
+        setUnlockError(isAutoplayBlockedError(e) ? null : e instanceof Error ? e.message : "Playback was blocked by the browser");
         setIsPlaying(false);
       });
       return;
@@ -218,14 +241,14 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
                 e.stopPropagation();
               }}
             >
-              <div className="audioUnlockPanel">
-                <div className="audioUnlockTitle">Unlock audio</div>
-                <div className="audioUnlockSubtitle">A browser permission is required to autoplay audio.</div>
-                {unlockError ? <div className="audioUnlockError">{unlockError}</div> : null}
-                <button className="audioUnlockButton" type="button" onClick={unlockAndPlayFromGesture}>
-                  {isUnlocking ? "Unlocking..." : "Unlock and play"}
-                </button>
-              </div>
+	              <div className="audioUnlockPanel">
+	                <div className="audioUnlockTitle">Unlock audio</div>
+	                <div className="audioUnlockSubtitle">A browser permission is required to autoplay audio.</div>
+	                {showUnlockError ? <div className="audioUnlockError">{unlockError}</div> : null}
+	                <button className="audioUnlockButton" type="button" onClick={unlockAndPlayFromGesture}>
+	                  {isUnlocking ? "Unlocking..." : "Unlock and play"}
+	                </button>
+	              </div>
             </div>,
             document.body,
           )
