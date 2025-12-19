@@ -42,6 +42,7 @@ a {
 .pageNoWindowScroll {
   height: 100dvh;
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 .pageNoWindowScroll .content {
@@ -95,7 +96,7 @@ a {
 }
 
 .cardTopLayer {
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .cardSurface {
@@ -616,11 +617,12 @@ a {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  display: grid;
-  place-items: end center;
-  padding: 16px 16px 18px;
-  background: rgba(0, 0, 0, 0.52);
-  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 16px calc(env(safe-area-inset-bottom, 0px) + 18px);
+  background: rgba(0, 0, 0, 0.20);
 }
 
 .voiceChatBackdropButton {
@@ -629,6 +631,23 @@ a {
   border: 0;
   background: transparent;
   cursor: pointer;
+}
+
+.voiceChatHud {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, 96vw);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(15, 23, 42, 0.72);
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
 }
 
 .voiceChatSheet {

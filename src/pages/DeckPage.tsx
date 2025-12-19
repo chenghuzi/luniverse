@@ -37,7 +37,7 @@ export function DeckPage() {
   }
 
   return (
-    <div className="page">
+    <div className="page pageNoWindowScroll">
       <header className="header">
         <div className="title">Deck</div>
         <div className="subtitle">

@@ -32,16 +32,16 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const [isPressing, setIsPressing] = useState(false);
   const closeRef = useRef<HTMLButtonElement | null>(null);
 
-  const title = useMemo(() => {
+  const targetName = useMemo(() => {
     if (!props.context) return "Voice chat";
     if (props.context.kind === "podcast") return props.context.podcastTitle;
     return props.context.episodeTitle;
   }, [props.context]);
 
-  const subtitle = useMemo(() => {
+  const hudSubtitle = useMemo(() => {
     if (!props.context) return "No context";
-    if (props.context.kind === "podcast") return `Podcast • ${props.context.podcastId}`;
-    return `Episode • ${props.context.podcastTitle}`;
+    if (props.context.kind === "podcast") return "Podcast";
+    return `Podcast • ${props.context.podcastTitle}`;
   }, [props.context]);
 
   useEffect(() => {
@@ -73,19 +73,17 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
 
   return createPortal(
     <div className="voiceChatBackdrop" role="dialog" aria-modal="true" aria-label="Voice chat">
-      <button className="voiceChatBackdropButton" type="button" onClick={props.onClose} aria-label="Close" />
+      <div className="voiceChatHud" onClick={(e) => stopEvent(e)}>
+        <div className="voiceChatHeaderText">
+          <div className="voiceChatTitle">{`Talking with: ${targetName}`}</div>
+          <div className="voiceChatSubtitle">{hudSubtitle}</div>
+        </div>
+        <button ref={closeRef} className="voiceChatCloseButton" type="button" onClick={props.onClose}>
+          Close
+        </button>
+      </div>
 
       <div className="voiceChatSheet" onClick={(e) => stopEvent(e)}>
-        <div className="voiceChatHeader">
-          <div className="voiceChatHeaderText">
-            <div className="voiceChatTitle">{title}</div>
-            <div className="voiceChatSubtitle">{subtitle}</div>
-          </div>
-          <button ref={closeRef} className="voiceChatCloseButton" type="button" onClick={props.onClose}>
-            Close
-          </button>
-        </div>
-
         <div className="voiceChatBody">
           <div className={isPressing ? "voiceChatWave voiceChatWaveActive" : "voiceChatWave"} aria-hidden="true">
             <div className="voiceChatWaveBar" />
