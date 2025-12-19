@@ -15,7 +15,7 @@ export function DetailPage() {
       <main className="content">
         <div className="detailCard">
           <div className="detailHeader">
-            <div className="detailTitle">{card?.title ?? "Unknown card"}</div>
+            <div className="detailTitle">{card?.highlight.title ?? "Unknown highlight"}</div>
             <div className="detailMeta">instanceId: {cardInstanceId ?? "-"}</div>
           </div>
           <div className="detailBody">

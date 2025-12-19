@@ -21,6 +21,11 @@ type CardProps = {
 };
 
 export function Card({ card, style, className, pointerBind }: CardProps) {
+  const subtitleParts = [
+    card.podcast.title,
+    card.episode.title ? `• ${card.episode.title}` : undefined,
+  ].filter(Boolean);
+
   return (
     <motion.div
       className={className ?? "card"}
@@ -33,10 +38,10 @@ export function Card({ card, style, className, pointerBind }: CardProps) {
       }}
       {...(pointerBind ?? {})}
     >
-      <div className="cardSurface" style={{ background: card.accent }}>
+      <div className="cardSurface" style={{ background: card.ui.accent }}>
         <div className="cardTop">
-          <div className="cardTitle">{card.title}</div>
-          {card.subtitle ? <div className="cardSubtitle">{card.subtitle}</div> : null}
+          <div className="cardTitle">{card.highlight.title}</div>
+          {subtitleParts.length > 0 ? <div className="cardSubtitle">{subtitleParts.join(" ")}</div> : null}
         </div>
         <div className="cardHint">Swipe left / right</div>
       </div>

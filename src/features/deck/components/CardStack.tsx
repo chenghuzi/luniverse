@@ -21,7 +21,14 @@ export function CardStack(props: CardStackProps) {
   const top = props.cards[0];
   const hasTop = Boolean(top);
   const controller = useSwipeController({
-    card: top ?? { id: "empty", instanceId: "empty-0", title: "No cards", accent: "#111827" },
+    card: top ?? {
+      id: "empty",
+      instanceId: "empty-0",
+      podcast: { id: "empty", title: "No cards" },
+      episode: { id: "empty", title: "", audio: { url: "" } },
+      highlight: { id: "empty", title: "No cards" },
+      ui: { accent: "#111827" },
+    },
     onDecision: props.onDecision,
     config,
   });
@@ -66,25 +73,25 @@ export function CardStack(props: CardStackProps) {
         ) : (
           stack
             .map((card, i) => {
-            const indexInStack = i;
-            const { translateY, scale } = getStackTransform(indexInStack, config);
-            const isTop = i === 0;
+              const indexInStack = i;
+              const { translateY, scale } = getStackTransform(indexInStack, config);
+              const isTop = i === 0;
 
-            return (
-              <Card
-                key={card.instanceId}
-                card={card}
-                className={isTop ? "card cardTopLayer" : "card"}
-                style={{
-                  x: isTop ? controller.motion.x : undefined,
-                  y: isTop ? controller.motion.y : undefined,
-                  rotate: isTop ? controller.motion.rotate : undefined,
-                  translateY,
-                  scale,
-                }}
-                pointerBind={isTop && hasTop ? controller.bind : undefined}
-              />
-            );
+              return (
+                <Card
+                  key={card.instanceId}
+                  card={card}
+                  className={isTop ? "card cardTopLayer" : "card"}
+                  style={{
+                    x: isTop ? controller.motion.x : undefined,
+                    y: isTop ? controller.motion.y : undefined,
+                    rotate: isTop ? controller.motion.rotate : undefined,
+                    translateY,
+                    scale,
+                  }}
+                  pointerBind={isTop && hasTop ? controller.bind : undefined}
+                />
+              );
             })
             .reverse()
         )}
