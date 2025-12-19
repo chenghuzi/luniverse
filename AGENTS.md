@@ -53,3 +53,42 @@
 
 这样可以保持 UI 与 ASR 解耦，避免后续改动扩散。
 
+## Tencent Real-time ASR (Front-end demo)
+
+当前已实现一个“前端签名 + WebSocket 直连腾讯云实时 ASR”的 demo 版本，重点是把结构拆开，方便后续改成“后端下发预签名 URL / 走服务端代理”。
+
+### 关键文件
+
+- `src/features/asr/types.ts`
+  - 抽象接口：`AsrEngine` / `AsrCallbacks` / `AsrStatus`。
+- `src/features/asr/credentials.ts`
+  - 仅负责从 `import.meta.env` 读取 `VITE_*` 配置（demo 阶段）。
+- `src/features/asr/tencent/signature.ts`
+  - 负责按腾讯文档生成签名并拼出 `wss://...` URL（HMAC-SHA1 + Base64）。
+- `src/features/asr/tencent/TencentRtAsrEngine.ts`
+  - WebSocket 生命周期、音频上送节奏、回包解析与 partial/final 文本聚合。
+- `src/features/asr/audio/*`
+  - 音频管道：重采样（线性插值 demo 版）、Float32->PCM16LE、40ms 分帧。
+- `src/features/asr/hooks/useTencentRtAsrSession.ts`
+  - React hook：向上提供 `start/pushAudio/stop` 与状态。
+- `src/features/chat/components/VoiceChatOverlay.tsx`
+  - 按住录音时启动 ASR，并用 `recognizedText` 实时显示；松开后等待 final transcript 再自动发 bubble。
+
+### 配置方式（不要把密钥提交到仓库）
+
+仓库内提供了 `.env.example` 作为模板（实际文件已被 `.gitignore` 忽略）。
+
+你需要在本地创建 `.env` 或 `.env.local`，并填入：
+
+- `VITE_TENCENT_ASR_APP_ID`
+- `VITE_TENCENT_ASR_SECRET_ID`
+- `VITE_TENCENT_ASR_SECRET_KEY`
+- `VITE_TENCENT_ASR_ENGINE_MODEL_TYPE`（可选，默认 `16k_zh`）
+
+### 未来切后端下发（迁移点）
+
+当前 demo 的“签名拼 URL”在前端完成；上线时建议只替换：
+
+- `src/features/asr/credentials.ts`：改为从后端拿预签名 URL / 临时 token
+
+其余层（录音、分帧、WS 引擎、UI）尽量不动，避免耦合扩散。

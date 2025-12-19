@@ -72,10 +72,7 @@ export function DeckPage() {
 
   return (
     <div className="page pageNoWindowScroll">
-      <header className="header">
-        <div className="title">Deck</div>
-        <div className="subtitle">Swipe left/right. Use arrow keys on desktop.</div>
-      </header>
+      <h1 className="deckTitleOverlay">{"\u58F0\u6D77\u62FE\u8D1D"}</h1>
 
       <main className="content">
         <CardStack cards={remainingCards} isLoading={isLoading} onDecision={handleDecision} />

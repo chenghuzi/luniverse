@@ -4,6 +4,7 @@ const gradientCache = new Map<string, string | null>();
 const inflight = new Map<string, Promise<string | null>>();
 const pageBgCache = new Map<string, string | null>();
 const pageBgInflight = new Map<string, Promise<string | null>>();
+const PAGE_BG_VERSION = "v3";
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -188,7 +189,7 @@ export async function getCoverGradient(url: string): Promise<string | null> {
 }
 
 export async function getCoverPageBackground(url: string): Promise<string | null> {
-  const key = url.trim();
+  const key = `${PAGE_BG_VERSION}:${url.trim()}`;
   if (key.length === 0) return null;
   if (pageBgCache.has(key)) return pageBgCache.get(key)!;
   const existing = pageBgInflight.get(key);
@@ -201,12 +202,12 @@ export async function getCoverPageBackground(url: string): Promise<string | null
       const clusters = kmeans2(pixels);
       if (!clusters) return null;
 
-      const a = mixWithWhite(clusters.a, 0.88);
-      const b = mixWithWhite(clusters.b, 0.88);
+      const a = mixWithWhite(clusters.a, 0.62);
+      const b = mixWithWhite(clusters.b, 0.62);
 
-      const c1 = `rgba(${clamp(Math.round(a.r), 0, 255)}, ${clamp(Math.round(a.g), 0, 255)}, ${clamp(Math.round(a.b), 0, 255)}, 0.36)`;
-      const c2 = `rgba(${clamp(Math.round(b.r), 0, 255)}, ${clamp(Math.round(b.g), 0, 255)}, ${clamp(Math.round(b.b), 0, 255)}, 0.28)`;
-      const whiteMist = "linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.90))";
+      const c1 = `rgba(${clamp(Math.round(a.r), 0, 255)}, ${clamp(Math.round(a.g), 0, 255)}, ${clamp(Math.round(a.b), 0, 255)}, 0.56)`;
+      const c2 = `rgba(${clamp(Math.round(b.r), 0, 255)}, ${clamp(Math.round(b.g), 0, 255)}, ${clamp(Math.round(b.b), 0, 255)}, 0.48)`;
+      const whiteMist = "linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.80))";
 
       return [
         `radial-gradient(1200px 820px at 18% 14%, ${c1}, transparent 62%)`,

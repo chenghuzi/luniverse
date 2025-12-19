@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 
 import { VoiceWaveform } from "@/features/chat/components/VoiceWaveform";
 import { useMicrophoneSession } from "@/features/chat/hooks/useMicrophoneSession";
+import { useTencentRtAsrSession } from "@/features/asr/hooks/useTencentRtAsrSession";
 
 export type VoiceChatContext =
   | {
@@ -89,6 +90,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const isPressingRef = useRef<boolean>(false);
   const pressStartMsRef = useRef<number | null>(null);
   const mic = useMicrophoneSession();
+  const { start: startAsr, pushAudio: pushAsrAudio, stop: stopAsr, status: asrStatus, error: asrError } = useTencentRtAsrSession();
 
   const targetName = useMemo(() => {
     if (!props.context) return "Voice chat";
@@ -175,25 +177,50 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       // ignore
     }
 
-    const started = await mic.start();
-    if (!started) {
+    const asrStartedPromise = startAsr(
+      { targetName },
+      {
+        onPartialText: (text) => {
+          if (token !== pressTokenRef.current) return;
+          setRecognizedText(text);
+        },
+        onFinalText: (text) => {
+          if (token !== pressTokenRef.current) return;
+          recognizedRef.current = text;
+          setRecognizedText(text);
+        },
+        onError: () => {
+          if (token !== pressTokenRef.current) return;
+          setRecognizedText("");
+        },
+      },
+    );
+
+    const micStartedPromise = mic.start({ onPcmChunk: pushAsrAudio });
+    const [asrStarted, micStarted] = await Promise.all([asrStartedPromise, micStartedPromise]);
+    void asrStarted;
+
+    if (!micStarted) {
       if (token !== pressTokenRef.current) return;
       isPressingRef.current = false;
       setIsPressing(false);
       pressStartMsRef.current = null;
+      await stopAsr();
       return;
     }
 
     if (token !== pressTokenRef.current || !isPressingRef.current) {
       mic.stop();
+      await stopAsr();
     }
   }
 
-  function stopHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
+  async function stopHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
     stopEvent(e);
     if (!isPressingRef.current) return;
 
     pressTokenRef.current += 1;
+    const token = pressTokenRef.current;
     isPressingRef.current = false;
     setIsPressing(false);
     mic.stop();
@@ -203,6 +230,14 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     if (typeof startedAt === "number") {
       const durationMs = Math.max(0, Date.now() - startedAt);
       setLastRecordingMs(durationMs);
+
+      const res = await stopAsr();
+      if (token !== pressTokenRef.current) return;
+      if (res.finalText.trim().length > 0) {
+        recognizedRef.current = res.finalText;
+        setRecognizedText(res.finalText);
+      }
+
       if (durationMs >= MIN_VOICE_SEND_MS) sendVoiceMessage(durationMs);
     }
   }
@@ -249,13 +284,15 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       document.body.style.overflow = prevBodyOverflow;
       clearReplyTimers();
       mic.stop();
+      void stopAsr();
     };
-  }, [mic.stop, props.context, props.onClose, props.open]);
+  }, [mic.stop, props.context, props.onClose, props.open, stopAsr]);
 
   useEffect(() => {
     if (props.open) return;
     mic.stop();
-  }, [mic.stop, props.open]);
+    void stopAsr();
+  }, [mic.stop, props.open, stopAsr]);
 
   useEffect(() => {
     if (!props.open) return;
@@ -269,6 +306,8 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     if (mic.status === "requesting") return "Requesting microphone access...";
     if (mic.status === "denied") return mic.error ?? "Microphone permission denied";
     if (mic.status === "error") return mic.error ?? "Microphone unavailable";
+    if (asrStatus === "connecting") return "Connecting ASR...";
+    if (asrStatus === "error") return asrError ?? "ASR error";
     if (isPressing && mic.status === "listening") return recognizedText ? `Recognizing: ${recognizedText}` : "Listening...";
     if (recognizedText) return `Recognized: ${recognizedText}`;
     if (typeof lastRecordingMs === "number") return `Recorded: ${(lastRecordingMs / 1000).toFixed(1)}s`;
