@@ -1,12 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { getActiveWindow, getGlobalAudioElement, pauseIfActive, playWindow } from "@/shared/audio/globalAudio";
+import { getActiveWindow, getGlobalAudioElement, onSegmentEnded, pauseIfActive, playWindow } from "@/shared/audio/globalAudio";
 
 type SnippetPlayerProps = {
   audioUrl: string;
   startMs: number;
   durationMs: number;
   isActive: boolean;
+  onAutoAdvance?: () => void;
 };
 
 function isAutoplayBlockedError(err: unknown) {
@@ -48,8 +49,12 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const startSec = props.startMs / 1000;
   const durationSec = Math.max(0, props.durationMs / 1000);
   const endSec = startSec + durationSec;
+  const segmentId = `${props.audioUrl}|${props.startMs}|${props.durationMs}`;
 
   const segmentIdRef = useRef<string>("");
+  segmentIdRef.current = segmentId;
+  const isActiveRef = useRef<boolean>(props.isActive);
+  const autoAdvanceArmedRef = useRef<boolean>(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [needsUserGesture, setNeedsUserGesture] = useState(false);
   const [showUnlockOverlay, setShowUnlockOverlay] = useState(false);
@@ -64,8 +69,9 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const showUnlockError = Boolean(unlockError && !isAutoplayBlockedError({ message: unlockError }));
 
   useEffect(() => {
-    segmentIdRef.current = `${props.audioUrl}|${props.startMs}|${props.durationMs}`;
-  }, [props.audioUrl, props.durationMs, props.startMs]);
+    isActiveRef.current = props.isActive;
+    if (!props.isActive) autoAdvanceArmedRef.current = false;
+  }, [props.isActive]);
 
   useEffect(() => {
     const audioEl = getGlobalAudioElement();
@@ -91,6 +97,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     function onPlay() {
       const active = getActiveWindow();
       if (!active || active.id !== segmentIdRef.current) return;
+      autoAdvanceArmedRef.current = true;
       setIsPlaying(true);
       setNeedsUserGesture(false);
       setIsUnlocking(false);
@@ -101,12 +108,14 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     function onPause() {
       const active = getActiveWindow();
       if (!active || active.id !== segmentIdRef.current) return;
+      autoAdvanceArmedRef.current = false;
       setIsPlaying(false);
     }
 
     function onError() {
       const active = getActiveWindow();
       if (!active || active.id !== segmentIdRef.current) return;
+      autoAdvanceArmedRef.current = false;
       const code = audioEl.error?.code;
       setIsUnlocking(false);
       setNeedsUserGesture(true);
@@ -138,6 +147,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     setUnlockError(null);
     setIsReady(false);
     setCurrentSec(startSec);
+    autoAdvanceArmedRef.current = false;
 
     if (!props.isActive) {
       pauseIfActive(segmentIdRef.current);
@@ -150,6 +160,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       startSec,
       durationSec,
     }).catch((e: unknown) => {
+      autoAdvanceArmedRef.current = false;
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
       setIsUnlocking(false);
@@ -157,6 +168,20 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setIsPlaying(false);
     });
   }, [props.isActive, props.audioUrl, startSec]);
+
+  useEffect(() => {
+    if (!props.isActive) return;
+    if (!props.onAutoAdvance) return;
+    const expectedId = segmentId;
+
+    return onSegmentEnded((endedId) => {
+      if (endedId !== expectedId) return;
+      if (!isActiveRef.current) return;
+      if (!autoAdvanceArmedRef.current) return;
+      autoAdvanceArmedRef.current = false;
+      props.onAutoAdvance?.();
+    });
+  }, [props.isActive, props.onAutoAdvance, segmentId]);
 
   async function unlockAndPlayFromGesture() {
     if (!props.isActive) return;
@@ -178,6 +203,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setIsUnlocking(false);
       setUnlockError(null);
     } catch (e: unknown) {
+      autoAdvanceArmedRef.current = false;
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
       setIsUnlocking(false);

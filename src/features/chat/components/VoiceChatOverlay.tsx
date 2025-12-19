@@ -1,5 +1,8 @@
-import { useEffect, useMemo, useRef, useState, type SyntheticEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent, type SyntheticEvent } from "react";
 import { createPortal } from "react-dom";
+
+import { VoiceWaveform } from "@/features/chat/components/VoiceWaveform";
+import { useMicrophoneSession } from "@/features/chat/hooks/useMicrophoneSession";
 
 export type VoiceChatContext =
   | {
@@ -72,13 +75,18 @@ const ASSISTANT_TEXTS = [
 
 export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const [isPressing, setIsPressing] = useState(false);
-  const [draftText, setDraftText] = useState("");
+  const [recognizedText, setRecognizedText] = useState("");
+  const [lastRecordingMs, setLastRecordingMs] = useState<number | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isNearBottom, setIsNearBottom] = useState(true);
   const closeRef = useRef<HTMLButtonElement | null>(null);
-  const draftRef = useRef<string>("");
+  const recognizedRef = useRef<string>("");
   const timelineRef = useRef<HTMLDivElement | null>(null);
   const replyTimeoutsRef = useRef<number[]>([]);
+  const pressTokenRef = useRef<number>(0);
+  const isPressingRef = useRef<boolean>(false);
+  const pressStartMsRef = useRef<number | null>(null);
+  const mic = useMicrophoneSession();
 
   const targetName = useMemo(() => {
     if (!props.context) return "Voice chat";
@@ -134,33 +142,65 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     sendUserText(pickOne(USER_TEXTS));
   }
 
-  function startHoldToTalk() {
-    const text = pickOne(USER_TEXTS);
+  async function startHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
+    stopEvent(e);
+    if (isPressingRef.current) return;
+    if (e.button !== 0) return;
+
+    pressTokenRef.current += 1;
+    const token = pressTokenRef.current;
+    isPressingRef.current = true;
     setIsPressing(true);
-    draftRef.current = text;
-    setDraftText(text);
+    setLastRecordingMs(null);
+    pressStartMsRef.current = Date.now();
+    recognizedRef.current = "";
+    setRecognizedText("");
+
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch {
+      // ignore
+    }
+
+    const started = await mic.start();
+    if (!started) {
+      if (token !== pressTokenRef.current) return;
+      isPressingRef.current = false;
+      setIsPressing(false);
+      pressStartMsRef.current = null;
+      return;
+    }
+
+    if (token !== pressTokenRef.current || !isPressingRef.current) {
+      mic.stop();
+    }
   }
 
-  function cancelHoldToTalk() {
+  function stopHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
+    stopEvent(e);
+    if (!isPressingRef.current) return;
+
+    pressTokenRef.current += 1;
+    isPressingRef.current = false;
     setIsPressing(false);
-    draftRef.current = "";
-    setDraftText("");
+    mic.stop();
+
+    const startedAt = pressStartMsRef.current;
+    pressStartMsRef.current = null;
+    if (typeof startedAt === "number") setLastRecordingMs(Math.max(0, Date.now() - startedAt));
   }
 
-  function finishHoldToTalk() {
-    setIsPressing(false);
-    const text = draftRef.current.trim();
-    draftRef.current = "";
-    setDraftText("");
-    if (text.length === 0) return;
-    sendUserText(text);
+  function cancelHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
+    stopHoldToTalk(e);
   }
 
   useEffect(() => {
     if (!props.open) return;
     setIsPressing(false);
-    setDraftText("");
-    draftRef.current = "";
+    isPressingRef.current = false;
+    setRecognizedText("");
+    recognizedRef.current = "";
+    setLastRecordingMs(null);
     clearReplyTimers();
     setMessages([
       {
@@ -191,8 +231,14 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       document.documentElement.style.overflow = prevHtmlOverflow;
       document.body.style.overflow = prevBodyOverflow;
       clearReplyTimers();
+      mic.stop();
     };
-  }, [props.context, props.onClose, props.open]);
+  }, [mic.stop, props.context, props.onClose, props.open]);
+
+  useEffect(() => {
+    if (props.open) return;
+    mic.stop();
+  }, [mic.stop, props.open]);
 
   useEffect(() => {
     if (!props.open) return;
@@ -201,6 +247,16 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   }, [isNearBottom, messages.length, props.open]);
 
   if (!props.open) return null;
+
+  const recognizedLine = (() => {
+    if (mic.status === "requesting") return "Requesting microphone access...";
+    if (mic.status === "denied") return mic.error ?? "Microphone permission denied";
+    if (mic.status === "error") return mic.error ?? "Microphone unavailable";
+    if (isPressing && mic.status === "listening") return recognizedText ? `Recognizing: ${recognizedText}` : "Listening...";
+    if (recognizedText) return `Recognized: ${recognizedText}`;
+    if (typeof lastRecordingMs === "number") return `Recorded: ${(lastRecordingMs / 1000).toFixed(1)}s`;
+    return "Ready";
+  })();
 
   return createPortal(
     <div className="voiceChatBackdrop" role="dialog" aria-modal="true" aria-label="Voice chat">
@@ -246,17 +302,18 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
 
       <div className="voiceChatSheet" onClick={(e) => stopEvent(e)}>
         <div className="voiceChatBottomRecognized">
-          {isPressing ? `Recognizing: ${draftText || "..."}` : draftText ? `Recognized: ${draftText}` : "Ready"}
+          {recognizedLine}
         </div>
+
+        <VoiceWaveform active={isPressing && mic.status === "listening"} bars={mic.waveform.bars} />
 
         <div className="voiceChatBottomControls">
           <button
             className={isPressing ? "voiceChatMicButton voiceChatMicButtonActive" : "voiceChatMicButton"}
             type="button"
             onPointerDown={startHoldToTalk}
-            onPointerUp={finishHoldToTalk}
+            onPointerUp={stopHoldToTalk}
             onPointerCancel={cancelHoldToTalk}
-            onPointerLeave={cancelHoldToTalk}
           >
             {isPressing ? "Release to send" : "Hold to talk"}
           </button>

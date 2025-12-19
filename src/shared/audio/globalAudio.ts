@@ -1,3 +1,5 @@
+import { fadeInOnPlay, fadeOutBeforePause, prepareForPlay } from "@/shared/audio/volumeFade";
+
 export type GlobalAudioSegment = {
   id: string;
   url: string;
@@ -15,6 +17,20 @@ type SegmentWindow = {
 let audioEl: HTMLAudioElement | null = null;
 let activeWindow: SegmentWindow | null = null;
 let pendingSeekSec: number | null = null;
+let lastEndedWindowId: string | null = null;
+
+type SegmentEndedListener = (segmentId: string) => void;
+const segmentEndedListeners = new Set<SegmentEndedListener>();
+
+function emitSegmentEnded(segmentId: string) {
+  for (const listener of segmentEndedListeners) {
+    try {
+      listener(segmentId);
+    } catch {
+      // Ignore listener errors.
+    }
+  }
+}
 
 function clampNumber(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -43,6 +59,10 @@ function ensureAudioEl() {
   el.style.opacity = "0";
   el.style.pointerEvents = "none";
 
+  el.addEventListener("play", () => {
+    fadeInOnPlay(el);
+  });
+
   el.addEventListener("loadedmetadata", () => {
     if (pendingSeekSec == null) return;
     try {
@@ -68,12 +88,25 @@ function ensureAudioEl() {
     if (el.src !== activeWindow.url) return;
     const epsilon = 0.03;
     if (el.currentTime >= activeWindow.endSec - epsilon) {
-      el.pause();
-      try {
-        el.currentTime = activeWindow.startSec;
-      } catch {
-        // Ignore.
-      }
+      const windowId = activeWindow.id;
+      if (lastEndedWindowId === windowId) return;
+      lastEndedWindowId = windowId;
+
+      const wasPlaying = !el.paused;
+      if (wasPlaying) emitSegmentEnded(windowId);
+
+      fadeOutBeforePause(
+        el,
+        () => {
+          el.pause();
+          try {
+            el.currentTime = activeWindow?.startSec ?? 0;
+          } catch {
+            // Ignore.
+          }
+        },
+        () => activeWindow?.id === windowId,
+      );
     }
   });
 
@@ -88,6 +121,13 @@ export function getGlobalAudioElement() {
 
 export function getActiveWindow() {
   return activeWindow;
+}
+
+export function onSegmentEnded(listener: SegmentEndedListener) {
+  segmentEndedListeners.add(listener);
+  return () => {
+    segmentEndedListeners.delete(listener);
+  };
 }
 
 export function pauseIfActive(id: string) {
@@ -123,6 +163,9 @@ export async function playWindow(segment: GlobalAudioSegment) {
   const safeDuration = Math.max(0, segment.durationSec);
   const endSec = safeStart + safeDuration;
   activeWindow = { id: segment.id, url: segment.url, startSec: safeStart, endSec };
+  lastEndedWindowId = null;
+
+  prepareForPlay(el);
 
   if (el.src !== segment.url) {
     el.src = segment.url;

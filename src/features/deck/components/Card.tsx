@@ -6,6 +6,7 @@ import { SnippetPlayer } from "@/features/deck/components/SnippetPlayer";
 type CardProps = {
   card: CardType;
   isTop?: boolean;
+  onAutoAdvance?: () => void;
   style?: {
     x?: MotionValue<number>;
     y?: MotionValue<number>;
@@ -22,7 +23,7 @@ type CardProps = {
   };
 };
 
-export function Card({ card, isTop, style, className, pointerBind }: CardProps) {
+export function Card({ card, isTop, onAutoAdvance, style, className, pointerBind }: CardProps) {
   const subtitleParts = [
     card.podcast.title,
     card.episode.title ? `• ${card.episode.title}` : undefined,
@@ -72,6 +73,7 @@ export function Card({ card, isTop, style, className, pointerBind }: CardProps) 
               startMs={snippet!.startMs}
               durationMs={snippet!.durationMs}
               isActive={Boolean(isTop)}
+              onAutoAdvance={onAutoAdvance}
             />
           ) : null}
         </div>

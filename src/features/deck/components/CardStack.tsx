@@ -113,6 +113,7 @@ export function CardStack(props: CardStackProps) {
                   key={card.instanceId}
                   card={card}
                   isTop={isTop}
+                  onAutoAdvance={isTop && hasTop ? () => controller.forceDecision("nope") : undefined}
                   className={isTop ? "card cardTopLayer" : "card"}
                   style={{
                     x: isTop ? controller.motion.x : undefined,
