@@ -630,12 +630,7 @@ a {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 16px 16px calc(env(safe-area-inset-bottom, 0px) + 18px);
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.18);
 }
 
 .voiceChatBackdropButton {
@@ -658,18 +653,79 @@ a {
   box-shadow: var(--shadow);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 12px;
   padding: 12px 14px;
+  z-index: 100000;
+}
+
+.voiceChatTopCloseButton {
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  right: calc(env(safe-area-inset-right, 0px) + 12px);
+  z-index: 100001;
+}
+
+.voiceChatTimeline {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: calc(env(safe-area-inset-top, 0px) + 94px) 16px calc(env(safe-area-inset-bottom, 0px) + 168px);
+}
+
+.voiceChatTimelineInner {
+  width: min(720px, 96vw);
+  margin: 0 auto;
+}
+
+.voiceChatMessageList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.voiceChatRow {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.voiceChatRowUser {
+  justify-content: flex-end;
+}
+
+.voiceChatBubble {
+  max-width: min(640px, 86%);
+  border-radius: 16px;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(15, 23, 42, 0.76);
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.35;
+  white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.20);
+}
+
+.voiceChatBubbleUser {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.28), rgba(99, 102, 241, 0.14));
+  border-color: rgba(59, 130, 246, 0.26);
 }
 
 .voiceChatSheet {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
   width: min(720px, 96vw);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(15, 23, 42, 0.92);
   box-shadow: var(--shadow);
   overflow: hidden;
+  padding: 12px 14px 14px;
+  z-index: 100000;
 }
 
 .voiceChatHeader {
@@ -722,6 +778,37 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 14px;
+}
+
+.voiceChatBottomRecognized {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.70);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voiceChatBottomControls {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.voiceChatCodeButton {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 12px 12px;
+  font-weight: 900;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.voiceChatCodeButton:hover {
+  border-color: rgba(255, 255, 255, 0.22);
 }
 
 .voiceChatWave {
@@ -783,19 +870,19 @@ a {
 }
 
 .voiceChatMicButton {
-  width: min(420px, 92%);
+  width: 100%;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(99, 102, 241, 0.12));
   padding: 14px 14px;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
   color: rgba(255, 255, 255, 0.92);
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
+  font-weight: 900;
 }
 
 .voiceChatMicButtonActive {
