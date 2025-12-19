@@ -8,8 +8,8 @@ function clamp01(v: number) {
 }
 
 export function VoiceWaveform(props: VoiceWaveformProps) {
-  const barMin = 0.18;
-  const barMax = 1.8;
+  const barMin = 0.1;
+  const barMax = 2.2;
 
   return (
     <div className={props.active ? "voiceChatWave voiceChatWaveLive" : "voiceChatWave"} aria-hidden="true">
@@ -20,4 +20,3 @@ export function VoiceWaveform(props: VoiceWaveformProps) {
     </div>
   );
 }
-

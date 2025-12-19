@@ -73,6 +73,8 @@ const ASSISTANT_TEXTS = [
   "I would start with a 30-second recap, then go deeper on the part you care about.",
 ] as const;
 
+const MIN_VOICE_SEND_MS = 450;
+
 export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const [isPressing, setIsPressing] = useState(false);
   const [recognizedText, setRecognizedText] = useState("");
@@ -138,6 +140,17 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     scheduleAssistantReply();
   }
 
+  function sendVoiceMessage(durationMs: number) {
+    const transcript = recognizedRef.current.trim();
+    if (transcript.length > 0) {
+      sendUserText(transcript);
+      return;
+    }
+
+    const seconds = Math.max(0, durationMs) / 1000;
+    sendUserText(`Voice message (${seconds.toFixed(1)}s)`);
+  }
+
   function codeToTalk() {
     sendUserText(pickOne(USER_TEXTS));
   }
@@ -187,7 +200,11 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
 
     const startedAt = pressStartMsRef.current;
     pressStartMsRef.current = null;
-    if (typeof startedAt === "number") setLastRecordingMs(Math.max(0, Date.now() - startedAt));
+    if (typeof startedAt === "number") {
+      const durationMs = Math.max(0, Date.now() - startedAt);
+      setLastRecordingMs(durationMs);
+      if (durationMs >= MIN_VOICE_SEND_MS) sendVoiceMessage(durationMs);
+    }
   }
 
   function cancelHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {

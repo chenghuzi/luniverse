@@ -2,6 +2,7 @@ import type React from "react";
 import { motion, type MotionValue } from "framer-motion";
 import type { Card as CardType } from "@/features/deck/model/types";
 import { SnippetPlayer } from "@/features/deck/components/SnippetPlayer";
+import { useImageGradient } from "@/features/deck/hooks/useImageGradient";
 
 type CardProps = {
   card: CardType;
@@ -34,6 +35,9 @@ export function Card({ card, isTop, onAutoAdvance, style, className, pointerBind
     ? `${card.podcast.title} - ${card.episode.title}`
     : `${card.podcast.title} cover`;
 
+  const gradient = useImageGradient(coverUrl);
+  const background = gradient ?? card.ui.accent;
+
   const snippet = card.highlight.snippet;
   const hasSnippet = Boolean(snippet && Number.isFinite(snippet.startMs) && Number.isFinite(snippet.durationMs));
 
@@ -49,7 +53,7 @@ export function Card({ card, isTop, onAutoAdvance, style, className, pointerBind
       }}
       {...(pointerBind ?? {})}
     >
-      <div className="cardSurface" style={{ background: card.ui.accent }}>
+      <div className="cardSurface" style={{ background: background }}>
         <div className="cardTop">
           <div className="cardTitle">{card.highlight.title}</div>
           {subtitleParts.length > 0 ? <div className="cardSubtitle">{subtitleParts.join(" ")}</div> : null}
