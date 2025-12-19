@@ -2,6 +2,8 @@ type Rgb = { r: number; g: number; b: number };
 
 const gradientCache = new Map<string, string | null>();
 const inflight = new Map<string, Promise<string | null>>();
+const pageBgCache = new Map<string, string | null>();
+const pageBgInflight = new Map<string, Promise<string | null>>();
 
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
@@ -12,6 +14,15 @@ function rgbToCss(rgb: Rgb) {
   const g = clamp(Math.round(rgb.g), 0, 255);
   const b = clamp(Math.round(rgb.b), 0, 255);
   return `rgb(${r}, ${g}, ${b})`;
+}
+
+function mixWithWhite(rgb: Rgb, amount: number): Rgb {
+  const t = clamp(amount, 0, 1);
+  return {
+    r: rgb.r * (1 - t) + 255 * t,
+    g: rgb.g * (1 - t) + 255 * t,
+    b: rgb.b * (1 - t) + 255 * t,
+  };
 }
 
 function relativeLuminance(rgb: Rgb) {
@@ -176,3 +187,47 @@ export async function getCoverGradient(url: string): Promise<string | null> {
   return p;
 }
 
+export async function getCoverPageBackground(url: string): Promise<string | null> {
+  const key = url.trim();
+  if (key.length === 0) return null;
+  if (pageBgCache.has(key)) return pageBgCache.get(key)!;
+  const existing = pageBgInflight.get(key);
+  if (existing) return existing;
+
+  const p = (async () => {
+    try {
+      const img = await loadImage(key);
+      const pixels = extractPixels(img);
+      const clusters = kmeans2(pixels);
+      if (!clusters) return null;
+
+      const a = mixWithWhite(clusters.a, 0.88);
+      const b = mixWithWhite(clusters.b, 0.88);
+
+      const c1 = `rgba(${clamp(Math.round(a.r), 0, 255)}, ${clamp(Math.round(a.g), 0, 255)}, ${clamp(Math.round(a.b), 0, 255)}, 0.36)`;
+      const c2 = `rgba(${clamp(Math.round(b.r), 0, 255)}, ${clamp(Math.round(b.g), 0, 255)}, ${clamp(Math.round(b.b), 0, 255)}, 0.28)`;
+      const whiteMist = "linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.90))";
+
+      return [
+        `radial-gradient(1200px 820px at 18% 14%, ${c1}, transparent 62%)`,
+        `radial-gradient(1050px 780px at 86% 36%, ${c2}, transparent 64%)`,
+        whiteMist,
+      ].join(", ");
+    } catch {
+      return null;
+    }
+  })()
+    .then((v) => {
+      pageBgCache.set(key, v);
+      pageBgInflight.delete(key);
+      return v;
+    })
+    .catch(() => {
+      pageBgCache.set(key, null);
+      pageBgInflight.delete(key);
+      return null;
+    });
+
+  pageBgInflight.set(key, p);
+  return p;
+}

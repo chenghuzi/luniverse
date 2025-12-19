@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CardStack } from "@/features/deck/components/CardStack";
 import { useDeckStore } from "@/features/deck/model/deckStore";
 import type { SwipeDecision } from "@/features/deck/model/types";
+import { getCoverPageBackground } from "@/shared/lib/imageGradient";
 
 const PAGE_SIZE = 8;
 const PREFETCH_THRESHOLD = PAGE_SIZE * 2;
@@ -19,6 +20,39 @@ export function DeckPage() {
   useEffect(() => {
     void loadInitial(PAGE_SIZE);
   }, [loadInitial]);
+
+  const topCard = cards[currentIndex] ?? null;
+  const topCoverUrl = topCard ? (topCard.episode.imageUrl ?? topCard.podcast.imageUrl ?? null) : null;
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    let canceled = false;
+
+    if (!topCoverUrl) {
+      document.documentElement.style.removeProperty("--pageBg");
+      return;
+    }
+
+    void getCoverPageBackground(topCoverUrl).then((bg) => {
+      if (canceled) return;
+      if (!bg) {
+        document.documentElement.style.removeProperty("--pageBg");
+        return;
+      }
+      document.documentElement.style.setProperty("--pageBg", bg);
+    });
+
+    return () => {
+      canceled = true;
+    };
+  }, [topCoverUrl]);
+
+  useEffect(() => {
+    return () => {
+      if (typeof document === "undefined") return;
+      document.documentElement.style.removeProperty("--pageBg");
+    };
+  }, []);
 
   useEffect(() => {
     const remaining = cards.length - currentIndex;

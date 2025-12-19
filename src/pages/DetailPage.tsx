@@ -46,6 +46,11 @@ export function DetailPage() {
   }, []);
 
   useEffect(() => {
+    if (typeof document === "undefined") return;
+    document.documentElement.style.removeProperty("--pageBg");
+  }, []);
+
+  useEffect(() => {
     const id = String(cardId ?? "").trim();
     if (id.length === 0) {
       setState({ status: "error", card: null, error: "Missing cardId" });
