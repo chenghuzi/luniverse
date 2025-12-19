@@ -96,6 +96,15 @@ export function pauseIfActive(id: string) {
   el.pause();
 }
 
+export function pauseGlobalAudio() {
+  if (!audioEl) return;
+  try {
+    audioEl.pause();
+  } catch {
+    // Ignore.
+  }
+}
+
 export function seekWithinActiveWindow(progressSec: number) {
   const el = ensureAudioEl();
   if (!activeWindow) return;

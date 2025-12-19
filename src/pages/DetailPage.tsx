@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
 import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
+import { pauseGlobalAudio } from "@/shared/audio/globalAudio";
 
 function formatDuration(totalSeconds?: number) {
   if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds)) return "-";
@@ -38,6 +39,10 @@ export function DetailPage() {
     open: false,
     context: null,
   });
+
+  useEffect(() => {
+    pauseGlobalAudio();
+  }, []);
 
   useEffect(() => {
     const id = String(cardId ?? "").trim();
