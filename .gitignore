@@ -11,3 +11,4 @@ pnpm-debug.log*
 src/podcast_list.json.bak
 card_data.json
 card_data.json.tmp
+.env.production
