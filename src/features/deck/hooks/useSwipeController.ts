@@ -32,7 +32,7 @@ export function useSwipeController(params: SwipeControllerParams) {
     isSettlingRef.current = true;
     const ax = animate(x, 0, { type: "spring", stiffness: 340, damping: 28 });
     const ay = animate(y, 0, { type: "spring", stiffness: 340, damping: 28 });
-    Promise.all([ax.finished, ay.finished]).finally(() => {
+    Promise.all([ax, ay]).finally(() => {
       isSettlingRef.current = false;
     });
   }, [x, y]);
@@ -57,7 +57,7 @@ export function useSwipeController(params: SwipeControllerParams) {
         velocity: velocityY * 1000,
       });
 
-      Promise.all([ax.finished, ay.finished])
+      Promise.all([ax, ay])
         .then(() => {
           params.onDecision({
             cardId: params.card.id,
@@ -121,4 +121,3 @@ export function useSwipeController(params: SwipeControllerParams) {
 
   return api;
 }
-
