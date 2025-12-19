@@ -1,157 +1,350 @@
 [
   {
     "id": "c1",
-    "podcast": {
-      "id": "p1",
-      "title": "The Night Shift",
-      "authorName": "Luniverse Studio",
-      "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg",
-      "language": "en",
-      "categories": ["Technology", "Culture"]
-    },
+    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
     "episode": {
       "id": "e1",
-      "title": "Why We Build Tools",
-      "link": "https://example.com/podcasts/the-night-shift/episodes/why-we-build-tools",
+      "title": "Episode 1: Why We Build Tools",
+      "link": "https://example.com/podcasts/the-night-shift/episodes/e1",
       "publishedAt": "2025-11-08T10:00:00Z",
       "durationSeconds": 2875,
       "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e1.jpg",
-      "audio": {
-        "url": "https://example.com/audio/the-night-shift/e1.mp3",
-        "mimeType": "audio/mpeg",
-        "byteLength": 46278123
-      }
+      "audio": { "url": "https://example.com/audio/the-night-shift/e1.mp3", "mimeType": "audio/mpeg", "byteLength": 46278123 }
     },
-    "highlight": {
-      "id": "h1",
-      "title": "The fastest route is fewer decisions",
-      "text": "If you remove choices early, you move faster later.",
-      "snippet": { "startMs": 312000, "durationMs": 18000 }
-    },
+    "highlight": { "id": "h1", "title": "Highlight 1: Fewer decisions, faster progress", "text": "Remove choices early to move faster later.", "snippet": { "startMs": 312000, "durationMs": 18000 } },
     "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
   },
   {
     "id": "c2",
-    "podcast": {
-      "id": "p2",
-      "title": "Database Unplugged",
-      "authorName": "Hz & Friends",
-      "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg",
-      "language": "zh",
-      "categories": ["Software", "Databases"]
-    },
+    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
     "episode": {
       "id": "e2",
-      "title": "Indexes, Reality, and Tradeoffs",
-      "link": "https://example.com/podcasts/database-unplugged/episodes/indexes-reality-tradeoffs",
+      "title": "Episode 2: Indexes, Reality, and Tradeoffs",
+      "link": "https://example.com/podcasts/database-unplugged/episodes/e2",
       "publishedAt": "2025-10-21T02:00:00Z",
       "durationSeconds": 3652,
       "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e2.jpg",
-      "audio": {
-        "url": "https://example.com/audio/database-unplugged/e2.mp3",
-        "mimeType": "audio/mpeg",
-        "byteLength": 58123456
-      }
+      "audio": { "url": "https://example.com/audio/database-unplugged/e2.mp3", "mimeType": "audio/mpeg", "byteLength": 58123456 }
     },
-    "highlight": {
-      "id": "h2",
-      "title": "Cost models are stories you tell yourself",
-      "text": "Then production reminds you which parts were fiction.",
-      "snippet": { "startMs": 1042000, "durationMs": 22000 }
-    },
+    "highlight": { "id": "h2", "title": "Highlight 2: Cost models are stories", "text": "Production reminds you which parts were fiction.", "snippet": { "startMs": 1042000, "durationMs": 22000 } },
     "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
   },
   {
     "id": "c3",
-    "podcast": {
-      "id": "p3",
-      "title": "Product Signals",
-      "authorName": "Signal Works",
-      "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg",
-      "language": "en",
-      "categories": ["Business", "Product"]
-    },
+    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
     "episode": {
       "id": "e3",
-      "title": "Designing for Drift",
-      "link": "https://example.com/podcasts/product-signals/episodes/designing-for-drift",
+      "title": "Episode 3: Designing for Drift",
+      "link": "https://example.com/podcasts/product-signals/episodes/e3",
       "publishedAt": "2025-09-12T18:30:00Z",
       "durationSeconds": 2411,
       "imageUrl": "https://example.com/podcasts/product-signals/episodes/e3.jpg",
-      "audio": {
-        "url": "https://example.com/audio/product-signals/e3.mp3",
-        "mimeType": "audio/mpeg",
-        "byteLength": 39876543
-      }
+      "audio": { "url": "https://example.com/audio/product-signals/e3.mp3", "mimeType": "audio/mpeg", "byteLength": 39876543 }
     },
-    "highlight": {
-      "id": "h3",
-      "title": "You are shipping your defaults",
-      "text": "Every unhandled edge case becomes a product choice.",
-      "snippet": { "startMs": 654000, "durationMs": 16000 }
-    },
+    "highlight": { "id": "h3", "title": "Highlight 3: You ship your defaults", "text": "Every unhandled edge becomes a product choice.", "snippet": { "startMs": 654000, "durationMs": 16000 } },
     "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
   },
   {
     "id": "c4",
-    "podcast": {
-      "id": "p4",
-      "title": "Frontend Mechanics",
-      "authorName": "Motion Lab",
-      "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg",
-      "language": "en",
-      "categories": ["Software", "Web"]
-    },
+    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
     "episode": {
       "id": "e4",
-      "title": "Pointer Events in the Real World",
-      "link": "https://example.com/podcasts/frontend-mechanics/episodes/pointer-events-real-world",
+      "title": "Episode 4: Pointer Events in the Real World",
+      "link": "https://example.com/podcasts/frontend-mechanics/episodes/e4",
       "publishedAt": "2025-08-03T09:15:00Z",
       "durationSeconds": 3190,
       "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e4.jpg",
-      "audio": {
-        "url": "https://example.com/audio/frontend-mechanics/e4.mp3",
-        "mimeType": "audio/mpeg",
-        "byteLength": 51234567
-      }
+      "audio": { "url": "https://example.com/audio/frontend-mechanics/e4.mp3", "mimeType": "audio/mpeg", "byteLength": 51234567 }
     },
-    "highlight": {
-      "id": "h4",
-      "title": "Drag feels wrong when scroll is uncertain",
-      "text": "Make touch-action explicit before you tune thresholds.",
-      "snippet": { "startMs": 184000, "durationMs": 20000 }
-    },
+    "highlight": { "id": "h4", "title": "Highlight 4: Make scroll intent explicit", "text": "Tune thresholds only after touch-action is correct.", "snippet": { "startMs": 184000, "durationMs": 20000 } },
     "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
   },
   {
     "id": "c5",
-    "podcast": {
-      "id": "p5",
-      "title": "Startup Minutes",
-      "authorName": "Minute Media",
-      "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg",
-      "language": "en",
-      "categories": ["Business", "Startups"]
-    },
+    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
     "episode": {
       "id": "e5",
-      "title": "When to Prefetch",
-      "link": "https://example.com/podcasts/startup-minutes/episodes/when-to-prefetch",
+      "title": "Episode 5: When to Prefetch",
+      "link": "https://example.com/podcasts/startup-minutes/episodes/e5",
       "publishedAt": "2025-07-19T12:00:00Z",
       "durationSeconds": 1520,
       "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e5.jpg",
-      "audio": {
-        "url": "https://example.com/audio/startup-minutes/e5.mp3",
-        "mimeType": "audio/mpeg",
-        "byteLength": 24321098
-      }
+      "audio": { "url": "https://example.com/audio/startup-minutes/e5.mp3", "mimeType": "audio/mpeg", "byteLength": 24321098 }
     },
-    "highlight": {
-      "id": "h5",
-      "title": "Prefetch is a UX promise",
-      "text": "If you start it, you must be able to finish it.",
-      "snippet": { "startMs": 97000, "durationMs": 14000 }
-    },
+    "highlight": { "id": "h5", "title": "Highlight 5: Prefetch is a UX promise", "text": "If you start it, you must finish it.", "snippet": { "startMs": 97000, "durationMs": 14000 } },
     "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+  },
+  {
+    "id": "c6",
+    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
+    "episode": {
+      "id": "e6",
+      "title": "Episode 6: Latency Budgets",
+      "link": "https://example.com/podcasts/signal-noise/episodes/e6",
+      "publishedAt": "2025-06-22T16:00:00Z",
+      "durationSeconds": 2710,
+      "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e6.jpg",
+      "audio": { "url": "https://example.com/audio/signal-noise/e6.mp3", "mimeType": "audio/mpeg", "byteLength": 43890123 }
+    },
+    "highlight": { "id": "h6", "title": "Highlight 6: You are always paying a budget", "text": "If not in CPU, then in UX.", "snippet": { "startMs": 420000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+  },
+  {
+    "id": "c7",
+    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
+    "episode": {
+      "id": "e7",
+      "title": "Episode 7: Retention Loops",
+      "link": "https://example.com/podcasts/creators-weekly/episodes/e7",
+      "publishedAt": "2025-05-18T08:00:00Z",
+      "durationSeconds": 1980,
+      "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e7.jpg",
+      "audio": { "url": "https://example.com/audio/creators-weekly/e7.mp3", "mimeType": "audio/mpeg", "byteLength": 31234567 }
+    },
+    "highlight": { "id": "h7", "title": "Highlight 7: Loops should close quickly", "text": "Fast feedback beats perfect feedback.", "snippet": { "startMs": 255000, "durationMs": 17000 } },
+    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+  },
+  {
+    "id": "c8",
+    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
+    "episode": {
+      "id": "e8",
+      "title": "Episode 8: The Power of Silence",
+      "link": "https://example.com/podcasts/designing-sound/episodes/e8",
+      "publishedAt": "2025-04-11T14:30:00Z",
+      "durationSeconds": 2230,
+      "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e8.jpg",
+      "audio": { "url": "https://example.com/audio/designing-sound/e8.mp3", "mimeType": "audio/mpeg", "byteLength": 35678901 }
+    },
+    "highlight": { "id": "h8", "title": "Highlight 8: Silence is a design tool", "text": "Pauses can carry meaning.", "snippet": { "startMs": 610000, "durationMs": 12000 } },
+    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
+  },
+
+  {
+    "id": "c9",
+    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
+    "episode": { "id": "e9", "title": "Episode 9: Naming Things", "link": "https://example.com/podcasts/the-night-shift/episodes/e9", "publishedAt": "2025-11-01T10:00:00Z", "durationSeconds": 2600, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e9.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e9.mp3", "mimeType": "audio/mpeg", "byteLength": 44112233 } },
+    "highlight": { "id": "h9", "title": "Highlight 9: Names are part of the API", "text": "A good name reduces cognitive load.", "snippet": { "startMs": 180000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
+  },
+  {
+    "id": "c10",
+    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
+    "episode": { "id": "e10", "title": "Episode 10: Consistency Isn’t Free", "link": "https://example.com/podcasts/database-unplugged/episodes/e10", "publishedAt": "2025-10-14T02:00:00Z", "durationSeconds": 3420, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e10.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e10.mp3", "mimeType": "audio/mpeg", "byteLength": 55220011 } },
+    "highlight": { "id": "h10", "title": "Highlight 10: Make constraints visible", "text": "Hidden invariants become outages.", "snippet": { "startMs": 900000, "durationMs": 19000 } },
+    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
+  },
+  {
+    "id": "c11",
+    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
+    "episode": { "id": "e11", "title": "Episode 11: Metrics With Teeth", "link": "https://example.com/podcasts/product-signals/episodes/e11", "publishedAt": "2025-09-05T18:30:00Z", "durationSeconds": 2350, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e11.jpg", "audio": { "url": "https://example.com/audio/product-signals/e11.mp3", "mimeType": "audio/mpeg", "byteLength": 40119988 } },
+    "highlight": { "id": "h11", "title": "Highlight 11: Measure what you can act on", "text": "A metric without a lever is trivia.", "snippet": { "startMs": 510000, "durationMs": 16000 } },
+    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
+  },
+  {
+    "id": "c12",
+    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
+    "episode": { "id": "e12", "title": "Episode 12: Gestures and Inertia", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e12", "publishedAt": "2025-07-27T09:15:00Z", "durationSeconds": 3010, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e12.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e12.mp3", "mimeType": "audio/mpeg", "byteLength": 49990111 } },
+    "highlight": { "id": "h12", "title": "Highlight 12: Velocity is a signal", "text": "Use it, but cap it.", "snippet": { "startMs": 120000, "durationMs": 14000 } },
+    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+  },
+  {
+    "id": "c13",
+    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
+    "episode": { "id": "e13", "title": "Episode 13: Simple Beats Clever", "link": "https://example.com/podcasts/startup-minutes/episodes/e13", "publishedAt": "2025-07-12T12:00:00Z", "durationSeconds": 1410, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e13.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e13.mp3", "mimeType": "audio/mpeg", "byteLength": 22110011 } },
+    "highlight": { "id": "h13", "title": "Highlight 13: Ship the boring version", "text": "Then add delight.", "snippet": { "startMs": 65000, "durationMs": 12000 } },
+    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+  },
+  {
+    "id": "c14",
+    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
+    "episode": { "id": "e14", "title": "Episode 14: Backpressure Everywhere", "link": "https://example.com/podcasts/signal-noise/episodes/e14", "publishedAt": "2025-06-15T16:00:00Z", "durationSeconds": 2800, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e14.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e14.mp3", "mimeType": "audio/mpeg", "byteLength": 45229900 } },
+    "highlight": { "id": "h14", "title": "Highlight 14: Queues are not a strategy", "text": "They are a symptom.", "snippet": { "startMs": 330000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+  },
+  {
+    "id": "c15",
+    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
+    "episode": { "id": "e15", "title": "Episode 15: Content Pipelines", "link": "https://example.com/podcasts/creators-weekly/episodes/e15", "publishedAt": "2025-05-11T08:00:00Z", "durationSeconds": 2100, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e15.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e15.mp3", "mimeType": "audio/mpeg", "byteLength": 33221100 } },
+    "highlight": { "id": "h15", "title": "Highlight 15: Consistency beats intensity", "text": "Small outputs compound.", "snippet": { "startMs": 400000, "durationMs": 16000 } },
+    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+  },
+  {
+    "id": "c16",
+    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
+    "episode": { "id": "e16", "title": "Episode 16: Texture and Timbre", "link": "https://example.com/podcasts/designing-sound/episodes/e16", "publishedAt": "2025-04-04T14:30:00Z", "durationSeconds": 2055, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e16.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e16.mp3", "mimeType": "audio/mpeg", "byteLength": 34001234 } },
+    "highlight": { "id": "h16", "title": "Highlight 16: Texture is emotion", "text": "Sound carries mood.", "snippet": { "startMs": 720000, "durationMs": 13000 } },
+    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
+  },
+
+  {
+    "id": "c17",
+    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
+    "episode": { "id": "e17", "title": "Episode 17: Debugging as a Skill", "link": "https://example.com/podcasts/the-night-shift/episodes/e17", "publishedAt": "2025-10-25T10:00:00Z", "durationSeconds": 2788, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e17.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e17.mp3", "mimeType": "audio/mpeg", "byteLength": 45110022 } },
+    "highlight": { "id": "h17", "title": "Highlight 17: Reproduce, reduce, resolve", "text": "Make bugs small before you make them gone.", "snippet": { "startMs": 240000, "durationMs": 17000 } },
+    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
+  },
+  {
+    "id": "c18",
+    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
+    "episode": { "id": "e18", "title": "Episode 18: Transactions in Practice", "link": "https://example.com/podcasts/database-unplugged/episodes/e18", "publishedAt": "2025-10-07T02:00:00Z", "durationSeconds": 3720, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e18.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e18.mp3", "mimeType": "audio/mpeg", "byteLength": 59001234 } },
+    "highlight": { "id": "h18", "title": "Highlight 18: Isolation is a dial", "text": "Know what you are paying for.", "snippet": { "startMs": 1100000, "durationMs": 20000 } },
+    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
+  },
+  {
+    "id": "c19",
+    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
+    "episode": { "id": "e19", "title": "Episode 19: Shipping With Confidence", "link": "https://example.com/podcasts/product-signals/episodes/e19", "publishedAt": "2025-08-29T18:30:00Z", "durationSeconds": 2280, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e19.jpg", "audio": { "url": "https://example.com/audio/product-signals/e19.mp3", "mimeType": "audio/mpeg", "byteLength": 38990011 } },
+    "highlight": { "id": "h19", "title": "Highlight 19: Confidence comes from constraints", "text": "Decide what you will not do.", "snippet": { "startMs": 360000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
+  },
+  {
+    "id": "c20",
+    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
+    "episode": { "id": "e20", "title": "Episode 20: Touch vs Mouse", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e20", "publishedAt": "2025-07-20T09:15:00Z", "durationSeconds": 2950, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e20.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e20.mp3", "mimeType": "audio/mpeg", "byteLength": 48001234 } },
+    "highlight": { "id": "h20", "title": "Highlight 20: One input model", "text": "Pointer Events keep your code honest.", "snippet": { "startMs": 150000, "durationMs": 17000 } },
+    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+  },
+  {
+    "id": "c21",
+    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
+    "episode": { "id": "e21", "title": "Episode 21: Your First 100 Users", "link": "https://example.com/podcasts/startup-minutes/episodes/e21", "publishedAt": "2025-07-05T12:00:00Z", "durationSeconds": 1490, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e21.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e21.mp3", "mimeType": "audio/mpeg", "byteLength": 23112233 } },
+    "highlight": { "id": "h21", "title": "Highlight 21: Talk to users daily", "text": "The market answers in full sentences.", "snippet": { "startMs": 88000, "durationMs": 13000 } },
+    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+  },
+  {
+    "id": "c22",
+    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
+    "episode": { "id": "e22", "title": "Episode 22: Error Budgets", "link": "https://example.com/podcasts/signal-noise/episodes/e22", "publishedAt": "2025-06-08T16:00:00Z", "durationSeconds": 2660, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e22.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e22.mp3", "mimeType": "audio/mpeg", "byteLength": 43000999 } },
+    "highlight": { "id": "h22", "title": "Highlight 22: Reliability is product", "text": "Users notice the absence of pain.", "snippet": { "startMs": 510000, "durationMs": 16000 } },
+    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+  },
+  {
+    "id": "c23",
+    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
+    "episode": { "id": "e23", "title": "Episode 23: Community Flywheels", "link": "https://example.com/podcasts/creators-weekly/episodes/e23", "publishedAt": "2025-05-04T08:00:00Z", "durationSeconds": 2050, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e23.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e23.mp3", "mimeType": "audio/mpeg", "byteLength": 32119988 } },
+    "highlight": { "id": "h23", "title": "Highlight 23: Community is a product surface", "text": "Design it like one.", "snippet": { "startMs": 290000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+  },
+  {
+    "id": "c24",
+    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
+    "episode": { "id": "e24", "title": "Episode 24: Rhythm in UI", "link": "https://example.com/podcasts/designing-sound/episodes/e24", "publishedAt": "2025-03-28T14:30:00Z", "durationSeconds": 2190, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e24.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e24.mp3", "mimeType": "audio/mpeg", "byteLength": 35220011 } },
+    "highlight": { "id": "h24", "title": "Highlight 24: Rhythm is predictability", "text": "Predictability builds trust.", "snippet": { "startMs": 540000, "durationMs": 14000 } },
+    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
+  },
+
+  {
+    "id": "c25",
+    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
+    "episode": { "id": "e25", "title": "Episode 25: Tools That Last", "link": "https://example.com/podcasts/the-night-shift/episodes/e25", "publishedAt": "2025-10-18T10:00:00Z", "durationSeconds": 2688, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e25.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e25.mp3", "mimeType": "audio/mpeg", "byteLength": 44550000 } },
+    "highlight": { "id": "h25", "title": "Highlight 25: Maintainability is a feature", "text": "Users feel it, even if they cannot name it.", "snippet": { "startMs": 600000, "durationMs": 18000 } },
+    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
+  },
+  {
+    "id": "c26",
+    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
+    "episode": { "id": "e26", "title": "Episode 26: The Shape of Data", "link": "https://example.com/podcasts/database-unplugged/episodes/e26", "publishedAt": "2025-09-30T02:00:00Z", "durationSeconds": 3540, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e26.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e26.mp3", "mimeType": "audio/mpeg", "byteLength": 57000001 } },
+    "highlight": { "id": "h26", "title": "Highlight 26: Schemas are communication", "text": "They align teams before they align tables.", "snippet": { "startMs": 780000, "durationMs": 19000 } },
+    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
+  },
+  {
+    "id": "c27",
+    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
+    "episode": { "id": "e27", "title": "Episode 27: Reduce Surprise", "link": "https://example.com/podcasts/product-signals/episodes/e27", "publishedAt": "2025-08-22T18:30:00Z", "durationSeconds": 2210, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e27.jpg", "audio": { "url": "https://example.com/audio/product-signals/e27.mp3", "mimeType": "audio/mpeg", "byteLength": 37770000 } },
+    "highlight": { "id": "h27", "title": "Highlight 27: Surprise is a tax", "text": "Pay it once, not daily.", "snippet": { "startMs": 430000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
+  },
+  {
+    "id": "c28",
+    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
+    "episode": { "id": "e28", "title": "Episode 28: Animation and State", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e28", "publishedAt": "2025-07-13T09:15:00Z", "durationSeconds": 3105, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e28.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e28.mp3", "mimeType": "audio/mpeg", "byteLength": 50123456 } },
+    "highlight": { "id": "h28", "title": "Highlight 28: Keep motion out of app state", "text": "MotionValues exist for a reason.", "snippet": { "startMs": 210000, "durationMs": 16000 } },
+    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+  },
+  {
+    "id": "c29",
+    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
+    "episode": { "id": "e29", "title": "Episode 29: Pricing is Positioning", "link": "https://example.com/podcasts/startup-minutes/episodes/e29", "publishedAt": "2025-06-28T12:00:00Z", "durationSeconds": 1580, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e29.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e29.mp3", "mimeType": "audio/mpeg", "byteLength": 25000999 } },
+    "highlight": { "id": "h29", "title": "Highlight 29: Price sets expectations", "text": "You are selling a promise.", "snippet": { "startMs": 120000, "durationMs": 14000 } },
+    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+  },
+  {
+    "id": "c30",
+    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
+    "episode": { "id": "e30", "title": "Episode 30: Cache Invalidation", "link": "https://example.com/podcasts/signal-noise/episodes/e30", "publishedAt": "2025-06-01T16:00:00Z", "durationSeconds": 2900, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e30.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e30.mp3", "mimeType": "audio/mpeg", "byteLength": 46880000 } },
+    "highlight": { "id": "h30", "title": "Highlight 30: Caches shift complexity", "text": "They do not remove it.", "snippet": { "startMs": 690000, "durationMs": 17000 } },
+    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+  },
+  {
+    "id": "c31",
+    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
+    "episode": { "id": "e31", "title": "Episode 31: Collaboration Patterns", "link": "https://example.com/podcasts/creators-weekly/episodes/e31", "publishedAt": "2025-04-27T08:00:00Z", "durationSeconds": 2140, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e31.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e31.mp3", "mimeType": "audio/mpeg", "byteLength": 33990000 } },
+    "highlight": { "id": "h31", "title": "Highlight 31: Collaboration needs rules", "text": "Defaults prevent conflict.", "snippet": { "startMs": 345000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+  },
+  {
+    "id": "c32",
+    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
+    "episode": { "id": "e32", "title": "Episode 32: Earworms and Hooks", "link": "https://example.com/podcasts/designing-sound/episodes/e32", "publishedAt": "2025-03-21T14:30:00Z", "durationSeconds": 2125, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e32.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e32.mp3", "mimeType": "audio/mpeg", "byteLength": 34990000 } },
+    "highlight": { "id": "h32", "title": "Highlight 32: Hooks are repetition", "text": "Give the brain a handle.", "snippet": { "startMs": 480000, "durationMs": 13000 } },
+    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
+  },
+
+  {
+    "id": "c33",
+    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
+    "episode": { "id": "e33", "title": "Episode 33: Interfaces for Humans", "link": "https://example.com/podcasts/the-night-shift/episodes/e33", "publishedAt": "2025-10-11T10:00:00Z", "durationSeconds": 2599, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e33.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e33.mp3", "mimeType": "audio/mpeg", "byteLength": 43999000 } },
+    "highlight": { "id": "h33", "title": "Highlight 33: UX is an API", "text": "Consistency is discoverability.", "snippet": { "startMs": 520000, "durationMs": 16000 } },
+    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
+  },
+  {
+    "id": "c34",
+    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
+    "episode": { "id": "e34", "title": "Episode 34: Observability for Data", "link": "https://example.com/podcasts/database-unplugged/episodes/e34", "publishedAt": "2025-09-23T02:00:00Z", "durationSeconds": 3600, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e34.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e34.mp3", "mimeType": "audio/mpeg", "byteLength": 57551234 } },
+    "highlight": { "id": "h34", "title": "Highlight 34: Logs are not enough", "text": "You need intent, not just events.", "snippet": { "startMs": 980000, "durationMs": 18000 } },
+    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
+  },
+  {
+    "id": "c35",
+    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
+    "episode": { "id": "e35", "title": "Episode 35: Roadmaps and Reality", "link": "https://example.com/podcasts/product-signals/episodes/e35", "publishedAt": "2025-08-15T18:30:00Z", "durationSeconds": 2195, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e35.jpg", "audio": { "url": "https://example.com/audio/product-signals/e35.mp3", "mimeType": "audio/mpeg", "byteLength": 37000123 } },
+    "highlight": { "id": "h35", "title": "Highlight 35: Roadmaps are negotiation tools", "text": "Treat them as such.", "snippet": { "startMs": 300000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
+  },
+  {
+    "id": "c36",
+    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
+    "episode": { "id": "e36", "title": "Episode 36: Accessibility in Motion", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e36", "publishedAt": "2025-07-06T09:15:00Z", "durationSeconds": 3055, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e36.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e36.mp3", "mimeType": "audio/mpeg", "byteLength": 49550111 } },
+    "highlight": { "id": "h36", "title": "Highlight 36: Motion needs an escape hatch", "text": "Respect reduced motion preferences.", "snippet": { "startMs": 420000, "durationMs": 17000 } },
+    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+  },
+  {
+    "id": "c37",
+    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
+    "episode": { "id": "e37", "title": "Episode 37: Product-Market Fit Signals", "link": "https://example.com/podcasts/startup-minutes/episodes/e37", "publishedAt": "2025-06-21T12:00:00Z", "durationSeconds": 1620, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e37.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e37.mp3", "mimeType": "audio/mpeg", "byteLength": 25990000 } },
+    "highlight": { "id": "h37", "title": "Highlight 37: Fit looks like pull", "text": "Not just push.", "snippet": { "startMs": 140000, "durationMs": 14000 } },
+    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+  },
+  {
+    "id": "c38",
+    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
+    "episode": { "id": "e38", "title": "Episode 38: Limits and SLOs", "link": "https://example.com/podcasts/signal-noise/episodes/e38", "publishedAt": "2025-05-25T16:00:00Z", "durationSeconds": 2750, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e38.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e38.mp3", "mimeType": "audio/mpeg", "byteLength": 44990000 } },
+    "highlight": { "id": "h38", "title": "Highlight 38: Limits are product boundaries", "text": "Make them explicit.", "snippet": { "startMs": 610000, "durationMs": 16000 } },
+    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+  },
+  {
+    "id": "c39",
+    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
+    "episode": { "id": "e39", "title": "Episode 39: Editing for Clarity", "link": "https://example.com/podcasts/creators-weekly/episodes/e39", "publishedAt": "2025-04-20T08:00:00Z", "durationSeconds": 2080, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e39.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e39.mp3", "mimeType": "audio/mpeg", "byteLength": 32881234 } },
+    "highlight": { "id": "h39", "title": "Highlight 39: Clarity is kindness", "text": "Editing is empathy.", "snippet": { "startMs": 260000, "durationMs": 15000 } },
+    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+  },
+  {
+    "id": "c40",
+    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
+    "episode": { "id": "e40", "title": "Episode 40: Micro-Details", "link": "https://example.com/podcasts/designing-sound/episodes/e40", "publishedAt": "2025-03-14T14:30:00Z", "durationSeconds": 2255, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e40.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e40.mp3", "mimeType": "audio/mpeg", "byteLength": 36220011 } },
+    "highlight": { "id": "h40", "title": "Highlight 40: Details create delight", "text": "Small choices add up.", "snippet": { "startMs": 810000, "durationMs": 14000 } },
+    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
   }
 ]

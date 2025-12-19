@@ -8,6 +8,7 @@ import { Card } from "@/features/deck/components/Card";
 
 type CardStackProps = {
   cards: CardType[];
+  isLoading?: boolean;
   onDecision: (decision: SwipeDecision) => void;
   config?: Partial<DeckMotionConfig>;
 };
@@ -69,7 +70,7 @@ export function CardStack(props: CardStackProps) {
     <div className="deckRoot">
       <div className="deckStage">
         {stack.length === 0 ? (
-          <div className="emptyState">No cards</div>
+          <div className="emptyState">{props.isLoading ? "Loading..." : "No cards"}</div>
         ) : (
           stack
             .map((card, i) => {

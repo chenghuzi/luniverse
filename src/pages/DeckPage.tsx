@@ -6,7 +6,7 @@ import { useDeckStore } from "@/features/deck/model/deckStore";
 import type { SwipeDecision } from "@/features/deck/model/types";
 
 const PAGE_SIZE = 8;
-const PREFETCH_THRESHOLD = 4;
+const PREFETCH_THRESHOLD = PAGE_SIZE * 2;
 
 export function DeckPage() {
   const navigate = useNavigate();
@@ -62,6 +62,7 @@ export function DeckPage() {
   }, [appendCards, cards.length, currentIndex, isFetchingNext, nextCursor, setIsFetchingNext]);
 
   const remainingCards = useMemo(() => cards.slice(currentIndex), [cards, currentIndex]);
+  const isLoading = isFetchingNext || cards.length === 0;
 
   function handleDecision(decision: SwipeDecision) {
     commitDecision(decision);
@@ -80,7 +81,7 @@ export function DeckPage() {
       </header>
 
       <main className="content">
-        <CardStack cards={remainingCards} onDecision={handleDecision} />
+        <CardStack cards={remainingCards} isLoading={isLoading} onDecision={handleDecision} />
       </main>
     </div>
   );
