@@ -16,6 +16,10 @@ load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env", override=F
 
 app = FastAPI(title="luniverse-backend", version="0.1.0")
 
+MINIMAX_TTS_VOICE_ID = "mia_voice_20251219_v3"
+MINIMAX_TTS_MODEL = "speech-2.6-hd"
+MINIMAX_TTS_ENCODING = "hex"
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -28,6 +32,16 @@ app.add_middleware(
 @app.get("/api/health")
 async def health() -> dict[str, Any]:
     return {"ok": True}
+
+
+@app.get("/api/tts/minimax/config")
+async def minimax_tts_config() -> dict[str, Any]:
+    return {
+        "voiceId": MINIMAX_TTS_VOICE_ID,
+        "model": MINIMAX_TTS_MODEL,
+        "encoding": MINIMAX_TTS_ENCODING,
+        "wsPath": "/api/tts/minimax/ws",
+    }
 
 
 async def _close_client_ws(ws: WebSocket) -> None:

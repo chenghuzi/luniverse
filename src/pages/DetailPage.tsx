@@ -4,6 +4,7 @@ import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
 import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
 import { pauseGlobalAudio } from "@/shared/audio/globalAudio";
 import { buildPromptContextForEpisodeChat, buildPromptContextForPodcastChat } from "@/features/llm/prompts/buildPromptContext";
+import { fetchMinimaxTtsConfig, type MinimaxTtsConfig } from "@/features/tts/minimax/config";
 
 function formatDuration(totalSeconds?: number) {
   if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds)) return "-";
@@ -41,6 +42,7 @@ export function DetailPage() {
     open: false,
     context: null,
   });
+  const [ttsConfig, setTtsConfig] = useState<MinimaxTtsConfig | null>(null);
 
   useEffect(() => {
     pauseGlobalAudio();
@@ -86,6 +88,29 @@ export function DetailPage() {
     : `${card?.podcast.title ?? "Podcast"} cover`;
   const episodes = useMemo(() => (Array.isArray(card?.episodes) ? card!.episodes : []), [card]);
 
+  useEffect(() => {
+    if (state.status !== "ready") {
+      setTtsConfig(null);
+      return;
+    }
+
+    const controller = new AbortController();
+    void fetchMinimaxTtsConfig(controller.signal)
+      .then((cfg) => setTtsConfig(cfg))
+      .catch(() => setTtsConfig(null));
+
+    return () => controller.abort();
+  }, [state.status]);
+
+  useEffect(() => {
+    if (!chat.open || !chat.context) return;
+    setChat((prev) => {
+      if (!prev.open || !prev.context) return prev;
+      if (prev.context.ttsConfig === ttsConfig) return prev;
+      return { ...prev, context: { ...prev.context, ttsConfig } };
+    });
+  }, [chat.context, chat.open, ttsConfig]);
+
   function openPodcastChat() {
     if (!card) return;
     setChat({
@@ -95,6 +120,7 @@ export function DetailPage() {
         podcastId: card.podcast.id,
         podcastTitle: card.podcast.title,
         coverUrl,
+        ttsConfig,
         promptContext: buildPromptContextForPodcastChat(card),
       },
     });
@@ -111,6 +137,7 @@ export function DetailPage() {
         episodeId: episode.id,
         episodeTitle: episode.title,
         coverUrl,
+        ttsConfig,
         promptContext: buildPromptContextForEpisodeChat(card, episode.id),
       },
     });

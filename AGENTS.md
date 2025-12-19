@@ -175,5 +175,15 @@ Vite 只会暴露以 `VITE_` 开头的 env 给前端代码。
 backend/.venv/bin/python --version
 backend/.venv/bin/pip install -r backend/requirements.txt
 
-backend/.venv/bin/python -m uvicorn app.main:app --app-dir backend --reload --port 8787
+backend/.venv/bin/python -m uvicorn app.main:app --app-dir backend --reload --port 8102
 ```
+
+### Front-end dev proxy
+
+- `vite.config.ts` 在开发模式下会把 `/api`（含 WebSocket）代理到 `http://127.0.0.1:8102`，所以前端代码应始终使用相对路径 `/api/...`。
+
+### MiniMax TTS (front-end demo)
+
+- 后端提供 `GET /api/tts/minimax/config`，前端在加载 detail 后自动拉取该配置（voiceId/model/encoding/wsPath）。
+- 前端通过 WebSocket 连接配置里的 `wsPath`（由后端代理到 MiniMax，负责注入 `MINIMAX_API_KEY`）。
+- voiceId 在后端代码里写死（见 `backend/app/main.py`），前端不再使用任何 `VITE_MINIMAX_TTS_*` 配置。

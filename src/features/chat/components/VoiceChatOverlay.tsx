@@ -8,6 +8,8 @@ import { createDashscopeLlmClient } from "@/features/llm/dashscope/DashscopeLlmC
 import type { LlmMessage, LlmStreamHandle } from "@/features/llm/types";
 import type { PromptContext } from "@/features/llm/prompts/types";
 import { composeSystemPrompt } from "@/features/llm/prompts/injectors";
+import { fetchMinimaxTtsConfig, type MinimaxTtsConfig } from "@/features/tts/minimax/config";
+import { createMinimaxTtsSession, type MinimaxTtsSession } from "@/features/tts/minimax/session";
 
 export type VoiceChatContext =
   | {
@@ -15,6 +17,7 @@ export type VoiceChatContext =
       podcastId: string;
       podcastTitle: string;
       coverUrl?: string | null;
+      ttsConfig?: MinimaxTtsConfig | null;
       promptContext?: PromptContext;
     }
   | {
@@ -24,6 +27,7 @@ export type VoiceChatContext =
       episodeId: string;
       episodeTitle: string;
       coverUrl?: string | null;
+      ttsConfig?: MinimaxTtsConfig | null;
       promptContext?: PromptContext;
     };
 
@@ -82,6 +86,10 @@ const ASSISTANT_TEXTS = [
 
 const MIN_VOICE_SEND_MS = 450;
 const MAX_CONTEXT_MESSAGES = 18;
+const TTS_FLUSH_MS = 300;
+const TTS_MAX_CHARS = 60;
+
+const TTS_PUNCTUATION = new Set(["。", "！", "？", "!", "?", "，", ",", "；", ";", "：", ":", "、", ".", "\n"]);
 
 function buildSystemPrompt(context: VoiceChatContext | null): string {
   if (context?.promptContext) return composeSystemPrompt(context.promptContext);
@@ -110,6 +118,15 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const timelineRef = useRef<HTMLDivElement | null>(null);
   const replyTimeoutsRef = useRef<number[]>([]);
   const llmStreamRef = useRef<LlmStreamHandle | null>(null);
+  const ttsSessionRef = useRef<MinimaxTtsSession | null>(null);
+  const ttsFlushTimerRef = useRef<number | null>(null);
+  const ttsPendingTextRef = useRef<string>("");
+  const ttsAudioRef = useRef<HTMLAudioElement | null>(null);
+  const ttsMediaSourceRef = useRef<MediaSource | null>(null);
+  const ttsSourceBufferRef = useRef<SourceBuffer | null>(null);
+  const ttsObjectUrlRef = useRef<string | null>(null);
+  const ttsChunkQueueRef = useRef<ArrayBuffer[]>([]);
+  const ttsEndPendingRef = useRef<boolean>(false);
   const messagesRef = useRef<ChatMessage[]>([]);
   const isNearBottomRef = useRef<boolean>(true);
   const scrollRafRef = useRef<number | null>(null);
@@ -119,6 +136,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const mic = useMicrophoneSession();
   const { start: startAsr, pushAudio: pushAsrAudio, stop: stopAsr, status: asrStatus, error: asrError } = useTencentRtAsrSession();
   const llmClient = useMemo(() => createDashscopeLlmClient(), []);
+  const [ttsConfig, setTtsConfig] = useState<MinimaxTtsConfig | null>(props.context?.ttsConfig ?? null);
 
   const targetName = useMemo(() => {
     if (!props.context) return "Voice chat";
@@ -132,6 +150,21 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     return `Podcast • ${props.context.podcastTitle}`;
   }, [props.context]);
 
+  useEffect(() => {
+    if (!props.context?.ttsConfig) return;
+    setTtsConfig(props.context.ttsConfig);
+  }, [props.context]);
+
+  useEffect(() => {
+    if (!props.open) return;
+    if (ttsConfig) return;
+    const controller = new AbortController();
+    void fetchMinimaxTtsConfig(controller.signal)
+      .then((cfg) => setTtsConfig(cfg))
+      .catch(() => {});
+    return () => controller.abort();
+  }, [props.open, ttsConfig]);
+
   function clearReplyTimers() {
     for (const id of replyTimeoutsRef.current) window.clearTimeout(id);
     replyTimeoutsRef.current = [];
@@ -140,6 +173,229 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   function abortLlmStream() {
     llmStreamRef.current?.abort();
     llmStreamRef.current = null;
+  }
+
+  function clearTtsFlushTimer() {
+    if (ttsFlushTimerRef.current == null) return;
+    window.clearTimeout(ttsFlushTimerRef.current);
+    ttsFlushTimerRef.current = null;
+  }
+
+  function resetTtsPlayback() {
+    clearTtsFlushTimer();
+    ttsPendingTextRef.current = "";
+    ttsChunkQueueRef.current = [];
+    ttsEndPendingRef.current = false;
+
+    const audio = ttsAudioRef.current;
+    if (audio) {
+      try {
+        audio.pause();
+      } catch {
+        // ignore
+      }
+    }
+
+    ttsSourceBufferRef.current = null;
+    ttsMediaSourceRef.current = null;
+
+    if (ttsObjectUrlRef.current) {
+      try {
+        URL.revokeObjectURL(ttsObjectUrlRef.current);
+      } catch {
+        // ignore
+      }
+      ttsObjectUrlRef.current = null;
+    }
+
+    if (audio) audio.removeAttribute("src");
+  }
+
+  function abortTtsStream() {
+    ttsSessionRef.current?.abort();
+    ttsSessionRef.current = null;
+    resetTtsPlayback();
+  }
+
+  function ensureTtsPlaybackInitialized(): boolean {
+    const audio = ttsAudioRef.current;
+    if (!audio) return false;
+    if (typeof MediaSource === "undefined") return false;
+    if (!MediaSource.isTypeSupported("audio/mpeg")) return false;
+
+    resetTtsPlayback();
+
+    const mediaSource = new MediaSource();
+    ttsMediaSourceRef.current = mediaSource;
+    const objectUrl = URL.createObjectURL(mediaSource);
+    ttsObjectUrlRef.current = objectUrl;
+    audio.src = objectUrl;
+
+    mediaSource.addEventListener("sourceopen", () => {
+      if (ttsMediaSourceRef.current !== mediaSource) return;
+      let sourceBuffer: SourceBuffer;
+      try {
+        sourceBuffer = mediaSource.addSourceBuffer("audio/mpeg");
+      } catch {
+        return;
+      }
+
+      sourceBuffer.mode = "sequence";
+      ttsSourceBufferRef.current = sourceBuffer;
+
+      const pump = () => {
+        if (ttsSourceBufferRef.current !== sourceBuffer) return;
+        if (sourceBuffer.updating) return;
+
+        const next = ttsChunkQueueRef.current.shift();
+        if (next) {
+          try {
+            sourceBuffer.appendBuffer(next);
+          } catch {
+            // ignore
+          }
+          return;
+        }
+
+        if (ttsEndPendingRef.current && mediaSource.readyState === "open") {
+          try {
+            mediaSource.endOfStream();
+          } catch {
+            // ignore
+          }
+        }
+      };
+
+      sourceBuffer.addEventListener("updateend", pump);
+      pump();
+    });
+
+    return true;
+  }
+
+  function pushTtsAudioChunk(chunk: Uint8Array) {
+    const sourceBuffer = ttsSourceBufferRef.current;
+    const mediaSource = ttsMediaSourceRef.current;
+    if (!sourceBuffer || !mediaSource) return;
+    if (mediaSource.readyState !== "open") return;
+
+    const copy = new Uint8Array(chunk.byteLength);
+    copy.set(chunk);
+    const arrayBuffer = copy.buffer;
+
+    if (sourceBuffer.updating || ttsChunkQueueRef.current.length > 0) {
+      ttsChunkQueueRef.current.push(arrayBuffer);
+      return;
+    }
+
+    try {
+      sourceBuffer.appendBuffer(arrayBuffer);
+    } catch {
+      // ignore
+    }
+  }
+
+  function markTtsAudioEnd() {
+    ttsEndPendingRef.current = true;
+    const sourceBuffer = ttsSourceBufferRef.current;
+    const mediaSource = ttsMediaSourceRef.current;
+    if (!sourceBuffer || !mediaSource) return;
+    if (sourceBuffer.updating) return;
+    if (ttsChunkQueueRef.current.length > 0) return;
+    if (mediaSource.readyState !== "open") return;
+    try {
+      mediaSource.endOfStream();
+    } catch {
+      // ignore
+    }
+  }
+
+  function findLastTtsPunctuation(textBuffer: string): number {
+    for (let i = textBuffer.length - 1; i >= 0; i -= 1) {
+      if (TTS_PUNCTUATION.has(textBuffer[i] ?? "")) return i + 1;
+    }
+    return -1;
+  }
+
+  function findTtsFlushIndex(textBuffer: string, limit: number): number {
+    if (textBuffer.length <= limit) return findLastTtsPunctuation(textBuffer);
+    const window = textBuffer.slice(0, limit);
+    const idx = findLastTtsPunctuation(window);
+    return idx > 0 ? idx : limit;
+  }
+
+  function flushTtsPending(force: boolean) {
+    const session = ttsSessionRef.current;
+    if (!session) return;
+    const pending = ttsPendingTextRef.current;
+    if (!pending.trim()) return;
+
+    if (!force && pending.length < TTS_MAX_CHARS) return;
+
+    const cutoff = findTtsFlushIndex(pending, TTS_MAX_CHARS);
+    if (cutoff <= 0 && !force) return;
+
+    const chunk = pending.slice(0, cutoff > 0 ? cutoff : pending.length);
+    ttsPendingTextRef.current = pending.slice(chunk.length);
+    session.pushText(chunk);
+  }
+
+  function scheduleTtsFlush() {
+    if (ttsFlushTimerRef.current != null) return;
+    ttsFlushTimerRef.current = window.setTimeout(() => {
+      ttsFlushTimerRef.current = null;
+      flushTtsPending(true);
+    }, TTS_FLUSH_MS);
+  }
+
+  function startAssistantTts() {
+    abortTtsStream();
+    if (!ttsConfig) return;
+    if (!ensureTtsPlaybackInitialized()) return;
+
+    const audio = ttsAudioRef.current;
+    if (audio) {
+      audio.volume = 1;
+      void audio.play().catch(() => {});
+    }
+
+    ttsSessionRef.current = createMinimaxTtsSession(
+      ttsConfig.wsPath,
+      {
+        model: ttsConfig.model,
+        encoding: ttsConfig.encoding,
+        voice: { voiceId: ttsConfig.voiceId, speed: 1, volume: 1, pitch: 0 },
+        audio: { sampleRate: 32000, bitrate: 128000, format: "mp3", channel: 1 },
+      },
+      {
+        onAudioChunk: pushTtsAudioChunk,
+        onEvent: (evt) => {
+          if (typeof evt !== "object" || evt === null) return;
+          const e = (evt as Record<string, unknown>)["event"];
+          if (e === "task_finished") markTtsAudioEnd();
+          if (e === "task_failed") markTtsAudioEnd();
+        },
+        onError: () => {
+          markTtsAudioEnd();
+        },
+      },
+    );
+  }
+
+  function pushAssistantTtsText(delta: string) {
+    const session = ttsSessionRef.current;
+    if (!session) return;
+    ttsPendingTextRef.current += delta;
+    flushTtsPending(false);
+    scheduleTtsFlush();
+  }
+
+  function finishAssistantTts() {
+    const session = ttsSessionRef.current;
+    if (!session) return;
+    clearTtsFlushTimer();
+    flushTtsPending(true);
+    session.finish();
   }
 
   function scrollToBottom(behavior: ScrollBehavior) {
@@ -195,6 +451,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     setMessages((prev) => [...prev, userMessage, assistantMessage]);
 
     abortLlmStream();
+    startAssistantTts();
     const systemPrompt = buildSystemPrompt(props.context);
     const history = [...messagesRef.current, userMessage];
 
@@ -203,16 +460,19 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       {
         onDeltaText: (delta) => {
           setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: m.text + delta } : m)));
+          pushAssistantTtsText(delta);
           ensureScrollToBottomSoon();
         },
         onDone: (finalText) => {
           setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: finalText.trim() } : m)));
+          finishAssistantTts();
           ensureScrollToBottomSoon();
         },
         onError: () => {
           setMessages((prev) =>
             prev.map((m) => (m.id === assistantId ? { ...m, text: "Sorry, the assistant is unavailable right now." } : m)),
           );
+          abortTtsStream();
           ensureScrollToBottomSoon();
         },
       },
@@ -331,6 +591,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     recognizedRef.current = "";
     setLastRecordingMs(null);
     abortLlmStream();
+    abortTtsStream();
     clearReplyTimers();
     setMessages([
       {
@@ -364,6 +625,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       mic.stop();
       void stopAsr();
       abortLlmStream();
+      abortTtsStream();
       if (scrollRafRef.current) window.cancelAnimationFrame(scrollRafRef.current);
     };
   }, [mic.stop, props.context, props.onClose, props.open, stopAsr]);
@@ -373,6 +635,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     mic.stop();
     void stopAsr();
     abortLlmStream();
+    abortTtsStream();
   }, [mic.stop, props.open, stopAsr]);
 
   useEffect(() => {
@@ -411,6 +674,13 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
           <div className="voiceChatSubtitle">{hudSubtitle}</div>
         </div>
       </div>
+
+      <audio
+        ref={ttsAudioRef}
+        playsInline
+        preload="auto"
+        style={{ position: "fixed", left: "-9999px", top: "0", width: "1px", height: "1px", opacity: 0 }}
+      />
 
       <button
         ref={closeRef}
