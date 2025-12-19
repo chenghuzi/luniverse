@@ -4,6 +4,8 @@ import { createPortal } from "react-dom";
 import { VoiceWaveform } from "@/features/chat/components/VoiceWaveform";
 import { useMicrophoneSession } from "@/features/chat/hooks/useMicrophoneSession";
 import { useTencentRtAsrSession } from "@/features/asr/hooks/useTencentRtAsrSession";
+import { createDashscopeLlmClient } from "@/features/llm/dashscope/DashscopeLlmClient";
+import type { LlmMessage, LlmStreamHandle } from "@/features/llm/types";
 
 export type VoiceChatContext =
   | {
@@ -75,6 +77,22 @@ const ASSISTANT_TEXTS = [
 ] as const;
 
 const MIN_VOICE_SEND_MS = 450;
+const MAX_CONTEXT_MESSAGES = 18;
+
+function buildSystemPrompt(context: VoiceChatContext | null): string {
+  if (!context) return "You are a helpful voice assistant. Be concise and actionable.";
+  if (context.kind === "podcast") {
+    return `You are a helpful voice assistant for the podcast "${context.podcastTitle}". Be concise and actionable.`;
+  }
+  return `You are a helpful voice assistant for the episode "${context.episodeTitle}" from the podcast "${context.podcastTitle}". Be concise and actionable.`;
+}
+
+function toLlmMessages(systemPrompt: string, history: ChatMessage[]): LlmMessage[] {
+  const trimmed = history.slice(-MAX_CONTEXT_MESSAGES);
+  const messages: LlmMessage[] = [{ role: "system", content: systemPrompt }];
+  for (const m of trimmed) messages.push({ role: m.role, content: m.text });
+  return messages;
+}
 
 export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const [isPressing, setIsPressing] = useState(false);
@@ -86,11 +104,16 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const recognizedRef = useRef<string>("");
   const timelineRef = useRef<HTMLDivElement | null>(null);
   const replyTimeoutsRef = useRef<number[]>([]);
+  const llmStreamRef = useRef<LlmStreamHandle | null>(null);
+  const messagesRef = useRef<ChatMessage[]>([]);
+  const isNearBottomRef = useRef<boolean>(true);
+  const scrollRafRef = useRef<number | null>(null);
   const pressTokenRef = useRef<number>(0);
   const isPressingRef = useRef<boolean>(false);
   const pressStartMsRef = useRef<number | null>(null);
   const mic = useMicrophoneSession();
   const { start: startAsr, pushAudio: pushAsrAudio, stop: stopAsr, status: asrStatus, error: asrError } = useTencentRtAsrSession();
+  const llmClient = useMemo(() => createDashscopeLlmClient(), []);
 
   const targetName = useMemo(() => {
     if (!props.context) return "Voice chat";
@@ -107,6 +130,11 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   function clearReplyTimers() {
     for (const id of replyTimeoutsRef.current) window.clearTimeout(id);
     replyTimeoutsRef.current = [];
+  }
+
+  function abortLlmStream() {
+    llmStreamRef.current?.abort();
+    llmStreamRef.current = null;
   }
 
   function scrollToBottom(behavior: ScrollBehavior) {
@@ -129,7 +157,16 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     ]);
   }
 
-  function scheduleAssistantReply() {
+  function ensureScrollToBottomSoon() {
+    if (!isNearBottomRef.current) return;
+    if (scrollRafRef.current) return;
+    scrollRafRef.current = window.requestAnimationFrame(() => {
+      scrollRafRef.current = null;
+      scrollToBottom("auto");
+    });
+  }
+
+  function scheduleAssistantReplyFallback() {
     const delay = 220 + Math.floor(Math.random() * 420);
     const id = window.setTimeout(() => {
       addMessage("assistant", pickOne(ASSISTANT_TEXTS));
@@ -138,8 +175,43 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   }
 
   function sendUserText(text: string) {
-    addMessage("user", text);
-    scheduleAssistantReply();
+    const trimmed = text.trim();
+    if (trimmed.length === 0) return;
+
+    const userMessage: ChatMessage = { id: makeId(), role: "user", text: trimmed, createdAt: Date.now() };
+    if (!llmClient) {
+      setMessages((prev) => [...prev, userMessage]);
+      scheduleAssistantReplyFallback();
+      return;
+    }
+
+    const assistantId = makeId();
+    const assistantMessage: ChatMessage = { id: assistantId, role: "assistant", text: "", createdAt: Date.now() };
+    setMessages((prev) => [...prev, userMessage, assistantMessage]);
+
+    abortLlmStream();
+    const systemPrompt = buildSystemPrompt(props.context);
+    const history = [...messagesRef.current, userMessage];
+
+    llmStreamRef.current = llmClient.streamChat(
+      { model: "", messages: toLlmMessages(systemPrompt, history) },
+      {
+        onDeltaText: (delta) => {
+          setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: m.text + delta } : m)));
+          ensureScrollToBottomSoon();
+        },
+        onDone: (finalText) => {
+          setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: finalText.trim() } : m)));
+          ensureScrollToBottomSoon();
+        },
+        onError: () => {
+          setMessages((prev) =>
+            prev.map((m) => (m.id === assistantId ? { ...m, text: "Sorry, the assistant is unavailable right now." } : m)),
+          );
+          ensureScrollToBottomSoon();
+        },
+      },
+    );
   }
 
   function sendVoiceMessage(durationMs: number) {
@@ -253,6 +325,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     setRecognizedText("");
     recognizedRef.current = "";
     setLastRecordingMs(null);
+    abortLlmStream();
     clearReplyTimers();
     setMessages([
       {
@@ -285,6 +358,8 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       clearReplyTimers();
       mic.stop();
       void stopAsr();
+      abortLlmStream();
+      if (scrollRafRef.current) window.cancelAnimationFrame(scrollRafRef.current);
     };
   }, [mic.stop, props.context, props.onClose, props.open, stopAsr]);
 
@@ -292,6 +367,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     if (props.open) return;
     mic.stop();
     void stopAsr();
+    abortLlmStream();
   }, [mic.stop, props.open, stopAsr]);
 
   useEffect(() => {
@@ -299,6 +375,14 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     if (!isNearBottom) return;
     scrollToBottom("smooth");
   }, [isNearBottom, messages.length, props.open]);
+
+  useEffect(() => {
+    messagesRef.current = messages;
+  }, [messages]);
+
+  useEffect(() => {
+    isNearBottomRef.current = isNearBottom;
+  }, [isNearBottom]);
 
   if (!props.open) return null;
 

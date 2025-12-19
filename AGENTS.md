@@ -92,3 +92,43 @@
 - `src/features/asr/credentials.ts`：改为从后端拿预签名 URL / 临时 token
 
 其余层（录音、分帧、WS 引擎、UI）尽量不动，避免耦合扩散。
+
+## DashScope (Qwen) LLM (Front-end demo)
+
+当前已接入一个“OpenAI-compatible”风格的前端 LLM 流式对话（用于 demo），目标是：
+
+- UI 层只依赖一个 `LlmClient` 抽象，不关心具体供应商；
+- demo 阶段直接在前端用 API Key 调用；
+- 后续改成“后端签发 / 代理转发”时，尽量只替换配置与 client 实现，不动 UI。
+
+### 关键文件
+
+- `src/features/llm/types.ts`
+  - `LlmClient` / `LlmMessage` / streaming callbacks 与 handle（支持 abort）。
+- `src/features/llm/dashscope/config.ts`
+  - 从 `import.meta.env` 读取配置（demo 阶段）。
+- `src/features/llm/openaiCompatible/*`
+  - 通用的 SSE 解析与 `chat/completions` streaming 逻辑（供应商无关）。
+- `src/features/llm/dashscope/DashscopeLlmClient.ts`
+  - DashScope (OpenAI-compatible mode) 的 client 实现（基于 `fetch` + SSE）。
+- `src/features/chat/components/VoiceChatOverlay.tsx`
+  - 用户发送消息后创建 assistant placeholder bubble，然后用 delta 文本流式更新同一条 bubble。
+
+### 配置方式（不要把 Key 提交到仓库）
+
+Vite 只会暴露以 `VITE_` 开头的 env 给前端代码。
+
+本仓库提供了 `.env.example`，你需要在本地 `.env` / `.env.local` / `.env.production` 中填：
+
+- `VITE_DASHSCOPE_BASE_URL`（默认 `https://dashscope.aliyuncs.com/compatible-mode/v1`）
+- `VITE_DASHSCOPE_MODEL`（默认 `qwen-plus`）
+- `VITE_DASHSCOPE_API_KEY`
+
+### 未来切后端（迁移点）
+
+建议保持 UI 与 “拿 Key / 签名 / 代理” 解耦：
+
+- demo：前端直接读取 `VITE_DASHSCOPE_API_KEY` 并请求；
+- 上线：改为后端签发短期 token / 后端代理 `/chat/completions`，前端只拿一个 session token 或直接请求自家后端。
+
+这样 `VoiceChatOverlay` 的消息流式更新逻辑可以保持不变。
