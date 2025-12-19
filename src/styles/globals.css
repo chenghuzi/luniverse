@@ -288,67 +288,8 @@ a {
   overflow: hidden;
 }
 
-.cardHint {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 10px 12px;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  width: fit-content;
-}
-
-.deckStageReducedFx .cardHint {
-  backdrop-filter: none;
-}
-
 .deckStageReducedFx .card {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-}
-
-.deckControls {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 16px;
-}
-
-.controlButton {
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 12px 14px;
-  background: var(--panel);
-  color: var(--text);
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
-}
-
-.controlButton:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.controlButton:disabled:hover {
-  transform: none;
-  background: var(--panel);
-  border-color: var(--border);
-}
-
-.controlButton:hover {
-  transform: translateY(-1px);
-  background: var(--panel2);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-
-.controlNope {
-  background: linear-gradient(135deg, rgba(239, 68, 68, 0.18), rgba(249, 115, 22, 0.12));
-}
-
-.controlLike {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.16), rgba(20, 184, 166, 0.12));
 }
 
 .detailCard {

@@ -75,7 +75,6 @@ export function Card({ card, isTop, style, className, pointerBind }: CardProps) 
             />
           ) : null}
         </div>
-        <div className="cardHint">Swipe left / right</div>
       </div>
     </motion.div>
   );
