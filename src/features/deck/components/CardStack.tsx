@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
 import { getStackTransform } from "@/features/deck/motion/transforms";
@@ -27,6 +27,36 @@ export function CardStack(props: CardStackProps) {
   });
 
   const stack = useMemo(() => props.cards.slice(0, config.stackSize), [props.cards, config.stackSize]);
+
+  useEffect(() => {
+    function isTypingTarget(target: EventTarget | null) {
+      if (!target || !(target instanceof HTMLElement)) return false;
+      if (target.isContentEditable) return true;
+      const tag = target.tagName;
+      return tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT";
+    }
+
+    function onKeyDown(e: KeyboardEvent) {
+      if (!hasTop) return;
+      if (e.defaultPrevented) return;
+      if (e.repeat) return;
+      if (isTypingTarget(e.target)) return;
+
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        controller.forceDecision("nope");
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        controller.forceDecision("like");
+      }
+    }
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [controller, hasTop]);
 
   return (
     <div className="deckRoot">
