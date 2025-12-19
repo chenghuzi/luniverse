@@ -14,6 +14,10 @@ def _stable_u32(seed: str) -> int:
     return int(digest[:8], 16)
 
 
+def _read_json(path: Path) -> Any:
+    return json.loads(path.read_text("utf-8"))
+
+
 def _to_int_or_none(value: Any) -> int | None:
     if isinstance(value, bool):
         return None
@@ -64,36 +68,42 @@ class CardsDataset:
     by_id: dict[str, dict[str, Any]]
 
     @classmethod
-    def load_from_json(cls, path: Path) -> "CardsDataset":
-        raw = json.loads(path.read_text("utf-8"))
-        if not isinstance(raw, list):
-            raise ValueError("cards dataset must be a JSON array")
+    def load_from_split_files(cls, deck_path: Path, details_dir: Path) -> "CardsDataset":
+        deck_raw = _read_json(deck_path)
+        if not isinstance(deck_raw, list):
+            raise ValueError("deckCards.json must be a JSON array")
 
-        cards: list[dict[str, Any]] = []
         deck_cards: list[dict[str, Any]] = []
-        by_id: dict[str, dict[str, Any]] = {}
-
-        for item in raw:
+        for item in deck_raw:
             if not isinstance(item, dict):
                 continue
             card_id = str(item.get("id", "")).strip()
             if not card_id:
                 continue
-
             _maybe_inject_snippet(item)
-            cards.append(item)
+            deck_cards.append(item)
+
+        by_id: dict[str, dict[str, Any]] = {}
+        cards: list[dict[str, Any]] = []
+        for path in sorted(details_dir.glob("*.json")):
+            item = _read_json(path)
+            if not isinstance(item, dict):
+                continue
+            card_id = str(item.get("id", "")).strip()
+            if not card_id:
+                continue
+            _maybe_inject_snippet(item)
             by_id[card_id] = item
-            deck_cards.append(_strip_episodes(item))
+            cards.append(item)
 
         return cls(cards=cards, deck_cards=deck_cards, by_id=by_id)
 
 
-def resolve_repo_root_from_backend_app() -> Path:
-    return Path(__file__).resolve().parents[2]
+def resolve_backend_root_from_backend_app() -> Path:
+    return Path(__file__).resolve().parents[1]
 
 
 def load_default_cards_dataset() -> CardsDataset:
-    repo_root = resolve_repo_root_from_backend_app()
-    dataset_path = repo_root / "card_data.json"
-    return CardsDataset.load_from_json(dataset_path)
-
+    backend_root = resolve_backend_root_from_backend_app()
+    data_dir = backend_root / "data"
+    return CardsDataset.load_from_split_files(data_dir / "deckCards.json", data_dir / "details")

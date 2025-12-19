@@ -168,6 +168,10 @@ Vite 只会暴露以 `VITE_` 开头的 env 给前端代码。
 - 所有 API 端点路径必须以 `/api/...` 开头（包含 HTTP 与 WebSocket）。
 - demo 阶段不做任何鉴权；上线前需要再补鉴权/限流/日志脱敏等。
 - 后端使用 `python-dotenv` 从 `backend/.env` 加载环境变量；请复制 `backend/.env.example` 为 `backend/.env` 并填写密钥（不要提交到仓库）。
+- 卡片/详情数据文件统一放在 `backend/data/`：
+  - 列表：`backend/data/deckCards.json`
+  - 详情：`backend/data/details/*.json`
+  - 后端直接读取这些拆分文件提供 `/api/deck` 与 `/api/cards/{cardId}`。
 
 ### 常用命令
 

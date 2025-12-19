@@ -8,8 +8,8 @@ const __dirname = path.dirname(__filename);
 
 const REPO_ROOT = path.resolve(__dirname, "..");
 const INPUT_PATH = path.join(REPO_ROOT, "card_data.json");
-const OUTPUT_PATH = path.join(REPO_ROOT, "src", "shared", "api", "mocks", "deckCards.json");
-const DETAILS_DIR = path.join(REPO_ROOT, "src", "shared", "api", "mocks", "details");
+const OUTPUT_PATH = path.join(REPO_ROOT, "backend", "data", "deckCards.json");
+const DETAILS_DIR = path.join(REPO_ROOT, "backend", "data", "details");
 
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
