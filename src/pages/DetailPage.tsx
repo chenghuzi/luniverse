@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
 import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
@@ -30,6 +30,7 @@ function formatSnippet(snippet?: { startMs: number; durationMs: number }) {
 
 export function DetailPage() {
   const { cardId } = useParams<{ cardId: string }>();
+  const navigate = useNavigate();
   const [state, setState] = useState<
     | { status: "idle" | "loading"; card: null; error: null }
     | { status: "ready"; card: CardDetail; error: null }
@@ -108,12 +109,15 @@ export function DetailPage() {
   }
 
   return (
-    <div className="page">
-      <header className="header">
-        <div className="title">Detail</div>
-        <div className="subtitle">Loaded by mock API from card id.</div>
-      </header>
-
+    <div className="page pageNoWindowScroll">
+      <button
+        className="detailBackButton"
+        type="button"
+        onClick={() => navigate("/")}
+        aria-label="Back to deck"
+      >
+        ‹
+      </button>
       <main className="content">
         <div className="detailCard">
           <div className="detailHeader">
@@ -202,11 +206,6 @@ export function DetailPage() {
                 </div>
               </div>
             ) : null}
-          </div>
-          <div className="detailFooter">
-            <Link className="linkButton" to="/">
-              Back to deck
-            </Link>
           </div>
         </div>
       </main>
