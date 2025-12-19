@@ -262,8 +262,9 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
         min={0}
         max={durationMs}
         value={progressMs}
+        readOnly
+        tabIndex={-1}
         disabled={!props.isActive || !isReady || durationMs <= 0}
-        onChange={(e) => onScrub(Number(e.target.value))}
       />
       <div className="snippetTime">
         {formatTime(progressSec)} / {formatTime(durationSec)}

@@ -26,6 +26,17 @@ body {
     radial-gradient(900px 700px at 85% 40%, rgba(14, 165, 233, 0.15), transparent 55%),
     radial-gradient(900px 700px at 60% 95%, rgba(236, 72, 153, 0.12), transparent 55%), var(--bg);
   color: var(--text);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+select,
+[contenteditable="true"],
+[contenteditable=""] {
+  -webkit-user-select: text;
+  user-select: text;
 }
 
 a {
@@ -185,6 +196,8 @@ a {
 
 .snippetRange {
   width: 100%;
+  pointer-events: none;
+  touch-action: none;
 }
 
 .snippetTime {
