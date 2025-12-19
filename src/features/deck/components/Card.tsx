@@ -26,6 +26,11 @@ export function Card({ card, style, className, pointerBind }: CardProps) {
     card.episode.title ? `• ${card.episode.title}` : undefined,
   ].filter(Boolean);
 
+  const coverUrl = card.episode.imageUrl ?? card.podcast.imageUrl;
+  const coverAlt = card.episode.title
+    ? `${card.podcast.title} - ${card.episode.title}`
+    : `${card.podcast.title} cover`;
+
   return (
     <motion.div
       className={className ?? "card"}
@@ -42,6 +47,20 @@ export function Card({ card, style, className, pointerBind }: CardProps) {
         <div className="cardTop">
           <div className="cardTitle">{card.highlight.title}</div>
           {subtitleParts.length > 0 ? <div className="cardSubtitle">{subtitleParts.join(" ")}</div> : null}
+        </div>
+        <div className="cardMedia">
+          {coverUrl ? (
+            <div className="cardImageFrame">
+              <img
+                className="cardImage"
+                src={coverUrl}
+                alt={coverAlt}
+                loading="lazy"
+                decoding="async"
+                draggable={false}
+              />
+            </div>
+          ) : null}
         </div>
         <div className="cardHint">Swipe left / right</div>
       </div>

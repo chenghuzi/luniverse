@@ -1,4 +1,5 @@
 import { readFile, rename, writeFile } from "node:fs/promises";
+import crypto from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -47,6 +48,32 @@ function validateCard(card, index) {
   assert(isNonEmptyString(ui.accent), `cards[${index}].ui.accent must be a non-empty string`);
 }
 
+function toPositiveIntOrUndefined(value) {
+  if (typeof value !== "number") return undefined;
+  if (!Number.isFinite(value)) return undefined;
+  const n = Math.floor(value);
+  return n > 0 ? n : undefined;
+}
+
+function withRandomHighlightSnippet(card) {
+  const windowSeconds = 30;
+  const durationSeconds = toPositiveIntOrUndefined(card?.episode?.durationSeconds);
+  if (!durationSeconds || durationSeconds < windowSeconds) {
+    if (card?.highlight && typeof card.highlight === "object" && "snippet" in card.highlight) {
+      delete card.highlight.snippet;
+    }
+    return card;
+  }
+
+  const maxStartSeconds = durationSeconds - windowSeconds;
+  const startSeconds = crypto.randomInt(0, maxStartSeconds + 1);
+  const startMs = startSeconds * 1000;
+  const durationMs = windowSeconds * 1000;
+
+  card.highlight.snippet = { startMs, durationMs };
+  return card;
+}
+
 async function main() {
   const startedAt = Date.now();
   const raw = await readFile(INPUT_PATH, "utf8");
@@ -56,10 +83,11 @@ async function main() {
   assert(parsed.length > 0, `card_data.json must not be empty`);
 
   for (let i = 0; i < parsed.length; i += 1) validateCard(parsed[i], i);
+  const transformed = parsed.map((c) => withRandomHighlightSnippet(c));
 
   const outDir = path.dirname(OUTPUT_PATH);
   const tmpPath = path.join(outDir, `${path.basename(OUTPUT_PATH)}.tmp`);
-  await writeFile(tmpPath, `${JSON.stringify(parsed, null, 2)}\n`, "utf8");
+  await writeFile(tmpPath, `${JSON.stringify(transformed, null, 2)}\n`, "utf8");
   await rename(tmpPath, OUTPUT_PATH);
 
   const elapsedMs = Date.now() - startedAt;
@@ -68,7 +96,7 @@ async function main() {
       {
         input: path.relative(REPO_ROOT, INPUT_PATH),
         output: path.relative(REPO_ROOT, OUTPUT_PATH),
-        cards: parsed.length,
+        cards: transformed.length,
         elapsedMs,
       },
       null,
