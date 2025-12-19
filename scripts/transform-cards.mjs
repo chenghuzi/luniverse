@@ -1,4 +1,4 @@
-import { readFile, rename, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import crypto from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, "..");
 const INPUT_PATH = path.join(REPO_ROOT, "card_data.json");
 const OUTPUT_PATH = path.join(REPO_ROOT, "src", "shared", "api", "mocks", "deckCards.json");
+const DETAILS_DIR = path.join(REPO_ROOT, "src", "shared", "api", "mocks", "details");
 
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
@@ -18,11 +19,16 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function isSafeFileStem(value) {
+  return typeof value === "string" && /^[a-zA-Z0-9_-]+$/.test(value);
+}
+
 function validateCard(card, index) {
   assert(card && typeof card === "object", `cards[${index}] must be an object`);
   assert(!("instanceId" in card), `cards[${index}].instanceId must not exist (mock omits runtime instanceId)`);
 
   assert(isNonEmptyString(card.id), `cards[${index}].id must be a non-empty string`);
+  assert(isSafeFileStem(card.id), `cards[${index}].id must be safe for filenames (got: ${JSON.stringify(card.id)})`);
 
   const podcast = card.podcast;
   assert(podcast && typeof podcast === "object", `cards[${index}].podcast must be an object`);
@@ -74,6 +80,27 @@ function withRandomHighlightSnippet(card) {
   return card;
 }
 
+async function writeJsonAtomic(destPath, value) {
+  const dir = path.dirname(destPath);
+  const base = path.basename(destPath);
+  const tmpPath = path.join(dir, `${base}.tmp`);
+
+  await writeFile(tmpPath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
+  try {
+    await rename(tmpPath, destPath);
+  } catch (err) {
+    if (err && typeof err === "object" && ("code" in err || "errno" in err)) {
+      const code = err.code;
+      if (code === "EEXIST" || code === "EPERM") {
+        await rm(destPath, { force: true });
+        await rename(tmpPath, destPath);
+        return;
+      }
+    }
+    throw err;
+  }
+}
+
 async function main() {
   const startedAt = Date.now();
   const raw = await readFile(INPUT_PATH, "utf8");
@@ -84,11 +111,25 @@ async function main() {
 
   for (let i = 0; i < parsed.length; i += 1) validateCard(parsed[i], i);
   const transformed = parsed.map((c) => withRandomHighlightSnippet(c));
+  const deckCards = transformed.map((card) => {
+    const { episodes, ...rest } = card;
+    return rest;
+  });
+  const ids = new Set();
+  for (let i = 0; i < transformed.length; i += 1) {
+    const id = transformed[i]?.id;
+    assert(!ids.has(id), `cards[${i}].id must be unique (duplicate: ${JSON.stringify(id)})`);
+    ids.add(id);
+  }
 
-  const outDir = path.dirname(OUTPUT_PATH);
-  const tmpPath = path.join(outDir, `${path.basename(OUTPUT_PATH)}.tmp`);
-  await writeFile(tmpPath, `${JSON.stringify(transformed, null, 2)}\n`, "utf8");
-  await rename(tmpPath, OUTPUT_PATH);
+  await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
+  await mkdir(DETAILS_DIR, { recursive: true });
+
+  await writeJsonAtomic(OUTPUT_PATH, deckCards);
+  for (const card of transformed) {
+    const detailPath = path.join(DETAILS_DIR, `${card.id}.json`);
+    await writeJsonAtomic(detailPath, card);
+  }
 
   const elapsedMs = Date.now() - startedAt;
   console.log(
@@ -96,7 +137,9 @@ async function main() {
       {
         input: path.relative(REPO_ROOT, INPUT_PATH),
         output: path.relative(REPO_ROOT, OUTPUT_PATH),
-        cards: transformed.length,
+        detailsDir: path.relative(REPO_ROOT, DETAILS_DIR),
+        detailsFiles: transformed.length,
+        cards: deckCards.length,
         elapsedMs,
       },
       null,

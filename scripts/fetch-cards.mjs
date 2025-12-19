@@ -17,6 +17,7 @@ const OUTPUT_PATH = path.join(REPO_ROOT, "card_data.json");
 
 const DEFAULT_TIMEOUT_MS = 15_000;
 const DEFAULT_CONCURRENCY = 6;
+const DEFAULT_EPISODES_LIMIT = 30;
 
 const ACCENT_PALETTE = [
   "linear-gradient(135deg,#0ea5e9,#6366f1)",
@@ -259,6 +260,10 @@ async function main() {
   const startedAt = Date.now();
   const timeoutMs = Number.parseInt(process.env.FETCH_TIMEOUT_MS ?? "", 10) || DEFAULT_TIMEOUT_MS;
   const concurrency = Number.parseInt(process.env.FETCH_CONCURRENCY ?? "", 10) || DEFAULT_CONCURRENCY;
+  const episodesLimit = Math.max(
+    1,
+    Number.parseInt(process.env.FETCH_EPISODES_LIMIT ?? "", 10) || DEFAULT_EPISODES_LIMIT,
+  );
 
   const rawListText = await readFile(PODCAST_LIST_PATH, "utf8");
   const rawList = (() => {
@@ -323,6 +328,30 @@ async function main() {
         const episode = normalizeEpisode(chosen.it, chosen.enclosure);
         const episodeImageUrl = firstNonEmpty(feed?.itunes?.image) ?? undefined;
 
+        const episodes = [];
+        const episodeIds = new Set();
+        const episodeCandidates = audioItems.slice(0, episodesLimit);
+        for (let i = 0; i < episodeCandidates.length; i += 1) {
+          const cand = episodeCandidates[i];
+          const seed =
+            firstNonEmpty(cand.it?.guid, cand.it?.link, cand.enclosure?.url, `${feedUrl}#${i}`) ??
+            `${feedUrl}#${i}`;
+          const id = stableId("e", seed, 12);
+          if (episodeIds.has(id)) continue;
+          episodeIds.add(id);
+
+          const e = normalizeEpisode(cand.it, cand.enclosure);
+          episodes.push({
+            id,
+            title: e.title,
+            link: e.link,
+            publishedAt: e.publishedAt,
+            durationSeconds: e.durationSeconds,
+            imageUrl: episodeImageUrl,
+            audio: e.audio,
+          });
+        }
+
         const highlightSeed = `${podcastId}:${episodeId}`;
         const highlightBase = buildHighlight(chosen.it, podcast.title, episode.title);
 
@@ -345,6 +374,7 @@ async function main() {
             imageUrl: episodeImageUrl,
             audio: episode.audio,
           },
+          episodes,
           highlight: {
             id: stableId("h", highlightSeed, 12),
             title: highlightBase.title,
@@ -377,6 +407,7 @@ async function main() {
         totalFeeds: total,
         okFeeds: ok,
         failedFeeds: failed,
+        episodesLimit,
         elapsedMs,
       },
       null,
