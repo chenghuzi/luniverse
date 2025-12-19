@@ -6,10 +6,11 @@ from typing import Any
 
 import anyio
 from dotenv import load_dotenv
-from fastapi import FastAPI, WebSocket
+from fastapi import FastAPI, HTTPException, Query, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.websockets import WebSocketDisconnect, WebSocketState
 
+from .cards_data import CardsDataset, load_default_cards_dataset
 from .minimax_ws import connect_minimax_tts
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env", override=False)
@@ -19,6 +20,29 @@ app = FastAPI(title="luniverse-backend", version="0.1.0")
 MINIMAX_TTS_VOICE_ID = "mia_voice_20251219_v3"
 MINIMAX_TTS_MODEL = "speech-2.6-hd"
 MINIMAX_TTS_ENCODING = "hex"
+
+_CARDS_DATASET: CardsDataset | None = None
+_INSTANCE_SEQ = 0
+
+
+def _mod(n: int, m: int) -> int:
+    r = n % m
+    return r + m if r < 0 else r
+
+
+def _get_cards_dataset() -> CardsDataset:
+    global _CARDS_DATASET
+    if _CARDS_DATASET is None:
+        _CARDS_DATASET = load_default_cards_dataset()
+    return _CARDS_DATASET
+
+
+def _next_instance_id(card_id: str) -> str:
+    global _INSTANCE_SEQ
+    instance_id = f"{card_id}-{_INSTANCE_SEQ}"
+    _INSTANCE_SEQ += 1
+    return instance_id
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -32,6 +56,46 @@ app.add_middleware(
 @app.get("/api/health")
 async def health() -> dict[str, Any]:
     return {"ok": True}
+
+
+@app.get("/api/deck")
+async def deck(
+    cursor: int = Query(0, description="cursor index into the base card list"),
+    limit: int = Query(8, description="page size, clamped to [1, 50]"),
+) -> dict[str, Any]:
+    dataset = _get_cards_dataset()
+    base = dataset.deck_cards
+    base_len = len(base)
+    if base_len == 0:
+        return {"cards": [], "nextCursor": 0}
+
+    safe_limit = max(1, min(50, int(limit)))
+    start = _mod(int(cursor), base_len)
+
+    cards: list[dict[str, Any]] = []
+    for i in range(safe_limit):
+        item = base[(start + i) % base_len]
+        card_id = str(item.get("id", "")).strip()
+        if not card_id:
+            continue
+        cards.append({**item, "instanceId": _next_instance_id(card_id)})
+
+    next_cursor = _mod(start + safe_limit, base_len)
+    return {"cards": cards, "nextCursor": next_cursor}
+
+
+@app.get("/api/cards/{card_id}")
+async def card_detail(card_id: str) -> dict[str, Any]:
+    cid = str(card_id or "").strip()
+    if not cid:
+        raise HTTPException(status_code=400, detail="cardId is required")
+
+    dataset = _get_cards_dataset()
+    card = dataset.by_id.get(cid)
+    if not card:
+        raise HTTPException(status_code=404, detail="card not found")
+
+    return card
 
 
 @app.get("/api/tts/minimax/config")
