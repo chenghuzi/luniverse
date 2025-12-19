@@ -1,12 +1,13 @@
 :root {
-  color-scheme: dark;
-  --bg: #0b1020;
-  --panel: rgba(255, 255, 255, 0.06);
-  --panel2: rgba(255, 255, 255, 0.10);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.65);
-  --border: rgba(255, 255, 255, 0.12);
-  --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  color-scheme: light;
+  --bg: #f7f8fc;
+  --panel: rgba(255, 255, 255, 0.74);
+  --panel2: rgba(255, 255, 255, 0.92);
+  --text: rgba(15, 23, 42, 0.92);
+  --muted: rgba(15, 23, 42, 0.62);
+  --border: rgba(15, 23, 42, 0.10);
+  --shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+  --shadowStrong: 0 24px 74px rgba(15, 23, 42, 0.18);
 }
 
 * {
@@ -22,9 +23,9 @@ body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
-  background: radial-gradient(1200px 800px at 20% 10%, rgba(99, 102, 241, 0.18), transparent 60%),
-    radial-gradient(900px 700px at 85% 40%, rgba(14, 165, 233, 0.15), transparent 55%),
-    radial-gradient(900px 700px at 60% 95%, rgba(236, 72, 153, 0.12), transparent 55%), var(--bg);
+  background: radial-gradient(1200px 800px at 15% 10%, rgba(99, 102, 241, 0.14), transparent 62%),
+    radial-gradient(1000px 760px at 88% 32%, rgba(14, 165, 233, 0.12), transparent 60%),
+    radial-gradient(980px 760px at 55% 96%, rgba(236, 72, 153, 0.10), transparent 62%), var(--bg);
   color: var(--text);
   -webkit-user-select: none;
   user-select: none;
@@ -48,6 +49,22 @@ a {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.audioReactiveBackground {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.audioReactiveCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .pageNoWindowScroll {
@@ -64,7 +81,8 @@ a {
 .header {
   padding: 20px 20px 8px;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), transparent);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.12));
+  backdrop-filter: blur(10px);
 }
 
 .title {
@@ -100,7 +118,7 @@ a {
   position: absolute;
   inset: 0;
   border-radius: 18px;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadowStrong);
   border: 1px solid var(--border);
   transform-origin: center;
   will-change: transform;
@@ -120,6 +138,7 @@ a {
   justify-content: space-between;
   padding: 18px 18px 16px;
   background-size: cover;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .cardTop {
@@ -148,9 +167,9 @@ a {
   aspect-ratio: 1 / 1;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
 }
 
 .cardImage {
@@ -170,8 +189,8 @@ a {
   gap: 10px;
   padding: 10px 12px;
   border-radius: 14px;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   backdrop-filter: blur(10px);
 }
 
@@ -180,9 +199,9 @@ a {
 }
 
 .snippetButton {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
   border-radius: 12px;
   padding: 8px 10px;
   font-weight: 600;
@@ -202,7 +221,7 @@ a {
 
 .snippetTime {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.82);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -214,7 +233,7 @@ a {
   display: grid;
   place-items: center;
   padding: 24px 16px;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(15, 23, 42, 0.18);
   backdrop-filter: blur(10px);
   touch-action: none;
   pointer-events: auto;
@@ -227,13 +246,14 @@ a {
 .audioUnlockPanel {
   width: min(520px, 92vw);
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(15, 23, 42, 0.92);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadowStrong);
   padding: 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  color: var(--text);
 }
 
 .audioUnlockTitle {
@@ -243,25 +263,25 @@ a {
 
 .audioUnlockSubtitle {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   line-height: 1.4;
 }
 
 .audioUnlockButton {
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 14px;
   padding: 12px 14px;
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.22), rgba(20, 184, 166, 0.14));
-  color: var(--text);
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.28), rgba(20, 184, 166, 0.18));
+  color: rgba(15, 23, 42, 0.92);
   font-weight: 700;
   cursor: pointer;
 }
 
 .audioUnlockError {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.78);
-  background: rgba(239, 68, 68, 0.16);
-  border: 1px solid rgba(239, 68, 68, 0.24);
+  color: rgba(127, 29, 29, 0.92);
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.22);
   padding: 10px 12px;
   border-radius: 14px;
   line-height: 1.35;
@@ -289,7 +309,7 @@ a {
 }
 
 .deckStageReducedFx .card {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14);
 }
 
 .detailCard {
@@ -314,9 +334,9 @@ a {
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.22);
-  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
   cursor: pointer;
   font-size: 22px;
   font-weight: 900;
@@ -327,8 +347,8 @@ a {
 }
 
 .detailBackButton:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(0, 0, 0, 0.28);
+  border-color: rgba(15, 23, 42, 0.16);
+  background: rgba(255, 255, 255, 0.84);
 }
 
 .detailBackButton:active {
@@ -372,9 +392,9 @@ a {
 
 .detailError {
   margin-top: 8px;
-  color: rgba(255, 255, 255, 0.86);
-  background: rgba(239, 68, 68, 0.16);
-  border: 1px solid rgba(239, 68, 68, 0.24);
+  color: rgba(127, 29, 29, 0.92);
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.22);
   padding: 10px 12px;
   border-radius: 14px;
   line-height: 1.35;
@@ -398,9 +418,9 @@ a {
   height: 96px;
   border-radius: 16px;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
 }
 
 .detailCover {
@@ -422,7 +442,7 @@ a {
 .detailInfoMeta {
   margin-top: 6px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.68);
+  color: var(--muted);
 }
 
 .detailChips {
@@ -444,15 +464,15 @@ a {
   justify-content: center;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(20, 184, 166, 0.12));
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(15, 23, 42, 0.92);
   font-weight: 800;
   cursor: pointer;
 }
 
 .chatButton:hover {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .chip {
@@ -460,21 +480,21 @@ a {
   align-items: center;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.82);
+  background: rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  color: rgba(15, 23, 42, 0.84);
   font-size: 12px;
 }
 
 .detailSection {
   padding-top: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .detailSectionTitle {
   font-size: 13px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(15, 23, 42, 0.82);
   margin-bottom: 10px;
   letter-spacing: 0.2px;
 }
@@ -488,12 +508,12 @@ a {
 
 .detailK {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.64);
+  color: var(--muted);
 }
 
 .detailV {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.86);
+  color: rgba(15, 23, 42, 0.88);
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -505,14 +525,14 @@ a {
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.2px;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(15, 23, 42, 0.88);
 }
 
 .detailParagraph {
   margin-top: 10px;
   font-size: 13px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(15, 23, 42, 0.72);
 }
 
 .episodeList {
@@ -527,8 +547,8 @@ a {
 .episodeRow {
   padding: 12px 12px;
   border-radius: 14px;
-  background: rgba(0, 0, 0, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.64);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
@@ -542,20 +562,20 @@ a {
 .episodeTitle {
   font-size: 13px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(15, 23, 42, 0.88);
   line-height: 1.35;
 }
 
 .episodeMeta {
   margin-top: 6px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
 }
 
 .episodeChatButton {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(15, 23, 42, 0.90);
   border-radius: 12px;
   padding: 8px 10px;
   font-weight: 800;
@@ -564,14 +584,14 @@ a {
 }
 
 .episodeChatButton:hover {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .voiceChatBackdrop {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(15, 23, 42, 0.12);
 }
 
 .voiceChatBackdropButton {
@@ -589,15 +609,16 @@ a {
   transform: translateX(-50%);
   width: min(720px, 96vw);
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(15, 23, 42, 0.72);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(255, 255, 255, 0.80);
+  box-shadow: var(--shadowStrong);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 12px;
   padding: 12px 14px;
   z-index: 100000;
+  color: var(--text);
 }
 
 .voiceChatTopCloseButton {
@@ -640,18 +661,18 @@ a {
   max-width: min(640px, 86%);
   border-radius: 16px;
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(15, 23, 42, 0.76);
-  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(255, 255, 255, 0.86);
+  color: rgba(15, 23, 42, 0.92);
   line-height: 1.35;
   white-space: pre-wrap;
   word-break: break-word;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.20);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
 }
 
 .voiceChatBubbleUser {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.28), rgba(99, 102, 241, 0.14));
-  border-color: rgba(59, 130, 246, 0.26);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.20), rgba(99, 102, 241, 0.12));
+  border-color: rgba(59, 130, 246, 0.22);
 }
 
 .voiceChatSheet {
@@ -661,12 +682,13 @@ a {
   bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
   width: min(720px, 96vw);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(15, 23, 42, 0.92);
-  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadowStrong);
   overflow: hidden;
   padding: 12px 14px 14px;
   z-index: 100000;
+  color: var(--text);
 }
 
 .voiceChatHeader {
@@ -674,7 +696,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 14px 14px 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .voiceChatHeaderText {
@@ -693,16 +715,16 @@ a {
 .voiceChatSubtitle {
   margin-top: 4px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .voiceChatCloseButton {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(15, 23, 42, 0.90);
   border-radius: 12px;
   padding: 8px 10px;
   font-weight: 800;
@@ -710,7 +732,7 @@ a {
 }
 
 .voiceChatCloseButton:hover {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .voiceChatBody {
@@ -723,7 +745,7 @@ a {
 
 .voiceChatBottomRecognized {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.70);
+  color: var(--muted);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -738,9 +760,9 @@ a {
 }
 
 .voiceChatCodeButton {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  color: rgba(15, 23, 42, 0.92);
   border-radius: 14px;
   padding: 12px 12px;
   font-weight: 900;
@@ -749,15 +771,15 @@ a {
 }
 
 .voiceChatCodeButton:hover {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .voiceChatWave {
   width: min(360px, 86%);
   height: 44px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(15, 23, 42, 0.04);
   display: grid;
   grid-auto-flow: column;
   gap: 6px;
@@ -770,13 +792,13 @@ a {
   width: 7px;
   height: 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.36);
+  background: rgba(15, 23, 42, 0.28);
   transform-origin: center;
   transition: transform 80ms linear, opacity 120ms linear;
 }
 
 .voiceChatWaveLive .voiceChatWaveBar {
-  background: rgba(255, 255, 255, 0.52);
+  background: rgba(15, 23, 42, 0.40);
 }
 
 .voiceChatWaveActive .voiceChatWaveBar:nth-child(1) {
@@ -812,19 +834,19 @@ a {
 
 .voiceChatHint {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.70);
+  color: var(--muted);
 }
 
 .voiceChatMicButton {
   width: 100%;
   border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(99, 102, 241, 0.12));
   padding: 14px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(15, 23, 42, 0.92);
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
@@ -833,7 +855,7 @@ a {
 
 .voiceChatMicButtonActive {
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.22), rgba(20, 184, 166, 0.14));
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .voiceChatMicIcon {
@@ -844,8 +866,8 @@ a {
   place-items: center;
   font-weight: 900;
   letter-spacing: 0.4px;
-  background: rgba(0, 0, 0, 0.16);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.10);
 }
 
 .voiceChatMicText {
@@ -861,7 +883,7 @@ a {
 
 .voiceChatFooterText {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.58);
+  color: var(--muted);
 }
 
 .detailFooter {
@@ -877,7 +899,7 @@ a {
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .emptyState {
@@ -886,7 +908,7 @@ a {
   display: grid;
   place-items: center;
   border-radius: 18px;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
+  border: 1px dashed rgba(15, 23, 42, 0.18);
   color: var(--muted);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.60);
 }

@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { getActiveWindow, getGlobalAudioElement, onSegmentEnded, pauseIfActive, playWindow } from "@/shared/audio/globalAudio";
+import { resumeAudioAnalysisFromGesture } from "@/shared/audio/audioAnalysis";
 
 type SnippetPlayerProps = {
   audioUrl: string;
@@ -192,6 +193,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     setUnlockError(null);
 
     try {
+      await resumeAudioAnalysisFromGesture();
       await playWindow({
         id: segmentIdRef.current,
         url: props.audioUrl,
