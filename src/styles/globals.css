@@ -340,37 +340,6 @@ a {
   outline-offset: 2px;
 }
 
-.audioFadeToggle {
-  position: fixed;
-  top: 14px;
-  right: 14px;
-  z-index: 2000;
-  height: 36px;
-  padding: 0 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.18);
-  color: rgba(255, 255, 255, 0.92);
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 800;
-  backdrop-filter: blur(10px);
-}
-
-.audioFadeToggle:hover {
-  border-color: rgba(255, 255, 255, 0.22);
-  background: rgba(0, 0, 0, 0.24);
-}
-
-.audioFadeToggle:active {
-  transform: translateY(1px);
-}
-
-.audioFadeToggle:focus-visible {
-  outline: 2px solid rgba(59, 130, 246, 0.65);
-  outline-offset: 2px;
-}
-
 .detailHeader {
   display: flex;
   flex-direction: column;

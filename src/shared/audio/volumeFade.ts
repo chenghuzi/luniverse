@@ -17,6 +17,21 @@ let activeToken = 0;
 let lastStableVolume = DEFAULT_OPTIONS.targetVolume;
 let lastEl: HTMLAudioElement | null = null;
 
+const STORAGE_KEY = "audioVolumeFadeEnabled";
+
+function readStoredEnabled(): boolean | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const raw = window.localStorage.getItem(STORAGE_KEY);
+    if (raw == null) return null;
+    if (raw === "true") return true;
+    if (raw === "false") return false;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value));
 }
@@ -124,4 +139,9 @@ export function fadeOutBeforePause(
       el.volume = target;
     }
   });
+}
+
+const storedEnabled = readStoredEnabled();
+if (storedEnabled != null) {
+  enabled = storedEnabled;
 }

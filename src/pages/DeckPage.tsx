@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { CardStack } from "@/features/deck/components/CardStack";
 import { useDeckStore } from "@/features/deck/model/deckStore";
 import type { SwipeDecision } from "@/features/deck/model/types";
-import { AudioFadeToggle } from "@/shared/audio/AudioFadeToggle";
 
 const PAGE_SIZE = 8;
 const PREFETCH_THRESHOLD = PAGE_SIZE * 2;
@@ -39,7 +38,6 @@ export function DeckPage() {
 
   return (
     <div className="page pageNoWindowScroll">
-      <AudioFadeToggle />
       <header className="header">
         <div className="title">Deck</div>
         <div className="subtitle">Swipe left/right. Use arrow keys on desktop.</div>
