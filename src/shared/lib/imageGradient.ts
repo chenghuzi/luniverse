@@ -189,15 +189,16 @@ export async function getCoverGradient(url: string): Promise<string | null> {
 }
 
 export async function getCoverPageBackground(url: string): Promise<string | null> {
-  const key = `${PAGE_BG_VERSION}:${url.trim()}`;
-  if (key.length === 0) return null;
-  if (pageBgCache.has(key)) return pageBgCache.get(key)!;
-  const existing = pageBgInflight.get(key);
+  const rawUrl = url.trim();
+  if (rawUrl.length === 0) return null;
+  const cacheKey = `${PAGE_BG_VERSION}:${rawUrl}`;
+  if (pageBgCache.has(cacheKey)) return pageBgCache.get(cacheKey)!;
+  const existing = pageBgInflight.get(cacheKey);
   if (existing) return existing;
 
   const p = (async () => {
     try {
-      const img = await loadImage(key);
+      const img = await loadImage(rawUrl);
       const pixels = extractPixels(img);
       const clusters = kmeans2(pixels);
       if (!clusters) return null;
@@ -219,16 +220,16 @@ export async function getCoverPageBackground(url: string): Promise<string | null
     }
   })()
     .then((v) => {
-      pageBgCache.set(key, v);
-      pageBgInflight.delete(key);
+      pageBgCache.set(cacheKey, v);
+      pageBgInflight.delete(cacheKey);
       return v;
     })
     .catch(() => {
-      pageBgCache.set(key, null);
-      pageBgInflight.delete(key);
+      pageBgCache.set(cacheKey, null);
+      pageBgInflight.delete(cacheKey);
       return null;
     });
 
-  pageBgInflight.set(key, p);
+  pageBgInflight.set(cacheKey, p);
   return p;
 }
