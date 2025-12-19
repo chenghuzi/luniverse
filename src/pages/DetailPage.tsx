@@ -1,28 +1,156 @@
 import { Link, useParams } from "react-router-dom";
-import { useDeckStore } from "@/features/deck/model/deckStore";
+import { useEffect, useMemo, useState } from "react";
+import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
+
+function formatDuration(totalSeconds?: number) {
+  if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds)) return "-";
+  const s = Math.max(0, Math.floor(totalSeconds));
+  const hh = Math.floor(s / 3600);
+  const mm = Math.floor((s % 3600) / 60);
+  const ss = s % 60;
+  if (hh > 0) return `${hh}:${mm.toString().padStart(2, "0")}:${ss.toString().padStart(2, "0")}`;
+  return `${mm.toString().padStart(2, "0")}:${ss.toString().padStart(2, "0")}`;
+}
+
+function formatDate(iso?: string) {
+  if (!iso) return "-";
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return "-";
+  return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "2-digit" });
+}
+
+function formatSnippet(snippet?: { startMs: number; durationMs: number }) {
+  if (!snippet) return "-";
+  const startSeconds = Math.max(0, Math.floor(snippet.startMs / 1000));
+  const durationSeconds = Math.max(0, Math.floor(snippet.durationMs / 1000));
+  return `${formatDuration(startSeconds)} + ${formatDuration(durationSeconds)}`;
+}
 
 export function DetailPage() {
-  const { cardInstanceId } = useParams<{ cardInstanceId: string }>();
-  const card = useDeckStore((s) => s.cards.find((c) => c.instanceId === cardInstanceId));
+  const { cardId } = useParams<{ cardId: string }>();
+  const [state, setState] = useState<
+    | { status: "idle" | "loading"; card: null; error: null }
+    | { status: "ready"; card: CardDetail; error: null }
+    | { status: "error"; card: null; error: string }
+  >({ status: "idle", card: null, error: null });
+
+  useEffect(() => {
+    const id = String(cardId ?? "").trim();
+    if (id.length === 0) {
+      setState({ status: "error", card: null, error: "Missing cardId" });
+      return;
+    }
+
+    let canceled = false;
+    setState({ status: "loading", card: null, error: null });
+    void fetchCardDetailById(id)
+      .then((card) => {
+        if (canceled) return;
+        setState({ status: "ready", card, error: null });
+      })
+      .catch((e: unknown) => {
+        if (canceled) return;
+        setState({
+          status: "error",
+          card: null,
+          error: e instanceof Error ? e.message : "Failed to load detail",
+        });
+      });
+
+    return () => {
+      canceled = true;
+    };
+  }, [cardId]);
+
+  const card = state.status === "ready" ? state.card : null;
+  const coverUrl = card?.episode.imageUrl ?? card?.podcast.imageUrl ?? null;
+  const coverAlt = card?.episode.title ? `${card.podcast.title} - ${card.episode.title}` : `${card?.podcast.title ?? "Podcast"} cover`;
+  const episodes = useMemo(() => (Array.isArray(card?.episodes) ? card!.episodes : []), [card]);
 
   return (
     <div className="page">
       <header className="header">
         <div className="title">Detail</div>
-        <div className="subtitle">This is a placeholder for the next interaction stage.</div>
+        <div className="subtitle">Loaded by mock API from card id.</div>
       </header>
 
       <main className="content">
         <div className="detailCard">
           <div className="detailHeader">
-            <div className="detailTitle">{card?.highlight.title ?? "Unknown highlight"}</div>
-            <div className="detailMeta">instanceId: {cardInstanceId ?? "-"}</div>
+            <div className="detailTitle">{card?.podcast.title ?? "Podcast detail"}</div>
+            <div className="detailMeta">cardId: {cardId ?? "-"}</div>
           </div>
           <div className="detailBody">
-            <div className="detailText">
-              Replace this with your next-step UI. Keep motion-heavy interactions isolated from business
-              state.
-            </div>
+            {state.status === "loading" ? <div className="detailText">Loading...</div> : null}
+            {state.status === "error" ? <div className="detailError">{state.error}</div> : null}
+
+            {card ? (
+              <div className="detailLayout">
+                <div className="detailTop">
+                  {coverUrl ? (
+                    <div className="detailCoverFrame">
+                      <img className="detailCover" src={coverUrl} alt={coverAlt} loading="lazy" decoding="async" />
+                    </div>
+                  ) : null}
+
+                  <div className="detailInfo">
+                    <div className="detailInfoTitle">{card.podcast.title}</div>
+                    <div className="detailInfoMeta">
+                      {[
+                        card.podcast.authorName ? `by ${card.podcast.authorName}` : null,
+                        card.podcast.language ? card.podcast.language : null,
+                      ]
+                        .filter(Boolean)
+                        .join(" • ")}
+                    </div>
+                    {Array.isArray(card.podcast.categories) && card.podcast.categories.length > 0 ? (
+                      <div className="detailChips">
+                        {card.podcast.categories.slice(0, 8).map((c) => (
+                          <span key={c} className="chip">
+                            {c}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                </div>
+
+                <div className="detailSection">
+                  <div className="detailSectionTitle">Current</div>
+                  <div className="detailKV">
+                    <div className="detailK">Episode</div>
+                    <div className="detailV">{card.episode.title}</div>
+                    <div className="detailK">Published</div>
+                    <div className="detailV">{formatDate(card.episode.publishedAt)}</div>
+                    <div className="detailK">Duration</div>
+                    <div className="detailV">{formatDuration(card.episode.durationSeconds)}</div>
+                    <div className="detailK">Snippet</div>
+                    <div className="detailV">{formatSnippet(card.highlight.snippet)}</div>
+                  </div>
+
+                  {card.highlight.title ? <div className="detailParagraphTitle">{card.highlight.title}</div> : null}
+                  {card.highlight.text ? <div className="detailParagraph">{card.highlight.text}</div> : null}
+                </div>
+
+                <div className="detailSection">
+                  <div className="detailSectionTitle">Episodes</div>
+                  {episodes.length === 0 ? (
+                    <div className="detailText">No episodes</div>
+                  ) : (
+                    <ul className="episodeList">
+                      {episodes.map((e) => (
+                        <li key={e.id} className="episodeRow">
+                          <div className="episodeTitle">{e.title}</div>
+                          <div className="episodeMeta">
+                            {formatDate(e.publishedAt)} • {formatDuration(e.durationSeconds)}
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
+            ) : null}
           </div>
           <div className="detailFooter">
             <Link className="linkButton" to="/">

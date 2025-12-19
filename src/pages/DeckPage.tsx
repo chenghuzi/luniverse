@@ -32,7 +32,7 @@ export function DeckPage() {
   function handleDecision(decision: SwipeDecision) {
     commitDecision(decision);
     if (decision.type === "like") {
-      navigate(`/detail/${decision.cardInstanceId}`);
+      navigate(`/detail/${decision.cardId}`);
     }
   }
 
