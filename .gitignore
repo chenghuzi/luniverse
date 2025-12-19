@@ -9,3 +9,4 @@ yarn-error.log*
 pnpm-debug.log*
 .vscode
 src/podcast_list.json.bak
+card_data.json

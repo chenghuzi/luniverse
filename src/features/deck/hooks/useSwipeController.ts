@@ -1,4 +1,4 @@
-import { animate, useMotionValue, useTransform } from "framer-motion";
+import { animate, useMotionValue, type MotionValue, useTransform } from "framer-motion";
 import { useCallback, useMemo, useRef } from "react";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
@@ -12,6 +12,10 @@ type SwipeControllerParams = {
   onDecision: (decision: SwipeDecision) => void;
   config?: Partial<DeckMotionConfig>;
   onMotionActivityChange?: (active: boolean) => void;
+  motion?: {
+    x: MotionValue<number>;
+    y: MotionValue<number>;
+  };
 };
 
 export function useSwipeController(params: SwipeControllerParams) {
@@ -20,8 +24,10 @@ export function useSwipeController(params: SwipeControllerParams) {
     [params.config],
   );
 
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
+  const internalX = useMotionValue(0);
+  const internalY = useMotionValue(0);
+  const x = params.motion?.x ?? internalX;
+  const y = params.motion?.y ?? internalY;
   const rotate = useTransform(x, (latestX) => {
     const clamped = clamp(latestX / 240, -1, 1);
     return clamped * config.maxRotateDeg;

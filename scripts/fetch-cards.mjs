@@ -1,4 +1,5 @@
 import { readFile, rename, writeFile } from "node:fs/promises";
+import { spawn } from "node:child_process";
 import crypto from "node:crypto";
 import dns from "node:dns";
 import path from "node:path";
@@ -117,6 +118,39 @@ function sleepMs(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+async function fetchTextViaCurl(url, timeoutMs) {
+  const timeoutSeconds = Math.max(1, Math.ceil(timeoutMs / 1000));
+  const args = [
+    "-fsSL",
+    "--max-time",
+    String(timeoutSeconds),
+    "-H",
+    "user-agent: luniverse-fetch/1.0 (+https://local)",
+    "-H",
+    "accept: application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.1",
+    url,
+  ];
+
+  return await new Promise((resolve, reject) => {
+    const child = spawn("curl", args, { stdio: ["ignore", "pipe", "pipe"] });
+    let stdout = "";
+    let stderr = "";
+    child.stdout.setEncoding("utf8");
+    child.stderr.setEncoding("utf8");
+    child.stdout.on("data", (c) => {
+      stdout += c;
+    });
+    child.stderr.on("data", (c) => {
+      stderr += c;
+    });
+    child.on("error", reject);
+    child.on("close", (code) => {
+      if (code === 0) return resolve(stdout);
+      reject(new Error(`curl failed (exit ${code}): ${stderr.trim()}`));
+    });
+  });
+}
+
 function isRetryableError(err) {
   if (!err) return false;
   const msg = err instanceof Error ? err.message : String(err);
@@ -130,6 +164,8 @@ function isRetryableError(err) {
 
 async function fetchTextWithRetry(url, timeoutMs) {
   const maxAttempts = Number.parseInt(process.env.FETCH_RETRIES ?? "", 10) || 3;
+  const useCurlFallback = (process.env.FETCH_CURL_FALLBACK ?? "1") !== "0";
+
   let lastErr;
   for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
     try {
@@ -140,6 +176,15 @@ async function fetchTextWithRetry(url, timeoutMs) {
       await sleepMs(250 * attempt);
     }
   }
+
+  if (useCurlFallback && process.platform !== "win32") {
+    try {
+      return await fetchTextViaCurl(url, timeoutMs);
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+
   throw lastErr;
 }
 
