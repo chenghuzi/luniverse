@@ -158,3 +158,22 @@ Vite 只会暴露以 `VITE_` 开头的 env 给前端代码。
 
 - 改“注入哪些字段”：只动 `buildPromptContext.ts`（比如改 recent episodes 数量、加入 show notes、加入更多 episode 元信息等）。
 - 改“怎么写进 prompt”：只动 `injectors.ts`（比如从 JSON block 改成更强的指令模板、增加 RAG 注入器等）。
+
+## Backend (FastAPI demo)
+
+### 约定（必须遵守）
+
+- `backend/.venv` 是仓库内的 Python 虚拟环境；所有 Python 相关命令必须使用该 venv 的解释器与 pip。
+- 所有依赖必须先写入 `backend/requirements.txt`，再用 venv 的 pip 安装；不要先 `pip install` 再补写文件。
+- 所有 API 端点路径必须以 `/api/...` 开头（包含 HTTP 与 WebSocket）。
+- demo 阶段不做任何鉴权；上线前需要再补鉴权/限流/日志脱敏等。
+- 后端使用 `python-dotenv` 从 `backend/.env` 加载环境变量；请复制 `backend/.env.example` 为 `backend/.env` 并填写密钥（不要提交到仓库）。
+
+### 常用命令
+
+```bash
+backend/.venv/bin/python --version
+backend/.venv/bin/pip install -r backend/requirements.txt
+
+backend/.venv/bin/python -m uvicorn app.main:app --app-dir backend --reload --port 8787
+```
