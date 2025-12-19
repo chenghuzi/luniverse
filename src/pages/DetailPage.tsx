@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
+import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
 
 function formatDuration(totalSeconds?: number) {
   if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds)) return "-";
@@ -33,6 +34,10 @@ export function DetailPage() {
     | { status: "ready"; card: CardDetail; error: null }
     | { status: "error"; card: null; error: string }
   >({ status: "idle", card: null, error: null });
+  const [chat, setChat] = useState<{ open: boolean; context: VoiceChatContext | null }>({
+    open: false,
+    context: null,
+  });
 
   useEffect(() => {
     const id = String(cardId ?? "").trim();
@@ -64,8 +69,38 @@ export function DetailPage() {
 
   const card = state.status === "ready" ? state.card : null;
   const coverUrl = card?.episode.imageUrl ?? card?.podcast.imageUrl ?? null;
-  const coverAlt = card?.episode.title ? `${card.podcast.title} - ${card.episode.title}` : `${card?.podcast.title ?? "Podcast"} cover`;
+  const coverAlt = card?.episode.title
+    ? `${card.podcast.title} - ${card.episode.title}`
+    : `${card?.podcast.title ?? "Podcast"} cover`;
   const episodes = useMemo(() => (Array.isArray(card?.episodes) ? card!.episodes : []), [card]);
+
+  function openPodcastChat() {
+    if (!card) return;
+    setChat({
+      open: true,
+      context: {
+        kind: "podcast",
+        podcastId: card.podcast.id,
+        podcastTitle: card.podcast.title,
+        coverUrl,
+      },
+    });
+  }
+
+  function openEpisodeChat(episode: { id: string; title: string }) {
+    if (!card) return;
+    setChat({
+      open: true,
+      context: {
+        kind: "episode",
+        podcastId: card.podcast.id,
+        podcastTitle: card.podcast.title,
+        episodeId: episode.id,
+        episodeTitle: episode.title,
+        coverUrl,
+      },
+    });
+  }
 
   return (
     <div className="page">
@@ -112,6 +147,12 @@ export function DetailPage() {
                         ))}
                       </div>
                     ) : null}
+
+                    <div className="detailInfoActions">
+                      <button className="chatButton" type="button" onClick={openPodcastChat}>
+                        Chat
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -140,10 +181,15 @@ export function DetailPage() {
                     <ul className="episodeList">
                       {episodes.map((e) => (
                         <li key={e.id} className="episodeRow">
-                          <div className="episodeTitle">{e.title}</div>
-                          <div className="episodeMeta">
-                            {formatDate(e.publishedAt)} • {formatDuration(e.durationSeconds)}
+                          <div className="episodeRowMain">
+                            <div className="episodeTitle">{e.title}</div>
+                            <div className="episodeMeta">
+                              {formatDate(e.publishedAt)} • {formatDuration(e.durationSeconds)}
+                            </div>
                           </div>
+                          <button className="episodeChatButton" type="button" onClick={() => openEpisodeChat(e)}>
+                            Chat
+                          </button>
                         </li>
                       ))}
                     </ul>
@@ -159,6 +205,8 @@ export function DetailPage() {
           </div>
         </div>
       </main>
+
+      <VoiceChatOverlay open={chat.open} context={chat.context} onClose={() => setChat({ open: false, context: null })} />
     </div>
   );
 }
