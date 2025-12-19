@@ -1,350 +1,662 @@
 [
   {
-    "id": "c1",
-    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
-    "episode": {
-      "id": "e1",
-      "title": "Episode 1: Why We Build Tools",
-      "link": "https://example.com/podcasts/the-night-shift/episodes/e1",
-      "publishedAt": "2025-11-08T10:00:00Z",
-      "durationSeconds": 2875,
-      "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e1.jpg",
-      "audio": { "url": "https://example.com/audio/the-night-shift/e1.mp3", "mimeType": "audio/mpeg", "byteLength": 46278123 }
+    "id": "c_3067a773be17",
+    "podcast": {
+      "id": "p_89aed79472cc",
+      "title": "有一家公司",
+      "authorName": "Yuzhuuu",
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "language": "zh-cn",
+      "categories": [
+        "Business"
+      ]
     },
-    "highlight": { "id": "h1", "title": "Highlight 1: Fewer decisions, faster progress", "text": "Remove choices early to move faster later.", "snippet": { "startMs": 312000, "durationMs": 18000 } },
-    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
-  },
-  {
-    "id": "c2",
-    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
     "episode": {
-      "id": "e2",
-      "title": "Episode 2: Indexes, Reality, and Tradeoffs",
-      "link": "https://example.com/podcasts/database-unplugged/episodes/e2",
-      "publishedAt": "2025-10-21T02:00:00Z",
-      "durationSeconds": 3652,
-      "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e2.jpg",
-      "audio": { "url": "https://example.com/audio/database-unplugged/e2.mp3", "mimeType": "audio/mpeg", "byteLength": 58123456 }
+      "id": "e_f919ec78188f",
+      "title": "#13 下架、换帅、军令状：被狼性文化入侵的山姆",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6936ce0a4ef12f9fe9931779?utm_source=rss",
+      "publishedAt": "2025-12-08T23:00:00.000Z",
+      "durationSeconds": 3240,
+      "imageUrl": "https://image.xyzcdn.net/FrAZ7n8O7MEUTfMbBmoGTLHeUTQW.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/68523c2acbff0c6ba39ac006/6936ce0a4ef12f9fe9931779/media.xyzcdn.net/68523c2acbff0c6ba39ac006/lsiHpk9UmQeEYhQLJSFHAarUxQSh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 52408463
+      }
     },
-    "highlight": { "id": "h2", "title": "Highlight 2: Cost models are stories", "text": "Production reminds you which parts were fiction.", "snippet": { "startMs": 1042000, "durationMs": 22000 } },
-    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
+    "highlight": {
+      "id": "h_3067a773be17",
+      "title": "#13 下架、换帅、军令状：被狼性文化入侵的山姆",
+      "text": "最近山姆的管理层可能会比较闹心。辛辛苦苦向互联网靠拢的策略似乎被自己的会员给否定了。 可明明就在2-3年前，山姆还是互联网上的当红炸子鸡。多少人对他家的会员趋之若鹜，多少人又因为靠做他家的代购发家致富。现在小红书上还能检索出《XX年老会员告诉你山姆应该买什么》这类爆款帖子。怎么短短几年，风向就变了？ 今天就让我们带领大家一起，看看这个从90年代就进入中国大陆的美国高端商超经历了怎样的沉浮。作为零售巨头沃尔玛旗下的增长贡献者，山姆曾经作对了什么。以及现在又是为什么因为“沾染”上大厂的风潮而把自己推到风口浪尖的。 听完欢迎大家留言，说说你对山姆的内卷怎么看。是否依旧看好会员服务的模式。期待你们的答案。 · ▶️ 收听指南 01:24 …"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+    }
   },
   {
-    "id": "c3",
-    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
+    "id": "c_d9f9c10cfcb9",
+    "podcast": {
+      "id": "p_36650b18a6ac",
+      "title": "岩中花述",
+      "authorName": "GIADA | JustPod",
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "language": "zh-cn",
+      "categories": [
+        "Arts"
+      ]
+    },
     "episode": {
-      "id": "e3",
-      "title": "Episode 3: Designing for Drift",
-      "link": "https://example.com/podcasts/product-signals/episodes/e3",
-      "publishedAt": "2025-09-12T18:30:00Z",
-      "durationSeconds": 2411,
-      "imageUrl": "https://example.com/podcasts/product-signals/episodes/e3.jpg",
-      "audio": { "url": "https://example.com/audio/product-signals/e3.mp3", "mimeType": "audio/mpeg", "byteLength": 39876543 }
+      "id": "e_86f8862e1175",
+      "title": "S8E6 鲁豫对话鸟鸟｜没有魅力的人，也值得拥有世界",
+      "link": "https://www.xiaoyuzhoufm.com/episode/69416af04c65abaff352d88f?utm_source=rss",
+      "publishedAt": "2025-12-17T00:00:00.000Z",
+      "durationSeconds": 5205,
+      "imageUrl": "https://image.xyzcdn.net/Fhcbb6JgoBoehDn8iex2HR3cbx9g",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/625635587bfca4e73e990703/69416af04c65abaff352d88f/media.xyzcdn.net/625635587bfca4e73e990703/lpP0InS7yMy1g7yRAtWTQ_G_AoBC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 84178384
+      }
     },
-    "highlight": { "id": "h3", "title": "Highlight 3: You ship your defaults", "text": "Every unhandled edge becomes a product choice.", "snippet": { "startMs": 654000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
+    "highlight": {
+      "id": "h_d9f9c10cfcb9",
+      "title": "S8E6 鲁豫对话鸟鸟｜没有魅力的人，也值得拥有世界",
+      "text": "– 本节目由GIADA出品，JustPod制作发行 – 【本期嘉宾】 鸟鸟，脱口秀演员，编剧，北京大学中文系硕士毕业 陈鲁豫，媒体人、主持人 【本期节目介绍】 岩中花述第八季第六期节目，鲁豫兑现了与鸟鸟的「岩中花述」之约。 和一些独生的90后女孩一样，学龄前她被双职工父母锁在家里，看《动画城》、自己打发时间，那时就大概明白了「孤独」的滋味。她自觉朋友很少，上寄宿初中时因容貌遭他人排挤，也早早懂得了「高压教育」下小孩的残忍。 大学时选了并不喜欢的「地质学」专业，却只能从文学作品中寻找坐标，于是在毕业后迎来了人生中第一次大反叛，跨学科考入北大中文，然而未来仍是混沌的，更大的世界衬得她愈发渺小，她依旧难以向社会熔炉迈出一步。 在「怀疑」…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#64748b,#0f172a)"
+    }
   },
   {
-    "id": "c4",
-    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
+    "id": "c_a717d83d2177",
+    "podcast": {
+      "id": "p_f20aedd900f0",
+      "title": "自我进化论",
+      "authorName": "颜晓静Athena",
+      "imageUrl": "https://fdfs.xmcdn.com/group71/M08/DA/C9/wKgOz148EAGCo41LAAHQ0IvnR1Q102.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Education",
+        "Society & Culture",
+        "Religion & Spirituality"
+      ]
+    },
     "episode": {
-      "id": "e4",
-      "title": "Episode 4: Pointer Events in the Real World",
-      "link": "https://example.com/podcasts/frontend-mechanics/episodes/e4",
-      "publishedAt": "2025-08-03T09:15:00Z",
-      "durationSeconds": 3190,
-      "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e4.jpg",
-      "audio": { "url": "https://example.com/audio/frontend-mechanics/e4.mp3", "mimeType": "audio/mpeg", "byteLength": 51234567 }
+      "id": "e_b2b4036531ac",
+      "title": "自我进化论｜No.77：复利人生：如何做对选择，过上长期主义的生活？",
+      "link": "https://www.ximalaya.com/sound/941121432",
+      "publishedAt": "2025-12-16T12:00:00.000Z",
+      "durationSeconds": 3207,
+      "imageUrl": "https://fdfs.xmcdn.com/group71/M08/DA/C9/wKgOz148EAGCo41LAAHQ0IvnR1Q102.jpg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIDoNFsc4AYwz9ARIN5_5.m4a?channel=rss&album_id=21056542&track_id=941121432&uid=67345292&jt=https://aod.cos.tx.xmcdn.com/storages/15ad-audiofreehighqps/18/62/GKwRIDoNFsc4AYwz9ARIN5_5.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 104356647
+      }
     },
-    "highlight": { "id": "h4", "title": "Highlight 4: Make scroll intent explicit", "text": "Tune thresholds only after touch-action is correct.", "snippet": { "startMs": 184000, "durationMs": 20000 } },
-    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+    "highlight": {
+      "id": "h_a717d83d2177",
+      "title": "自我进化论｜No.77：复利人生：如何做对选择，过上长期主义的生活？",
+      "text": "今年是我做播客的第六年。过去短短三个月，《自我进化论》在小宇宙的订阅量从30万增长到100万，在其他平台的订阅量和播放量也都增长了好几倍。 这是我第一次如此直观地体验到 复利的威力 ——原来在时间的长河里，持续、耐心地投入，真的会在某一刻迎来指数级的增长。 而在我30岁这一年，当我回头看20到30岁这十年，会发现很多重要的选择，其实都是站在长期主义的角度做出的。当下看起来并不起眼，甚至不被理解，但在五年、十年的尺度里，却持续影响着我今天的生活状态。 这一期，我想和你聊聊「复利」与「长期主义」，如何真正落到人生选择中，以及如何在不焦虑、不追赶的前提下，过一种更笃定、更安心的生活。 本期节目由 有知有行 赞助播出。 高光时刻 &nbs…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+    }
   },
   {
-    "id": "c5",
-    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
+    "id": "c_295c4a1f13a0",
+    "podcast": {
+      "id": "p_395fa45b8cb8",
+      "title": "余华文学深度剖析",
+      "authorName": "文化很有限",
+      "imageUrl": "https://fdfs.xmcdn.com/storages/47d8-audiofreehighqps/B4/91/GAqh_aQMUs2KAAQxYQPmcbWT.jpeg",
+      "language": "zh-cn",
+      "categories": [
+        "Society & Culture",
+        "Education",
+        "Arts"
+      ]
+    },
     "episode": {
-      "id": "e5",
-      "title": "Episode 5: When to Prefetch",
-      "link": "https://example.com/podcasts/startup-minutes/episodes/e5",
-      "publishedAt": "2025-07-19T12:00:00Z",
-      "durationSeconds": 1520,
-      "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e5.jpg",
-      "audio": { "url": "https://example.com/audio/startup-minutes/e5.mp3", "mimeType": "audio/mpeg", "byteLength": 24321098 }
+      "id": "e_3bed772412c8",
+      "title": "余华《我们生活在巨大的差距里》所谓差距，或许从来不是鸿沟",
+      "link": "https://www.ximalaya.com/sound/895564917",
+      "publishedAt": "2025-08-04T23:00:00.000Z",
+      "durationSeconds": 643,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/47d8-audiofreehighqps/B4/91/GAqh_aQMUs2KAAQxYQPmcbWT.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIJEMZkb3AE-AvgPwyXci.m4a?channel=rss&album_id=98183186&track_id=895564917&uid=177618421&jt=https://aod.cos.tx.xmcdn.com/storages/f3b9-audiofreehighqps/7A/E7/GKwRIJEMZkb3AE-AvgPwyXci.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 113504334
+      }
     },
-    "highlight": { "id": "h5", "title": "Highlight 5: Prefetch is a UX promise", "text": "If you start it, you must finish it.", "snippet": { "startMs": 97000, "durationMs": 14000 } },
-    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+    "highlight": {
+      "id": "h_295c4a1f13a0",
+      "title": "余华《我们生活在巨大的差距里》所谓差距，或许从来不是鸿沟",
+      "text": "把精准的标尺，丈量着时代褶皱里那些沉默的距离。 他写北京 CBD 的玻璃幕墙映着流浪者的影子，写豪宅阳台上的玫瑰与贫民窟墙角的苔藓共享同一片阳光，写有人为一顿饭奔波整日，有人为一件摆件一掷千金。这些差距不是冰冷的数字，是菜市场里被捏皱的找零，是医院走廊里悬殊的床位，是春运火车上挤成纸片的梦想与头等舱里未动的餐食。 余华不做道德评判，只把差距掰开了给我们看：它藏在母亲给孩子买的盗版球鞋里，藏在打工者手机里与家乡的时差里，藏在拆迁公告与老屋炊烟的对峙里。而最锋利的是，他让我们看见 —— 差距里不仅有荒诞，更有每个普通人在裂缝中长出的韧性：卖菜阿婆把皱巴巴的钱叠成方块，快递员在暴雨里把包裹裹进雨衣，留守儿童对着视频里的父母说 “我很好”…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+    }
   },
   {
-    "id": "c6",
-    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
+    "id": "c_67649cb49e0f",
+    "podcast": {
+      "id": "p_b1a7d7047e48",
+      "title": "【心理有数】理解自己，也理解世界",
+      "authorName": "初渡漫谈",
+      "imageUrl": "https://fdfs.xmcdn.com/storages/a15b-audiofreehighqps/11/27/GKwRIasMrXkDAAkPOwQYFMg9.jpeg",
+      "language": "zh-cn",
+      "categories": [
+        "Health & Fitness",
+        "Education",
+        "Society & Culture"
+      ]
+    },
     "episode": {
-      "id": "e6",
-      "title": "Episode 6: Latency Budgets",
-      "link": "https://example.com/podcasts/signal-noise/episodes/e6",
-      "publishedAt": "2025-06-22T16:00:00Z",
-      "durationSeconds": 2710,
-      "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e6.jpg",
-      "audio": { "url": "https://example.com/audio/signal-noise/e6.mp3", "mimeType": "audio/mpeg", "byteLength": 43890123 }
+      "id": "e_d22f5253a76c",
+      "title": "当你有价值后，就不会活在别人的话语里｜自我价值·底气来源",
+      "link": "https://www.ximalaya.com/sound/941455335",
+      "publishedAt": "2025-12-19T11:48:00.000Z",
+      "durationSeconds": 179,
+      "imageUrl": "https://fdfs.xmcdn.com/storages/a15b-audiofreehighqps/11/27/GKwRIasMrXkDAAkPOwQYFMg9.jpeg",
+      "audio": {
+        "url": "https://jt.ximalaya.com//GKwRIJENGD9SABYlKgRI1y0B.m4a?channel=rss&album_id=104934320&track_id=941455335&uid=573809345&jt=https://aod.cos.tx.xmcdn.com/storages/8e2d-audiofreehighqps/FE/DE/GKwRIJENGD9SABYlKgRI1y0B.m4a",
+        "mimeType": "audio/x-m4a",
+        "byteLength": 7160690
+      }
     },
-    "highlight": { "id": "h6", "title": "Highlight 6: You are always paying a budget", "text": "If not in CPU, then in UX.", "snippet": { "startMs": 420000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+    "highlight": {
+      "id": "h_67649cb49e0f",
+      "title": "当你有价值后，就不会活在别人的话语里｜自我价值·底气来源",
+      "text": "别人说什么影响你的程度，取决于你手里到底握着什么。"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+    }
   },
   {
-    "id": "c7",
-    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
+    "id": "c_2a4fe8861408",
+    "podcast": {
+      "id": "p_2038e99e8a72",
+      "title": "All Ears English Podcast",
+      "authorName": "Lindsay McMahon and Michelle Kaplan",
+      "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "language": "en",
+      "categories": [
+        "Education",
+        "Business"
+      ]
+    },
     "episode": {
-      "id": "e7",
-      "title": "Episode 7: Retention Loops",
-      "link": "https://example.com/podcasts/creators-weekly/episodes/e7",
-      "publishedAt": "2025-05-18T08:00:00Z",
-      "durationSeconds": 1980,
-      "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e7.jpg",
-      "audio": { "url": "https://example.com/audio/creators-weekly/e7.mp3", "mimeType": "audio/mpeg", "byteLength": 31234567 }
+      "id": "e_260fec91fef8",
+      "title": "AEE: The Many Ways to Have a Moment in English",
+      "link": "https://www.allearsenglish.com/fluencyscore",
+      "publishedAt": "2025-12-19T06:00:00.000Z",
+      "durationSeconds": 1237,
+      "imageUrl": "https://megaphone.imgix.net/podcasts/88b85f10-a0c0-11ec-9e52-bfcf9441f742/image/All_Ears_English_New_Cover_with_Michelle_Under_500_KB.jpg?ixlib=rails-4.3.1&max-w=3000&max-h=3000&fit=crop&auto=format,compress",
+      "audio": {
+        "url": "https://traffic.megaphone.fm/ALLE1362990730.mp3?updated=1764592088",
+        "mimeType": "audio/mpeg",
+        "byteLength": 0
+      }
     },
-    "highlight": { "id": "h7", "title": "Highlight 7: Loops should close quickly", "text": "Fast feedback beats perfect feedback.", "snippet": { "startMs": 255000, "durationMs": 17000 } },
-    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+    "highlight": {
+      "id": "h_2a4fe8861408",
+      "title": "AEE: The Many Ways to Have a Moment in English",
+      "text": "Want to know your English level? Take our free English-level quiz here to find out what your current English level is. Do you love All Ears English? Try our other podcasts here: Business English Podcast: Improve your Business English with 3 episodes per week, featuring Lindsay, Michelle, and Aubrey IELTS Energy Podcas…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)"
+    }
   },
   {
-    "id": "c8",
-    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
+    "id": "c_4519164ba984",
+    "podcast": {
+      "id": "p_bad7fab5d82e",
+      "title": "忽左忽右",
+      "authorName": "JustPod",
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "language": "zh-cn",
+      "categories": [
+        "Society & Culture"
+      ]
+    },
     "episode": {
-      "id": "e8",
-      "title": "Episode 8: The Power of Silence",
-      "link": "https://example.com/podcasts/designing-sound/episodes/e8",
-      "publishedAt": "2025-04-11T14:30:00Z",
-      "durationSeconds": 2230,
-      "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e8.jpg",
-      "audio": { "url": "https://example.com/audio/designing-sound/e8.mp3", "mimeType": "audio/mpeg", "byteLength": 35678901 }
+      "id": "e_d783ae373db1",
+      "title": "特番｜从齐柏林飞艇到迈巴赫后座：漫谈德式豪车百年技术史",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6943c29f52d4707aaa3d873d?utm_source=rss",
+      "publishedAt": "2025-12-18T09:10:46.000Z",
+      "durationSeconds": 3855,
+      "imageUrl": "https://image.xyzcdn.net/FrYMqb37Wg_LA8aenDJJ8SFGsjea",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/5e4ee557418a84a0466737b7/6943c29f52d4707aaa3d873d/media.xyzcdn.net/5e4ee557418a84a0466737b7/lkNIlEmofgkZWjxBY8-c5PvhHYX2.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 62348968
+      }
     },
-    "highlight": { "id": "h8", "title": "Highlight 8: Silence is a design tool", "text": "Pauses can carry meaning.", "snippet": { "startMs": 610000, "durationMs": 12000 } },
-    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
-  },
-
-  {
-    "id": "c9",
-    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
-    "episode": { "id": "e9", "title": "Episode 9: Naming Things", "link": "https://example.com/podcasts/the-night-shift/episodes/e9", "publishedAt": "2025-11-01T10:00:00Z", "durationSeconds": 2600, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e9.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e9.mp3", "mimeType": "audio/mpeg", "byteLength": 44112233 } },
-    "highlight": { "id": "h9", "title": "Highlight 9: Names are part of the API", "text": "A good name reduces cognitive load.", "snippet": { "startMs": 180000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
+    "highlight": {
+      "id": "h_4519164ba984",
+      "title": "特番｜从齐柏林飞艇到迈巴赫后座：漫谈德式豪车百年技术史",
+      "text": "本期节目是由迈巴赫特别支持的《邂逅百年至臻传奇》企划系列节目之一。本次企划从文化、历史、工艺、设计美学等维度，讲述属于迈巴赫的百年传奇篇章，欢迎大家前往 《邂逅百年至臻传奇》 收听更多内容。 - 导语 - 回顾世界汽车工业的历史，德国汽车工业是绕不开的篇章。而这段历史，也是时代变迁与严谨工艺、深厚技术传承深刻互动的历史，汽车品牌迈巴赫的历史便是这种互动中最生动的体现。这段传奇，要从天才工程师威廉·迈巴赫说起，他与戴姆勒的世纪合作，如何点燃了汽车工业的星火？从齐柏林飞艇到定义豪华轿车的私密后座，迈巴赫凝练着怎样的技术传承与商业浮沉？在发动机与车身之外，迈巴赫还实现了哪些跨界技术输出？当二十世纪下半叶大规模生产兴起，顶尖技术又将如何传…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+    }
   },
   {
-    "id": "c10",
-    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
-    "episode": { "id": "e10", "title": "Episode 10: Consistency Isn’t Free", "link": "https://example.com/podcasts/database-unplugged/episodes/e10", "publishedAt": "2025-10-14T02:00:00Z", "durationSeconds": 3420, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e10.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e10.mp3", "mimeType": "audio/mpeg", "byteLength": 55220011 } },
-    "highlight": { "id": "h10", "title": "Highlight 10: Make constraints visible", "text": "Hidden invariants become outages.", "snippet": { "startMs": 900000, "durationMs": 19000 } },
-    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
+    "id": "c_0d0d73b06b0f",
+    "podcast": {
+      "id": "p_f977c0d048da",
+      "title": "思文，败类",
+      "authorName": "思文败类",
+      "imageUrl": "https://image.xyzcdn.net/FpFIvLhZ4FR018EATvPWPVpKjpZ7.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Leisure"
+      ]
+    },
+    "episode": {
+      "id": "e_f3db8a85636c",
+      "title": "95.想读本书怎么就这么难？聊聊文化体力",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693ab62137f52a644e69027c?utm_source=rss",
+      "publishedAt": "2025-12-11T22:00:00.000Z",
+      "durationSeconds": 2872,
+      "imageUrl": "https://image.xyzcdn.net/FpFIvLhZ4FR018EATvPWPVpKjpZ7.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/64228877179eec53318a7182/693ab62137f52a644e69027c/media.xyzcdn.net/64228877179eec53318a7182/lkw12KjNQs5rHfSKY4sU32TCSxL6.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 46497072
+      }
+    },
+    "highlight": {
+      "id": "h_0d0d73b06b0f",
+      "title": "95.想读本书怎么就这么难？聊聊文化体力",
+      "text": "经常有朋友私信问，为什么我就是读不下去书？实际上，我们近期也有同样的疑问。读书原本是件让人愉快的事，但为什么越来越无法静下来翻开一本大书呢？ 出于这种疑问，我们聊了一期关于文化体力的内容。没有解决方案，只有一些个人经验，和碎碎的所思所想。但读不下去书，其实并不是一件那么紧急要解决的事，我们只需要量力而行。 收听愉快。 ✍️ Show Notes： 02:23 &nbsp;看完了一段文字，但我不知道我在看什么 05:35 &nbsp;与钩子作对，就是跟人性作对 08:35 &nbsp;当看书变得不再流行 11:55 &nbsp;我哪有力气读那么重的书 15:55 &nbsp;太好了！不是疲惫，是发烧 18:06 &nbsp;上班比想…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+    }
   },
   {
-    "id": "c11",
-    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
-    "episode": { "id": "e11", "title": "Episode 11: Metrics With Teeth", "link": "https://example.com/podcasts/product-signals/episodes/e11", "publishedAt": "2025-09-05T18:30:00Z", "durationSeconds": 2350, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e11.jpg", "audio": { "url": "https://example.com/audio/product-signals/e11.mp3", "mimeType": "audio/mpeg", "byteLength": 40119988 } },
-    "highlight": { "id": "h11", "title": "Highlight 11: Measure what you can act on", "text": "A metric without a lever is trivia.", "snippet": { "startMs": 510000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
+    "id": "c_0c6c7fd9fb6e",
+    "podcast": {
+      "id": "p_db0242c89c90",
+      "title": "世界这七天",
+      "authorName": "Talk2Fay",
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "News"
+      ]
+    },
+    "episode": {
+      "id": "e_5d1f411c4acc",
+      "title": "ep.11 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！李开复：中美大模型竞争如同苹果与安卓之争",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6941b5514c65abaff35ac854?utm_source=rss",
+      "publishedAt": "2025-12-16T19:45:28.000Z",
+      "durationSeconds": 1146,
+      "imageUrl": "https://image.xyzcdn.net/FtKhR8iCNU7dgqKGHsQGd8DxFEHu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f6a2563fd23887ec1234b7/6941b5514c65abaff35ac854/media.xyzcdn.net/67f6a2563fd23887ec1234b7/lpZQwEJaj4b2PIIA5Ock-8kRKQL-.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 18507360
+      }
+    },
+    "highlight": {
+      "id": "h_0c6c7fd9fb6e",
+      "title": "ep.11 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！李开复：中美大模型竞争如同苹果与安卓之争",
+      "text": "（上图：内蒙古乌兰察布一座在建的数据中心） (上图：位于乌兰察布的华为数据中心) 00:00 特朗普允许英伟达向中国出口H200芯片 01:21 内蒙古才是中国AI赛道的另一张王牌：全球最大电网！ 12:45 李开复：中国开源AI具有独特优势，中美大模型竞争如同苹果与安卓之争 16:59 全球股市涨跌互现，本周将迎来超级央行周 ps. 各位听友，主播本周仍然感冒未愈，声音状况不佳，尽请包涵🫶 pps. 本节目已建立听友群，加入方法在节目公告中 ❤️"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+    }
   },
   {
-    "id": "c12",
-    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
-    "episode": { "id": "e12", "title": "Episode 12: Gestures and Inertia", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e12", "publishedAt": "2025-07-27T09:15:00Z", "durationSeconds": 3010, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e12.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e12.mp3", "mimeType": "audio/mpeg", "byteLength": 49990111 } },
-    "highlight": { "id": "h12", "title": "Highlight 12: Velocity is a signal", "text": "Use it, but cap it.", "snippet": { "startMs": 120000, "durationMs": 14000 } },
-    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+    "id": "c_6d4ad9c25990",
+    "podcast": {
+      "id": "p_09327139708f",
+      "title": "可能性褶皱 Possibility",
+      "authorName": "可能性褶皱Possibility",
+      "imageUrl": "https://image.xyzcdn.net/FowdeRC8c8093bpLB0U0y7hmOnNa.png",
+      "language": "zh-cn",
+      "categories": [
+        "Religion & Spirituality"
+      ]
+    },
+    "episode": {
+      "id": "e_70c8cdd9b51d",
+      "title": "10. 如何积极夺回线下生活？",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6938ef6a498c58d63aa508e2?utm_source=rss",
+      "publishedAt": "2025-12-10T04:49:57.000Z",
+      "durationSeconds": 2954,
+      "imageUrl": "https://image.xyzcdn.net/FowdeRC8c8093bpLB0U0y7hmOnNa.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/6807993539793c80b08070f0/6938ef6a498c58d63aa508e2/media.xyzcdn.net/6807993539793c80b08070f0/lpCcEgiiq1AAeLcyQWcin74YZHOC.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 47775155
+      }
+    },
+    "highlight": {
+      "id": "h_6d4ad9c25990",
+      "title": "10. 如何积极夺回线下生活？",
+      "text": "欢迎大家收听我们的全新系列——灵感快充。 感谢「妙界」品牌对本期节目的大力支持。点击下方专属链接领取优惠购买： mo.m.tmall.com 在新系列里，作为两个“点子王”，我们将分享一些轻松的生活小灵感、小工具，希望在繁忙的生活间隙，为你注入一些灵感碎片以及对于美好生活的向往和期待。非常欢迎大家在评论区或听友群分享你想听的主题。 本期节目，我们想讨论除了被手机吸走所有碎片时间，生活还有什么选择？我们分享了在屏幕之外收获快乐与能量的亲身实践。从外出探索到居家创造，希望能为你提供一份实用的“现实生活灵感指南”。让我们一起来愉快地减少屏幕使用时间吧！ 04:54 外出类一：爱上接触自然，探索户外的魅力 9:13 小提醒：维生素D与心情…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+    }
   },
   {
-    "id": "c13",
-    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
-    "episode": { "id": "e13", "title": "Episode 13: Simple Beats Clever", "link": "https://example.com/podcasts/startup-minutes/episodes/e13", "publishedAt": "2025-07-12T12:00:00Z", "durationSeconds": 1410, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e13.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e13.mp3", "mimeType": "audio/mpeg", "byteLength": 22110011 } },
-    "highlight": { "id": "h13", "title": "Highlight 13: Ship the boring version", "text": "Then add delight.", "snippet": { "startMs": 65000, "durationMs": 12000 } },
-    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+    "id": "c_4e918d839e93",
+    "podcast": {
+      "id": "p_a908488040a0",
+      "title": "多多指教",
+      "authorName": "杨大壹",
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Leisure"
+      ]
+    },
+    "episode": {
+      "id": "e_741d3e706f6b",
+      "title": "老马：《电影巨辩》是怎样做成的",
+      "link": "https://www.xiaoyuzhoufm.com/episode/68e64bc28e321a0d6f525b75?utm_source=rss",
+      "publishedAt": "2025-10-08T23:00:00.000Z",
+      "durationSeconds": 11584,
+      "imageUrl": "https://image.xyzcdn.net/FndrAIBUXOcaKCIfHvFwsGjTCfcY.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/603ca3853443e659b4ad0486/68e64bc28e321a0d6f525b75/media.xyzcdn.net/603ca3853443e659b4ad0486/lgrt4dijgKwz0wSsL-dqBRHxt1tx.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 187532039
+      }
+    },
+    "highlight": {
+      "id": "h_4e918d839e93",
+      "title": "老马：《电影巨辩》是怎样做成的",
+      "text": "嘉宾：老马，播客《电影巨辩》主播 本期节目录制于2025年9月18日。 - 关于个人 1. 最近一次被电影感动是什么时候，看了什么？ 2. 什么时候开始接触电影的？关于电影最初的记忆画面是什么样？ 3. 电影的录像带、vcd、dvd、下载、流媒体时代，你有什么特别的记忆？技术变化给你带来了什么样的新体验？ 4. 你是怎么挑选电影的？ 5. 你会从哪几个方面评价一部电影？如何认定一部电影是杰作？ 6. 现在什么情况下你会去电影院看电影？ - 关于播客 7. 为什么会想到做《电影巨辩》？ 8. 和阿吴的合作模式是怎样的？如何制作一期《电影巨辩》？ 9. 为什么节目要那么长？你们追求的是什么？ 10. 相比文字、论坛，播客这个媒介有什么…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)"
+    }
   },
   {
-    "id": "c14",
-    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
-    "episode": { "id": "e14", "title": "Episode 14: Backpressure Everywhere", "link": "https://example.com/podcasts/signal-noise/episodes/e14", "publishedAt": "2025-06-15T16:00:00Z", "durationSeconds": 2800, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e14.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e14.mp3", "mimeType": "audio/mpeg", "byteLength": 45229900 } },
-    "highlight": { "id": "h14", "title": "Highlight 14: Queues are not a strategy", "text": "They are a symptom.", "snippet": { "startMs": 330000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+    "id": "c_f5b1ba21704c",
+    "podcast": {
+      "id": "p_57ddaca85dfd",
+      "title": "立场不明",
+      "authorName": "尹萌美",
+      "imageUrl": "https://image.xyzcdn.net/FujvMlFxuOpJPiLGyeg9oGamdChu.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Society & Culture"
+      ]
+    },
+    "episode": {
+      "id": "e_1d0d6d032efb",
+      "title": "Vol.90 穿衣自由？每件衣服都是你主动或被动参与的权力游戏。",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693585913fec3166cfbd7489?utm_source=rss",
+      "publishedAt": "2025-12-07T23:30:00.000Z",
+      "durationSeconds": 5810,
+      "imageUrl": "https://image.xyzcdn.net/FujvMlFxuOpJPiLGyeg9oGamdChu.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/64e9f2b6202ab0f74fe991bb/693585913fec3166cfbd7489/media.xyzcdn.net/64e9f2b6202ab0f74fe991bb/lmVWvU9rYICkc06dT9T-rr9_Pr8W.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 94051018
+      }
+    },
+    "highlight": {
+      "id": "h_f5b1ba21704c",
+      "title": "Vol.90 穿衣自由？每件衣服都是你主动或被动参与的权力游戏。",
+      "text": "从法式女孩的“毫不费力”到网红经济的“精心设计”，从户外机能风到老钱审美，我们穿在身上的从来不止是布料，更是阶层、性别与时代的缩影。你是否也曾在“精致感”与“舒适区”之间反复横跳？是否疑惑过为什么女性服饰的口袋总比男性的少？为什么女性政客的西装比政策更容易上头条？ 本期节目，我们想借由这本《穿衣自由？》和你一起聊聊时尚如何成为隐形的社会脚本 —— 它既是盔甲，也是牢笼；既是自我表达，也是他人期待。你会听到关于巴黎综合症的尴尬真相，也会发现户外马甲如何悄悄爬上金融大佬的肩膀；既有“炫耀性消费”背后的身份焦虑，也会了解“身体即时尚”时代的新规训…… 时尚从不肤浅，它是一场无声的对话。如果你也曾对“穿衣自由”抱有疑问，或单纯想听听时尚背…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+    }
   },
   {
-    "id": "c15",
-    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
-    "episode": { "id": "e15", "title": "Episode 15: Content Pipelines", "link": "https://example.com/podcasts/creators-weekly/episodes/e15", "publishedAt": "2025-05-11T08:00:00Z", "durationSeconds": 2100, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e15.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e15.mp3", "mimeType": "audio/mpeg", "byteLength": 33221100 } },
-    "highlight": { "id": "h15", "title": "Highlight 15: Consistency beats intensity", "text": "Small outputs compound.", "snippet": { "startMs": 400000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+    "id": "c_b4625681c80e",
+    "podcast": {
+      "id": "p_8f44e90487a0",
+      "title": "取景框",
+      "authorName": "七堇年official",
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Society & Culture"
+      ]
+    },
+    "episode": {
+      "id": "e_6343076cf6a4",
+      "title": "EP01：七堇年心理学专题—偶然性的艺术",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6900dd2f558113deb7e5b7b3?utm_source=rss",
+      "publishedAt": "2025-10-28T23:00:00.000Z",
+      "durationSeconds": 2957,
+      "imageUrl": "https://image.xyzcdn.net/FiwOz_WkeP7sVj27_oBztUozJiB5.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/686239dcb3f4482c80c6da0c/6900dd2f558113deb7e5b7b3/media.xyzcdn.net/686239dcb3f4482c80c6da0c/lpN_3nUB72q3yII1jui3dqf-zvbh.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 71499659
+      }
+    },
+    "highlight": {
+      "id": "h_b4625681c80e",
+      "title": "EP01：七堇年心理学专题—偶然性的艺术",
+      "text": "你现在正在收听的是取景框心理学专题系列的第一期节目，它源自英文播客「Hidden Brain」。 这是我非常想要推荐分享的宝藏播客 ，它是一档由美国知名记者、作家Shankar Vedantam主持的心理学与社会科学类播客。它的核心目标是探索“人类行为背后的隐秘驱动力”，即那些我们常常没有意识到、却深刻影响着思维、决策和人际关系的心理机制，我称它为「隐藏的大脑」。 目前他们已有五百多期节目，我将从中精选出最有价值的几期翻译分享给大家。也希望大家能订阅他们的官方播客了解原文：podcast、小宇宙搜索「 Hidden brain 」 【节目介绍】 本期节目搬运自《隐藏大脑》T he Art of Unknown 这一期。 你是不是也…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#10b981,#84cc16)"
+    }
   },
   {
-    "id": "c16",
-    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
-    "episode": { "id": "e16", "title": "Episode 16: Texture and Timbre", "link": "https://example.com/podcasts/designing-sound/episodes/e16", "publishedAt": "2025-04-04T14:30:00Z", "durationSeconds": 2055, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e16.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e16.mp3", "mimeType": "audio/mpeg", "byteLength": 34001234 } },
-    "highlight": { "id": "h16", "title": "Highlight 16: Texture is emotion", "text": "Sound carries mood.", "snippet": { "startMs": 720000, "durationMs": 13000 } },
-    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
-  },
-
-  {
-    "id": "c17",
-    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
-    "episode": { "id": "e17", "title": "Episode 17: Debugging as a Skill", "link": "https://example.com/podcasts/the-night-shift/episodes/e17", "publishedAt": "2025-10-25T10:00:00Z", "durationSeconds": 2788, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e17.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e17.mp3", "mimeType": "audio/mpeg", "byteLength": 45110022 } },
-    "highlight": { "id": "h17", "title": "Highlight 17: Reproduce, reduce, resolve", "text": "Make bugs small before you make them gone.", "snippet": { "startMs": 240000, "durationMs": 17000 } },
-    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
-  },
-  {
-    "id": "c18",
-    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
-    "episode": { "id": "e18", "title": "Episode 18: Transactions in Practice", "link": "https://example.com/podcasts/database-unplugged/episodes/e18", "publishedAt": "2025-10-07T02:00:00Z", "durationSeconds": 3720, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e18.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e18.mp3", "mimeType": "audio/mpeg", "byteLength": 59001234 } },
-    "highlight": { "id": "h18", "title": "Highlight 18: Isolation is a dial", "text": "Know what you are paying for.", "snippet": { "startMs": 1100000, "durationMs": 20000 } },
-    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
-  },
-  {
-    "id": "c19",
-    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
-    "episode": { "id": "e19", "title": "Episode 19: Shipping With Confidence", "link": "https://example.com/podcasts/product-signals/episodes/e19", "publishedAt": "2025-08-29T18:30:00Z", "durationSeconds": 2280, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e19.jpg", "audio": { "url": "https://example.com/audio/product-signals/e19.mp3", "mimeType": "audio/mpeg", "byteLength": 38990011 } },
-    "highlight": { "id": "h19", "title": "Highlight 19: Confidence comes from constraints", "text": "Decide what you will not do.", "snippet": { "startMs": 360000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
-  },
-  {
-    "id": "c20",
-    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
-    "episode": { "id": "e20", "title": "Episode 20: Touch vs Mouse", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e20", "publishedAt": "2025-07-20T09:15:00Z", "durationSeconds": 2950, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e20.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e20.mp3", "mimeType": "audio/mpeg", "byteLength": 48001234 } },
-    "highlight": { "id": "h20", "title": "Highlight 20: One input model", "text": "Pointer Events keep your code honest.", "snippet": { "startMs": 150000, "durationMs": 17000 } },
-    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+    "id": "c_c43e3452a94e",
+    "podcast": {
+      "id": "p_69312d67b2b4",
+      "title": "东京无聊俱乐部",
+      "authorName": "二浩",
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/40102028/40102028-1740202418178-21f1a1adc84d7.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Comedy"
+      ]
+    },
+    "episode": {
+      "id": "e_7b4a5841e421",
+      "title": "045 濑户内海艺术节跳岛归来，五天四岛：丰岛骑车、小豆岛自驾、犬岛小而美、直岛要排队",
+      "link": "https://podcasters.spotify.com/pod/show/takeshi9755/episodes/045-e3c9rcp",
+      "publishedAt": "2025-12-13T04:08:17.000Z",
+      "durationSeconds": 7625,
+      "imageUrl": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/40102028/40102028-1740202418178-21f1a1adc84d7.jpg",
+      "audio": {
+        "url": "https://anchor.fm/s/ef9f6d30/podcast/play/112569177/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-13%2Fd20ebda9-c931-d154-254e-3eb6b9771758.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 183700694
+      }
+    },
+    "highlight": {
+      "id": "h_c43e3452a94e",
+      "title": "045 濑户内海艺术节跳岛归来，五天四岛：丰岛骑车、小豆岛自驾、犬岛小而美、直岛要排队",
+      "text": "欢迎大家收听东京无聊俱乐部，我们是一档在日本东京的闲聊访谈类节目。 ✳️ 您可以添加「TokyoBBClub」的微信加入听友群！ 本期是二浩和朋友小顾的濑户内海艺术节跳岛流水账，两个几乎没做攻略的人靠每晚的&quot;作战会议&quot;决定第二天去哪；骑车环丰岛、租车逛小豆岛、被犬岛的小而美治愈，也体验了直岛的人流和拥挤。 ℹ️ 一些节目中提到的信息 在高松入住的酒店：WeBase 高松 （地址：香川県高松市瓦町１丁目２−３） 香川县厅舍 （地址：香川県高松市番町四丁目1番10号） 高松的共享电助力自行车：Hello Cycling (网址：www.hellocycling.jp) 高松居酒屋：酒場にぼし （地址：香川県高松市内…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+    }
   },
   {
-    "id": "c21",
-    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
-    "episode": { "id": "e21", "title": "Episode 21: Your First 100 Users", "link": "https://example.com/podcasts/startup-minutes/episodes/e21", "publishedAt": "2025-07-05T12:00:00Z", "durationSeconds": 1490, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e21.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e21.mp3", "mimeType": "audio/mpeg", "byteLength": 23112233 } },
-    "highlight": { "id": "h21", "title": "Highlight 21: Talk to users daily", "text": "The market answers in full sentences.", "snippet": { "startMs": 88000, "durationMs": 13000 } },
-    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
+    "id": "c_9ae6f0a37ae9",
+    "podcast": {
+      "id": "p_95c76fc85c70",
+      "title": "听起来不错！",
+      "authorName": "迪卡普里鑫",
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Arts",
+        "Society & Culture",
+        "Music"
+      ]
+    },
+    "episode": {
+      "id": "e_aa5e2b440b60",
+      "title": "010 | 被回声塑造的人类",
+      "link": "https://www.xiaoyuzhoufm.com/episode/692f03094ef12f9fe98ee2fa?utm_source=rss",
+      "publishedAt": "2025-12-02T15:33:16.000Z",
+      "durationSeconds": 3462,
+      "imageUrl": "https://image.xyzcdn.net/FqyLIIQxHv0GTeaMdLaWAbAJbN-m.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/678a8c969b619eecc7bf6c1f/692f03094ef12f9fe98ee2fa/media.xyzcdn.net/nncF6N0Fi-Cs19BXNt1zGfUKgP4L.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 55399234
+      }
+    },
+    "highlight": {
+      "id": "h_9ae6f0a37ae9",
+      "title": "010 | 被回声塑造的人类",
+      "text": "两万年前，旧石器时代的人在洞穴最黑的深处画下成群的牛、马和鹿。长期以来，学者们将它们解释为宗教崇拜或史前美术的视觉产物。然而，声学考古学揭示了一个被忽略的维度：这些壁画并非孤立的视觉图像，因为最重要、最密集的壁画，几乎都落在回声最强、共鸣最大的地方。 所以声音到底是怎样参与塑造了几万年前的洞穴壁画？那些在黑暗里画画的人，到底是在“听”什么？ 从拉斯科洞穴，圣索菲亚大教堂 11s 的混响，再到巨石阵、哥特大教堂、市政厅、图书馆和现代录音棚，人类也巧妙的利用这些建筑来制造和驯服古老的回声，而我们的听觉和大脑也都在其中被深刻的改变。回音塑造了我们的世界。 说明：为了方便理解，本期节目提到的「回声」包含「混响+回声」2层含义。 时间线 0…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#eab308,#f59e0b)"
+    }
   },
   {
-    "id": "c22",
-    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
-    "episode": { "id": "e22", "title": "Episode 22: Error Budgets", "link": "https://example.com/podcasts/signal-noise/episodes/e22", "publishedAt": "2025-06-08T16:00:00Z", "durationSeconds": 2660, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e22.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e22.mp3", "mimeType": "audio/mpeg", "byteLength": 43000999 } },
-    "highlight": { "id": "h22", "title": "Highlight 22: Reliability is product", "text": "Users notice the absence of pain.", "snippet": { "startMs": 510000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
+    "id": "c_42f628402fe2",
+    "podcast": {
+      "id": "p_4d7b1cfdc23a",
+      "title": "101 Weekly",
+      "authorName": "Valley101,Inc",
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "language": "zh-cn",
+      "categories": [
+        "Technology",
+        "Business",
+        "News"
+      ]
+    },
+    "episode": {
+      "id": "e_42df034d6776",
+      "title": "杠杆、垄断和泡沫：解析硅谷万亿资本闭环｜20251014",
+      "link": "https://101weekly.fireside.fm/22",
+      "publishedAt": "2025-10-14T08:00:00.000Z",
+      "durationSeconds": 953,
+      "imageUrl": "https://media24.fireside.fm/file/fireside-images-2024/podcasts/images/a/a381c757-79d5-4dc9-9aca-8676b4bb59bb/cover.jpg?v=1",
+      "audio": {
+        "url": "https://aphid.fireside.fm/d/1437767933/a381c757-79d5-4dc9-9aca-8676b4bb59bb/bbb62726-38c0-42c7-be9f-93b336ef8189.mp3",
+        "mimeType": "audio/mpeg",
+        "byteLength": 15375018
+      }
+    },
+    "highlight": {
+      "id": "h_42f628402fe2",
+      "title": "杠杆、垄断和泡沫：解析硅谷万亿资本闭环｜20251014",
+      "text": "在硅谷，一场规模空前的资本循环正在悄然成形，先是英伟达投资OpenAI，OpenAI购买甲骨文的算力，而后甲骨文又向英伟达购买芯片。紧接着，OpenAI还与英伟达的竞争对手AMD签署协议，通过购买AMD芯片获得了其10%的股份，除此之外，这场循环交易还涉及了众多其他科技公司，就在我们视频发布前一天，OpenAI又宣布和博通签订类似协议。有批评者指出，这一切更像是建立在未来收入幻想之上的资本表演，而非真实需求。这期视频我们将梳理硅谷AI资本之间错综复杂的关系，并试图解析，这场环环相扣的资本游戏，会是泡沫吗的开端吗？ 【主播】 Yiwen，硅谷101研究员 【嘉宾】 刘沁东（Bruce Liu），美国Esoterica Capital…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#a855f7,#ec4899)"
+    }
   },
   {
-    "id": "c23",
-    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
-    "episode": { "id": "e23", "title": "Episode 23: Community Flywheels", "link": "https://example.com/podcasts/creators-weekly/episodes/e23", "publishedAt": "2025-05-04T08:00:00Z", "durationSeconds": 2050, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e23.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e23.mp3", "mimeType": "audio/mpeg", "byteLength": 32119988 } },
-    "highlight": { "id": "h23", "title": "Highlight 23: Community is a product surface", "text": "Design it like one.", "snippet": { "startMs": 290000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
+    "id": "c_7e71982dc5ae",
+    "podcast": {
+      "id": "p_2b08edfe6167",
+      "title": "实验之外",
+      "authorName": "Moonpie_TZF2",
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "language": "zh-cn",
+      "categories": [
+        "Education",
+        "Leisure",
+        "Science",
+        "Society & Culture"
+      ]
+    },
+    "episode": {
+      "id": "e_5f7ea6afb9f6",
+      "title": "EP33 - 放弃学术界到工业界：我的澳洲职场初体验",
+      "link": "https://www.xiaoyuzhoufm.com/episode/693cdde62a383da167d6fe9d?utm_source=rss",
+      "publishedAt": "2025-12-14T23:30:00.000Z",
+      "durationSeconds": 2419,
+      "imageUrl": "https://image.xyzcdn.net/FkVHGjzRidBkPgmzUuAq6O0hfi1c.png",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/67f9b1800fda196570975551/693cdde62a383da167d6fe9d/media.xyzcdn.net/67f9b1800fda196570975551/lgXijI_2mE6sIKrupm8vq3xuj6Q9.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 39129173
+      }
+    },
+    "highlight": {
+      "id": "h_7e71982dc5ae",
+      "title": "EP33 - 放弃学术界到工业界：我的澳洲职场初体验",
+      "text": "🔔 温馨提示：这一期tina录音设备发生了故障， 建议大家外放～ 🎙“这期我们聊聊 从学术界跳到工业界 的真实感受：在澳洲找工作到底难在哪？学术的“难题”到了职场会变成什么？” 👩‍🦰【本期主播】 Tina 转转 👀 “学位是门票，但不是方向盘：真正决定你走到哪的，是你对自己想要什么越来越清楚” 生活愉快！(●'◡'●) 📜Show Notes： 00:55 留学生在澳洲找工作，真的难！ 03:27 国内 vs 澳洲：哪些专业更“好上岸”？ 05:50 读博之后去工业界，会更轻松吗？ 06:40 澳洲 STEM 职场初体验 10:00 学术的难题 vs 职场的难题：解题方式完全不同 13:00 职场沟通会不会更消耗？ …"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#f97316,#ef4444)"
+    }
   },
   {
-    "id": "c24",
-    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
-    "episode": { "id": "e24", "title": "Episode 24: Rhythm in UI", "link": "https://example.com/podcasts/designing-sound/episodes/e24", "publishedAt": "2025-03-28T14:30:00Z", "durationSeconds": 2190, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e24.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e24.mp3", "mimeType": "audio/mpeg", "byteLength": 35220011 } },
-    "highlight": { "id": "h24", "title": "Highlight 24: Rhythm is predictability", "text": "Predictability builds trust.", "snippet": { "startMs": 540000, "durationMs": 14000 } },
-    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
-  },
-
-  {
-    "id": "c25",
-    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
-    "episode": { "id": "e25", "title": "Episode 25: Tools That Last", "link": "https://example.com/podcasts/the-night-shift/episodes/e25", "publishedAt": "2025-10-18T10:00:00Z", "durationSeconds": 2688, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e25.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e25.mp3", "mimeType": "audio/mpeg", "byteLength": 44550000 } },
-    "highlight": { "id": "h25", "title": "Highlight 25: Maintainability is a feature", "text": "Users feel it, even if they cannot name it.", "snippet": { "startMs": 600000, "durationMs": 18000 } },
-    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
-  },
-  {
-    "id": "c26",
-    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
-    "episode": { "id": "e26", "title": "Episode 26: The Shape of Data", "link": "https://example.com/podcasts/database-unplugged/episodes/e26", "publishedAt": "2025-09-30T02:00:00Z", "durationSeconds": 3540, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e26.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e26.mp3", "mimeType": "audio/mpeg", "byteLength": 57000001 } },
-    "highlight": { "id": "h26", "title": "Highlight 26: Schemas are communication", "text": "They align teams before they align tables.", "snippet": { "startMs": 780000, "durationMs": 19000 } },
-    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
-  },
-  {
-    "id": "c27",
-    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
-    "episode": { "id": "e27", "title": "Episode 27: Reduce Surprise", "link": "https://example.com/podcasts/product-signals/episodes/e27", "publishedAt": "2025-08-22T18:30:00Z", "durationSeconds": 2210, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e27.jpg", "audio": { "url": "https://example.com/audio/product-signals/e27.mp3", "mimeType": "audio/mpeg", "byteLength": 37770000 } },
-    "highlight": { "id": "h27", "title": "Highlight 27: Surprise is a tax", "text": "Pay it once, not daily.", "snippet": { "startMs": 430000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
-  },
-  {
-    "id": "c28",
-    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
-    "episode": { "id": "e28", "title": "Episode 28: Animation and State", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e28", "publishedAt": "2025-07-13T09:15:00Z", "durationSeconds": 3105, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e28.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e28.mp3", "mimeType": "audio/mpeg", "byteLength": 50123456 } },
-    "highlight": { "id": "h28", "title": "Highlight 28: Keep motion out of app state", "text": "MotionValues exist for a reason.", "snippet": { "startMs": 210000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
+    "id": "c_0cbefbb3dde0",
+    "podcast": {
+      "id": "p_e95b9f1f6860",
+      "title": "你才博士",
+      "authorName": "你才博士",
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Arts"
+      ]
+    },
+    "episode": {
+      "id": "e_45334c92a56f",
+      "title": "Vol.038当学者开始做饭，如何在朋友圈成为烹饪哲学家-张翀/李晖/东山/思煜",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6941469c5e8cb26fdf256375?utm_source=rss",
+      "publishedAt": "2025-12-16T16:00:00.000Z",
+      "durationSeconds": 3628,
+      "imageUrl": "https://image.xyzcdn.net/Fvh3Udl2zpFA5oMWX6512o6gTRSl.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/672b3c5adab8efe6d92babc5/6941469c5e8cb26fdf256375/media.xyzcdn.net/672b3c5adab8efe6d92babc5/lvvo9t4g7vYTDvtFCmhi96eH7pGG.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 58675161
+      }
+    },
+    "highlight": {
+      "id": "h_0cbefbb3dde0",
+      "title": "Vol.038当学者开始做饭，如何在朋友圈成为烹饪哲学家-张翀/李晖/东山/思煜",
+      "text": "【万粉福利】非常感谢各位听友们的支持和喜欢，我们的播客订阅上万啦～本期小编们为各位听友们准备了一些从三星堆、敦煌、晋博等各地博物馆带回的文创小礼物。听众朋友们可以评论区留下 「你最喜欢做的一道菜和你是因为哪期节目关注我们的」 。我们会挑选一些小伙伴的评论送出小礼物～也期待听友们给我们一些希望我们聊的选题建议，我们也会在明年的节目筹备中参考。感谢大家的一路陪伴～ 【本期嘉宾】 张翀 @中央美术学院艺术学博士，中国社会科学院古代史研究所副研究员 李晖 @职业译者，北京大学英语系博士，任教于北京语言大学 【主理人】 思煜 @北京大学艺术学院硕士 东山 @芝加哥大学艺术史博士 【你将听到】 Part One 是谁规定搞学术不能当厨子的 0…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+    }
   },
   {
-    "id": "c29",
-    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
-    "episode": { "id": "e29", "title": "Episode 29: Pricing is Positioning", "link": "https://example.com/podcasts/startup-minutes/episodes/e29", "publishedAt": "2025-06-28T12:00:00Z", "durationSeconds": 1580, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e29.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e29.mp3", "mimeType": "audio/mpeg", "byteLength": 25000999 } },
-    "highlight": { "id": "h29", "title": "Highlight 29: Price sets expectations", "text": "You are selling a promise.", "snippet": { "startMs": 120000, "durationMs": 14000 } },
-    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
-  },
-  {
-    "id": "c30",
-    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
-    "episode": { "id": "e30", "title": "Episode 30: Cache Invalidation", "link": "https://example.com/podcasts/signal-noise/episodes/e30", "publishedAt": "2025-06-01T16:00:00Z", "durationSeconds": 2900, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e30.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e30.mp3", "mimeType": "audio/mpeg", "byteLength": 46880000 } },
-    "highlight": { "id": "h30", "title": "Highlight 30: Caches shift complexity", "text": "They do not remove it.", "snippet": { "startMs": 690000, "durationMs": 17000 } },
-    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
-  },
-  {
-    "id": "c31",
-    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
-    "episode": { "id": "e31", "title": "Episode 31: Collaboration Patterns", "link": "https://example.com/podcasts/creators-weekly/episodes/e31", "publishedAt": "2025-04-27T08:00:00Z", "durationSeconds": 2140, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e31.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e31.mp3", "mimeType": "audio/mpeg", "byteLength": 33990000 } },
-    "highlight": { "id": "h31", "title": "Highlight 31: Collaboration needs rules", "text": "Defaults prevent conflict.", "snippet": { "startMs": 345000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
-  },
-  {
-    "id": "c32",
-    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
-    "episode": { "id": "e32", "title": "Episode 32: Earworms and Hooks", "link": "https://example.com/podcasts/designing-sound/episodes/e32", "publishedAt": "2025-03-21T14:30:00Z", "durationSeconds": 2125, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e32.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e32.mp3", "mimeType": "audio/mpeg", "byteLength": 34990000 } },
-    "highlight": { "id": "h32", "title": "Highlight 32: Hooks are repetition", "text": "Give the brain a handle.", "snippet": { "startMs": 480000, "durationMs": 13000 } },
-    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
-  },
-
-  {
-    "id": "c33",
-    "podcast": { "id": "p1", "title": "The Night Shift", "authorName": "Luniverse Studio", "imageUrl": "https://example.com/podcasts/the-night-shift/cover.jpg", "language": "en", "categories": ["Technology", "Culture"] },
-    "episode": { "id": "e33", "title": "Episode 33: Interfaces for Humans", "link": "https://example.com/podcasts/the-night-shift/episodes/e33", "publishedAt": "2025-10-11T10:00:00Z", "durationSeconds": 2599, "imageUrl": "https://example.com/podcasts/the-night-shift/episodes/e33.jpg", "audio": { "url": "https://example.com/audio/the-night-shift/e33.mp3", "mimeType": "audio/mpeg", "byteLength": 43999000 } },
-    "highlight": { "id": "h33", "title": "Highlight 33: UX is an API", "text": "Consistency is discoverability.", "snippet": { "startMs": 520000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#0ea5e9,#6366f1)" }
-  },
-  {
-    "id": "c34",
-    "podcast": { "id": "p2", "title": "Database Unplugged", "authorName": "Hz & Friends", "imageUrl": "https://example.com/podcasts/database-unplugged/cover.jpg", "language": "zh", "categories": ["Software", "Databases"] },
-    "episode": { "id": "e34", "title": "Episode 34: Observability for Data", "link": "https://example.com/podcasts/database-unplugged/episodes/e34", "publishedAt": "2025-09-23T02:00:00Z", "durationSeconds": 3600, "imageUrl": "https://example.com/podcasts/database-unplugged/episodes/e34.jpg", "audio": { "url": "https://example.com/audio/database-unplugged/e34.mp3", "mimeType": "audio/mpeg", "byteLength": 57551234 } },
-    "highlight": { "id": "h34", "title": "Highlight 34: Logs are not enough", "text": "You need intent, not just events.", "snippet": { "startMs": 980000, "durationMs": 18000 } },
-    "ui": { "accent": "linear-gradient(135deg,#22c55e,#14b8a6)" }
-  },
-  {
-    "id": "c35",
-    "podcast": { "id": "p3", "title": "Product Signals", "authorName": "Signal Works", "imageUrl": "https://example.com/podcasts/product-signals/cover.jpg", "language": "en", "categories": ["Business", "Product"] },
-    "episode": { "id": "e35", "title": "Episode 35: Roadmaps and Reality", "link": "https://example.com/podcasts/product-signals/episodes/e35", "publishedAt": "2025-08-15T18:30:00Z", "durationSeconds": 2195, "imageUrl": "https://example.com/podcasts/product-signals/episodes/e35.jpg", "audio": { "url": "https://example.com/audio/product-signals/e35.mp3", "mimeType": "audio/mpeg", "byteLength": 37000123 } },
-    "highlight": { "id": "h35", "title": "Highlight 35: Roadmaps are negotiation tools", "text": "Treat them as such.", "snippet": { "startMs": 300000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#f97316,#ef4444)" }
-  },
-  {
-    "id": "c36",
-    "podcast": { "id": "p4", "title": "Frontend Mechanics", "authorName": "Motion Lab", "imageUrl": "https://example.com/podcasts/frontend-mechanics/cover.jpg", "language": "en", "categories": ["Software", "Web"] },
-    "episode": { "id": "e36", "title": "Episode 36: Accessibility in Motion", "link": "https://example.com/podcasts/frontend-mechanics/episodes/e36", "publishedAt": "2025-07-06T09:15:00Z", "durationSeconds": 3055, "imageUrl": "https://example.com/podcasts/frontend-mechanics/episodes/e36.jpg", "audio": { "url": "https://example.com/audio/frontend-mechanics/e36.mp3", "mimeType": "audio/mpeg", "byteLength": 49550111 } },
-    "highlight": { "id": "h36", "title": "Highlight 36: Motion needs an escape hatch", "text": "Respect reduced motion preferences.", "snippet": { "startMs": 420000, "durationMs": 17000 } },
-    "ui": { "accent": "linear-gradient(135deg,#a855f7,#ec4899)" }
-  },
-  {
-    "id": "c37",
-    "podcast": { "id": "p5", "title": "Startup Minutes", "authorName": "Minute Media", "imageUrl": "https://example.com/podcasts/startup-minutes/cover.jpg", "language": "en", "categories": ["Business", "Startups"] },
-    "episode": { "id": "e37", "title": "Episode 37: Product-Market Fit Signals", "link": "https://example.com/podcasts/startup-minutes/episodes/e37", "publishedAt": "2025-06-21T12:00:00Z", "durationSeconds": 1620, "imageUrl": "https://example.com/podcasts/startup-minutes/episodes/e37.jpg", "audio": { "url": "https://example.com/audio/startup-minutes/e37.mp3", "mimeType": "audio/mpeg", "byteLength": 25990000 } },
-    "highlight": { "id": "h37", "title": "Highlight 37: Fit looks like pull", "text": "Not just push.", "snippet": { "startMs": 140000, "durationMs": 14000 } },
-    "ui": { "accent": "linear-gradient(135deg,#eab308,#f59e0b)" }
-  },
-  {
-    "id": "c38",
-    "podcast": { "id": "p6", "title": "Signal & Noise", "authorName": "Audio Guild", "imageUrl": "https://example.com/podcasts/signal-noise/cover.jpg", "language": "en", "categories": ["Technology", "Engineering"] },
-    "episode": { "id": "e38", "title": "Episode 38: Limits and SLOs", "link": "https://example.com/podcasts/signal-noise/episodes/e38", "publishedAt": "2025-05-25T16:00:00Z", "durationSeconds": 2750, "imageUrl": "https://example.com/podcasts/signal-noise/episodes/e38.jpg", "audio": { "url": "https://example.com/audio/signal-noise/e38.mp3", "mimeType": "audio/mpeg", "byteLength": 44990000 } },
-    "highlight": { "id": "h38", "title": "Highlight 38: Limits are product boundaries", "text": "Make them explicit.", "snippet": { "startMs": 610000, "durationMs": 16000 } },
-    "ui": { "accent": "linear-gradient(135deg,#06b6d4,#3b82f6)" }
-  },
-  {
-    "id": "c39",
-    "podcast": { "id": "p7", "title": "Creators Weekly", "authorName": "Creators Network", "imageUrl": "https://example.com/podcasts/creators-weekly/cover.jpg", "language": "en", "categories": ["Business", "Creators"] },
-    "episode": { "id": "e39", "title": "Episode 39: Editing for Clarity", "link": "https://example.com/podcasts/creators-weekly/episodes/e39", "publishedAt": "2025-04-20T08:00:00Z", "durationSeconds": 2080, "imageUrl": "https://example.com/podcasts/creators-weekly/episodes/e39.jpg", "audio": { "url": "https://example.com/audio/creators-weekly/e39.mp3", "mimeType": "audio/mpeg", "byteLength": 32881234 } },
-    "highlight": { "id": "h39", "title": "Highlight 39: Clarity is kindness", "text": "Editing is empathy.", "snippet": { "startMs": 260000, "durationMs": 15000 } },
-    "ui": { "accent": "linear-gradient(135deg,#10b981,#84cc16)" }
-  },
-  {
-    "id": "c40",
-    "podcast": { "id": "p8", "title": "Designing Sound", "authorName": "Studio Echo", "imageUrl": "https://example.com/podcasts/designing-sound/cover.jpg", "language": "en", "categories": ["Design", "Audio"] },
-    "episode": { "id": "e40", "title": "Episode 40: Micro-Details", "link": "https://example.com/podcasts/designing-sound/episodes/e40", "publishedAt": "2025-03-14T14:30:00Z", "durationSeconds": 2255, "imageUrl": "https://example.com/podcasts/designing-sound/episodes/e40.jpg", "audio": { "url": "https://example.com/audio/designing-sound/e40.mp3", "mimeType": "audio/mpeg", "byteLength": 36220011 } },
-    "highlight": { "id": "h40", "title": "Highlight 40: Details create delight", "text": "Small choices add up.", "snippet": { "startMs": 810000, "durationMs": 14000 } },
-    "ui": { "accent": "linear-gradient(135deg,#64748b,#0f172a)" }
+    "id": "c_2a228717168e",
+    "podcast": {
+      "id": "p_337985638195",
+      "title": "爬梯登月",
+      "authorName": "ptdy",
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Science"
+      ]
+    },
+    "episode": {
+      "id": "e_530c6f900341",
+      "title": "神经网络的泛化之谜：一些线索和一点猜想",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6533ad13bfd0868f2b6ed639?utm_source=rss",
+      "publishedAt": "2023-10-21T10:50:59.000Z",
+      "durationSeconds": 3221,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6533ad13bfd0868f2b6ed639/media.xyzcdn.net/lnYYDaFdMqaVbW4bDGNMwSrbjGGl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 52144170
+      }
+    },
+    "highlight": {
+      "id": "h_2a228717168e",
+      "title": "神经网络的泛化之谜：一些线索和一点猜想",
+      "text": "好久没录，这次我们尝试讨论了一只深度学习房间里的大象：为什么海量参数的模型在测试集上的泛化性能依然很好，而且这种趋势并不会随着参数量增加而变化？ 下面是本期内容简介： 开场 什么是神经网络的泛化之谜？ 一些线索 三层网络的拟合能力 &amp; ReLU 网络与其的等价性 Lottery ticket hypothesis Double descent 双重下降 Linear Mode connectivity 胡乱猜想：解空间的密度决定了求解的容易程度 神经网络里的几种对称性：scaling, permutation和其他 结语 Kolmogorov Complexity, ensemble method, OpenAI首席科学家…"
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+    }
   }
 ]

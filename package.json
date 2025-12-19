@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "fetch": "node scripts/fetch-cards.mjs",
+    "transform": "node scripts/transform-cards.mjs",
     "deploy": "tsc -b && vite build && scp -r dist/* ubuntu@EnactFlow001:/home/ubuntu/Deployed/luniverse/dist"
   },
   "dependencies": {
