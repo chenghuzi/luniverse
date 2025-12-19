@@ -8,8 +8,8 @@ type CardProps = {
     x?: MotionValue<number>;
     y?: MotionValue<number>;
     rotate?: MotionValue<number>;
-    scale?: number;
-    translateY?: number;
+    scale?: MotionValue<number> | number;
+    translateY?: MotionValue<number> | number;
   };
   className?: string;
   pointerBind?: {

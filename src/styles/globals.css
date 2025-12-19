@@ -81,6 +81,7 @@ a {
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   transform-origin: center;
+  will-change: transform;
 }
 
 .cardTopLayer {
@@ -126,6 +127,14 @@ a {
   border-radius: 14px;
   backdrop-filter: blur(10px);
   width: fit-content;
+}
+
+.deckStageReducedFx .cardHint {
+  backdrop-filter: none;
+}
+
+.deckStageReducedFx .card {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .deckControls {

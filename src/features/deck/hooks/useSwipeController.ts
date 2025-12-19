@@ -11,6 +11,7 @@ type SwipeControllerParams = {
   card: Card;
   onDecision: (decision: SwipeDecision) => void;
   config?: Partial<DeckMotionConfig>;
+  onMotionActivityChange?: (active: boolean) => void;
 };
 
 export function useSwipeController(params: SwipeControllerParams) {
@@ -27,19 +28,31 @@ export function useSwipeController(params: SwipeControllerParams) {
   });
 
   const isSettlingRef = useRef(false);
+  const isActiveRef = useRef(false);
+  const setActive = useCallback(
+    (active: boolean) => {
+      if (isActiveRef.current === active) return;
+      isActiveRef.current = active;
+      params.onMotionActivityChange?.(active);
+    },
+    [params],
+  );
 
   const settleToCenter = useCallback(() => {
     isSettlingRef.current = true;
+    setActive(true);
     const ax = animate(x, 0, { type: "spring", stiffness: 340, damping: 28 });
     const ay = animate(y, 0, { type: "spring", stiffness: 340, damping: 28 });
     Promise.all([ax, ay]).finally(() => {
       isSettlingRef.current = false;
+      setActive(false);
     });
-  }, [x, y]);
+  }, [setActive, x, y]);
 
   const settleOffscreen = useCallback(
     (type: SwipeType, velocityX: number, velocityY: number) => {
       isSettlingRef.current = true;
+      setActive(true);
       const direction = type === "like" ? "right" : "left";
       const targetX = getOffscreenTargetX(direction);
       const targetY = y.get() + velocityY * 160;
@@ -69,11 +82,12 @@ export function useSwipeController(params: SwipeControllerParams) {
         })
         .finally(() => {
           isSettlingRef.current = false;
+          setActive(false);
           x.set(0);
           y.set(0);
         });
     },
-    [params, x, y],
+    [params, setActive, x, y],
   );
 
   const decideFromGesture = useCallback(
@@ -87,6 +101,10 @@ export function useSwipeController(params: SwipeControllerParams) {
   );
 
   const pointerBind = usePointerDrag({
+    onStart: () => {
+      if (isSettlingRef.current) return;
+      setActive(true);
+    },
     onMove: (dx, dy) => {
       if (isSettlingRef.current) return;
       x.set(dx);

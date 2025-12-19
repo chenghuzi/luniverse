@@ -30,6 +30,9 @@ export function DeckPage() {
       .catch(() => {
         if (cancelled) return;
         replaceCards([], 0);
+      })
+      .finally(() => {
+        setIsFetchingNext(false);
       });
     return () => {
       cancelled = true;
@@ -52,7 +55,6 @@ export function DeckPage() {
         if (cancelled) return;
       })
       .finally(() => {
-        if (cancelled) return;
         setIsFetchingNext(false);
       });
 

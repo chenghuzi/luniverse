@@ -1,10 +1,12 @@
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useTransform, type MotionValue } from "framer-motion";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
 import { getStackTransform } from "@/features/deck/motion/transforms";
 import type { Card as CardType, SwipeDecision } from "@/features/deck/model/types";
 import { useSwipeController } from "@/features/deck/hooks/useSwipeController";
 import { Card } from "@/features/deck/components/Card";
+import { clamp } from "@/shared/lib/clamp";
 
 type CardStackProps = {
   cards: CardType[];
@@ -21,6 +23,19 @@ export function CardStack(props: CardStackProps) {
 
   const top = props.cards[0];
   const hasTop = Boolean(top);
+  const mountedRef = useRef(true);
+  const [reduceEffects, setReduceEffects] = useState(false);
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  const onMotionActivityChange = useCallback((active: boolean) => {
+    if (!mountedRef.current) return;
+    setReduceEffects(active);
+  }, []);
+
   const controller = useSwipeController({
     card: top ?? {
       id: "empty",
@@ -32,9 +47,18 @@ export function CardStack(props: CardStackProps) {
     },
     onDecision: props.onDecision,
     config,
+    onMotionActivityChange,
   });
 
   const stack = useMemo(() => props.cards.slice(0, config.stackSize), [props.cards, config.stackSize]);
+
+  const absX = useTransform(controller.motion.x, (v) => Math.abs(v));
+  const stackProgress = useTransform(absX, (v) => {
+    const p = clamp(v / config.swipeDistanceThresholdPx, 0, 1);
+    return 1 - Math.pow(1 - p, 3);
+  });
+  const secondScale = useTransform(stackProgress, (p) => (1 - config.cardScaleStep) + p * config.cardScaleStep);
+  const secondTranslateY = useTransform(stackProgress, (p) => config.cardSpacingPx * (1 - p));
 
   useEffect(() => {
     function isTypingTarget(target: EventTarget | null) {
@@ -68,14 +92,20 @@ export function CardStack(props: CardStackProps) {
 
   return (
     <div className="deckRoot">
-      <div className="deckStage">
+      <div className={reduceEffects ? "deckStage deckStageReducedFx" : "deckStage"}>
         {stack.length === 0 ? (
           <div className="emptyState">{props.isLoading ? "Loading..." : "No cards"}</div>
         ) : (
           stack
             .map((card, i) => {
               const indexInStack = i;
-              const { translateY, scale } = getStackTransform(indexInStack, config);
+              const base = getStackTransform(indexInStack, config);
+              let translateY: number | MotionValue<number> = base.translateY;
+              let scale: number | MotionValue<number> = base.scale;
+              if (indexInStack === 1) {
+                translateY = secondTranslateY;
+                scale = secondScale;
+              }
               const isTop = i === 0;
 
               return (

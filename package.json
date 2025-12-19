@@ -7,9 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
+    "fetch": "node scripts/fetch-cards.mjs",
     "deploy": "tsc -b && vite build && scp -r dist/* ubuntu@EnactFlow001:/home/ubuntu/Deployed/luniverse/dist"
   },
   "dependencies": {
+    "@rowanmanning/feed-parser": "^2.1.0",
     "framer-motion": "^11.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
