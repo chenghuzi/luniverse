@@ -61,6 +61,7 @@ export function useSwipeController(params: SwipeControllerParams) {
         .then(() => {
           params.onDecision({
             cardId: params.card.id,
+            cardInstanceId: params.card.instanceId,
             type,
             velocityX,
             velocityY,

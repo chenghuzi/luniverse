@@ -1,8 +1,10 @@
 import { create } from "zustand";
-import type { Card, CardId, SwipeDecision } from "@/features/deck/model/types";
+import type { Card, SwipeDecision } from "@/features/deck/model/types";
 
 type DeckActions = {
-  setCards: (cards: Card[]) => void;
+  replaceCards: (cards: Card[], nextCursor: number) => void;
+  appendCards: (cards: Card[], nextCursor: number) => void;
+  setIsFetchingNext: (value: boolean) => void;
   commitDecision: (decision: SwipeDecision) => void;
   reset: () => void;
 };
@@ -10,41 +12,47 @@ type DeckActions = {
 type DeckState = {
   cards: Card[];
   currentIndex: number;
-  liked: CardId[];
-  noped: CardId[];
+  nextCursor: number;
+  isFetchingNext: boolean;
+  decisions: SwipeDecision[];
   actions: DeckActions;
 };
 
 export const useDeckStore = create<DeckState>((set) => ({
   cards: [],
   currentIndex: 0,
-  liked: [],
-  noped: [],
+  nextCursor: 0,
+  isFetchingNext: false,
+  decisions: [],
   actions: {
-    setCards: (cards) =>
+    replaceCards: (cards, nextCursor) =>
       set({
         cards,
         currentIndex: 0,
-        liked: [],
-        noped: [],
+        nextCursor,
+        isFetchingNext: false,
+        decisions: [],
       }),
+    appendCards: (cards, nextCursor) =>
+      set((state) => ({
+        cards: [...state.cards, ...cards],
+        nextCursor,
+      })),
+    setIsFetchingNext: (value) => set({ isFetchingNext: value }),
     commitDecision: (decision) =>
       set((state) => {
-        const liked = decision.type === "like" ? [...state.liked, decision.cardId] : state.liked;
-        const noped = decision.type === "nope" ? [...state.noped, decision.cardId] : state.noped;
         return {
-          liked,
-          noped,
+          decisions: [...state.decisions, decision],
           currentIndex: Math.min(state.currentIndex + 1, state.cards.length),
         };
       }),
     reset: () =>
       set((state) => ({
         currentIndex: 0,
-        liked: [],
-        noped: [],
+        decisions: [],
         cards: state.cards,
+        nextCursor: state.nextCursor,
+        isFetchingNext: false,
       })),
   },
 }));
-

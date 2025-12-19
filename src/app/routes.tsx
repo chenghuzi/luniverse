@@ -4,6 +4,5 @@ import { DetailPage } from "@/pages/DetailPage";
 
 export const router = createBrowserRouter([
   { path: "/", element: <DeckPage /> },
-  { path: "/detail/:cardId", element: <DetailPage /> },
+  { path: "/detail/:cardInstanceId", element: <DetailPage /> },
 ]);
-

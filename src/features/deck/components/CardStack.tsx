@@ -21,7 +21,7 @@ export function CardStack(props: CardStackProps) {
   const top = props.cards[0];
   const hasTop = Boolean(top);
   const controller = useSwipeController({
-    card: top ?? { id: "empty", title: "No cards", accent: "#111827" },
+    card: top ?? { id: "empty", instanceId: "empty-0", title: "No cards", accent: "#111827" },
     onDecision: props.onDecision,
     config,
   });
@@ -42,7 +42,7 @@ export function CardStack(props: CardStackProps) {
 
             return (
               <Card
-                key={card.id}
+                key={card.instanceId}
                 card={card}
                 className={isTop ? "card cardTopLayer" : "card"}
                 style={{

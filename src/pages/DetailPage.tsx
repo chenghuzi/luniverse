@@ -2,8 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import { useDeckStore } from "@/features/deck/model/deckStore";
 
 export function DetailPage() {
-  const { cardId } = useParams<{ cardId: string }>();
-  const card = useDeckStore((s) => s.cards.find((c) => c.id === cardId));
+  const { cardInstanceId } = useParams<{ cardInstanceId: string }>();
+  const card = useDeckStore((s) => s.cards.find((c) => c.instanceId === cardInstanceId));
 
   return (
     <div className="page">
@@ -16,7 +16,7 @@ export function DetailPage() {
         <div className="detailCard">
           <div className="detailHeader">
             <div className="detailTitle">{card?.title ?? "Unknown card"}</div>
-            <div className="detailMeta">id: {cardId ?? "-"}</div>
+            <div className="detailMeta">instanceId: {cardInstanceId ?? "-"}</div>
           </div>
           <div className="detailBody">
             <div className="detailText">
@@ -34,4 +34,3 @@ export function DetailPage() {
     </div>
   );
 }
-

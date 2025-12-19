@@ -1,39 +1,72 @@
 import { useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
-import { fetchDeck } from "@/shared/api/deck";
+import { fetchDeckPage } from "@/shared/api/deck";
 import { CardStack } from "@/features/deck/components/CardStack";
 import { useDeckStore } from "@/features/deck/model/deckStore";
 import type { SwipeDecision } from "@/features/deck/model/types";
+
+const PAGE_SIZE = 8;
+const PREFETCH_THRESHOLD = 4;
 
 export function DeckPage() {
   const navigate = useNavigate();
   const cards = useDeckStore((s) => s.cards);
   const currentIndex = useDeckStore((s) => s.currentIndex);
-  const setCards = useDeckStore((s) => s.actions.setCards);
+  const nextCursor = useDeckStore((s) => s.nextCursor);
+  const isFetchingNext = useDeckStore((s) => s.isFetchingNext);
+  const replaceCards = useDeckStore((s) => s.actions.replaceCards);
+  const appendCards = useDeckStore((s) => s.actions.appendCards);
+  const setIsFetchingNext = useDeckStore((s) => s.actions.setIsFetchingNext);
   const commitDecision = useDeckStore((s) => s.actions.commitDecision);
 
   useEffect(() => {
     let cancelled = false;
-    fetchDeck()
-      .then((deck) => {
+    setIsFetchingNext(true);
+    fetchDeckPage({ cursor: 0, limit: PAGE_SIZE })
+      .then((page) => {
         if (cancelled) return;
-        setCards(deck);
+        replaceCards(page.cards, page.nextCursor);
       })
       .catch(() => {
         if (cancelled) return;
-        setCards([]);
+        replaceCards([], 0);
       });
     return () => {
       cancelled = true;
     };
-  }, [setCards]);
+  }, [replaceCards, setIsFetchingNext]);
+
+  useEffect(() => {
+    if (isFetchingNext) return;
+    const remaining = cards.length - currentIndex;
+    if (remaining > PREFETCH_THRESHOLD) return;
+
+    let cancelled = false;
+    setIsFetchingNext(true);
+    fetchDeckPage({ cursor: nextCursor, limit: PAGE_SIZE })
+      .then((page) => {
+        if (cancelled) return;
+        appendCards(page.cards, page.nextCursor);
+      })
+      .catch(() => {
+        if (cancelled) return;
+      })
+      .finally(() => {
+        if (cancelled) return;
+        setIsFetchingNext(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [appendCards, cards.length, currentIndex, isFetchingNext, nextCursor, setIsFetchingNext]);
 
   const remainingCards = useMemo(() => cards.slice(currentIndex), [cards, currentIndex]);
 
   function handleDecision(decision: SwipeDecision) {
     commitDecision(decision);
     if (decision.type === "like") {
-      navigate(`/detail/${decision.cardId}`);
+      navigate(`/detail/${decision.cardInstanceId}`);
     }
   }
 
@@ -52,4 +85,3 @@ export function DeckPage() {
     </div>
   );
 }
-
