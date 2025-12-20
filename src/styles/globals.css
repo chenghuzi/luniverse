@@ -118,6 +118,18 @@ a {
   z-index: 2;
 }
 
+.deckBrandIcon {
+  position: absolute;
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
+  left: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .content {
   flex: 1;
   display: grid;

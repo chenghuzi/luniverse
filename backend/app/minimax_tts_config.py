@@ -10,9 +10,11 @@ DEFAULT_MINIMAX_TTS_VOICE_ID = "clip_s8e6_1766199126"
 
 _VOICE_ID_BY_CARD_ID: dict[str, str] = {
     "c_3067a773be17": "clip_13_1766199126",
-    "c_a717d83d2177": "clip_no77_1766199126",
     "c_d9f9c10cfcb9": "clip_s8e6_1766199126",
+    "c_a717d83d2177": "clip_no77_1766199126",
+    "c_2a228717168e": "chenghuzi_voice_20251220_v4",
 }
+
 
 
 def select_minimax_voice_id(card_id: str | None) -> str:
