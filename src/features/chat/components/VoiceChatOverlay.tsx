@@ -12,6 +12,7 @@ import { createMinimaxTtsSession, type MinimaxTtsSession } from "@/features/tts/
 export type VoiceChatContext =
   | {
       kind: "podcast";
+      cardId: string;
       podcastId: string;
       podcastTitle: string;
       coverUrl?: string | null;
@@ -20,6 +21,7 @@ export type VoiceChatContext =
     }
   | {
       kind: "episode";
+      cardId: string;
       podcastId: string;
       podcastTitle: string;
       episodeId: string;
@@ -181,11 +183,11 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     if (!props.open) return;
     if (ttsConfig) return;
     const controller = new AbortController();
-    void fetchMinimaxTtsConfig(controller.signal)
+    void fetchMinimaxTtsConfig({ cardId: props.context?.cardId, signal: controller.signal })
       .then((cfg) => setTtsConfig(cfg))
       .catch(() => {});
     return () => controller.abort();
-  }, [props.open, ttsConfig]);
+  }, [props.context?.cardId, props.open, ttsConfig]);
 
   function clearReplyTimers() {
     for (const id of replyTimeoutsRef.current) window.clearTimeout(id);

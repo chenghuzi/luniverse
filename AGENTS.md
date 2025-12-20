@@ -213,6 +213,7 @@ backend/.venv/bin/python -m uvicorn app.main:app --app-dir backend --reload --po
 
 ### MiniMax TTS (front-end demo)
 
-- 后端提供 `GET /api/tts/minimax/config`，前端在加载 detail 后自动拉取该配置（voiceId/model/encoding/wsPath）。
+- 后端提供 `GET /api/tts/minimax/config?cardId=<cardId>`，前端在加载 detail 后按当前卡片 id 拉取该配置（voiceId/model/encoding/wsPath）。
 - 前端通过 WebSocket 连接配置里的 `wsPath`（由后端代理到 MiniMax，负责注入 `MINIMAX_API_KEY`）。
-- voiceId 在后端代码里写死（见 `backend/app/main.py`），前端不再使用任何 `VITE_MINIMAX_TTS_*` 配置。
+- voiceId 在后端按 cardId 选择（默认 fallback），映射见 `backend/app/minimax_tts_config.py`；未命中映射时统一使用默认 voice。
+- 前端不再使用任何 `VITE_MINIMAX_TTS_*` 配置。

@@ -116,6 +116,44 @@
     }
   },
   {
+    "id": "c_2a228717168e",
+    "podcast": {
+      "id": "p_337985638195",
+      "title": "爬梯登月",
+      "authorName": "ptdy",
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "language": "zh-cn",
+      "categories": [
+        "Science"
+      ]
+    },
+    "episode": {
+      "id": "e_530c6f900341",
+      "title": "神经网络的泛化之谜：一些线索和一点猜想",
+      "link": "https://www.xiaoyuzhoufm.com/episode/6533ad13bfd0868f2b6ed639?utm_source=rss",
+      "publishedAt": "2023-10-21T10:50:59.000Z",
+      "durationSeconds": 3221,
+      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
+      "audio": {
+        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6533ad13bfd0868f2b6ed639/media.xyzcdn.net/lnYYDaFdMqaVbW4bDGNMwSrbjGGl.m4a",
+        "mimeType": "audio/mp4",
+        "byteLength": 52144170
+      }
+    },
+    "highlight": {
+      "id": "h_2a228717168e",
+      "title": "神经网络的泛化之谜：一些线索和一点猜想",
+      "text": "好久没录，这次我们尝试讨论了一只深度学习房间里的大象：为什么海量参数的模型在测试集上的泛化性能依然很好，而且这种趋势并不会随着参数量增加而变化？ 下面是本期内容简介： 开场 什么是神经网络的泛化之谜？ 一些线索 三层网络的拟合能力 &amp; ReLU 网络与其的等价性 Lottery ticket hypothesis Double descent 双重下降 Linear Mode connectivity 胡乱猜想：解空间的密度决定了求解的容易程度 神经网络里的几种对称性：scaling, permutation和其他 结语 Kolmogorov Complexity, ensemble method, OpenAI首席科学家…",
+      "snippet": {
+        "startMs": 2405000,
+        "durationMs": 30000
+      }
+    },
+    "ui": {
+      "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
+    }
+  },
+  {
     "id": "c_295c4a1f13a0",
     "podcast": {
       "id": "p_395fa45b8cb8",
@@ -690,44 +728,6 @@
       "text": "【万粉福利】非常感谢各位听友们的支持和喜欢，我们的播客订阅上万啦～本期小编们为各位听友们准备了一些从三星堆、敦煌、晋博等各地博物馆带回的文创小礼物。听众朋友们可以评论区留下 「你最喜欢做的一道菜和你是因为哪期节目关注我们的」 。我们会挑选一些小伙伴的评论送出小礼物～也期待听友们给我们一些希望我们聊的选题建议，我们也会在明年的节目筹备中参考。感谢大家的一路陪伴～ 【本期嘉宾】 张翀 @中央美术学院艺术学博士，中国社会科学院古代史研究所副研究员 李晖 @职业译者，北京大学英语系博士，任教于北京语言大学 【主理人】 思煜 @北京大学艺术学院硕士 东山 @芝加哥大学艺术史博士 【你将听到】 Part One 是谁规定搞学术不能当厨子的 0…",
       "snippet": {
         "startMs": 1038000,
-        "durationMs": 30000
-      }
-    },
-    "ui": {
-      "accent": "linear-gradient(135deg,#22c55e,#14b8a6)"
-    }
-  },
-  {
-    "id": "c_2a228717168e",
-    "podcast": {
-      "id": "p_337985638195",
-      "title": "爬梯登月",
-      "authorName": "ptdy",
-      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
-      "language": "zh-cn",
-      "categories": [
-        "Science"
-      ]
-    },
-    "episode": {
-      "id": "e_530c6f900341",
-      "title": "神经网络的泛化之谜：一些线索和一点猜想",
-      "link": "https://www.xiaoyuzhoufm.com/episode/6533ad13bfd0868f2b6ed639?utm_source=rss",
-      "publishedAt": "2023-10-21T10:50:59.000Z",
-      "durationSeconds": 3221,
-      "imageUrl": "https://image.xyzcdn.net/FrwlLF8bJFBJbl98yWgXk8c37mNE.jpg",
-      "audio": {
-        "url": "https://dts-api.xiaoyuzhoufm.com/track/641627d72cf486b2476a66b3/6533ad13bfd0868f2b6ed639/media.xyzcdn.net/lnYYDaFdMqaVbW4bDGNMwSrbjGGl.m4a",
-        "mimeType": "audio/mp4",
-        "byteLength": 52144170
-      }
-    },
-    "highlight": {
-      "id": "h_2a228717168e",
-      "title": "神经网络的泛化之谜：一些线索和一点猜想",
-      "text": "好久没录，这次我们尝试讨论了一只深度学习房间里的大象：为什么海量参数的模型在测试集上的泛化性能依然很好，而且这种趋势并不会随着参数量增加而变化？ 下面是本期内容简介： 开场 什么是神经网络的泛化之谜？ 一些线索 三层网络的拟合能力 &amp; ReLU 网络与其的等价性 Lottery ticket hypothesis Double descent 双重下降 Linear Mode connectivity 胡乱猜想：解空间的密度决定了求解的容易程度 神经网络里的几种对称性：scaling, permutation和其他 结语 Kolmogorov Complexity, ensemble method, OpenAI首席科学家…",
-      "snippet": {
-        "startMs": 2405000,
         "durationMs": 30000
       }
     },

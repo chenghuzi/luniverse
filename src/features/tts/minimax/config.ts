@@ -12,6 +12,11 @@ type MinimaxTtsConfigResponse = {
   wsPath?: unknown;
 };
 
+export type FetchMinimaxTtsConfigArgs = {
+  cardId?: string;
+  signal?: AbortSignal;
+};
+
 function normalizeEncoding(raw: unknown): MinimaxTtsConfig["encoding"] {
   return String(raw ?? "")
     .trim()
@@ -25,8 +30,17 @@ function normalizeWsPath(raw: unknown): string {
   return v.startsWith("/") ? v : "/api/tts/minimax/ws";
 }
 
-export async function fetchMinimaxTtsConfig(signal?: AbortSignal): Promise<MinimaxTtsConfig> {
-  const res = await fetch("/api/tts/minimax/config", { method: "GET", signal });
+function isAbortSignal(value: unknown): value is AbortSignal {
+  if (!value) return false;
+  return typeof value === "object" && "aborted" in (value as Record<string, unknown>);
+}
+
+export async function fetchMinimaxTtsConfig(args?: AbortSignal | FetchMinimaxTtsConfigArgs): Promise<MinimaxTtsConfig> {
+  const cardId = isAbortSignal(args) ? undefined : String(args?.cardId ?? "").trim();
+  const signal = isAbortSignal(args) ? args : args?.signal;
+  const qs = cardId ? `?cardId=${encodeURIComponent(cardId)}` : "";
+
+  const res = await fetch(`/api/tts/minimax/config${qs}`, { method: "GET", signal });
   if (!res.ok) throw new Error(`Failed to fetch TTS config: ${res.status}`);
 
   const json = (await res.json()) as MinimaxTtsConfigResponse;

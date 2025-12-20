@@ -92,18 +92,18 @@ export function DetailPage() {
   }, [card]);
 
   useEffect(() => {
-    if (state.status !== "ready") {
+    if (!card) {
       setTtsConfig(null);
       return;
     }
 
     const controller = new AbortController();
-    void fetchMinimaxTtsConfig(controller.signal)
+    void fetchMinimaxTtsConfig({ cardId: card.id, signal: controller.signal })
       .then((cfg) => setTtsConfig(cfg))
       .catch(() => setTtsConfig(null));
 
     return () => controller.abort();
-  }, [state.status]);
+  }, [card?.id]);
 
   useEffect(() => {
     if (!chat.open || !chat.context) return;
@@ -121,6 +121,7 @@ export function DetailPage() {
       open: true,
       context: {
         kind: "podcast",
+        cardId: card.id,
         podcastId: card.podcast.id,
         podcastTitle: card.podcast.title,
         coverUrl,
@@ -138,6 +139,7 @@ export function DetailPage() {
       open: true,
       context: {
         kind: "episode",
+        cardId: card.id,
         podcastId: card.podcast.id,
         podcastTitle: card.podcast.title,
         episodeId: episode.id,

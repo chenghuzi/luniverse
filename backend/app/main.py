@@ -12,15 +12,12 @@ from starlette.websockets import WebSocketDisconnect, WebSocketState
 
 from .cards_data import CardsDataset, load_default_cards_dataset
 from .chat_seeds import build_chat_seeds_for_card
+from .minimax_tts_config import build_minimax_tts_config
 from .minimax_ws import connect_minimax_tts
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env", override=False)
 
 app = FastAPI(title="luniverse-backend", version="0.1.0")
-
-MINIMAX_TTS_VOICE_ID = "chenghuzi_voice_20251220_v4"
-MINIMAX_TTS_MODEL = "speech-2.6-hd"
-MINIMAX_TTS_ENCODING = "hex"
 
 _CARDS_DATASET: CardsDataset | None = None
 _INSTANCE_SEQ = 0
@@ -102,13 +99,12 @@ async def card_detail(card_id: str) -> dict[str, Any]:
 
 
 @app.get("/api/tts/minimax/config")
-async def minimax_tts_config() -> dict[str, Any]:
-    return {
-        "voiceId": MINIMAX_TTS_VOICE_ID,
-        "model": MINIMAX_TTS_MODEL,
-        "encoding": MINIMAX_TTS_ENCODING,
-        "wsPath": "/api/tts/minimax/ws",
-    }
+async def minimax_tts_config(
+    card_id: str | None = Query(None, alias="cardId", description="card id (deck card id)"),
+    cardid: str | None = Query(None, include_in_schema=False),
+) -> dict[str, Any]:
+    selected = (card_id or cardid or "").strip() or None
+    return build_minimax_tts_config(selected)
 
 
 async def _close_client_ws(ws: WebSocket) -> None:
