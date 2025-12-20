@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { CardStack } from "@/features/deck/components/CardStack";
+import { RecycleBinBar } from "@/features/deck/components/RecycleBinBar";
 import { useDeckStore } from "@/features/deck/model/deckStore";
 import type { SwipeDecision } from "@/features/deck/model/types";
 import { getCoverPageBackground } from "@/shared/lib/imageGradient";
@@ -78,6 +79,8 @@ export function DeckPage() {
       <main className="content">
         <CardStack cards={remainingCards} isLoading={isLoading} onDecision={handleDecision} />
       </main>
+
+      <RecycleBinBar />
     </div>
   );
 }

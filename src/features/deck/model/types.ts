@@ -57,3 +57,12 @@ export type SwipeDecision = {
   velocityX: number;
   velocityY: number;
 };
+
+export type RecycleBinItem = {
+  cardId: CardId;
+  cardInstanceId: string;
+  podcastTitle: string;
+  highlightTitle: string;
+  coverUrl: string | null;
+  accent: string;
+};

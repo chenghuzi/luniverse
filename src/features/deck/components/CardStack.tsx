@@ -105,7 +105,7 @@ export function CardStack(props: CardStackProps) {
     const side = x > 0 ? 1 : 0.28;
     return eased * side;
   });
-  const rightHintText = hasTop ? `和${top.podcast.title}聊聊吧` : "开始聊聊吧";
+  const rightHintText = hasTop ? `和「${top.podcast.title}」聊聊吧` : "开始聊聊吧";
 
   useEffect(() => {
     function isTypingTarget(target: EventTarget | null) {

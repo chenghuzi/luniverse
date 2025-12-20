@@ -141,6 +141,96 @@ a {
   width: min(420px, 92vw);
 }
 
+.recycleBinBar {
+  position: fixed;
+  left: 14px;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 14px);
+  z-index: 6;
+  pointer-events: auto;
+}
+
+.recycleBinList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  max-width: min(320px, calc(100vw - 28px));
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}
+
+.deckStageReducedFx .recycleBinList {
+  backdrop-filter: none;
+}
+
+.recycleBinItem {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+}
+
+.recycleBinThumb {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 12px;
+  background: rgba(148, 163, 184, 0.26);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(1) saturate(0.2);
+  opacity: 0.86;
+  transform: scale(1);
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+@media (hover: hover) {
+  .recycleBinItem:hover .recycleBinThumb {
+    transform: scale(1.06);
+    opacity: 0.94;
+  }
+}
+
+.recycleBinItem:active .recycleBinThumb {
+  transform: scale(0.98);
+}
+
+.recycleBinTooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.92);
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.25);
+  pointer-events: none;
+}
+
+.recycleBinTooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(15, 23, 42, 0.92);
+}
+
 .deckStage {
   position: relative;
   height: min(520px, 68vh);
