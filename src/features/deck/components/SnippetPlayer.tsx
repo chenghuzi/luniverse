@@ -235,14 +235,14 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
                 e.stopPropagation();
               }}
             >
-	              <div className="audioUnlockPanel">
-	                <div className="audioUnlockTitle">Unlock audio</div>
-	                <div className="audioUnlockSubtitle">A browser permission is required to autoplay audio.</div>
-	                {showUnlockError ? <div className="audioUnlockError">{unlockError}</div> : null}
-	                <button className="audioUnlockButton" type="button" onClick={unlockAndPlayFromGesture}>
-	                  {isUnlocking ? "Unlocking..." : "Unlock and play"}
-	                </button>
-	              </div>
+              <div className="audioUnlockPanel">
+                <div className="audioUnlockTitle">{"\u89e3\u9501\u5b8c\u6574\u4f53\u9a8c"}</div>
+                <div className="audioUnlockSubtitle">A browser permission is required to autoplay audio.</div>
+                {showUnlockError ? <div className="audioUnlockError">{unlockError}</div> : null}
+                <button className="audioUnlockButton" type="button" onClick={unlockAndPlayFromGesture} disabled={isUnlocking}>
+                  ok
+                </button>
+              </div>
             </div>,
             document.body,
           )

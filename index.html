@@ -39,6 +39,26 @@
         display: block;
         user-select: none;
         -webkit-user-drag: none;
+        will-change: transform, opacity;
+      }
+
+      @keyframes splashBreathe {
+        0% {
+          transform: scale(0.985);
+          opacity: 0.92;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(0.985);
+          opacity: 0.92;
+        }
+      }
+
+      html.routeRoot .splashIcon {
+        animation: splashBreathe 880ms ease-in-out both;
       }
 
       .splashSlogan {
@@ -58,6 +78,10 @@
       @media (prefers-reduced-motion: reduce) {
         .splash {
           transition: none;
+        }
+
+        html.routeRoot .splashIcon {
+          animation: none;
         }
       }
     </style>
