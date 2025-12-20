@@ -193,7 +193,6 @@ export function DetailPage() {
         <div className="detailCard">
           <div className="detailHeader">
             <div className="detailTitle">{card?.podcast.title ?? "Podcast detail"}</div>
-            <div className="detailMeta">cardId: {cardId ?? "-"}</div>
           </div>
           <div className="detailBody">
             {state.status === "loading" ? <div className="detailText">Loading...</div> : null}

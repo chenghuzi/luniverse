@@ -147,29 +147,33 @@ a {
 }
 
 .deckHints {
+  --deckHintEdgePadding: clamp(18px, 4vw, 52px);
   position: absolute;
   inset: 0;
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 14px;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  padding-left: calc(env(safe-area-inset-left, 0px) + var(--deckHintEdgePadding));
+  padding-right: calc(env(safe-area-inset-right, 0px) + var(--deckHintEdgePadding));
   pointer-events: none;
   user-select: none;
 }
 
 .deckHint {
-  max-width: 46%;
-  padding: 10px 12px;
+  max-width: min(320px, 44vw);
+  padding: 8px 10px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 850;
   letter-spacing: 0.2px;
   color: rgba(15, 23, 42, 0.92);
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.10);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.44);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -181,10 +185,12 @@ a {
 
 .deckHintLeft {
   transform-origin: left center;
+  text-align: left;
 }
 
 .deckHintRight {
   transform-origin: right center;
+  text-align: right;
 }
 
 .card {
