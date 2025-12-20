@@ -774,38 +774,20 @@ a {
 .voiceChatBottomControls {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   gap: 10px;
   align-items: center;
-}
-
-.voiceChatCodeButton {
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: rgba(255, 255, 255, 0.72);
-  color: rgba(15, 23, 42, 0.92);
-  border-radius: 14px;
-  padding: 12px 12px;
-  font-weight: 900;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.voiceChatCodeButton:hover {
-  border-color: rgba(15, 23, 42, 0.18);
 }
 
 .voiceChatWave {
   width: min(360px, 86%);
   height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  background: rgba(15, 23, 42, 0.04);
+  margin: 0 auto;
   display: grid;
   grid-auto-flow: column;
   gap: 6px;
   align-items: center;
   justify-content: center;
-  padding: 0 14px;
 }
 
 .voiceChatWaveBar {

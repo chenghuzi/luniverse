@@ -61,18 +61,6 @@ function pickOne<T>(items: readonly T[]) {
   return items[Math.floor(Math.random() * items.length)];
 }
 
-const USER_TEXTS = [
-  "Give me a quick summary of this episode.",
-  "What are the key takeaways?",
-  "Who is the guest and why should I care?",
-  "Find the most interesting moment.",
-  "What should I listen for in the first 5 minutes?",
-  "Can you explain this topic like I'm new to it?",
-  "What questions should I ask after listening?",
-  "Turn this into 3 actionable bullet points.",
-  "What did I miss if I skip this episode?",
-] as const;
-
 const ASSISTANT_TEXTS = [
   "Got it. Here are the highlights: 1) ... 2) ... 3) ...",
   "If you only remember one thing: focus on the main constraint and the trade-off.",
@@ -490,10 +478,6 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     sendUserText(`Voice message (${seconds.toFixed(1)}s)`);
   }
 
-  function codeToTalk() {
-    sendUserText(pickOne(USER_TEXTS));
-  }
-
   async function startHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
     stopEvent(e);
     if (isPressingRef.current) return;
@@ -593,14 +577,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     abortLlmStream();
     abortTtsStream();
     clearReplyTimers();
-    setMessages([
-      {
-        id: makeId(),
-        role: "assistant",
-        text: "Hi. Ask me anything about this podcast or episode.",
-        createdAt: Date.now(),
-      },
-    ]);
+    setMessages([]);
 
     const prevHtmlOverflow = document.documentElement.style.overflow;
     const prevBodyOverflow = document.body.style.overflow;
@@ -686,9 +663,10 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
         ref={closeRef}
         className="voiceChatCloseButton voiceChatTopCloseButton"
         type="button"
+        aria-label="Close"
         onClick={props.onClose}
       >
-        Close
+        ×
       </button>
 
       <div
@@ -731,9 +709,6 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
             onPointerCancel={cancelHoldToTalk}
           >
             {isPressing ? "Release to send" : "Hold to talk"}
-          </button>
-          <button className="voiceChatCodeButton" type="button" onClick={codeToTalk}>
-            Code to Talk
           </button>
         </div>
       </div>
