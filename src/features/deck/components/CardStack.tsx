@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { motion, useMotionValue, useTransform, type MotionValue } from "framer-motion";
+import { createPortal } from "react-dom";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
 import { getStackTransform } from "@/features/deck/motion/transforms";
@@ -38,6 +39,7 @@ export function CardStack(props: CardStackProps) {
   const mountedRef = useRef(true);
   const stageRef = useRef<HTMLDivElement | null>(null);
   const stageRectRef = useRef<StageRect | null>(null);
+  const [stageRect, setStageRect] = useState<StageRect | null>(null);
   const dragActiveRef = useRef(false);
   const [reduceEffects, setReduceEffects] = useState(false);
   const setDragActive = useRecycleBinUiStore((s) => s.actions.setDragActive);
@@ -118,7 +120,13 @@ export function CardStack(props: CardStackProps) {
     const stageEl = el;
 
     function updateRect() {
-      stageRectRef.current = toStageRect(stageEl.getBoundingClientRect());
+      const next = toStageRect(stageEl.getBoundingClientRect());
+      stageRectRef.current = next;
+      setStageRect((prev) => {
+        if (!prev) return next;
+        if (prev.left === next.left && prev.top === next.top && prev.width === next.width && prev.height === next.height) return prev;
+        return next;
+      });
     }
 
     updateRect();
@@ -166,6 +174,15 @@ export function CardStack(props: CardStackProps) {
   }, [controller.motion.x, controller.motion.y, setDragCenter, setDragSide]);
 
   const stack = useMemo(() => props.cards.slice(0, config.stackSize), [props.cards, config.stackSize]);
+  const dockPortalActive = Boolean(controller.settle && controller.settle.type === "nope" && controller.settle.docked);
+  const showDockPortal = Boolean(hasTop && stageRect && dockPortalActive);
+
+  useEffect(() => {
+    if (!showDockPortal) return;
+    if (typeof document === "undefined") return;
+    document.documentElement.classList.add("deckDocking");
+    return () => document.documentElement.classList.remove("deckDocking");
+  }, [showDockPortal]);
 
   const absX = useTransform(controller.motion.x, (v) => Math.abs(v));
   const stackProgress = useTransform(absX, (v) => {
@@ -254,6 +271,34 @@ export function CardStack(props: CardStackProps) {
 
   return (
     <div className="deckRoot">
+      {showDockPortal && typeof document !== "undefined"
+        ? createPortal(
+            <div
+              className="deckDockOverlay"
+            >
+              <div
+                className="deckDockPortal"
+                style={{ left: stageRect!.left, top: stageRect!.top, width: stageRect!.width, height: stageRect!.height }}
+              >
+                <div className="deckDockPortalStage">
+                  <Card
+                    card={top!}
+                    isTop={false}
+                    mode="visual"
+                    className="card cardTopLayer"
+                    style={{
+                      x: controller.motion.x,
+                      y: controller.motion.y,
+                      rotate: controller.motion.rotate,
+                      scale: controller.motion.scale,
+                    }}
+                  />
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
       <div className={reduceEffects ? "deckStage deckStageReducedFx" : "deckStage"} ref={stageRef}>
         {hasTop ? (
           <div className="deckHints" aria-hidden="true">
@@ -286,7 +331,7 @@ export function CardStack(props: CardStackProps) {
                   card={card}
                   isTop={isTop}
                   onAutoAdvance={isTop && hasTop ? () => controller.forceDecision("nope") : undefined}
-                  className={isTop ? "card cardTopLayer" : "card"}
+                  className={isTop ? (showDockPortal ? "card cardTopLayer cardPortalHidden" : "card cardTopLayer") : "card"}
                   style={{
                     x: isTop ? controller.motion.x : undefined,
                     y: isTop ? controller.motion.y : undefined,

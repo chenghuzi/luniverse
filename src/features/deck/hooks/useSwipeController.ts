@@ -1,5 +1,5 @@
 import { animate, useMotionValue, type MotionValue, useTransform } from "framer-motion";
-import { useCallback, useMemo, useRef } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
 import { usePointerDrag } from "@/features/deck/hooks/usePointerDrag";
@@ -11,6 +11,11 @@ type DockTarget = {
   x: number;
   y: number;
   scale?: number;
+};
+
+type SettleState = {
+  type: SwipeType;
+  docked: boolean;
 };
 
 type SwipeControllerParams = {
@@ -31,6 +36,13 @@ export function useSwipeController(params: SwipeControllerParams) {
     [params.config],
   );
 
+  const mountedRef = useRef(true);
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
   const internalX = useMotionValue(0);
   const internalY = useMotionValue(0);
   const internalScale = useMotionValue(1);
@@ -42,6 +54,7 @@ export function useSwipeController(params: SwipeControllerParams) {
     return clamped * config.maxRotateDeg;
   });
 
+  const [settle, setSettle] = useState<SettleState | null>(null);
   const isSettlingRef = useRef(false);
   const isActiveRef = useRef(false);
   const setActive = useCallback(
@@ -74,6 +87,8 @@ export function useSwipeController(params: SwipeControllerParams) {
       const targetX = dock?.x ?? getOffscreenTargetX(direction);
       const targetY = dock?.y ?? (y.get() + velocityY * 160);
       const targetScale = dock?.scale ?? 1;
+
+      if (mountedRef.current) setSettle({ type, docked: Boolean(dock) });
 
       const ax = animate(x, targetX, {
         type: "spring",
@@ -109,6 +124,7 @@ export function useSwipeController(params: SwipeControllerParams) {
           x.set(0);
           y.set(0);
           scale.set(1);
+          if (mountedRef.current) setSettle(null);
         });
     },
     [params, scale, setActive, x, y],
@@ -154,13 +170,14 @@ export function useSwipeController(params: SwipeControllerParams) {
     return {
       motion: { x, y, rotate, scale },
       bind: pointerBind,
+      settle,
       forceDecision: (type: SwipeType) => {
         if (isSettlingRef.current) return;
         const velocityX = type === "like" ? 0.85 : -0.85;
         settleOffscreen(type, velocityX, 0);
       },
     };
-  }, [pointerBind, rotate, scale, settleOffscreen, x, y]);
+  }, [pointerBind, rotate, scale, settle, settleOffscreen, x, y]);
 
   return api;
 }

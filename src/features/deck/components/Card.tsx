@@ -8,6 +8,7 @@ type CardProps = {
   card: CardType;
   isTop?: boolean;
   onAutoAdvance?: () => void;
+  mode?: "full" | "visual";
   style?: {
     x?: MotionValue<number>;
     y?: MotionValue<number>;
@@ -24,7 +25,7 @@ type CardProps = {
   };
 };
 
-export function Card({ card, isTop, onAutoAdvance, style, className, pointerBind }: CardProps) {
+export function Card({ card, isTop, onAutoAdvance, mode = "full", style, className, pointerBind }: CardProps) {
   const subtitleParts = [
     card.podcast.title,
     card.episode.title ? `• ${card.episode.title}` : undefined,
@@ -40,6 +41,7 @@ export function Card({ card, isTop, onAutoAdvance, style, className, pointerBind
 
   const snippet = card.highlight.snippet;
   const hasSnippet = Boolean(snippet && Number.isFinite(snippet.startMs) && Number.isFinite(snippet.durationMs));
+  const renderSnippet = mode === "full" && hasSnippet;
 
   return (
     <motion.div
@@ -71,7 +73,7 @@ export function Card({ card, isTop, onAutoAdvance, style, className, pointerBind
               />
             </div>
           ) : null}
-          {hasSnippet ? (
+          {renderSnippet ? (
             <SnippetPlayer
               audioUrl={card.episode.audio.url}
               startMs={snippet!.startMs}

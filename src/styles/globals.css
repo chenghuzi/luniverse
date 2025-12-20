@@ -141,6 +141,37 @@ a {
   width: min(420px, 92vw);
 }
 
+.deckDockOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483646;
+  pointer-events: none;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+.deckDockPortal {
+  position: absolute;
+  isolation: isolate;
+  transform: translateZ(0);
+}
+
+.deckDockPortalStage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cardPortalHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.deckDocking .recycleBinList {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .recycleBinBar {
   position: fixed;
   left: 14px;
@@ -251,7 +282,7 @@ a {
   --deckHintEdgePadding: clamp(18px, 4vw, 52px);
   position: absolute;
   inset: 0;
-  z-index: 3;
+  z-index: 8;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -306,6 +337,7 @@ a {
 
 .cardTopLayer {
   touch-action: none;
+  z-index: 7;
 }
 
 .cardSurface {
@@ -390,10 +422,27 @@ a {
   cursor: not-allowed;
 }
 
-.snippetRange {
+.snippetProgress {
   width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  overflow: hidden;
   pointer-events: none;
   touch-action: none;
+  --snippet-progress: 0%;
+}
+
+.snippetProgressFill {
+  height: 100%;
+  width: var(--snippet-progress);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.snippetProgress[data-disabled="true"] {
+  opacity: 0.55;
 }
 
 .snippetTime {

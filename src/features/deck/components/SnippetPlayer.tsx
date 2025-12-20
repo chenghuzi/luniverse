@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { createPortal } from "react-dom";
 import { getActiveWindow, getGlobalAudioElement, onSegmentEnded, pauseIfActive, playWindow } from "@/shared/audio/globalAudio";
 import { resumeAudioAnalysisFromGesture } from "@/shared/audio/audioAnalysis";
@@ -67,6 +67,8 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const progressSec = useMemo(() => clampNumber(currentSec - startSec, 0, durationSec), [currentSec, startSec, durationSec]);
   const progressMs = Math.round(progressSec * 1000);
   const durationMs = Math.round(durationSec * 1000);
+  const progressRatio = durationMs > 0 ? clampNumber(progressMs / durationMs, 0, 1) : 0;
+  const progressPct = `${progressRatio * 100}%`;
   const showUnlockError = Boolean(unlockError && !isAutoplayBlockedError({ message: unlockError }));
 
   useEffect(() => {
@@ -247,16 +249,22 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
             document.body,
           )
         : null}
-      <input
-        className="snippetRange"
-        type="range"
-        min={0}
-        max={durationMs}
-        value={progressMs}
-        readOnly
-        tabIndex={-1}
-        disabled={!props.isActive || !isReady || durationMs <= 0}
-      />
+      <div
+        className="snippetProgress"
+        role="progressbar"
+        aria-label="Playback progress"
+        aria-valuemin={0}
+        aria-valuemax={durationMs}
+        aria-valuenow={progressMs}
+        data-disabled={!props.isActive || !isReady || durationMs <= 0 ? "true" : "false"}
+        style={
+          {
+            ["--snippet-progress" as any]: progressPct,
+          } as CSSProperties
+        }
+      >
+        <div className="snippetProgressFill" />
+      </div>
       <div className="snippetTime">
         {formatTime(progressSec)} / {formatTime(durationSec)}
       </div>
