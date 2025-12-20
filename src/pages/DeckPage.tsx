@@ -75,6 +75,9 @@ export function DeckPage() {
     <div className="page pageNoWindowScroll">
       <img className="deckBrandIcon" src="/voiceland.png" alt="Voiceland" />
       <h1 className="deckTitleOverlay">{"\u58F0\u5C9B"}</h1>
+      <p className="deckSloganOverlay">
+        {"\u8BA9\u597D\u58F0\u97F3\u4E0D\u518D\u6F02\u6D41\uFF0C\u8BA9\u5171\u9E23\u4E0D\u6B62\u4E8E\u6536\u542C"}
+      </p>
 
       <main className="content">
         <CardStack cards={remainingCards} isLoading={isLoading} onDecision={handleDecision} />
