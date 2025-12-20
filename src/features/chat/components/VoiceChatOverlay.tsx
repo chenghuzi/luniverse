@@ -1035,23 +1035,37 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     return "Ready";
   })();
 
-  const siriStatusLine = (() => {
-    if (overlayMode !== "siri") return "";
-    if (siriError) return siriError;
-    if (mic.status === "denied") return mic.error ?? "Microphone permission denied";
-    if (mic.status === "error") return mic.error ?? "Microphone unavailable";
-    if (asrStatus === "error") return asrError ?? "ASR error";
-    if (siriState === "listening") return recognizedText ? recognizedText : "Listening...";
-    if (siriState === "thinking") return "Thinking...";
-    if (siriState === "speaking") return voiceOnly ? "Speaking..." : (assistantLiveText || "Speaking...");
-    return "Tap to talk";
-  })();
+	  const siriStatusLine = (() => {
+	    if (overlayMode !== "siri") return "";
+	    if (siriError) return siriError;
+	    if (mic.status === "denied") return mic.error ?? "Microphone permission denied";
+	    if (mic.status === "error") return mic.error ?? "Microphone unavailable";
+	    if (asrStatus === "error") return asrError ?? "ASR error";
+	    if (siriState === "listening") return recognizedText ? recognizedText : "Listening...";
+	    if (siriState === "thinking") return "Thinking...";
+	    if (siriState === "speaking") return voiceOnly ? "Speaking..." : (assistantLiveText || "Speaking...");
+	    return "Tap to talk";
+	  })();
 
-  const siriWave = (() => {
-    const activeAssistantId = ttsAssistantIdRef.current;
-    const assistantBars = (activeAssistantId ? assistantWaveBars[activeAssistantId] : null) ?? ttsWavePrevBarsRef.current;
-    if (siriState === "listening") return { active: true, bars: mic.waveform.bars, animate: false };
-    if (siriState === "speaking") return { active: ttsAudioPlaying, bars: assistantBars, animate: false };
+	  const siriTapLabel =
+	    siriState === "listening"
+	      ? "Tap to send"
+	      : siriState === "speaking" || siriState === "thinking"
+	        ? "Tap to interrupt"
+	        : "Tap to talk";
+
+	  const siriOrbClassName =
+	    siriState === "listening"
+	      ? "voiceChatSiriOrbButton voiceChatSiriOrbButtonListening"
+	      : siriState === "speaking" || siriState === "thinking"
+	        ? "voiceChatSiriOrbButton voiceChatSiriOrbButtonInterrupt"
+	        : "voiceChatSiriOrbButton";
+
+	  const siriWave = (() => {
+	    const activeAssistantId = ttsAssistantIdRef.current;
+	    const assistantBars = (activeAssistantId ? assistantWaveBars[activeAssistantId] : null) ?? ttsWavePrevBarsRef.current;
+	    if (siriState === "listening") return { active: true, bars: mic.waveform.bars, animate: false };
+	    if (siriState === "speaking") return { active: ttsAudioPlaying, bars: assistantBars, animate: false };
     if (siriState === "thinking") return { active: false, bars: new Array<number>(5).fill(1), animate: true };
     return { active: false, bars: new Array<number>(5).fill(1), animate: false };
   })();
@@ -1164,28 +1178,35 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
             </div>
           </div>
         </>
-      ) : (
-        <div className="voiceChatSiriPanel" onClick={(e) => stopEvent(e)}>
-          <div className="voiceChatSiriStatus">{siriStatusLine}</div>
-          <div className="voiceChatSiriWave">
-            <VoiceWaveform active={siriWave.active} animate={siriWave.animate} bars={siriWave.bars} />
-          </div>
-          <div className="voiceChatSiriControls">
-            <button
-              className={siriState === "listening" ? "voiceChatMicButton voiceChatMicButtonActive" : "voiceChatMicButton"}
-              type="button"
-              onClick={() => void onSiriMicTap()}
-            >
-              {siriState === "listening"
-                ? "Tap to send"
-                : siriState === "speaking" || siriState === "thinking"
-                  ? "Tap to interrupt"
-                  : "Tap to talk"}
-            </button>
-          </div>
-        </div>
-      )}
-    </div>,
-    document.body,
-  );
+	      ) : (
+	        <div className="voiceChatSiriPanel" onClick={(e) => stopEvent(e)}>
+	          <div className="voiceChatSiriCenter">
+	            <div className="voiceChatSiriStatus">{siriStatusLine}</div>
+	            <div className="voiceChatSiriWave">
+	              <VoiceWaveform active={siriWave.active} animate={siriWave.animate} bars={siriWave.bars} />
+	            </div>
+	          </div>
+
+	          <button
+	            className={siriOrbClassName}
+	            type="button"
+	            aria-label={siriTapLabel}
+	            onClick={() => void onSiriMicTap()}
+	          >
+	            <svg
+	              className="voiceChatSiriOrbIcon"
+	              viewBox="0 0 24 24"
+	              aria-hidden="true"
+	              focusable="false"
+	            >
+	              <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z" />
+	              <path d="M19 11a7 7 0 0 1-14 0h2a5 5 0 0 0 10 0h2Z" />
+	              <path d="M13 21v-3h-2v3h2Z" />
+	            </svg>
+	          </button>
+	        </div>
+	      )}
+	    </div>,
+	    document.body,
+	  );
 }
