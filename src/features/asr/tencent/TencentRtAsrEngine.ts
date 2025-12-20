@@ -7,6 +7,7 @@ import { buildTencentAsrWsUrl } from "@/features/asr/tencent/signature";
 type TencentStartOptions = {
   config: TencentAsrEnvConfig;
   targetSampleRate?: number;
+  needVad?: boolean;
 };
 
 type TencentAsrResponse = {
@@ -196,6 +197,7 @@ export class TencentRtAsrEngine implements AsrEngine {
 
     let url: string;
     try {
+      const needVad = options?.needVad ?? true;
       url = await buildTencentAsrWsUrl(
         config.appId,
         {
@@ -206,7 +208,7 @@ export class TencentRtAsrEngine implements AsrEngine {
           engine_model_type: config.engineModelType,
           voice_id: voiceId,
           voice_format: 1,
-          needvad: 1,
+          needvad: needVad ? 1 : 0,
         },
         config.secretKey,
       );

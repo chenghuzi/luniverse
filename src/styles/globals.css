@@ -726,6 +726,47 @@ a {
   color: var(--text);
 }
 
+.voiceChatSiriPanel {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(720px, 96vw);
+  border-radius: 22px;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadowStrong);
+  overflow: hidden;
+  padding: 18px 18px 16px;
+  z-index: 100000;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.voiceChatSiriStatus {
+  width: min(640px, 92%);
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.92);
+  text-align: center;
+  line-height: 1.35;
+  max-height: 4.1em;
+  overflow: hidden;
+}
+
+.voiceChatSiriWave {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.voiceChatSiriControls {
+  width: min(360px, 86%);
+}
+
 .voiceChatHeader {
   display: flex;
   align-items: center;

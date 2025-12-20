@@ -46,6 +46,9 @@ type ChatMessage = {
   createdAt: number;
 };
 
+type OverlayMode = "timeline" | "siri";
+type SiriState = "idle" | "listening" | "thinking" | "speaking" | "error";
+
 function parseBooleanFlag(raw: unknown): boolean {
   const v = String(raw ?? "")
     .trim()
@@ -55,6 +58,14 @@ function parseBooleanFlag(raw: unknown): boolean {
 
 function isVoiceOnlyModeEnabled(): boolean {
   return parseBooleanFlag(import.meta.env.VITE_VOICE_CHAT_VOICE_ONLY);
+}
+
+function isSiriModeEnabled(): boolean {
+  return parseBooleanFlag(import.meta.env.VITE_VOICE_CHAT_SIRI_MODE);
+}
+
+function isSiriAutoListenEnabled(): boolean {
+  return parseBooleanFlag(import.meta.env.VITE_VOICE_CHAT_SIRI_AUTO_LISTEN);
 }
 
 function stopEvent(e: SyntheticEvent) {
@@ -151,6 +162,7 @@ function toLlmMessages(seedMessages: LlmMessage[], history: ChatMessage[]): LlmM
 
 export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const voiceOnly = useMemo(() => isVoiceOnlyModeEnabled(), []);
+  const overlayMode: OverlayMode = useMemo(() => (isSiriModeEnabled() ? "siri" : "timeline"), []);
   const [isPressing, setIsPressing] = useState(false);
   const [recognizedText, setRecognizedText] = useState("");
   const [lastRecordingMs, setLastRecordingMs] = useState<number | null>(null);
@@ -184,6 +196,13 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const pressTokenRef = useRef<number>(0);
   const isPressingRef = useRef<boolean>(false);
   const pressStartMsRef = useRef<number | null>(null);
+  const siriTokenRef = useRef<number>(0);
+  const siriListeningRef = useRef<boolean>(false);
+  const siriAutoRearmRef = useRef<boolean>(true);
+  const [siriState, setSiriState] = useState<SiriState>("idle");
+  const [assistantLiveText, setAssistantLiveText] = useState<string>("");
+  const assistantLiveTextRef = useRef<string>("");
+  const [siriError, setSiriError] = useState<string | null>(null);
   const mic = useMicrophoneSession();
   const { start: startAsr, pushAudio: pushAsrAudio, stop: stopAsr, status: asrStatus, error: asrError } = useTencentRtAsrSession();
   const llmClient = useMemo(() => createDashscopeLlmClient(), []);
@@ -363,6 +382,117 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     resetTtsPlayback();
   }
 
+  async function stopSiriListening(reason: "cancel" | "teardown") {
+    siriTokenRef.current += 1;
+    siriListeningRef.current = false;
+    mic.stop();
+    try {
+      await stopAsr();
+    } catch {
+      // ignore
+    }
+
+    if (overlayMode !== "siri") return;
+    if (reason === "teardown") return;
+    if (reason === "cancel") setSiriState("idle");
+  }
+
+  async function stopSiriListeningAndGetFinalText(): Promise<string> {
+    if (overlayMode !== "siri") return "";
+    if (!props.open) return "";
+
+    siriTokenRef.current += 1;
+    const token = siriTokenRef.current;
+
+    siriListeningRef.current = false;
+    mic.stop();
+
+    let res: { finalText: string } = { finalText: "" };
+    try {
+      res = await stopAsr();
+    } catch {
+      // ignore
+    }
+
+    if (overlayMode !== "siri") return "";
+    if (token !== siriTokenRef.current) return "";
+
+    const finalText = String(res.finalText ?? "").trim();
+    recognizedRef.current = finalText;
+    setRecognizedText(finalText);
+    return finalText;
+  }
+
+  async function startSiriListening(trigger: "user" | "auto") {
+    if (overlayMode !== "siri") return;
+    if (!props.open) return;
+    if (trigger === "auto" && !isSiriAutoListenEnabled()) return;
+    if (trigger === "auto" && !siriAutoRearmRef.current) return;
+    if (siriListeningRef.current) return;
+
+    siriTokenRef.current += 1;
+    const token = siriTokenRef.current;
+
+    setSiriError(null);
+    setSiriState("listening");
+    setRecognizedText("");
+    recognizedRef.current = "";
+    siriListeningRef.current = true;
+
+    const asrStartedPromise = startAsr(
+      { targetName },
+      {
+        onPartialText: (text) => {
+          if (overlayMode !== "siri") return;
+          if (token !== siriTokenRef.current) return;
+          setRecognizedText(String(text ?? ""));
+        },
+        onFinalText: (text) => {
+          if (overlayMode !== "siri") return;
+          if (token !== siriTokenRef.current) return;
+          setRecognizedText(String(text ?? ""));
+        },
+        onError: (msg) => {
+          if (overlayMode !== "siri") return;
+          if (token !== siriTokenRef.current) return;
+          siriListeningRef.current = false;
+          setSiriState("error");
+          setSiriError(String(msg ?? "ASR error"));
+          setRecognizedText("");
+        },
+      },
+      { needVad: false },
+    );
+
+    const micStartedPromise = mic.start({ onPcmChunk: pushAsrAudio });
+    const [asrStarted, micStarted] = await Promise.all([asrStartedPromise, micStartedPromise]);
+    void asrStarted;
+
+    if (token !== siriTokenRef.current) {
+      if (micStarted) mic.stop();
+      await stopAsr().catch(() => {});
+      return;
+    }
+
+    if (!micStarted) {
+      siriListeningRef.current = false;
+      setSiriState("error");
+      setSiriError(mic.error ?? "Microphone unavailable");
+      setRecognizedText("");
+      await stopAsr().catch(() => {});
+      return;
+    }
+  }
+
+  async function siriInterruptAndListen() {
+    if (overlayMode !== "siri") return;
+    siriAutoRearmRef.current = isSiriAutoListenEnabled();
+    abortLlmStream();
+    abortTtsStream();
+    await stopSiriListening("teardown");
+    await startSiriListening("user");
+  }
+
   function ensureTtsPlaybackInitialized(): boolean {
     const audio = ttsAudioRef.current;
     if (!audio) return false;
@@ -424,6 +554,8 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     const mediaSource = ttsMediaSourceRef.current;
     if (!sourceBuffer || !mediaSource) return;
     if (mediaSource.readyState !== "open") return;
+
+    if (overlayMode === "siri") setSiriState((prev) => (prev === "thinking" ? "speaking" : prev));
 
     const copy = new Uint8Array(chunk.byteLength);
     copy.set(chunk);
@@ -620,7 +752,13 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     setMessages((prev) => [...prev, userMessage, assistantMessage]);
 
     abortLlmStream();
-    void startAssistantTts(assistantId);
+    const ttsStarted = startAssistantTts(assistantId);
+    if (overlayMode === "siri") {
+      setSiriError(null);
+      setSiriState("thinking");
+      assistantLiveTextRef.current = "";
+      setAssistantLiveText("");
+    }
     const seedMessages = buildSeedMessages(props.context);
     const history = [...messagesRef.current, userMessage];
 
@@ -630,11 +768,27 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
         onDeltaText: (delta) => {
           setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: m.text + delta } : m)));
           pushAssistantTtsText(delta);
+          if (overlayMode === "siri") {
+            const next = (assistantLiveTextRef.current + delta).slice(-1800);
+            assistantLiveTextRef.current = next;
+            setAssistantLiveText(next);
+            if (!ttsStarted) setSiriState("speaking");
+          }
           ensureScrollToBottomSoon();
         },
         onDone: (finalText) => {
           setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: finalText.trim() } : m)));
           finishAssistantTts();
+          if (overlayMode === "siri") {
+            const next = String(finalText ?? "").trim();
+            assistantLiveTextRef.current = next;
+            setAssistantLiveText(next);
+            if (!ttsStarted) setSiriState("speaking");
+            if (!ttsStarted) {
+              setSiriState("idle");
+              void startSiriListening("auto");
+            }
+          }
           ensureScrollToBottomSoon();
         },
         onError: () => {
@@ -642,6 +796,14 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
             prev.map((m) => (m.id === assistantId ? { ...m, text: "Sorry, the assistant is unavailable right now." } : m)),
           );
           abortTtsStream();
+          if (overlayMode === "siri") {
+            setSiriState("error");
+            setSiriError("Assistant unavailable");
+            if (!ttsStarted) {
+              setSiriState("idle");
+              void startSiriListening("auto");
+            }
+          }
           ensureScrollToBottomSoon();
         },
       },
@@ -761,6 +923,12 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     setMessages([]);
     setAssistantWaveBars({});
     setAssistantHasVoice({});
+    assistantLiveTextRef.current = "";
+    setAssistantLiveText("");
+    setSiriError(null);
+    setSiriState("idle");
+    siriAutoRearmRef.current = isSiriAutoListenEnabled();
+    siriListeningRef.current = false;
 
     const prevHtmlOverflow = document.documentElement.style.overflow;
     const prevBodyOverflow = document.body.style.overflow;
@@ -786,6 +954,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       void stopAsr();
       abortLlmStream();
       abortTtsStream();
+      void stopSiriListening("teardown");
       if (scrollRafRef.current) window.cancelAnimationFrame(scrollRafRef.current);
     };
   }, [mic.stop, props.context, props.onClose, props.open, stopAsr]);
@@ -795,17 +964,25 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     const audio = ttsAudioRef.current;
     if (!audio) return;
 
-    const onPlay = () => setTtsAudioPlaying(true);
+    const onPlay = () => {
+      setTtsAudioPlaying(true);
+      if (overlayMode === "siri") setSiriState((prev) => (prev === "thinking" ? "speaking" : prev));
+    };
     const onPause = () => setTtsAudioPlaying(false);
     const onEnded = () => {
       setTtsAudioPlaying(false);
       ttsPlaybackActiveRef.current = false;
       stopTtsWaveLoop();
+      if (overlayMode === "siri") {
+        setSiriState("idle");
+        void startSiriListening("auto");
+      }
     };
     const onError = () => {
       setTtsAudioPlaying(false);
       ttsPlaybackActiveRef.current = false;
       stopTtsWaveLoop();
+      if (overlayMode === "siri") setSiriState("idle");
     };
 
     audio.addEventListener("play", onPlay);
@@ -819,7 +996,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       audio.removeEventListener("ended", onEnded);
       audio.removeEventListener("error", onError);
     };
-  }, [props.open]);
+  }, [overlayMode, props.open]);
 
   useEffect(() => {
     if (props.open) return;
@@ -827,6 +1004,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     void stopAsr();
     abortLlmStream();
     abortTtsStream();
+    void stopSiriListening("teardown");
   }, [mic.stop, props.open, stopAsr]);
 
   useEffect(() => {
@@ -857,6 +1035,48 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     return "Ready";
   })();
 
+  const siriStatusLine = (() => {
+    if (overlayMode !== "siri") return "";
+    if (siriError) return siriError;
+    if (mic.status === "denied") return mic.error ?? "Microphone permission denied";
+    if (mic.status === "error") return mic.error ?? "Microphone unavailable";
+    if (asrStatus === "error") return asrError ?? "ASR error";
+    if (siriState === "listening") return recognizedText ? recognizedText : "Listening...";
+    if (siriState === "thinking") return "Thinking...";
+    if (siriState === "speaking") return voiceOnly ? "Speaking..." : (assistantLiveText || "Speaking...");
+    return "Tap to talk";
+  })();
+
+  const siriWave = (() => {
+    const activeAssistantId = ttsAssistantIdRef.current;
+    const assistantBars = (activeAssistantId ? assistantWaveBars[activeAssistantId] : null) ?? ttsWavePrevBarsRef.current;
+    if (siriState === "listening") return { active: true, bars: mic.waveform.bars, animate: false };
+    if (siriState === "speaking") return { active: ttsAudioPlaying, bars: assistantBars, animate: false };
+    if (siriState === "thinking") return { active: false, bars: new Array<number>(5).fill(1), animate: true };
+    return { active: false, bars: new Array<number>(5).fill(1), animate: false };
+  })();
+
+  async function onSiriMicTap() {
+    if (overlayMode !== "siri") return;
+    if (siriState === "speaking" || siriState === "thinking") {
+      await siriInterruptAndListen();
+      return;
+    }
+    if (siriState === "listening") {
+      setSiriError(null);
+      setSiriState("thinking");
+      const utterance = await stopSiriListeningAndGetFinalText();
+      if (!utterance) {
+        setSiriState("idle");
+        return;
+      }
+      sendUserText(utterance, { kind: "voice" });
+      return;
+    }
+    siriAutoRearmRef.current = isSiriAutoListenEnabled();
+    await startSiriListening("user");
+  }
+
   return createPortal(
     <div className="voiceChatBackdrop" role="dialog" aria-modal="true" aria-label="Voice chat">
       <div className="voiceChatHud" onClick={(e) => stopEvent(e)}>
@@ -883,64 +1103,88 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
         ×
       </button>
 
-      <div
-        ref={timelineRef}
-        className="voiceChatTimeline"
-        onClick={(e) => stopEvent(e)}
-        onScroll={() => {
-          const el = timelineRef.current;
-          if (!el) return;
-          const distance = el.scrollHeight - el.scrollTop - el.clientHeight;
-          setIsNearBottom(distance < 48);
-        }}
-      >
-        <div className="voiceChatTimelineInner">
-          <div className="voiceChatMessageList">
-            {messages.map((m) => (
-              <div key={m.id} className={m.role === "user" ? "voiceChatRow voiceChatRowUser" : "voiceChatRow"}>
-                <div className={m.role === "user" ? "voiceChatBubble voiceChatBubbleUser" : "voiceChatBubble"}>
-                  {voiceOnly && m.role === "assistant"
-                    ? assistantHasVoice[m.id]
-                      ? (
-                          <VoiceWaveform
-                            active={ttsAudioPlaying && ttsAssistantIdRef.current === m.id}
-                            bars={assistantWaveBars[m.id] ?? ttsWavePrevBarsRef.current}
-                          />
-                        )
-                      : m.text
-                    : null}
-                  {voiceOnly && m.role === "user"
-                    ? m.kind === "voice"
-                      ? <VoiceWaveform active={false} bars={buildStaticVoiceMessageBars(m.durationMs)} />
-                      : m.text
-                    : null}
-                  {!voiceOnly ? m.text : null}
-                </div>
+      {overlayMode === "timeline" ? (
+        <>
+          <div
+            ref={timelineRef}
+            className="voiceChatTimeline"
+            onClick={(e) => stopEvent(e)}
+            onScroll={() => {
+              const el = timelineRef.current;
+              if (!el) return;
+              const distance = el.scrollHeight - el.scrollTop - el.clientHeight;
+              setIsNearBottom(distance < 48);
+            }}
+          >
+            <div className="voiceChatTimelineInner">
+              <div className="voiceChatMessageList">
+                {messages.map((m) => (
+                  <div key={m.id} className={m.role === "user" ? "voiceChatRow voiceChatRowUser" : "voiceChatRow"}>
+                    <div className={m.role === "user" ? "voiceChatBubble voiceChatBubbleUser" : "voiceChatBubble"}>
+                      {voiceOnly && m.role === "assistant"
+                        ? assistantHasVoice[m.id]
+                          ? (
+                              <VoiceWaveform
+                                active={ttsAudioPlaying && ttsAssistantIdRef.current === m.id}
+                                bars={assistantWaveBars[m.id] ?? ttsWavePrevBarsRef.current}
+                              />
+                            )
+                          : m.text
+                        : null}
+                      {voiceOnly && m.role === "user"
+                        ? m.kind === "voice"
+                          ? <VoiceWaveform active={false} bars={buildStaticVoiceMessageBars(m.durationMs)} />
+                          : m.text
+                        : null}
+                      {!voiceOnly ? m.text : null}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+          </div>
+
+          <div className="voiceChatSheet" onClick={(e) => stopEvent(e)}>
+            <div className="voiceChatBottomRecognized">
+              {recognizedLine}
+            </div>
+
+            <VoiceWaveform active={isPressing && mic.status === "listening"} bars={mic.waveform.bars} />
+
+            <div className="voiceChatBottomControls">
+              <button
+                className={isPressing ? "voiceChatMicButton voiceChatMicButtonActive" : "voiceChatMicButton"}
+                type="button"
+                onPointerDown={startHoldToTalk}
+                onPointerUp={stopHoldToTalk}
+                onPointerCancel={cancelHoldToTalk}
+              >
+                {isPressing ? "Release to send" : "Hold to talk"}
+              </button>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="voiceChatSiriPanel" onClick={(e) => stopEvent(e)}>
+          <div className="voiceChatSiriStatus">{siriStatusLine}</div>
+          <div className="voiceChatSiriWave">
+            <VoiceWaveform active={siriWave.active} animate={siriWave.animate} bars={siriWave.bars} />
+          </div>
+          <div className="voiceChatSiriControls">
+            <button
+              className={siriState === "listening" ? "voiceChatMicButton voiceChatMicButtonActive" : "voiceChatMicButton"}
+              type="button"
+              onClick={() => void onSiriMicTap()}
+            >
+              {siriState === "listening"
+                ? "Tap to send"
+                : siriState === "speaking" || siriState === "thinking"
+                  ? "Tap to interrupt"
+                  : "Tap to talk"}
+            </button>
           </div>
         </div>
-      </div>
-
-      <div className="voiceChatSheet" onClick={(e) => stopEvent(e)}>
-        <div className="voiceChatBottomRecognized">
-          {recognizedLine}
-        </div>
-
-        <VoiceWaveform active={isPressing && mic.status === "listening"} bars={mic.waveform.bars} />
-
-        <div className="voiceChatBottomControls">
-          <button
-            className={isPressing ? "voiceChatMicButton voiceChatMicButtonActive" : "voiceChatMicButton"}
-            type="button"
-            onPointerDown={startHoldToTalk}
-            onPointerUp={stopHoldToTalk}
-            onPointerCancel={cancelHoldToTalk}
-          >
-            {isPressing ? "Release to send" : "Hold to talk"}
-          </button>
-        </div>
-      </div>
+      )}
     </div>,
     document.body,
   );

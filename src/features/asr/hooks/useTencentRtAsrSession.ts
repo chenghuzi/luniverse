@@ -26,7 +26,7 @@ export function useTencentRtAsrSession() {
   }, []);
 
   const start = useCallback(
-    async (context: AsrStartContext, callbacks: AsrCallbacks) => {
+    async (context: AsrStartContext, callbacks: AsrCallbacks, opts?: { needVad?: boolean }) => {
       const engine = engineRef.current;
       if (!engine) return false;
       if (!config) {
@@ -35,7 +35,7 @@ export function useTencentRtAsrSession() {
         callbacks.onError?.(msg);
         return false;
       }
-      return engine.start(context, callbacks, { config, targetSampleRate: 16000 });
+      return engine.start(context, callbacks, { config, targetSampleRate: 16000, needVad: opts?.needVad });
     },
     [config],
   );
