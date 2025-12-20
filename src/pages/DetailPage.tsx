@@ -3,7 +3,6 @@ import { useEffect, useMemo, useState } from "react";
 import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
 import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
 import { pauseGlobalAudio } from "@/shared/audio/globalAudio";
-import { buildPromptContextForEpisodeChat, buildPromptContextForPodcastChat } from "@/features/llm/prompts/buildPromptContext";
 import { fetchMinimaxTtsConfig, type MinimaxTtsConfig } from "@/features/tts/minimax/config";
 
 function formatDuration(totalSeconds?: number) {
@@ -87,6 +86,10 @@ export function DetailPage() {
     ? `${card.podcast.title} - ${card.episode.title}`
     : `${card?.podcast.title ?? "Podcast"} cover`;
   const episodes = useMemo(() => (Array.isArray(card?.episodes) ? card!.episodes : []), [card]);
+  const podcastSeed = useMemo(() => {
+    if (!card?.chat?.podcast?.messages?.length) return null;
+    return card.chat.podcast;
+  }, [card]);
 
   useEffect(() => {
     if (state.status !== "ready") {
@@ -113,6 +116,7 @@ export function DetailPage() {
 
   function openPodcastChat() {
     if (!card) return;
+    if (!podcastSeed) return;
     setChat({
       open: true,
       context: {
@@ -121,13 +125,15 @@ export function DetailPage() {
         podcastTitle: card.podcast.title,
         coverUrl,
         ttsConfig,
-        promptContext: buildPromptContextForPodcastChat(card),
+        seedMessages: podcastSeed.messages,
       },
     });
   }
 
   function openEpisodeChat(episode: { id: string; title: string }) {
     if (!card) return;
+    const seed = card.chat?.episodes?.[episode.id];
+    if (!seed?.messages?.length) return;
     setChat({
       open: true,
       context: {
@@ -138,7 +144,7 @@ export function DetailPage() {
         episodeTitle: episode.title,
         coverUrl,
         ttsConfig,
-        promptContext: buildPromptContextForEpisodeChat(card, episode.id),
+        seedMessages: seed.messages,
       },
     });
   }
@@ -195,7 +201,7 @@ export function DetailPage() {
                     ) : null}
 
                     <div className="detailInfoActions">
-                      <button className="chatButton" type="button" onClick={openPodcastChat}>
+                      <button className="chatButton" type="button" onClick={openPodcastChat} disabled={!podcastSeed}>
                         Chat
                       </button>
                     </div>
@@ -233,7 +239,12 @@ export function DetailPage() {
                               {formatDate(e.publishedAt)} • {formatDuration(e.durationSeconds)}
                             </div>
                           </div>
-                          <button className="episodeChatButton" type="button" onClick={() => openEpisodeChat(e)}>
+                          <button
+                            className="episodeChatButton"
+                            type="button"
+                            onClick={() => openEpisodeChat(e)}
+                            disabled={!card?.chat?.episodes?.[e.id]?.messages?.length}
+                          >
                             Chat
                           </button>
                         </li>

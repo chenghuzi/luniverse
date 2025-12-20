@@ -6,8 +6,6 @@ import { useMicrophoneSession } from "@/features/chat/hooks/useMicrophoneSession
 import { useTencentRtAsrSession } from "@/features/asr/hooks/useTencentRtAsrSession";
 import { createDashscopeLlmClient } from "@/features/llm/dashscope/DashscopeLlmClient";
 import type { LlmMessage, LlmStreamHandle } from "@/features/llm/types";
-import type { PromptContext } from "@/features/llm/prompts/types";
-import { composeSystemPrompt } from "@/features/llm/prompts/injectors";
 import { fetchMinimaxTtsConfig, type MinimaxTtsConfig } from "@/features/tts/minimax/config";
 import { createMinimaxTtsSession, type MinimaxTtsSession } from "@/features/tts/minimax/session";
 
@@ -18,7 +16,7 @@ export type VoiceChatContext =
       podcastTitle: string;
       coverUrl?: string | null;
       ttsConfig?: MinimaxTtsConfig | null;
-      promptContext?: PromptContext;
+      seedMessages?: LlmMessage[];
     }
   | {
       kind: "episode";
@@ -28,7 +26,7 @@ export type VoiceChatContext =
       episodeTitle: string;
       coverUrl?: string | null;
       ttsConfig?: MinimaxTtsConfig | null;
-      promptContext?: PromptContext;
+      seedMessages?: LlmMessage[];
     };
 
 type VoiceChatOverlayProps = {
@@ -77,20 +75,56 @@ const MAX_CONTEXT_MESSAGES = 18;
 const TTS_FLUSH_MS = 300;
 const TTS_MAX_CHARS = 60;
 
-const TTS_PUNCTUATION = new Set(["。", "！", "？", "!", "?", "，", ",", "；", ";", "：", ":", "、", ".", "\n"]);
+const TTS_PUNCTUATION = new Set([
+  "\u3002",
+  "\uff01",
+  "\uff1f",
+  "!",
+  "?",
+  "\uff0c",
+  ",",
+  "\uff1b",
+  ";",
+  "\uff1a",
+  ":",
+  "\u3001",
+  ".",
+  "\n",
+]);
 
-function buildSystemPrompt(context: VoiceChatContext | null): string {
-  if (context?.promptContext) return composeSystemPrompt(context.promptContext);
-  if (!context) return "You are a helpful voice assistant. Be concise and actionable.";
-  if (context.kind === "podcast") {
-    return `You are a helpful voice assistant for the podcast "${context.podcastTitle}". Be concise and actionable.`;
-  }
-  return `You are a helpful voice assistant for the episode "${context.episodeTitle}" from the podcast "${context.podcastTitle}". Be concise and actionable.`;
+function normalizeSeedMessages(messages: LlmMessage[] | undefined): LlmMessage[] | null {
+  if (!Array.isArray(messages) || messages.length === 0) return null;
+  const normalized = messages
+    .map((m) => ({ role: m.role, content: String(m.content ?? "") }))
+    .filter((m) => m.content.trim().length > 0);
+  return normalized.length > 0 ? normalized : null;
 }
 
-function toLlmMessages(systemPrompt: string, history: ChatMessage[]): LlmMessage[] {
+function buildSeedMessages(context: VoiceChatContext | null): LlmMessage[] {
+  const provided = normalizeSeedMessages(context?.seedMessages);
+  if (provided) return provided;
+
+  if (!context) return [{ role: "system", content: "You are a helpful voice assistant. Be concise and actionable." }];
+  if (context.kind === "podcast") {
+    return [
+      {
+        role: "system",
+        content: `You are a helpful voice assistant for the podcast "${context.podcastTitle}". Be concise and actionable.`,
+      },
+    ];
+  }
+
+  return [
+    {
+      role: "system",
+      content: `You are a helpful voice assistant for the episode "${context.episodeTitle}" from the podcast "${context.podcastTitle}". Be concise and actionable.`,
+    },
+  ];
+}
+
+function toLlmMessages(seedMessages: LlmMessage[], history: ChatMessage[]): LlmMessage[] {
   const trimmed = history.slice(-MAX_CONTEXT_MESSAGES);
-  const messages: LlmMessage[] = [{ role: "system", content: systemPrompt }];
+  const messages: LlmMessage[] = [...seedMessages];
   for (const m of trimmed) messages.push({ role: m.role, content: m.text });
   return messages;
 }
@@ -440,11 +474,11 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
 
     abortLlmStream();
     startAssistantTts();
-    const systemPrompt = buildSystemPrompt(props.context);
+    const seedMessages = buildSeedMessages(props.context);
     const history = [...messagesRef.current, userMessage];
 
     llmStreamRef.current = llmClient.streamChat(
-      { model: "", messages: toLlmMessages(systemPrompt, history) },
+      { model: "", messages: toLlmMessages(seedMessages, history) },
       {
         onDeltaText: (delta) => {
           setMessages((prev) => prev.map((m) => (m.id === assistantId ? { ...m, text: m.text + delta } : m)));

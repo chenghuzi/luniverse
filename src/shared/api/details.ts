@@ -1,7 +1,23 @@
 import type { Card, EpisodeInfo } from "@/features/deck/model/types";
 
+export type ChatSeedMessage = {
+  role: "system" | "user" | "assistant";
+  content: string;
+};
+
+export type ChatSeedBundle = {
+  episodeId?: string;
+  messages: ChatSeedMessage[];
+};
+
+export type CardChatSeeds = {
+  podcast: ChatSeedBundle | null;
+  episodes: Record<string, ChatSeedBundle>;
+};
+
 export type CardDetail = Omit<Card, "instanceId"> & {
   episodes?: EpisodeInfo[];
+  chat?: CardChatSeeds;
 };
 
 export async function fetchCardDetailById(cardId: string): Promise<CardDetail> {

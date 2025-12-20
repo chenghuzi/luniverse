@@ -11,6 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.websockets import WebSocketDisconnect, WebSocketState
 
 from .cards_data import CardsDataset, load_default_cards_dataset
+from .chat_seeds import build_chat_seeds_for_card
 from .minimax_ws import connect_minimax_tts
 
 load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env", override=False)
@@ -95,7 +96,9 @@ async def card_detail(card_id: str) -> dict[str, Any]:
     if not card:
         raise HTTPException(status_code=404, detail="card not found")
 
-    return card
+    payload: dict[str, Any] = dict(card)
+    payload["chat"] = build_chat_seeds_for_card(cid, card)
+    return payload
 
 
 @app.get("/api/tts/minimax/config")

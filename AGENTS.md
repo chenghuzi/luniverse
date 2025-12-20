@@ -133,31 +133,56 @@ Vite 只会暴露以 `VITE_` 开头的 env 给前端代码。
 
 这样 `VoiceChatOverlay` 的消息流式更新逻辑可以保持不变。
 
-## System Prompt 注入（Podcast vs Episode）
+## Prompt Seeds（后端拼接 transcripts）
 
-为了让“播客 chat”和“单集 chat”能把对应内容注入到 system prompt，同时保持后续可迭代，我们把注入拆成两层：
+为了让 demo 不在前端拼 system prompt，同时避免把逐字稿逻辑散落到 UI，我们把“prompt + transcripts 拼接”放在后端的 detail API 中完成：
 
-1) `PromptContext`：稳定的结构化上下文（来自 `CardDetail`），由页面在“点击 Chat”时构建。
-2) `PromptInjectors`：可插拔的 prompt 拼接器，把 `PromptContext` 变成最终 system prompt。
+- 前端进入详情页时请求 `GET /api/cards/{cardId}`。
+- 后端除了返回原本的 detail JSON，还会额外返回 `chat` 字段，里面包含可直接喂给 LLM 的标准 `messages`（history seeds）。
+- 前端只负责：
+  - 根据是否存在 seeds 来 disable/enable Chat 按钮；
+  - 打开 overlay 后，把 seeds 作为固定前缀拼进 LLM 请求，然后 append 用户后续对话。
+
+### 数据位置与命名约定
+
+- Prompt 模板：
+  - `backend/data/prompts/chat_w_podcast.txt`
+  - `backend/data/prompts/chat_w_episode.txt`
+- Transcript：
+  - `backend/data/transcripts/{cardId}.{episodeId}.txt`
+  - 逐字稿文件可能缺失（并非每个 episode 都有）。
+
+### API 返回结构（增量字段）
+
+`GET /api/cards/{cardId}` 返回的 JSON 会额外包含：
+
+- `chat.podcast`
+  - `null`：该节目下没有任何 episode 有逐字稿
+  - 否则：`{ episodeId, messages }`，其中 `messages` 结构为：
+    - `system`: `chat_w_podcast.txt`
+    - `user`: transcript wrapper + full transcript
+    - `assistant`: ack
+- `chat.episodes`
+  - `Record<episodeId, { messages }>`，只包含“确实存在逐字稿文件”的 episodes。
+
+### 选择逻辑
+
+- “和节目聊”（podcast chat）：按 detail 的 `episodes` 顺序扫描，选择第一个存在逐字稿的 episode 作为 transcript 来源。
+- “和单集聊”（episode chat）：只有当 `{cardId}.{episodeId}.txt` 存在时才返回该 episode 的 seeds；否则前端 disable 对应按钮。
 
 ### 关键文件
 
-- `src/features/llm/prompts/types.ts`
-  - `PromptContext` / `PromptInjector` 类型。
-- `src/features/llm/prompts/buildPromptContext.ts`
-  - `buildPromptContextForPodcastChat(card)`：播客 chat 注入 podcast + current episode + recent 2 episodes + highlight。
-  - `buildPromptContextForEpisodeChat(card, episodeId)`：单集 chat 注入 podcast + target episode + highlight。
-- `src/features/llm/prompts/injectors.ts`
-  - `composeSystemPrompt(ctx, injectors)`：按 injector pipeline 拼接；默认包含 persona + JSON context。
-- `src/pages/DetailPage.tsx`
-  - 点击 Chat 时把 promptContext 填进 `VoiceChatContext`。
-- `src/features/chat/components/VoiceChatOverlay.tsx`
-  - 优先使用 `context.promptContext` 生成 system prompt；否则 fallback 到简单 title prompt。
+- 后端：
+  - `backend/app/chat_seeds.py`：读取 prompt/transcripts 并生成 seeds（messages）。
+  - `backend/app/main.py`：`GET /api/cards/{cardId}` 注入 `chat` 字段。
+- 前端：
+  - `src/shared/api/details.ts`：`CardDetail.chat` 类型定义。
+  - `src/pages/DetailPage.tsx`：根据 `card.chat` disable/enable Chat 按钮，并把 `seedMessages` 传给 overlay。
+  - `src/features/chat/components/VoiceChatOverlay.tsx`：请求 LLM 时把 `seedMessages` 作为固定前缀 messages。
 
-### 后续怎么改注入内容（推荐方式）
+### 旧的前端 Prompt 注入（暂留但不再走主路径）
 
-- 改“注入哪些字段”：只动 `buildPromptContext.ts`（比如改 recent episodes 数量、加入 show notes、加入更多 episode 元信息等）。
-- 改“怎么写进 prompt”：只动 `injectors.ts`（比如从 JSON block 改成更强的指令模板、增加 RAG 注入器等）。
+`src/features/llm/prompts/*` 仍然保留（便于对比/回退/快速试验），但当前主流程已改为后端返回 seeds。
 
 ## Backend (FastAPI demo)
 
