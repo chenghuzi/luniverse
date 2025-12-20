@@ -4,10 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>luniverse</title>
+
+    <style>
+      .splash {
+        position: fixed;
+        inset: 0;
+        display: none;
+        place-items: center;
+        background: #f9f0ec;
+        z-index: 2147483647;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 260ms ease, transform 260ms ease;
+      }
+
+      html.routeRoot .splash {
+        display: grid;
+      }
+
+      .splashInner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        padding: 24px;
+        text-align: center;
+      }
+
+      .splashIcon {
+        width: 96px;
+        height: 96px;
+        object-fit: contain;
+        display: block;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      .splashSlogan {
+        max-width: 30rem;
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: 0.2px;
+        color: rgba(15, 23, 42, 0.82);
+      }
+
+      .splashFadeOut {
+        opacity: 0;
+        transform: translateY(-2px);
+        pointer-events: none;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .splash {
+          transition: none;
+        }
+      }
+    </style>
+
+    <script>
+      (function () {
+        var path = location.pathname || "/";
+        var isRoot = path === "/" || path === "/index.html";
+        if (isRoot) document.documentElement.classList.add("routeRoot");
+      })();
+    </script>
   </head>
   <body>
+    <div id="splash" class="splash" aria-hidden="true">
+      <div class="splashInner">
+        <img class="splashIcon" src="/voiceland.png" alt="Voiceland" />
+        <div class="splashSlogan">
+          &#x8BA9;&#x597D;&#x58F0;&#x97F3;&#x4E0D;&#x518D;&#x6F02;&#x6D41;&#xFF0C;&#x8BA9;&#x5171;&#x9E23;&#x4E0D;&#x6B62;&#x4E8E;&#x6536;&#x542C;
+        </div>
+      </div>
+    </div>
     <div id="root"></div>
+
+    <script>
+      (function () {
+        if (!document.documentElement.classList.contains("routeRoot")) return;
+        var splash = document.getElementById("splash");
+        if (!splash) return;
+
+        var SHOW_MS = 1880;
+        var FADE_MS = 260;
+
+        window.setTimeout(function () {
+          splash.classList.add("splashFadeOut");
+          window.setTimeout(function () {
+            splash.remove();
+          }, FADE_MS + 50);
+        }, SHOW_MS);
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

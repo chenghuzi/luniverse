@@ -555,8 +555,6 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     if (!sourceBuffer || !mediaSource) return;
     if (mediaSource.readyState !== "open") return;
 
-    if (overlayMode === "siri") setSiriState((prev) => (prev === "thinking" ? "speaking" : prev));
-
     const copy = new Uint8Array(chunk.byteLength);
     copy.set(chunk);
     const arrayBuffer = copy.buffer;
@@ -964,7 +962,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     const audio = ttsAudioRef.current;
     if (!audio) return;
 
-    const onPlay = () => {
+    const onPlaying = () => {
       setTtsAudioPlaying(true);
       if (overlayMode === "siri") setSiriState((prev) => (prev === "thinking" ? "speaking" : prev));
     };
@@ -985,13 +983,13 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       if (overlayMode === "siri") setSiriState("idle");
     };
 
-    audio.addEventListener("play", onPlay);
+    audio.addEventListener("playing", onPlaying);
     audio.addEventListener("pause", onPause);
     audio.addEventListener("ended", onEnded);
     audio.addEventListener("error", onError);
 
     return () => {
-      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("playing", onPlaying);
       audio.removeEventListener("pause", onPause);
       audio.removeEventListener("ended", onEnded);
       audio.removeEventListener("error", onError);
