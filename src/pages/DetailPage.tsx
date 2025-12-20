@@ -4,6 +4,7 @@ import { fetchCardDetailById, type CardDetail } from "@/shared/api/details";
 import { VoiceChatOverlay, type VoiceChatContext } from "@/features/chat/components/VoiceChatOverlay";
 import { pauseGlobalAudio } from "@/shared/audio/globalAudio";
 import { fetchMinimaxTtsConfig, type MinimaxTtsConfig } from "@/features/tts/minimax/config";
+import { getCoverPageBackground } from "@/shared/lib/imageGradient";
 
 function formatDuration(totalSeconds?: number) {
   if (typeof totalSeconds !== "number" || !Number.isFinite(totalSeconds)) return "-";
@@ -48,11 +49,6 @@ export function DetailPage() {
   }, []);
 
   useEffect(() => {
-    if (typeof document === "undefined") return;
-    document.documentElement.style.removeProperty("--pageBg");
-  }, []);
-
-  useEffect(() => {
     const id = String(cardId ?? "").trim();
     if (id.length === 0) {
       setState({ status: "error", card: null, error: "Missing cardId" });
@@ -90,6 +86,36 @@ export function DetailPage() {
     if (!card?.chat?.podcast?.messages?.length) return null;
     return card.chat.podcast;
   }, [card]);
+
+  useEffect(() => {
+    if (typeof document === "undefined") return;
+    let canceled = false;
+
+    if (!coverUrl) {
+      document.documentElement.style.removeProperty("--pageBg");
+      return;
+    }
+
+    void getCoverPageBackground(coverUrl).then((bg) => {
+      if (canceled) return;
+      if (!bg) {
+        document.documentElement.style.removeProperty("--pageBg");
+        return;
+      }
+      document.documentElement.style.setProperty("--pageBg", bg);
+    });
+
+    return () => {
+      canceled = true;
+    };
+  }, [coverUrl]);
+
+  useEffect(() => {
+    return () => {
+      if (typeof document === "undefined") return;
+      document.documentElement.style.removeProperty("--pageBg");
+    };
+  }, []);
 
   useEffect(() => {
     if (!card) {

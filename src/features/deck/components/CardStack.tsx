@@ -61,20 +61,49 @@ export function CardStack(props: CardStackProps) {
   const secondTranslateY = useTransform(stackProgress, (p) => config.cardSpacingPx * (1 - p));
 
   const hintZonePx = Math.min(72, Math.max(24, config.swipeDistanceThresholdPx * 0.35));
+  const hintShowStartPx = 14;
   const hintScaleMax = 1.18;
-  const hintProgress = useTransform(controller.motion.x, (v) => {
-    const abs = Math.abs(v);
-    if (abs <= hintZonePx) return 0;
+  const leftHintScale = useTransform(controller.motion.x, (x) => {
+    const abs = Math.abs(x);
+    if (abs <= hintShowStartPx) return 0.98;
+    const showT = clamp((abs - hintShowStartPx) / Math.max(1, hintZonePx - hintShowStartPx), 0, 1);
+    const showEased = 1 - Math.pow(1 - showT, 3);
+    const base = 0.98 + 0.02 * showEased;
+
+    if (x >= 0) return base;
+    if (abs <= hintZonePx) return base;
     const t = clamp((abs - hintZonePx) / Math.max(1, config.swipeDistanceThresholdPx - hintZonePx), 0, 1);
-    return 1 - Math.pow(1 - t, 3);
+    const eased = 1 - Math.pow(1 - t, 3);
+    return base + (hintScaleMax - base) * eased;
   });
-  const leftHintScale = useTransform([controller.motion.x, hintProgress], ([x, p]) => {
-    if (x >= 0) return 1;
-    return 1 + (hintScaleMax - 1) * p;
+  const rightHintScale = useTransform(controller.motion.x, (x) => {
+    const abs = Math.abs(x);
+    if (abs <= hintShowStartPx) return 0.98;
+    const showT = clamp((abs - hintShowStartPx) / Math.max(1, hintZonePx - hintShowStartPx), 0, 1);
+    const showEased = 1 - Math.pow(1 - showT, 3);
+    const base = 0.98 + 0.02 * showEased;
+
+    if (x <= 0) return base;
+    if (abs <= hintZonePx) return base;
+    const t = clamp((abs - hintZonePx) / Math.max(1, config.swipeDistanceThresholdPx - hintZonePx), 0, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    return base + (hintScaleMax - base) * eased;
   });
-  const rightHintScale = useTransform([controller.motion.x, hintProgress], ([x, p]) => {
-    if (x <= 0) return 1;
-    return 1 + (hintScaleMax - 1) * p;
+  const leftHintOpacity = useTransform(controller.motion.x, (x) => {
+    const abs = Math.abs(x);
+    if (abs <= hintShowStartPx) return 0;
+    const t = clamp((abs - hintShowStartPx) / Math.max(1, hintZonePx - hintShowStartPx), 0, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const side = x < 0 ? 1 : 0.28;
+    return eased * side;
+  });
+  const rightHintOpacity = useTransform(controller.motion.x, (x) => {
+    const abs = Math.abs(x);
+    if (abs <= hintShowStartPx) return 0;
+    const t = clamp((abs - hintShowStartPx) / Math.max(1, hintZonePx - hintShowStartPx), 0, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const side = x > 0 ? 1 : 0.28;
+    return eased * side;
   });
   const rightHintText = hasTop ? `和${top.podcast.title}聊聊吧` : "开始聊聊吧";
 
@@ -113,10 +142,10 @@ export function CardStack(props: CardStackProps) {
       <div className={reduceEffects ? "deckStage deckStageReducedFx" : "deckStage"}>
         {hasTop ? (
           <div className="deckHints" aria-hidden="true">
-            <motion.div className="deckHint deckHintLeft" style={{ scale: leftHintScale }}>
+            <motion.div className="deckHint deckHintLeft" style={{ opacity: leftHintOpacity, scale: leftHintScale }}>
               {"\u6362\u4E0B\u4E00\u671F"}
             </motion.div>
-            <motion.div className="deckHint deckHintRight" style={{ scale: rightHintScale }}>
+            <motion.div className="deckHint deckHintRight" style={{ opacity: rightHintOpacity, scale: rightHintScale }}>
               {rightHintText}
             </motion.div>
           </div>

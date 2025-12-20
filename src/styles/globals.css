@@ -146,6 +146,47 @@ a {
   height: min(520px, 68vh);
 }
 
+.deckHints {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.deckHint {
+  max-width: 46%;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: 0.2px;
+  color: rgba(15, 23, 42, 0.92);
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.10);
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.deckStageReducedFx .deckHint {
+  backdrop-filter: none;
+}
+
+.deckHintLeft {
+  transform-origin: left center;
+}
+
+.deckHintRight {
+  transform-origin: right center;
+}
+
 .card {
   position: absolute;
   inset: 0;
