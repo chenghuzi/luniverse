@@ -7,11 +7,18 @@ import { getOffscreenTargetX } from "@/features/deck/motion/transforms";
 import type { Card, SwipeDecision, SwipeType } from "@/features/deck/model/types";
 import { clamp } from "@/shared/lib/clamp";
 
+type DockTarget = {
+  x: number;
+  y: number;
+  scale?: number;
+};
+
 type SwipeControllerParams = {
   card: Card;
   onDecision: (decision: SwipeDecision) => void;
   config?: Partial<DeckMotionConfig>;
   onMotionActivityChange?: (active: boolean) => void;
+  getNopeDockTarget?: (args: { velocityX: number; velocityY: number }) => DockTarget | null;
   motion?: {
     x: MotionValue<number>;
     y: MotionValue<number>;
@@ -26,8 +33,10 @@ export function useSwipeController(params: SwipeControllerParams) {
 
   const internalX = useMotionValue(0);
   const internalY = useMotionValue(0);
+  const internalScale = useMotionValue(1);
   const x = params.motion?.x ?? internalX;
   const y = params.motion?.y ?? internalY;
+  const scale = internalScale;
   const rotate = useTransform(x, (latestX) => {
     const clamped = clamp(latestX / 240, -1, 1);
     return clamped * config.maxRotateDeg;
@@ -49,19 +58,22 @@ export function useSwipeController(params: SwipeControllerParams) {
     setActive(true);
     const ax = animate(x, 0, { type: "spring", stiffness: 340, damping: 28 });
     const ay = animate(y, 0, { type: "spring", stiffness: 340, damping: 28 });
-    Promise.all([ax, ay]).finally(() => {
+    const as = animate(scale, 1, { type: "spring", stiffness: 340, damping: 28 });
+    Promise.all([ax, ay, as]).finally(() => {
       isSettlingRef.current = false;
       setActive(false);
     });
-  }, [setActive, x, y]);
+  }, [scale, setActive, x, y]);
 
   const settleOffscreen = useCallback(
     (type: SwipeType, velocityX: number, velocityY: number) => {
       isSettlingRef.current = true;
       setActive(true);
       const direction = type === "like" ? "right" : "left";
-      const targetX = getOffscreenTargetX(direction);
-      const targetY = y.get() + velocityY * 160;
+      const dock = type === "nope" ? params.getNopeDockTarget?.({ velocityX, velocityY }) : null;
+      const targetX = dock?.x ?? getOffscreenTargetX(direction);
+      const targetY = dock?.y ?? (y.get() + velocityY * 160);
+      const targetScale = dock?.scale ?? 1;
 
       const ax = animate(x, targetX, {
         type: "spring",
@@ -75,8 +87,13 @@ export function useSwipeController(params: SwipeControllerParams) {
         damping: 22,
         velocity: velocityY * 1000,
       });
+      const as = animate(scale, targetScale, {
+        type: "spring",
+        stiffness: 260,
+        damping: 24,
+      });
 
-      Promise.all([ax, ay])
+      Promise.all([ax, ay, as])
         .then(() => {
           params.onDecision({
             cardId: params.card.id,
@@ -91,9 +108,10 @@ export function useSwipeController(params: SwipeControllerParams) {
           setActive(false);
           x.set(0);
           y.set(0);
+          scale.set(1);
         });
     },
-    [params, setActive, x, y],
+    [params, scale, setActive, x, y],
   );
 
   const decideFromGesture = useCallback(
@@ -134,7 +152,7 @@ export function useSwipeController(params: SwipeControllerParams) {
 
   const api = useMemo(() => {
     return {
-      motion: { x, y, rotate },
+      motion: { x, y, rotate, scale },
       bind: pointerBind,
       forceDecision: (type: SwipeType) => {
         if (isSettlingRef.current) return;
@@ -142,7 +160,7 @@ export function useSwipeController(params: SwipeControllerParams) {
         settleOffscreen(type, velocityX, 0);
       },
     };
-  }, [pointerBind, rotate, settleOffscreen, x, y]);
+  }, [pointerBind, rotate, scale, settleOffscreen, x, y]);
 
   return api;
 }

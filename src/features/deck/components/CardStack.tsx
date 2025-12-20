@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { motion, useTransform, type MotionValue } from "framer-motion";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { motion, useMotionValue, useTransform, type MotionValue } from "framer-motion";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
 import { getStackTransform } from "@/features/deck/motion/transforms";
@@ -7,6 +7,7 @@ import type { Card as CardType, SwipeDecision } from "@/features/deck/model/type
 import { useSwipeController } from "@/features/deck/hooks/useSwipeController";
 import { Card } from "@/features/deck/components/Card";
 import { clamp } from "@/shared/lib/clamp";
+import { useRecycleBinUiStore } from "@/features/deck/model/recycleBinUiStore";
 
 type CardStackProps = {
   cards: CardType[];
@@ -14,6 +15,17 @@ type CardStackProps = {
   onDecision: (decision: SwipeDecision) => void;
   config?: Partial<DeckMotionConfig>;
 };
+
+type StageRect = {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+};
+
+function toStageRect(r: DOMRect): StageRect {
+  return { left: r.left, top: r.top, width: r.width, height: r.height };
+}
 
 export function CardStack(props: CardStackProps) {
   const config = useMemo(
@@ -24,7 +36,15 @@ export function CardStack(props: CardStackProps) {
   const top = props.cards[0];
   const hasTop = Boolean(top);
   const mountedRef = useRef(true);
+  const stageRef = useRef<HTMLDivElement | null>(null);
+  const stageRectRef = useRef<StageRect | null>(null);
+  const dragActiveRef = useRef(false);
   const [reduceEffects, setReduceEffects] = useState(false);
+  const setDragActive = useRecycleBinUiStore((s) => s.actions.setDragActive);
+  const setDragCenter = useRecycleBinUiStore((s) => s.actions.setDragCenter);
+  const setDragSide = useRecycleBinUiStore((s) => s.actions.setDragSide);
+  const dockRect = useRecycleBinUiStore((s) => s.dockRect);
+
   useEffect(() => {
     return () => {
       mountedRef.current = false;
@@ -34,7 +54,16 @@ export function CardStack(props: CardStackProps) {
   const onMotionActivityChange = useCallback((active: boolean) => {
     if (!mountedRef.current) return;
     setReduceEffects(active);
-  }, []);
+    dragActiveRef.current = active;
+    setDragActive(active);
+    if (!active) {
+      setDragCenter(null);
+      setDragSide(null);
+    }
+  }, [setDragActive, setDragCenter, setDragSide]);
+
+  const sharedX = useMotionValue(0);
+  const sharedY = useMotionValue(0);
 
   const controller = useSwipeController({
     card: top ?? {
@@ -48,7 +77,93 @@ export function CardStack(props: CardStackProps) {
     onDecision: props.onDecision,
     config,
     onMotionActivityChange,
+    motion: { x: sharedX, y: sharedY },
+    getNopeDockTarget: ({ velocityY }) => {
+      const stage = stageRectRef.current;
+      if (!stage) return null;
+      if (!dockRect) return null;
+
+      const dockCx = dockRect.left + dockRect.width / 2;
+      const dockCy = dockRect.top + dockRect.height / 2;
+
+      const currentX = sharedX.get();
+      const currentY = sharedY.get();
+      const currentCx = stage.left + stage.width / 2 + currentX;
+      const currentCy = stage.top + stage.height / 2 + currentY;
+
+      const targetX = currentX + (dockCx - currentCx);
+      const targetY = currentY + (dockCy - currentCy) + velocityY * 60;
+      const scale = Math.max(0.06, Math.min(1, dockRect.width / Math.max(1, stage.width)));
+
+      return { x: targetX, y: targetY, scale };
+    },
   });
+
+  useEffect(() => {
+    if (!reduceEffects) return;
+    const stage = stageRectRef.current;
+    if (!stage) return;
+    const cx = stage.left + stage.width / 2 + controller.motion.x.get();
+    const cy = stage.top + stage.height / 2 + controller.motion.y.get();
+    setDragCenter({ x: cx, y: cy });
+    const x = controller.motion.x.get();
+    if (x <= -6) setDragSide("left");
+    else if (x >= 6) setDragSide("right");
+    else setDragSide(null);
+  }, [controller.motion.x, controller.motion.y, reduceEffects, setDragCenter, setDragSide]);
+
+  useLayoutEffect(() => {
+    const el = stageRef.current;
+    if (!el) return;
+    const stageEl = el;
+
+    function updateRect() {
+      stageRectRef.current = toStageRect(stageEl.getBoundingClientRect());
+    }
+
+    updateRect();
+
+    const ro = new ResizeObserver(() => updateRect());
+    ro.observe(stageEl);
+
+    const onResize = () => updateRect();
+    window.addEventListener("resize", onResize, { passive: true });
+
+    return () => {
+      window.removeEventListener("resize", onResize);
+      ro.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    let rafId: number | null = null;
+    const schedule = () => {
+      if (rafId != null) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = null;
+        if (!dragActiveRef.current) return;
+        const stage = stageRectRef.current;
+        if (!stage) return;
+        const x = controller.motion.x.get();
+        const y = controller.motion.y.get();
+        const cx = stage.left + stage.width / 2 + x;
+        const cy = stage.top + stage.height / 2 + y;
+        setDragCenter({ x: cx, y: cy });
+        if (x <= -6) setDragSide("left");
+        else if (x >= 6) setDragSide("right");
+        else setDragSide(null);
+      });
+    };
+
+    const unsubX = controller.motion.x.on("change", schedule);
+    const unsubY = controller.motion.y.on("change", schedule);
+
+    return () => {
+      if (rafId != null) window.cancelAnimationFrame(rafId);
+      unsubX();
+      unsubY();
+    };
+  }, [controller.motion.x, controller.motion.y, setDragCenter, setDragSide]);
 
   const stack = useMemo(() => props.cards.slice(0, config.stackSize), [props.cards, config.stackSize]);
 
@@ -139,7 +254,7 @@ export function CardStack(props: CardStackProps) {
 
   return (
     <div className="deckRoot">
-      <div className={reduceEffects ? "deckStage deckStageReducedFx" : "deckStage"}>
+      <div className={reduceEffects ? "deckStage deckStageReducedFx" : "deckStage"} ref={stageRef}>
         {hasTop ? (
           <div className="deckHints" aria-hidden="true">
             <motion.div className="deckHint deckHintLeft" style={{ opacity: leftHintOpacity, scale: leftHintScale }}>
@@ -177,7 +292,7 @@ export function CardStack(props: CardStackProps) {
                     y: isTop ? controller.motion.y : undefined,
                     rotate: isTop ? controller.motion.rotate : undefined,
                     translateY,
-                    scale,
+                    scale: isTop ? controller.motion.scale : scale,
                   }}
                   pointerBind={isTop && hasTop ? controller.bind : undefined}
                 />

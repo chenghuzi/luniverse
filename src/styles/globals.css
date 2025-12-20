@@ -190,26 +190,36 @@ a {
   background-position: center;
   filter: grayscale(1) saturate(0.2);
   opacity: 0.86;
-  transform: scale(1);
+  --thumbScale: 1;
+  --thumbHoverAdd: 0;
+  transform: scale(calc(var(--thumbScale) + var(--thumbHoverAdd)));
   transition: transform 120ms ease, opacity 120ms ease;
 }
 
 @media (hover: hover) {
   .recycleBinItem:hover .recycleBinThumb {
-    transform: scale(1.06);
+    --thumbHoverAdd: 0.06;
     opacity: 0.94;
   }
 }
 
 .recycleBinItem:active .recycleBinThumb {
-  transform: scale(0.98);
+  transform: scale(calc(var(--thumbScale) - 0.02));
 }
 
-.recycleBinTooltip {
-  position: absolute;
+.recycleBinDockThumb {
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px dashed rgba(15, 23, 42, 0.18);
+  box-shadow: none;
+  filter: grayscale(1) saturate(0.1);
+  opacity: 0.62;
+}
+
+.recycleBinTooltipPortal {
+  position: fixed;
   left: 50%;
-  bottom: calc(100% + 10px);
-  transform: translateX(-50%);
+  top: 0;
+  transform: translate(-50%, -100%);
   padding: 8px 10px;
   border-radius: 12px;
   background: rgba(15, 23, 42, 0.92);
@@ -219,9 +229,10 @@ a {
   white-space: nowrap;
   box-shadow: 0 18px 44px rgba(15, 23, 42, 0.25);
   pointer-events: none;
+  z-index: 99999;
 }
 
-.recycleBinTooltip::after {
+.recycleBinTooltipPortal::after {
   content: "";
   position: absolute;
   left: 50%;
