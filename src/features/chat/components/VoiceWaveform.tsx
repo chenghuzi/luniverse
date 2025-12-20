@@ -1,5 +1,6 @@
 type VoiceWaveformProps = {
   active: boolean;
+  animate?: boolean;
   bars: number[];
 };
 
@@ -10,9 +11,19 @@ function clamp01(v: number) {
 export function VoiceWaveform(props: VoiceWaveformProps) {
   const barMin = 0.1;
   const barMax = 2.2;
+  const animate = Boolean(props.animate);
 
   return (
-    <div className={props.active ? "voiceChatWave voiceChatWaveLive" : "voiceChatWave"} aria-hidden="true">
+    <div
+      className={[
+        "voiceChatWave",
+        props.active ? "voiceChatWaveLive" : null,
+        animate ? "voiceChatWaveActive" : null,
+      ]
+        .filter(Boolean)
+        .join(" ")}
+      aria-hidden="true"
+    >
       {props.bars.map((v, idx) => {
         const scaled = barMin + clamp01(v) * (barMax - barMin);
         return <span key={idx} className="voiceChatWaveBar" style={{ transform: `scaleY(${scaled})` }} />;

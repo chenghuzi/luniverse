@@ -40,9 +40,22 @@ type VoiceChatOverlayProps = {
 type ChatMessage = {
   id: string;
   role: "user" | "assistant";
+  kind: "text" | "voice";
   text: string;
+  durationMs?: number;
   createdAt: number;
 };
+
+function parseBooleanFlag(raw: unknown): boolean {
+  const v = String(raw ?? "")
+    .trim()
+    .toLowerCase();
+  return v === "1" || v === "true" || v === "yes" || v === "on";
+}
+
+function isVoiceOnlyModeEnabled(): boolean {
+  return parseBooleanFlag(import.meta.env.VITE_VOICE_CHAT_VOICE_ONLY);
+}
 
 function stopEvent(e: SyntheticEvent) {
   e.preventDefault();
@@ -61,6 +74,10 @@ function pickOne<T>(items: readonly T[]) {
   return items[Math.floor(Math.random() * items.length)];
 }
 
+function clampNumber(value: number, min: number, max: number) {
+  return Math.max(min, Math.min(max, value));
+}
+
 const ASSISTANT_TEXTS = [
   "Got it. Here are the highlights: 1) ... 2) ... 3) ...",
   "If you only remember one thing: focus on the main constraint and the trade-off.",
@@ -76,6 +93,7 @@ const MIN_VOICE_SEND_MS = 450;
 const MAX_CONTEXT_MESSAGES = 18;
 const TTS_FLUSH_MS = 300;
 const TTS_MAX_CHARS = 60;
+const TTS_VOICE_WAVE_BARS = 18;
 
 const TTS_PUNCTUATION = new Set([
   "\u3002",
@@ -132,6 +150,7 @@ function toLlmMessages(seedMessages: LlmMessage[], history: ChatMessage[]): LlmM
 }
 
 export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
+  const voiceOnly = useMemo(() => isVoiceOnlyModeEnabled(), []);
   const [isPressing, setIsPressing] = useState(false);
   const [recognizedText, setRecognizedText] = useState("");
   const [lastRecordingMs, setLastRecordingMs] = useState<number | null>(null);
@@ -151,6 +170,14 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const ttsObjectUrlRef = useRef<string | null>(null);
   const ttsChunkQueueRef = useRef<ArrayBuffer[]>([]);
   const ttsEndPendingRef = useRef<boolean>(false);
+  const ttsAssistantIdRef = useRef<string | null>(null);
+  const [ttsAudioPlaying, setTtsAudioPlaying] = useState(false);
+  const ttsPlaybackActiveRef = useRef<boolean>(false);
+  const ttsWaveRafRef = useRef<number | null>(null);
+  const ttsWavePrevBarsRef = useRef<number[]>(Array.from({ length: TTS_VOICE_WAVE_BARS }, () => 0));
+  const [assistantWaveBars, setAssistantWaveBars] = useState<Record<string, number[]>>({});
+  const [assistantHasVoice, setAssistantHasVoice] = useState<Record<string, boolean>>({});
+  const ttsWaveFakeSeedRef = useRef<number>(Math.random() * 1000);
   const messagesRef = useRef<ChatMessage[]>([]);
   const isNearBottomRef = useRef<boolean>(true);
   const scrollRafRef = useRef<number | null>(null);
@@ -161,6 +188,96 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   const { start: startAsr, pushAudio: pushAsrAudio, stop: stopAsr, status: asrStatus, error: asrError } = useTencentRtAsrSession();
   const llmClient = useMemo(() => createDashscopeLlmClient(), []);
   const [ttsConfig, setTtsConfig] = useState<MinimaxTtsConfig | null>(props.context?.ttsConfig ?? null);
+
+  function stopTtsWaveLoop() {
+    if (ttsWaveRafRef.current == null) return;
+    window.cancelAnimationFrame(ttsWaveRafRef.current);
+    ttsWaveRafRef.current = null;
+  }
+
+  function clamp01(v: number) {
+    return Math.max(0, Math.min(1, v));
+  }
+
+  function buildStaticVoiceMessageBars(durationMs: number | undefined): number[] {
+    const barCount = 18;
+    const d = typeof durationMs === "number" && Number.isFinite(durationMs) ? durationMs : 800;
+    const seconds = clampNumber(d / 1000, 0.25, 6.5);
+    const seed = seconds * 1.7;
+
+    const bars: number[] = [];
+    for (let i = 0; i < barCount; i += 1) {
+      const x = barCount <= 1 ? 0 : i / (barCount - 1);
+      const envelope = Math.pow(Math.sin(Math.PI * x), 0.85);
+      const mod = 0.62 + 0.38 * Math.sin(seed + x * (6.4 + seconds * 0.6) + i * 0.35);
+      const v = clamp01(0.08 + envelope * mod);
+      bars.push(v);
+    }
+    return bars;
+  }
+
+  function generateFakeVoiceBars(nowMs: number): number[] {
+    const t = nowMs / 1000;
+    const out: number[] = [];
+    const seed = ttsWaveFakeSeedRef.current;
+    for (let i = 0; i < TTS_VOICE_WAVE_BARS; i += 1) {
+      const phase = seed + i * 0.77;
+      const a = 0.55 + 0.45 * Math.sin(t * (2.4 + (i % 3) * 0.45) + phase);
+      const b = 0.35 + 0.35 * Math.sin(t * (5.1 + (i % 5) * 0.35) + phase * 1.7);
+      const c = 0.20 + 0.20 * Math.sin(t * (9.3 + (i % 7) * 0.25) + phase * 0.4);
+      const v = clamp01(0.15 + 0.55 * a + 0.35 * b + 0.15 * c);
+      out.push(v);
+    }
+    return out;
+  }
+
+  function smoothBars(prev: number[], next: number[], alpha: number): number[] {
+    if (prev.length !== next.length) return next.slice();
+    const out: number[] = [];
+    for (let i = 0; i < next.length; i += 1) {
+      out.push(prev[i]! * (1 - alpha) + next[i]! * alpha);
+    }
+    return out;
+  }
+
+  function setBarsForAssistant(assistantId: string, bars: number[]) {
+    setAssistantWaveBars((prev) => {
+      const current = prev[assistantId];
+      if (current && current.length === bars.length) {
+        let same = true;
+        for (let i = 0; i < bars.length; i += 1) {
+          if (Math.abs((current[i] ?? 0) - (bars[i] ?? 0)) > 1e-4) {
+            same = false;
+            break;
+          }
+        }
+        if (same) return prev;
+      }
+      return { ...prev, [assistantId]: bars };
+    });
+  }
+
+  function startTtsWaveLoop(assistantId: string) {
+    if (!voiceOnly) return;
+    ttsAssistantIdRef.current = assistantId;
+    stopTtsWaveLoop();
+
+    const tick = (now: number) => {
+      if (!voiceOnly) return;
+      const activeId = ttsAssistantIdRef.current;
+      if (!activeId) return;
+      if (!ttsPlaybackActiveRef.current) return;
+
+      const raw = generateFakeVoiceBars(now);
+      const prev = ttsWavePrevBarsRef.current;
+      const smoothed = smoothBars(prev, raw, 0.22);
+      ttsWavePrevBarsRef.current = smoothed;
+      setBarsForAssistant(activeId, smoothed);
+      ttsWaveRafRef.current = window.requestAnimationFrame(tick);
+    };
+
+    ttsWaveRafRef.current = window.requestAnimationFrame(tick);
+  }
 
   const targetName = useMemo(() => {
     if (!props.context) return "Voice chat";
@@ -210,6 +327,8 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     ttsPendingTextRef.current = "";
     ttsChunkQueueRef.current = [];
     ttsEndPendingRef.current = false;
+    setTtsAudioPlaying(false);
+    ttsPlaybackActiveRef.current = false;
 
     const audio = ttsAudioRef.current;
     if (audio) {
@@ -238,6 +357,9 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   function abortTtsStream() {
     ttsSessionRef.current?.abort();
     ttsSessionRef.current = null;
+    ttsAssistantIdRef.current = null;
+    ttsPlaybackActiveRef.current = false;
+    stopTtsWaveLoop();
     resetTtsPlayback();
   }
 
@@ -332,6 +454,12 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     } catch {
       // ignore
     }
+
+    const audio = ttsAudioRef.current;
+    if (audio && audio.paused) {
+      ttsPlaybackActiveRef.current = false;
+      stopTtsWaveLoop();
+    }
   }
 
   function findLastTtsPunctuation(textBuffer: string): number {
@@ -372,16 +500,21 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     }, TTS_FLUSH_MS);
   }
 
-  function startAssistantTts() {
+  function startAssistantTts(assistantId: string): boolean {
     abortTtsStream();
-    if (!ttsConfig) return;
-    if (!ensureTtsPlaybackInitialized()) return;
+    if (!ttsConfig) return false;
+    if (!ensureTtsPlaybackInitialized()) return false;
+
+    ttsPlaybackActiveRef.current = true;
+    setAssistantHasVoice((prev) => ({ ...prev, [assistantId]: true }));
+    setBarsForAssistant(assistantId, Array.from({ length: TTS_VOICE_WAVE_BARS }, () => 0));
 
     const audio = ttsAudioRef.current;
     if (audio) {
       audio.volume = 1;
       void audio.play().catch(() => {});
     }
+    startTtsWaveLoop(assistantId);
 
     ttsSessionRef.current = createMinimaxTtsSession(
       ttsConfig.wsPath,
@@ -401,9 +534,13 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
         },
         onError: () => {
           markTtsAudioEnd();
+          ttsPlaybackActiveRef.current = false;
+          stopTtsWaveLoop();
+          setAssistantHasVoice((prev) => ({ ...prev, [assistantId]: false }));
         },
       },
     );
+    return true;
   }
 
   function pushAssistantTtsText(delta: string) {
@@ -436,6 +573,7 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       {
         id: makeId(),
         role,
+        kind: "text",
         text: trimmed,
         createdAt: Date.now(),
       },
@@ -459,11 +597,18 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     replyTimeoutsRef.current.push(id);
   }
 
-  function sendUserText(text: string) {
+  function sendUserText(text: string, opts?: { kind?: ChatMessage["kind"]; durationMs?: number }) {
     const trimmed = text.trim();
     if (trimmed.length === 0) return;
 
-    const userMessage: ChatMessage = { id: makeId(), role: "user", text: trimmed, createdAt: Date.now() };
+    const userMessage: ChatMessage = {
+      id: makeId(),
+      role: "user",
+      kind: opts?.kind ?? "text",
+      durationMs: typeof opts?.durationMs === "number" ? opts.durationMs : undefined,
+      text: trimmed,
+      createdAt: Date.now(),
+    };
     if (!llmClient) {
       setMessages((prev) => [...prev, userMessage]);
       scheduleAssistantReplyFallback();
@@ -471,11 +616,11 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     }
 
     const assistantId = makeId();
-    const assistantMessage: ChatMessage = { id: assistantId, role: "assistant", text: "", createdAt: Date.now() };
+    const assistantMessage: ChatMessage = { id: assistantId, role: "assistant", kind: "text", text: "", createdAt: Date.now() };
     setMessages((prev) => [...prev, userMessage, assistantMessage]);
 
     abortLlmStream();
-    startAssistantTts();
+    void startAssistantTts(assistantId);
     const seedMessages = buildSeedMessages(props.context);
     const history = [...messagesRef.current, userMessage];
 
@@ -506,12 +651,12 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
   function sendVoiceMessage(durationMs: number) {
     const transcript = recognizedRef.current.trim();
     if (transcript.length > 0) {
-      sendUserText(transcript);
+      sendUserText(transcript, { kind: "voice", durationMs });
       return;
     }
 
     const seconds = Math.max(0, durationMs) / 1000;
-    sendUserText(`Voice message (${seconds.toFixed(1)}s)`);
+    sendUserText(`Voice message (${seconds.toFixed(1)}s)`, { kind: "voice", durationMs });
   }
 
   async function startHoldToTalk(e: ReactPointerEvent<HTMLButtonElement>) {
@@ -614,6 +759,8 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
     abortTtsStream();
     clearReplyTimers();
     setMessages([]);
+    setAssistantWaveBars({});
+    setAssistantHasVoice({});
 
     const prevHtmlOverflow = document.documentElement.style.overflow;
     const prevBodyOverflow = document.body.style.overflow;
@@ -642,6 +789,37 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
       if (scrollRafRef.current) window.cancelAnimationFrame(scrollRafRef.current);
     };
   }, [mic.stop, props.context, props.onClose, props.open, stopAsr]);
+
+  useEffect(() => {
+    if (!props.open) return;
+    const audio = ttsAudioRef.current;
+    if (!audio) return;
+
+    const onPlay = () => setTtsAudioPlaying(true);
+    const onPause = () => setTtsAudioPlaying(false);
+    const onEnded = () => {
+      setTtsAudioPlaying(false);
+      ttsPlaybackActiveRef.current = false;
+      stopTtsWaveLoop();
+    };
+    const onError = () => {
+      setTtsAudioPlaying(false);
+      ttsPlaybackActiveRef.current = false;
+      stopTtsWaveLoop();
+    };
+
+    audio.addEventListener("play", onPlay);
+    audio.addEventListener("pause", onPause);
+    audio.addEventListener("ended", onEnded);
+    audio.addEventListener("error", onError);
+
+    return () => {
+      audio.removeEventListener("play", onPlay);
+      audio.removeEventListener("pause", onPause);
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onError);
+    };
+  }, [props.open]);
 
   useEffect(() => {
     if (props.open) return;
@@ -721,7 +899,22 @@ export function VoiceChatOverlay(props: VoiceChatOverlayProps) {
             {messages.map((m) => (
               <div key={m.id} className={m.role === "user" ? "voiceChatRow voiceChatRowUser" : "voiceChatRow"}>
                 <div className={m.role === "user" ? "voiceChatBubble voiceChatBubbleUser" : "voiceChatBubble"}>
-                  {m.text}
+                  {voiceOnly && m.role === "assistant"
+                    ? assistantHasVoice[m.id]
+                      ? (
+                          <VoiceWaveform
+                            active={ttsAudioPlaying && ttsAssistantIdRef.current === m.id}
+                            bars={assistantWaveBars[m.id] ?? ttsWavePrevBarsRef.current}
+                          />
+                        )
+                      : m.text
+                    : null}
+                  {voiceOnly && m.role === "user"
+                    ? m.kind === "voice"
+                      ? <VoiceWaveform active={false} bars={buildStaticVoiceMessageBars(m.durationMs)} />
+                      : m.text
+                    : null}
+                  {!voiceOnly ? m.text : null}
                 </div>
               </div>
             ))}

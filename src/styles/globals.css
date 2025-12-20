@@ -330,11 +330,8 @@ a {
 }
 
 .detailCard {
-  width: min(680px, 92vw);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--panel);
-  box-shadow: var(--shadow);
+  width: min(768px, 92vw);
+  margin: 0 auto;
   padding: 18px;
   display: flex;
   flex-direction: column;
@@ -575,9 +572,6 @@ a {
 
 .episodeRow {
   padding: 12px 12px;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.64);
-  border: 1px solid rgba(15, 23, 42, 0.08);
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
