@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useTransform, type MotionValue } from "framer-motion";
+import { motion, useTransform, type MotionValue } from "framer-motion";
 import type { DeckMotionConfig } from "@/features/deck/motion/constants";
 import { DEFAULT_DECK_MOTION_CONFIG } from "@/features/deck/motion/constants";
 import { getStackTransform } from "@/features/deck/motion/transforms";
@@ -60,6 +60,24 @@ export function CardStack(props: CardStackProps) {
   const secondScale = useTransform(stackProgress, (p) => (1 - config.cardScaleStep) + p * config.cardScaleStep);
   const secondTranslateY = useTransform(stackProgress, (p) => config.cardSpacingPx * (1 - p));
 
+  const hintZonePx = Math.min(72, Math.max(24, config.swipeDistanceThresholdPx * 0.35));
+  const hintScaleMax = 1.18;
+  const hintProgress = useTransform(controller.motion.x, (v) => {
+    const abs = Math.abs(v);
+    if (abs <= hintZonePx) return 0;
+    const t = clamp((abs - hintZonePx) / Math.max(1, config.swipeDistanceThresholdPx - hintZonePx), 0, 1);
+    return 1 - Math.pow(1 - t, 3);
+  });
+  const leftHintScale = useTransform([controller.motion.x, hintProgress], ([x, p]) => {
+    if (x >= 0) return 1;
+    return 1 + (hintScaleMax - 1) * p;
+  });
+  const rightHintScale = useTransform([controller.motion.x, hintProgress], ([x, p]) => {
+    if (x <= 0) return 1;
+    return 1 + (hintScaleMax - 1) * p;
+  });
+  const rightHintText = hasTop ? `和${top.podcast.title}聊聊吧` : "开始聊聊吧";
+
   useEffect(() => {
     function isTypingTarget(target: EventTarget | null) {
       if (!target || !(target instanceof HTMLElement)) return false;
@@ -93,6 +111,16 @@ export function CardStack(props: CardStackProps) {
   return (
     <div className="deckRoot">
       <div className={reduceEffects ? "deckStage deckStageReducedFx" : "deckStage"}>
+        {hasTop ? (
+          <div className="deckHints" aria-hidden="true">
+            <motion.div className="deckHint deckHintLeft" style={{ scale: leftHintScale }}>
+              {"\u6362\u4E0B\u4E00\u671F"}
+            </motion.div>
+            <motion.div className="deckHint deckHintRight" style={{ scale: rightHintScale }}>
+              {rightHintText}
+            </motion.div>
+          </div>
+        ) : null}
         {stack.length === 0 ? (
           <div className="emptyState">{props.isLoading ? "Loading..." : "No cards"}</div>
         ) : (

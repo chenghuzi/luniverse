@@ -236,8 +236,8 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
               }}
             >
               <div className="audioUnlockPanel">
-                <div className="audioUnlockTitle">{"\u89e3\u9501\u5b8c\u6574\u4f53\u9a8c"}</div>
-                <div className="audioUnlockSubtitle">A browser permission is required to autoplay audio.</div>
+                <div className="audioUnlockTitle">{"\u5141\u8bb8\u64ad\u653e\u4ee5\u4eab\u53d7\u5b8c\u6574\u4f53\u9a8c"}</div>
+                <div className="audioUnlockSubtitle">{"\u6d4f\u89c8\u5668\u53ef\u80fd\u4f1a\u8981\u6c42\u5a92\u4f53\u64ad\u653e\u6743\u9650"}</div>
                 {showUnlockError ? <div className="audioUnlockError">{unlockError}</div> : null}
                 <button className="audioUnlockButton" type="button" onClick={unlockAndPlayFromGesture} disabled={isUnlocking}>
                   ok
