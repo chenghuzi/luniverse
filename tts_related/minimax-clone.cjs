@@ -19,7 +19,7 @@ const getArg = (flag, fallback = undefined) => {
 
 const inputPath = getArg('--audio') || getArg('--input')
 const promptPath = getArg('--prompt-audio')
-const promptText = getArg('--prompt-text', 'This is a prompt audio for voice cloning.')
+const promptText = getArg('--prompt-text', '测试测试.')
 const sampleText = getArg('--text', 'Hello, this is a quick sample to validate the cloned voice.')
 const model = getArg('--model', 'speech-2.6-hd')
 const outPath = getArg('--out')
