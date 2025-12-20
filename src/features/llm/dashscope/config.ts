@@ -5,7 +5,7 @@ type DashscopeConfig = {
 };
 
 const DEFAULT_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1";
-const DEFAULT_MODEL = "qwen-plus";
+const DEFAULT_MODEL = "qwen3-max";
 
 export function getDashscopeConfig(): DashscopeConfig | null {
   const baseUrl = String(import.meta.env.VITE_DASHSCOPE_BASE_URL ?? DEFAULT_BASE_URL).trim();
