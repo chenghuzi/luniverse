@@ -187,6 +187,7 @@ export function RecycleBinBar() {
           );
         })}
       </div>
+      <div className="attributionText recycleBinAttribution">By Enactflow from Hangzhou</div>
       {tooltip && typeof document !== "undefined"
         ? createPortal(
             <div className="recycleBinTooltipPortal" role="tooltip" style={{ left: tooltip.left, top: tooltip.top }}>

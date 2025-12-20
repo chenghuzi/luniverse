@@ -285,6 +285,8 @@ export function DetailPage() {
         </div>
       </main>
 
+      <footer className="attributionText pageAttribution">By Enactflow from Hangzhou</footer>
+
       <VoiceChatOverlay open={chat.open} context={chat.context} onClose={() => setChat({ open: false, context: null })} />
     </div>
   );
