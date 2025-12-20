@@ -492,6 +492,18 @@ a {
   border-color: rgba(15, 23, 42, 0.18);
 }
 
+.chatButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  filter: grayscale(1);
+  background: rgba(15, 23, 42, 0.06);
+  border-color: rgba(15, 23, 42, 0.10);
+}
+
+.chatButton:disabled:hover {
+  border-color: rgba(15, 23, 42, 0.10);
+}
+
 .chip {
   display: inline-flex;
   align-items: center;
@@ -602,6 +614,18 @@ a {
 
 .episodeChatButton:hover {
   border-color: rgba(15, 23, 42, 0.18);
+}
+
+.episodeChatButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  filter: grayscale(1);
+  background: rgba(15, 23, 42, 0.06);
+  border-color: rgba(15, 23, 42, 0.10);
+}
+
+.episodeChatButton:disabled:hover {
+  border-color: rgba(15, 23, 42, 0.10);
 }
 
 .voiceChatBackdrop {
