@@ -9,7 +9,10 @@ type SnippetPlayerProps = {
   durationMs: number;
   isActive: boolean;
   onAutoAdvance?: () => void;
+  onPlaybackStateChange?: (state: SnippetPlaybackState) => void;
 };
+
+export type SnippetPlaybackState = "idle" | "playing" | "paused" | "blocked";
 
 function isAutoplayBlockedError(err: unknown) {
   const e = err as { name?: unknown; message?: unknown } | null;
@@ -63,6 +66,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
   const [unlockError, setUnlockError] = useState<string | null>(null);
   const [currentSec, setCurrentSec] = useState(startSec);
   const [isReady, setIsReady] = useState(false);
+  const [playbackState, setPlaybackState] = useState<SnippetPlaybackState>("idle");
 
   const progressSec = useMemo(() => clampNumber(currentSec - startSec, 0, durationSec), [currentSec, startSec, durationSec]);
   const progressMs = Math.round(progressSec * 1000);
@@ -75,6 +79,10 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     isActiveRef.current = props.isActive;
     if (!props.isActive) autoAdvanceArmedRef.current = false;
   }, [props.isActive]);
+
+  useEffect(() => {
+    props.onPlaybackStateChange?.(playbackState);
+  }, [playbackState, props.onPlaybackStateChange]);
 
   useEffect(() => {
     const audioEl = getGlobalAudioElement();
@@ -102,6 +110,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       if (!active || active.id !== segmentIdRef.current) return;
       autoAdvanceArmedRef.current = true;
       setIsPlaying(true);
+      setPlaybackState("playing");
       setNeedsUserGesture(false);
       setIsUnlocking(false);
       setUnlockError(null);
@@ -113,6 +122,12 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       if (!active || active.id !== segmentIdRef.current) return;
       autoAdvanceArmedRef.current = false;
       setIsPlaying(false);
+      if (!isActiveRef.current) {
+        setPlaybackState("idle");
+        return;
+      }
+      const isNearSegmentEnd = audioEl.currentTime >= endSec - 0.08;
+      setPlaybackState(isNearSegmentEnd ? "idle" : "paused");
     }
 
     function onError() {
@@ -123,7 +138,8 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setIsUnlocking(false);
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
-      setUnlockError(code ? `Media error (code ${code})` : "Media error");
+      setPlaybackState("blocked");
+      setUnlockError(code ? `媒体播放错误（代码 ${code}）` : "媒体播放错误");
     }
 
     audioEl.addEventListener("loadedmetadata", onLoadedMetadata);
@@ -150,6 +166,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
     setUnlockError(null);
     setIsReady(false);
     setCurrentSec(startSec);
+    setPlaybackState("idle");
     autoAdvanceArmedRef.current = false;
 
     if (!props.isActive) {
@@ -167,8 +184,9 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
       setIsUnlocking(false);
-      setUnlockError(isAutoplayBlockedError(e) ? null : e instanceof Error ? e.message : null);
+      setUnlockError(isAutoplayBlockedError(e) ? null : "媒体播放异常");
       setIsPlaying(false);
+      setPlaybackState("blocked");
     });
   }, [props.isActive, props.audioUrl, startSec]);
 
@@ -211,8 +229,9 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       setNeedsUserGesture(true);
       setShowUnlockOverlay(true);
       setIsUnlocking(false);
-      setUnlockError(isAutoplayBlockedError(e) ? null : "Playback was blocked by the browser");
+      setUnlockError(isAutoplayBlockedError(e) ? null : "浏览器阻止了播放");
       setIsPlaying(false);
+      setPlaybackState("blocked");
     }
   }
 
@@ -242,7 +261,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
                 <div className="audioUnlockSubtitle">{"\u6d4f\u89c8\u5668\u53ef\u80fd\u4f1a\u8981\u6c42\u5a92\u4f53\u64ad\u653e\u6743\u9650"}</div>
                 {showUnlockError ? <div className="audioUnlockError">{unlockError}</div> : null}
                 <button className="audioUnlockButton" type="button" onClick={unlockAndPlayFromGesture} disabled={isUnlocking}>
-                  ok
+                  继续播放
                 </button>
               </div>
             </div>,
@@ -252,7 +271,7 @@ export function SnippetPlayer(props: SnippetPlayerProps) {
       <div
         className="snippetProgress"
         role="progressbar"
-        aria-label="Playback progress"
+        aria-label="播放进度"
         aria-valuemin={0}
         aria-valuemax={durationMs}
         aria-valuenow={progressMs}

@@ -141,8 +141,8 @@ export function createMinimaxTtsSession(path: string, params: MinimaxTtsStartPar
     if (isObject(baseResp)) {
       const statusCode = baseResp["status_code"];
       if (typeof statusCode === "number" && statusCode !== 0) {
-        const statusMsg = getString(baseResp, "status_msg") ?? "unknown_error";
-        callbacks.onError?.(new Error(`minimax_error: ${statusMsg} (${statusCode})`));
+        const statusMsg = getString(baseResp, "status_msg") ?? "未知错误";
+        callbacks.onError?.(new Error(`语音合成服务错误：${statusMsg}（${statusCode}）`));
       }
     }
 
@@ -154,7 +154,7 @@ export function createMinimaxTtsSession(path: string, params: MinimaxTtsStartPar
     }
 
     if (event === "task_failed") {
-      callbacks.onError?.(new Error("minimax_task_failed"));
+      callbacks.onError?.(new Error("语音合成任务失败"));
       socket.close();
       return;
     }
@@ -171,7 +171,7 @@ export function createMinimaxTtsSession(path: string, params: MinimaxTtsStartPar
   });
 
   socket.addEventListener("error", () => {
-    callbacks.onError?.(new Error("tts_ws_error"));
+    callbacks.onError?.(new Error("语音合成连接异常"));
   });
 
   socket.addEventListener("close", () => {

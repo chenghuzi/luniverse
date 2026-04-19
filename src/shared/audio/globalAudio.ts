@@ -145,6 +145,22 @@ export function pauseGlobalAudio() {
   }
 }
 
+export async function toggleActiveWindowPlayback() {
+  if (!activeWindow) return null;
+  const el = ensureAudioEl();
+
+  if (el.paused) {
+    prepareForPlay(el);
+    await el.play();
+    return "playing" as const;
+  }
+
+  fadeOutBeforePause(el, () => {
+    el.pause();
+  }, () => activeWindow != null);
+  return "paused" as const;
+}
+
 export function seekWithinActiveWindow(progressSec: number) {
   const el = ensureAudioEl();
   if (!activeWindow) return;

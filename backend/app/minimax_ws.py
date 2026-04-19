@@ -20,6 +20,10 @@ def _connect_kwargs(api_key: str) -> dict[str, Any]:
 
     kwargs: dict[str, Any] = {"ping_interval": 20, "close_timeout": 5}
 
+    # Avoid inheriting desktop/system SOCKS proxy settings for the upstream TTS WS.
+    if sig and "proxy" in sig.parameters:
+        kwargs["proxy"] = None
+
     if sig and "extra_headers" in sig.parameters:
         kwargs["extra_headers"] = headers
         return kwargs

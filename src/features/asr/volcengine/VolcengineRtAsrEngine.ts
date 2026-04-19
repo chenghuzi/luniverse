@@ -1,53 +1,24 @@
 import type { AsrCallbacks, AsrEngine, AsrEngineState, AsrStartContext, AsrStopResult, AsrStatus, Unsubscribe } from "@/features/asr/types";
-import type { TencentAsrEnvConfig } from "@/features/asr/credentials";
+import type { VolcengineAsrEnvConfig } from "@/features/asr/credentials";
 import { LinearResampler } from "@/features/asr/audio/LinearResampler";
 import { float32ToPcm16, Pcm16FrameAssembler } from "@/features/asr/audio/pcm16";
-import { buildTencentAsrWsUrl } from "@/features/asr/tencent/signature";
 
-type TencentStartOptions = {
-  config: TencentAsrEnvConfig;
+type VolcengineStartOptions = {
+  config: VolcengineAsrEnvConfig;
   targetSampleRate?: number;
-  needVad?: boolean;
 };
 
-type TencentAsrResponse = {
-  code?: number;
+type VolcengineProxyMessage = {
+  type?: "ready" | "partial" | "final" | "error";
+  text?: string;
   message?: string;
-  voice_id?: string;
-  final?: 0 | 1;
-  result?: {
-    slice_type?: 0 | 1 | 2;
-    index?: number;
-    voice_text_str?: string;
-  };
 };
-
-function makeId() {
-  try {
-    return crypto.randomUUID();
-  } catch {
-    return `${Date.now()}_${Math.random().toString(16).slice(2)}`;
-  }
-}
 
 function sleep(ms: number) {
   return new Promise<void>((resolve) => window.setTimeout(resolve, ms));
 }
 
-function joinStableText(stable: Map<number, string>, unstable: { index: number | null; text: string }) {
-  const parts: string[] = [];
-  const keys = Array.from(stable.keys()).sort((a, b) => a - b);
-  for (const k of keys) {
-    const t = stable.get(k);
-    if (t) parts.push(t);
-  }
-  if (unstable.text.trim().length > 0 && (unstable.index == null || !stable.has(unstable.index))) {
-    parts.push(unstable.text);
-  }
-  return parts.join("");
-}
-
-export class TencentRtAsrEngine implements AsrEngine {
+export class VolcengineRtAsrEngine implements AsrEngine {
   private state: AsrEngineState;
   private listeners: Set<(s: AsrEngineState) => void>;
   private callbacks: AsrCallbacks;
@@ -55,11 +26,8 @@ export class TencentRtAsrEngine implements AsrEngine {
 
   private ws: WebSocket | null;
   private ready: boolean;
-  private voiceId: string | null;
+  private lastPartialText: string;
   private lastFinalText: string;
-
-  private stableSegments: Map<number, string>;
-  private unstableSegment: { index: number | null; text: string };
 
   private targetSampleRate: number;
   private resampler: LinearResampler | null;
@@ -76,11 +44,8 @@ export class TencentRtAsrEngine implements AsrEngine {
 
     this.ws = null;
     this.ready = false;
-    this.voiceId = null;
+    this.lastPartialText = "";
     this.lastFinalText = "";
-
-    this.stableSegments = new Map();
-    this.unstableSegment = { index: null, text: "" };
 
     this.targetSampleRate = 16000;
     this.resampler = null;
@@ -118,10 +83,8 @@ export class TencentRtAsrEngine implements AsrEngine {
 
   private resetSessionState() {
     this.ready = false;
-    this.voiceId = null;
+    this.lastPartialText = "";
     this.lastFinalText = "";
-    this.stableSegments.clear();
-    this.unstableSegment = { index: null, text: "" };
     this.framer.reset();
     this.frameQueue = [];
     if (this.resampler) this.resampler.reset();
@@ -156,27 +119,26 @@ export class TencentRtAsrEngine implements AsrEngine {
     this.clearSendTimer();
     this.sendTimer = window.setInterval(() => {
       const ws = this.ws;
-      if (!ws || !this.ready) return;
+      if (!ws || !this.ready || ws.readyState !== WebSocket.OPEN) return;
       const frame = this.frameQueue.shift();
       if (!frame) return;
       try {
         ws.send(frame);
-      } catch (e) {
-        void e;
+      } catch {
         this.onError("发送音频失败");
       }
     }, 40);
   }
 
-  async start(context: AsrStartContext, callbacks: AsrCallbacks, options?: TencentStartOptions): Promise<boolean> {
+  async start(context: AsrStartContext, callbacks: AsrCallbacks, options?: VolcengineStartOptions): Promise<boolean> {
     if (this.state.status !== "idle") return false;
     this.context = context;
     this.callbacks = callbacks;
     this.resetSessionState();
 
     const config = options?.config;
-    if (!config) {
-      this.onError("缺少语音识别配置");
+    if (!config?.wsPath) {
+      this.onError("缺少火山引擎语音识别配置");
       return false;
     }
 
@@ -185,54 +147,22 @@ export class TencentRtAsrEngine implements AsrEngine {
     this.resampler = null;
     this.resamplerSrcRate = null;
 
-    const voiceId = makeId();
-    this.voiceId = voiceId;
-
-    const now = Math.floor(Date.now() / 1000);
-    const timestamp = now;
-    const expired = now + 24 * 60 * 60;
-    const nonce = Math.floor(Math.random() * 1_000_000_000);
-
     this.setState({ status: "connecting", error: null });
-
-    let url: string;
-    try {
-      const needVad = options?.needVad ?? true;
-      url = await buildTencentAsrWsUrl(
-        config.appId,
-        {
-          secretid: config.secretId,
-          timestamp,
-          expired,
-          nonce,
-          engine_model_type: config.engineModelType,
-          voice_id: voiceId,
-          voice_format: 1,
-          needvad: needVad ? 1 : 0,
-        },
-        config.secretKey,
-      );
-    } catch (e) {
-      void e;
-      this.onError("生成语音识别连接失败");
-      return false;
-    }
 
     let ws: WebSocket;
     try {
-      ws = new WebSocket(url);
-    } catch (e) {
-      void e;
+      ws = new WebSocket(config.wsPath);
+    } catch {
       this.onError("打开语音识别连接失败");
       return false;
     }
 
+    ws.binaryType = "arraybuffer";
     this.ws = ws;
     this.startSendingLoop();
 
     ws.onopen = () => {
-      this.ready = true;
-      this.setState({ status: "ready", error: null });
+      this.setState({ status: "connecting", error: null });
     };
 
     ws.onerror = () => {
@@ -248,42 +178,39 @@ export class TencentRtAsrEngine implements AsrEngine {
     ws.onmessage = (evt) => {
       if (typeof evt.data !== "string") return;
 
-      let msg: TencentAsrResponse;
+      let msg: VolcengineProxyMessage;
       try {
-        msg = JSON.parse(evt.data) as TencentAsrResponse;
+        msg = JSON.parse(evt.data) as VolcengineProxyMessage;
       } catch {
         return;
       }
 
-      const code = msg.code ?? 0;
-      if (code !== 0) {
-        this.onError(`语音识别服务返回错误（代码 ${code}）`);
+      if (msg.type === "ready") {
+        this.ready = true;
+        this.setState({ status: "ready", error: null });
         return;
       }
 
-      if (this.state.status !== "recognizing") this.setState({ status: "recognizing", error: null });
-
-      const result = msg.result;
-      if (result) {
-        const index = typeof result.index === "number" ? result.index : null;
-        const text = typeof result.voice_text_str === "string" ? result.voice_text_str : "";
-        const sliceType = result.slice_type ?? 0;
-
-        if (sliceType === 2 && index != null) {
-          this.stableSegments.set(index, text);
-          if (this.unstableSegment.index === index) this.unstableSegment = { index: null, text: "" };
-        } else {
-          this.unstableSegment = { index, text };
-        }
-
-        const full = joinStableText(this.stableSegments, this.unstableSegment);
-        this.callbacks.onPartialText?.(full);
+      if (msg.type === "error") {
+        this.onError(String(msg.message ?? "语音识别服务异常"));
+        return;
       }
 
-      if (msg.final === 1) {
-        const full = joinStableText(this.stableSegments, this.unstableSegment).trim();
-        this.lastFinalText = full;
-        this.callbacks.onFinalText?.(full);
+      const text = String(msg.text ?? "");
+      if (msg.type === "partial") {
+        if (this.state.status !== "recognizing") this.setState({ status: "recognizing", error: null });
+        if (text !== this.lastPartialText) {
+          this.lastPartialText = text;
+          this.callbacks.onPartialText?.(text);
+        }
+        return;
+      }
+
+      if (msg.type === "final") {
+        if (this.state.status !== "recognizing") this.setState({ status: "recognizing", error: null });
+        this.lastPartialText = text;
+        this.lastFinalText = text.trim();
+        this.callbacks.onFinalText?.(this.lastFinalText);
       }
     };
 
@@ -324,7 +251,7 @@ export class TencentRtAsrEngine implements AsrEngine {
     const ws = this.ws;
     this.clearSendTimer();
 
-    if (ws && this.ready) {
+    if (ws && ws.readyState === WebSocket.OPEN) {
       while (this.frameQueue.length > 0) {
         const frame = this.frameQueue.shift();
         if (!frame) break;

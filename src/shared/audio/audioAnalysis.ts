@@ -17,6 +17,10 @@ function getAudioContextCtor(): AudioContextCtor | null {
 
 function ensureContext(): AudioContext | null {
   if (ctx) return ctx;
+  return null;
+}
+
+function createContext(): AudioContext | null {
   const Ctor = getAudioContextCtor();
   if (!Ctor) return null;
   try {
@@ -64,7 +68,10 @@ function connectGraphIfNeeded(runningCtx: AudioContext) {
 }
 
 export async function resumeAudioAnalysisFromGesture() {
-  const c = ensureContext();
+  let c = ensureContext();
+  if (!c) {
+    c = createContext();
+  }
   if (!c) return;
   try {
     if (c.state !== "running") {

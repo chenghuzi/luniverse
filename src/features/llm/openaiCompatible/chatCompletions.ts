@@ -14,6 +14,7 @@ export type StreamChatCompletionParams = {
   model: string;
   messages: LlmMessage[];
   temperature?: number;
+  enableThinking?: boolean;
   signal?: AbortSignal;
 };
 
@@ -31,6 +32,7 @@ export async function streamChatCompletion(params: StreamChatCompletionParams, o
       stream: true,
       messages: params.messages,
       temperature: params.temperature ?? 0.6,
+      enable_thinking: params.enableThinking ?? false,
     }),
     signal: params.signal,
   });
@@ -65,4 +67,3 @@ export async function streamChatCompletion(params: StreamChatCompletionParams, o
 
   return assembled;
 }
-

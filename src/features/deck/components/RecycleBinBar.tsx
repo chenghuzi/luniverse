@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { useDeckStore } from "@/features/deck/model/deckStore";
 import { useRecycleBinUiStore, type DockRect } from "@/features/deck/model/recycleBinUiStore";
 
@@ -110,84 +111,93 @@ export function RecycleBinBar() {
   }, [dragActive, dragCenter, dragSide, items.length]);
 
   return (
-    <div className="recycleBinBar" role="region" aria-label="Recycle bin">
+    <div className="recycleBinBar" role="region" aria-label="回收站">
       <div className="recycleBinList" role="list" ref={listRef}>
-        <button
-          ref={(el) => {
-            dockRef.current = el;
-            itemRefs.current[0] = el;
-          }}
-          type="button"
-          className="recycleBinItem recycleBinDock"
-          aria-label="Recycle bin dock"
-          onPointerDown={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-          }}
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            if (hideTimerRef.current != null) window.clearTimeout(hideTimerRef.current);
-            setTooltip(null);
-          }}
-        >
-          <span
-            className="recycleBinThumb recycleBinDockThumb"
-            aria-hidden="true"
-            style={{
-              ["--thumbScale" as never]: String(magicScales[0] ?? 1),
+        {dragActive && (
+          <button
+            ref={(el) => {
+              dockRef.current = el;
+              itemRefs.current[0] = el;
             }}
-          />
-        </button>
-        {items.map((item, i) => {
-          const key = `${item.cardInstanceId}-${i}`;
-          const isActive = tooltip?.key === key;
-          const title = `${item.highlightTitle} • ${item.podcastTitle}`;
-          const scale = magicScales[i + 1] ?? 1;
-
-          return (
-            <button
-              key={key}
-              type="button"
-              className="recycleBinItem"
-              role="listitem"
-              title={title}
-              ref={(el) => {
-                itemRefs.current[i + 1] = el;
+            type="button"
+            className="recycleBinItem recycleBinDock"
+            aria-label="回收站停靠区"
+            onPointerDown={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              if (hideTimerRef.current != null) window.clearTimeout(hideTimerRef.current);
+              setTooltip(null);
+            }}
+          >
+            <span
+              className="recycleBinThumb recycleBinDockThumb"
+              aria-hidden="true"
+              style={{
+                ["--thumbScale" as never]: String(magicScales[0] ?? 1),
               }}
-              onPointerDown={(e) => e.stopPropagation()}
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
+            />
+          </button>
+        )}
+        <AnimatePresence mode="popLayout">
+          {items.map((item, i) => {
+            const key = `${item.cardInstanceId}-${i}`;
+            const isActive = tooltip?.key === key;
+            const title = `${item.highlightTitle} • ${item.podcastTitle}`;
+            const scale = magicScales[dragActive ? i + 1 : i] ?? 1;
 
-                if (hideTimerRef.current != null) window.clearTimeout(hideTimerRef.current);
-                if (isActive) {
-                  setTooltip(null);
-                  return;
-                }
-
-                const r = e.currentTarget.getBoundingClientRect();
-                const anchorLeft = r.left + r.width / 2;
-                const clampedLeft = clampNumber(anchorLeft, 92, window.innerWidth - 92);
-                const anchorTop = r.top - 10;
-                setTooltip({ key, left: clampedLeft, top: anchorTop });
-                hideTimerRef.current = window.setTimeout(() => setTooltip(null), TOOLTIP_HIDE_MS);
-              }}
-            >
-              <span
-                className="recycleBinThumb"
-                aria-hidden="true"
-                style={{
-                  backgroundColor: item.accent,
-                  backgroundImage: item.coverUrl ? `url(${item.coverUrl})` : undefined,
-                  ["--thumbScale" as never]: String(scale),
+            return (
+              <motion.button
+                key={key}
+                layout
+                type="button"
+                className="recycleBinItem"
+                role="listitem"
+                title={title}
+                initial={{ opacity: 0, scale: 0.5, x: -20 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.5 }}
+                transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                ref={(el) => {
+                  itemRefs.current[dragActive ? i + 1 : i] = el;
                 }}
-              />
-            </button>
-          );
-        })}
+                onPointerDown={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+
+                  if (hideTimerRef.current != null) window.clearTimeout(hideTimerRef.current);
+                  if (isActive) {
+                    setTooltip(null);
+                    return;
+                  }
+
+                  const r = e.currentTarget.getBoundingClientRect();
+                  const anchorLeft = r.left + r.width / 2;
+                  const clampedLeft = clampNumber(anchorLeft, 92, window.innerWidth - 92);
+                  const anchorTop = r.top - 10;
+                  setTooltip({ key, left: clampedLeft, top: anchorTop });
+                  hideTimerRef.current = window.setTimeout(() => setTooltip(null), TOOLTIP_HIDE_MS);
+                }}
+              >
+                <span
+                  className="recycleBinThumb"
+                  aria-hidden="true"
+                  style={{
+                    backgroundColor: item.accent,
+                    backgroundImage: item.coverUrl ? `url(${item.coverUrl})` : undefined,
+                    ["--thumbScale" as never]: String(scale),
+                  }}
+                />
+              </motion.button>
+            );
+          })}
+        </AnimatePresence>
       </div>
-      <div className="attributionText recycleBinAttribution">By Enactflow from Hangzhou</div>
+      <div className="attributionText recycleBinAttribution">杭州 Enactflow 出品</div>
       {tooltip && typeof document !== "undefined"
         ? createPortal(
             <div className="recycleBinTooltipPortal" role="tooltip" style={{ left: tooltip.left, top: tooltip.top }}>

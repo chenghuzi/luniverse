@@ -9,6 +9,7 @@ import { useSwipeController } from "@/features/deck/hooks/useSwipeController";
 import { Card } from "@/features/deck/components/Card";
 import { clamp } from "@/shared/lib/clamp";
 import { useRecycleBinUiStore } from "@/features/deck/model/recycleBinUiStore";
+import { toggleActiveWindowPlayback } from "@/shared/audio/globalAudio";
 
 type CardStackProps = {
   cards: CardType[];
@@ -71,12 +72,15 @@ export function CardStack(props: CardStackProps) {
     card: top ?? {
       id: "empty",
       instanceId: "empty-0",
-      podcast: { id: "empty", title: "No cards" },
+      podcast: { id: "empty", title: "暂无内容" },
       episode: { id: "empty", title: "", audio: { url: "" } },
-      highlight: { id: "empty", title: "No cards" },
+      highlight: { id: "empty", title: "暂无内容" },
       ui: { accent: "#111827" },
     },
     onDecision: props.onDecision,
+    onTap: () => {
+      void toggleActiveWindowPlayback();
+    },
     config,
     onMotionActivityChange,
     motion: { x: sharedX, y: sharedY },
@@ -303,7 +307,7 @@ export function CardStack(props: CardStackProps) {
         {hasTop ? (
           <div className="deckHints" aria-hidden="true">
             <motion.div className="deckHint deckHintLeft" style={{ opacity: leftHintOpacity, scale: leftHintScale }}>
-              {"\u6362\u4E0B\u4E00\u671F"}
+              {"\u6362\u4E0B\u4E00\u5F20"}
             </motion.div>
             <motion.div className="deckHint deckHintRight" style={{ opacity: rightHintOpacity, scale: rightHintScale }}>
               {rightHintText}
@@ -311,7 +315,7 @@ export function CardStack(props: CardStackProps) {
           </div>
         ) : null}
         {stack.length === 0 ? (
-          <div className="emptyState">{props.isLoading ? "Loading..." : "No cards"}</div>
+          <div className="emptyState">{props.isLoading ? "加载中..." : "暂无内容"}</div>
         ) : (
           stack
             .map((card, i) => {

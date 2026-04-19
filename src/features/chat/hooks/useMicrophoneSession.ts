@@ -28,7 +28,8 @@ type InternalNodes = {
   audioContext: AudioContext;
   source: MediaStreamAudioSourceNode;
   analyser: AnalyserNode;
-  processor: ScriptProcessorNode;
+  workletNode: AudioWorkletNode | null;
+  scriptProcessor: ScriptProcessorNode | null;
   silentGain: GainNode;
 };
 
@@ -41,15 +42,15 @@ function mapGetUserMediaError(e: unknown): { status: MicStatus; message: string 
   const strName = typeof name === "string" ? name : "UnknownError";
 
   if (strName === "NotAllowedError" || strName === "SecurityError") {
-    return { status: "denied", message: "Microphone permission denied" };
+    return { status: "denied", message: "麦克风权限被拒绝" };
   }
   if (strName === "NotFoundError" || strName === "DevicesNotFoundError") {
-    return { status: "error", message: "No microphone device found" };
+    return { status: "error", message: "未找到麦克风设备" };
   }
   if (strName === "NotReadableError" || strName === "TrackStartError") {
-    return { status: "error", message: "Microphone is not available" };
+    return { status: "error", message: "麦克风当前不可用" };
   }
-  return { status: "error", message: "Failed to access microphone" };
+  return { status: "error", message: "访问麦克风失败" };
 }
 
 function computeBarsFromTimeDomain(data: Uint8Array, barCount: number) {
@@ -118,11 +119,6 @@ export function useMicrophoneSession() {
 
     if (nodes) {
       try {
-        nodes.processor.onaudioprocess = null;
-      } catch {
-        // ignore
-      }
-      try {
         nodes.source.disconnect();
       } catch {
         // ignore
@@ -133,7 +129,15 @@ export function useMicrophoneSession() {
         // ignore
       }
       try {
-        nodes.processor.disconnect();
+        nodes.workletNode?.disconnect();
+      } catch {
+        // ignore
+      }
+      try {
+        if (nodes.scriptProcessor) {
+          nodes.scriptProcessor.onaudioprocess = null;
+          nodes.scriptProcessor.disconnect();
+        }
       } catch {
         // ignore
       }
@@ -179,7 +183,7 @@ export function useMicrophoneSession() {
 
       if (!navigator.mediaDevices?.getUserMedia) {
         setStatus("error");
-        setError("Microphone API is not supported");
+        setError("当前浏览器不支持麦克风接口");
         startingRef.current = false;
         return false;
       }
@@ -203,16 +207,19 @@ export function useMicrophoneSession() {
           // ignore
         }
         setStatus("error");
-        setError("Web Audio API is not supported");
+        setError("当前浏览器不支持 Web Audio");
         startingRef.current = false;
         return false;
       }
 
       const audioContext = new AudioContextCtor();
-      try {
-        await audioContext.resume();
-      } catch {
-        // ignore
+      
+      if (audioContext.state === 'suspended') {
+        try {
+          await audioContext.resume();
+        } catch (resumeError) {
+          console.warn('AudioContext resume failed:', resumeError);
+        }
       }
 
       const source = audioContext.createMediaStreamSource(stream);
@@ -220,25 +227,53 @@ export function useMicrophoneSession() {
       analyser.fftSize = 1024;
       analyser.smoothingTimeConstant = 0.45;
 
-      const processor = audioContext.createScriptProcessor(4096, 1, 1);
       const silentGain = audioContext.createGain();
       silentGain.gain.value = 0;
 
-      processor.onaudioprocess = (evt) => {
-        const handler = onPcmChunkRef.current;
-        if (!handler) return;
-        const input = evt.inputBuffer.getChannelData(0);
-        const copy = new Float32Array(input.length);
-        copy.set(input);
-        handler(copy, evt.inputBuffer.sampleRate);
-      };
+      let workletNode: AudioWorkletNode | null = null;
+      let scriptProcessor: ScriptProcessorNode | null = null;
+
+      if (onPcmChunkRef.current) {
+        try {
+          await audioContext.audioWorklet.addModule("/pcm-processor.js");
+          workletNode = new AudioWorkletNode(audioContext, "pcm-processor");
+          workletNode.port.onmessage = (evt) => {
+            const handler = onPcmChunkRef.current;
+            if (!handler) return;
+            const { pcm, sampleRate } = evt.data;
+            if (pcm && typeof sampleRate === "number") {
+              handler(new Float32Array(pcm), sampleRate);
+            }
+          };
+        } catch (workletError) {
+          console.warn('AudioWorklet failed, falling back to ScriptProcessorNode:', workletError);
+          workletNode = null;
+        }
+
+        if (!workletNode) {
+          scriptProcessor = audioContext.createScriptProcessor(4096, 1, 1);
+          scriptProcessor.onaudioprocess = (evt) => {
+            const handler = onPcmChunkRef.current;
+            if (!handler) return;
+            const input = evt.inputBuffer.getChannelData(0);
+            const copy = new Float32Array(input.length);
+            copy.set(input);
+            handler(copy, evt.inputBuffer.sampleRate);
+          };
+        }
+      }
 
       source.connect(analyser);
-      source.connect(processor);
-      processor.connect(silentGain);
+      if (workletNode) {
+        source.connect(workletNode);
+        workletNode.connect(silentGain);
+      } else if (scriptProcessor) {
+        source.connect(scriptProcessor);
+        scriptProcessor.connect(silentGain);
+      }
       silentGain.connect(audioContext.destination);
 
-      nodesRef.current = { stream, audioContext, source, analyser, processor, silentGain };
+      nodesRef.current = { stream, audioContext, source, analyser, workletNode, scriptProcessor, silentGain };
       timeDomainRef.current = new Uint8Array(analyser.fftSize) as Uint8Array<ArrayBuffer>;
       prevBarsRef.current = new Array<number>(barCountRef.current).fill(0);
       lastUpdateMsRef.current = 0;

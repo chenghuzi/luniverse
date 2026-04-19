@@ -9,8 +9,8 @@ function clamp01(v: number) {
 }
 
 export function VoiceWaveform(props: VoiceWaveformProps) {
-  const barMin = 0.1;
-  const barMax = 2.2;
+  const barMin = 0.25;
+  const barMax = 1.0;
   const animate = Boolean(props.animate);
 
   return (

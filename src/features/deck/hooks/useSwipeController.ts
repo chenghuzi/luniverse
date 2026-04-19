@@ -21,6 +21,7 @@ type SettleState = {
 type SwipeControllerParams = {
   card: Card;
   onDecision: (decision: SwipeDecision) => void;
+  onTap?: () => void;
   config?: Partial<DeckMotionConfig>;
   onMotionActivityChange?: (active: boolean) => void;
   getNopeDockTarget?: (args: { velocityX: number; velocityY: number }) => DockTarget | null;
@@ -31,6 +32,7 @@ type SwipeControllerParams = {
 };
 
 export function useSwipeController(params: SwipeControllerParams) {
+  const TAP_MAX_TRAVEL_PX = 10;
   const config = useMemo(
     () => ({ ...DEFAULT_DECK_MOTION_CONFIG, ...(params.config ?? {}) }),
     [params.config],
@@ -154,6 +156,14 @@ export function useSwipeController(params: SwipeControllerParams) {
       if (isSettlingRef.current) return;
       const decision = decideFromGesture(dx, velocityX);
       if (!decision) {
+        if (Math.hypot(dx, dy) <= TAP_MAX_TRAVEL_PX) {
+          x.set(0);
+          y.set(0);
+          scale.set(1);
+          setActive(false);
+          params.onTap?.();
+          return;
+        }
         settleToCenter();
         return;
       }

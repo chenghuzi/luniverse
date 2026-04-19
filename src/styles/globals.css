@@ -102,25 +102,30 @@ a {
   line-height: 1.35;
 }
 
-.deckTitleOverlay {
+.deckHeader {
   position: absolute;
-  top: calc(env(safe-area-inset-top, 0px) + 16px);
+  top: calc(env(safe-area-inset-top, 0px) + 12px);
   left: 0;
   right: 0;
-  margin: 0;
   display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: 0.2px;
-  color: var(--text);
+  gap: 8px;
   pointer-events: none;
   z-index: 2;
 }
 
+.deckTitleOverlay {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
 .deckSloganOverlay {
   position: absolute;
-  top: calc(env(safe-area-inset-top, 0px) + 40px);
+  top: calc(env(safe-area-inset-top, 0px) + 44px);
   left: 0;
   right: 0;
   margin: 0;
@@ -137,15 +142,10 @@ a {
 }
 
 .deckBrandIcon {
-  position: absolute;
-  top: calc(env(safe-area-inset-top, 0px) + 12px);
-  left: 16px;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   object-fit: cover;
-  pointer-events: none;
-  z-index: 2;
 }
 
 .content {
@@ -349,18 +349,32 @@ a {
 
 .deckHint {
   max-width: min(320px, 44vw);
-  padding: 8px 10px;
+  padding: 8px 14px;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 850;
   letter-spacing: 0.2px;
   color: rgba(15, 23, 42, 0.92);
-  background: rgba(255, 255, 255, 0.44);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  text-overflow: clip;
+  position: relative;
+  z-index: 1;
+}
+
+.deckHint::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -60px;
+  right: -60px;
+  border-radius: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .deckStageReducedFx .deckHint {
@@ -370,11 +384,27 @@ a {
 .deckHintLeft {
   transform-origin: left center;
   text-align: left;
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+.deckHintLeft::before {
+  left: -100px;
+  right: -20px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0) 100%);
 }
 
 .deckHintRight {
   transform-origin: right center;
   text-align: right;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.deckHintRight::before {
+  left: -20px;
+  right: -100px;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 30%, rgba(255, 255, 255, 0.2) 60%, rgba(255, 255, 255, 0) 100%);
 }
 
 .card {
@@ -393,6 +423,7 @@ a {
 }
 
 .cardSurface {
+  position: relative;
   height: 100%;
   width: 100%;
   border-radius: 18px;
@@ -440,6 +471,100 @@ a {
   display: block;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+.cardPauseOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04) 42%, rgba(15, 23, 42, 0.22) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(18px) saturate(135%);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  animation: cardPauseOverlayIn 180ms ease-out;
+  pointer-events: none;
+}
+
+.deckStageReducedFx .cardPauseOverlay {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.cardPauseOverlayInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.cardPauseOverlayButton {
+  width: 78px;
+  height: 78px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.16));
+  box-shadow:
+    0 18px 44px rgba(15, 23, 42, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease;
+}
+
+.cardPauseOverlayButton:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow:
+    0 22px 52px rgba(15, 23, 42, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.cardPauseOverlayButton:active {
+  transform: scale(0.98);
+}
+
+.cardPauseOverlayButton:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.82);
+  outline-offset: 4px;
+}
+
+.cardPauseOverlayPlayGlyph {
+  width: 18px;
+  height: 22px;
+  margin-left: 4px;
+  display: block;
+  background: rgba(15, 23, 42, 0.92);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.cardPauseOverlayLabel {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 1px 10px rgba(15, 23, 42, 0.28);
+}
+
+@keyframes cardPauseOverlayIn {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .snippetPlayer {
@@ -607,37 +732,42 @@ a {
 }
 
 .detailBackButton {
-  position: fixed;
-  top: calc(env(safe-area-inset-top, 0px) + 12px);
-  left: calc(env(safe-area-inset-left, 0px) + 12px);
-  z-index: 1000;
+  flex: 0 0 auto;
   width: 44px;
   height: 44px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.72);
+  border-radius: 0;
+  border: none;
+  background: transparent;
   color: var(--text);
   cursor: pointer;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 900;
   line-height: 1;
   display: grid;
   place-items: center;
-  backdrop-filter: blur(10px);
+  padding: 0;
 }
 
 .detailBackButton:hover {
-  border-color: rgba(15, 23, 42, 0.16);
-  background: rgba(255, 255, 255, 0.84);
+  background: transparent;
+  opacity: 0.72;
 }
 
 .detailBackButton:active {
   transform: translateY(1px);
+  opacity: 0.58;
 }
 
 .detailBackButton:focus-visible {
   outline: 2px solid rgba(59, 130, 246, 0.65);
   outline-offset: 2px;
+}
+
+.detailHeaderRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
 }
 
 .detailHeader {
@@ -649,8 +779,11 @@ a {
 }
 
 .detailTitle {
+  flex: 1;
   font-size: 20px;
   font-weight: 700;
+  line-height: 1.2;
+  min-width: 0;
 }
 
 .detailMeta {
@@ -690,10 +823,11 @@ a {
   display: grid;
   grid-template-columns: 96px 1fr;
   gap: 12px;
-  align-items: center;
+  align-items: start;
 }
 
 .detailCoverFrame {
+  align-self: start;
   width: 96px;
   height: 96px;
   border-radius: 16px;
@@ -742,12 +876,13 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-radius: 12px;
   border: 1px solid rgba(15, 23, 42, 0.12);
   background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(20, 184, 166, 0.12));
   color: rgba(15, 23, 42, 0.92);
   font-weight: 800;
+  line-height: 1.1;
   cursor: pointer;
 }
 
@@ -765,6 +900,86 @@ a {
 
 .chatButton:disabled:hover {
   border-color: rgba(15, 23, 42, 0.10);
+}
+
+.chatFab {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99990;
+  transition: transform 0.2s ease;
+  touch-action: none;
+  user-select: none;
+}
+
+.chatFab::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(208, 255, 243, 0.92) 0%,
+      rgba(208, 255, 243, 0.8) 34%,
+      rgba(208, 255, 243, 0.42) 60%,
+      rgba(208, 255, 243, 0.16) 80%,
+      rgba(208, 255, 243, 0) 100%
+    );
+  z-index: -1;
+  animation: chatFabBreathe 2s ease-in-out infinite;
+  transform-origin: center;
+  filter: blur(7px);
+  transition: inset 0.2s ease, filter 0.2s ease;
+  pointer-events: none;
+}
+
+@keyframes chatFabBreathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.96;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+.chatFab:hover {
+  transform: scale(1.05);
+}
+
+.chatFab:hover::after {
+  inset: -18px;
+  filter: blur(9px);
+}
+
+.chatFab:active {
+  transform: scale(0.95);
+}
+
+.chatFabMediaFrame {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.chatFabAnimatedIcon,
+.chatFabIcon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .chip {
@@ -841,7 +1056,7 @@ a {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
-  align-items: center;
+  align-items: start;
 }
 
 .episodeRowMain {
@@ -862,12 +1077,14 @@ a {
 }
 
 .episodeChatButton {
+  align-self: start;
   border: 1px solid rgba(15, 23, 42, 0.12);
   background: rgba(255, 255, 255, 0.72);
   color: rgba(15, 23, 42, 0.90);
   border-radius: 12px;
-  padding: 8px 10px;
+  padding: 6px 10px;
   font-weight: 800;
+  line-height: 1.1;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -892,7 +1109,199 @@ a {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: rgba(15, 23, 42, 0.12);
+  background: rgba(15, 23, 42, 0.40);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.voiceChatPanel {
+  width: 100%;
+  max-width: 720px;
+  height: 90vh;
+  max-height: 90vh;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.voiceChatPanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  flex-shrink: 0;
+}
+
+.voiceChatPanelTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.voiceChatTabBar {
+  display: flex;
+  gap: 8px;
+  padding: 0 0 12px;
+  flex-shrink: 0;
+}
+
+.voiceChatTab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: transparent;
+  color: rgba(15, 23, 42, 0.70);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voiceChatTabArrow {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.voiceChatTab:hover:not(:disabled) {
+  border-color: rgba(15, 23, 42, 0.20);
+  color: rgba(15, 23, 42, 0.90);
+}
+
+.voiceChatTabActive {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.18), rgba(20, 184, 166, 0.12));
+  border-color: rgba(34, 197, 94, 0.30);
+  color: rgba(15, 23, 42, 0.92);
+}
+
+.voiceChatTab:disabled {
+  opacity: 0.40;
+  cursor: not-allowed;
+}
+
+.voiceChatEpisodePicker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 0;
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  border-bottom: none;
+  max-height: 280px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.12);
+  animation: episodePickerSlideUp 0.25s ease-out;
+}
+
+@keyframes episodePickerSlideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes episodePickerSlideDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.voiceChatEpisodePickerClosing {
+  animation: episodePickerSlideDown 0.2s ease-in forwards;
+}
+
+.voiceChatEpisodePickerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(15, 23, 42, 0.70);
+}
+
+.voiceChatEpisodePickerClose {
+  border: none;
+  background: transparent;
+  color: rgba(15, 23, 42, 0.50);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.voiceChatEpisodePickerClose:hover {
+  color: rgba(15, 23, 42, 0.80);
+}
+
+.voiceChatEpisodeList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 220px;
+}
+
+.voiceChatEpisodeItem {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: none;
+  background: transparent;
+  color: rgba(15, 23, 42, 0.85);
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  transition: background 0.15s ease;
+}
+
+.voiceChatEpisodeItem:hover {
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.voiceChatEpisodeItemActive {
+  background: rgba(34, 197, 94, 0.12);
+  color: rgba(15, 23, 42, 0.95);
+  font-weight: 600;
+}
+
+.voiceChatEpisodeItemDisabled {
+  color: rgba(15, 23, 42, 0.40);
+  cursor: not-allowed;
+}
+
+.voiceChatEpisodeItemDisabled:hover {
+  background: transparent;
 }
 
 .voiceChatBackdropButton {
@@ -930,15 +1339,15 @@ a {
 }
 
 .voiceChatTimeline {
-  position: absolute;
-  inset: 0;
+  flex: 1;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: calc(env(safe-area-inset-top, 0px) + 94px) 16px calc(env(safe-area-inset-bottom, 0px) + 168px);
+  padding: 16px;
 }
 
 .voiceChatTimelineInner {
-  width: min(720px, 96vw);
+  width: 100%;
+  max-width: 640px;
   margin: 0 auto;
 }
 
@@ -946,7 +1355,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10px 0;
+  padding: 10px 14px;
 }
 
 .voiceChatRow {
@@ -972,51 +1381,45 @@ a {
 }
 
 .voiceChatBubbleUser {
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.20), rgba(99, 102, 241, 0.12));
-  border-color: rgba(59, 130, 246, 0.22);
+  background: rgba(203, 237, 252, 0.7);
+  border-color: rgba(203, 237, 252, 0.8);
 }
 
 .voiceChatSheet {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
-  width: min(720px, 96vw);
-  border-radius: 20px;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: var(--shadowStrong);
-  overflow: hidden;
-  padding: 12px 14px 14px;
-  z-index: 100000;
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.98);
+  padding: 12px 16px calc(env(safe-area-inset-bottom, 0px) + 12px);
   color: var(--text);
 }
 
 .voiceChatSiriPanel {
-  position: fixed;
-  inset: 0;
-  z-index: 100000;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px 16px;
   color: var(--text);
-  background: transparent;
-  display: grid;
-  place-items: center;
-  padding: 0 16px;
-  pointer-events: none;
 }
 
 .voiceChatSiriCenter {
-  width: min(720px, 96vw);
+  width: 100%;
+  max-width: 640px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 14px;
-  pointer-events: none;
-  padding: 18px 18px 16px;
+  padding: 18px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.42);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  backdrop-filter: blur(14px) saturate(135%);
-  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  background: rgba(255, 255, 255, 0.80);
+  border: 1px solid rgba(15, 23, 42, 0.08);
 }
 
 .voiceChatSiriStatus {
@@ -1114,17 +1517,16 @@ a {
 }
 
 .voiceChatCloseButton {
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: rgba(255, 255, 255, 0.72);
+  border: none;
+  background: transparent;
   color: rgba(15, 23, 42, 0.90);
-  border-radius: 12px;
   padding: 8px 10px;
   font-weight: 800;
   cursor: pointer;
 }
 
 .voiceChatCloseButton:hover {
-  border-color: rgba(15, 23, 42, 0.18);
+  color: rgba(15, 23, 42, 1);
 }
 
 .voiceChatBody {
@@ -1152,19 +1554,19 @@ a {
 }
 
 .voiceChatWave {
-  width: min(360px, 86%);
-  height: 44px;
+  width: min(200px, 60%);
+  height: 28px;
   margin: 0 auto;
   display: grid;
   grid-auto-flow: column;
-  gap: 6px;
+  gap: 3px;
   align-items: center;
   justify-content: center;
 }
 
 .voiceChatWaveBar {
-  width: 7px;
-  height: 10px;
+  width: 3px;
+  height: 22px;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.28);
   transform-origin: center;
@@ -1214,8 +1616,8 @@ a {
 .voiceChatMicButton {
   width: 100%;
   border-radius: 18px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(99, 102, 241, 0.12));
+  border: none;
+  background: #CBEDFC;
   padding: 14px 14px;
   display: flex;
   align-items: center;
@@ -1228,8 +1630,7 @@ a {
 }
 
 .voiceChatMicButtonActive {
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.22), rgba(20, 184, 166, 0.14));
-  border-color: rgba(15, 23, 42, 0.18);
+  background: #a8e0f8;
 }
 
 .voiceChatMicIcon {
@@ -1285,4 +1686,145 @@ a {
   border: 1px dashed rgba(15, 23, 42, 0.18);
   color: var(--muted);
   background: rgba(255, 255, 255, 0.60);
+}
+
+.voiceChatLoadingDots {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.voiceChatLoadingDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+  animation: voiceChatLoadingDotBounce 1.4s ease-in-out infinite both;
+}
+
+.voiceChatLoadingDot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.voiceChatLoadingDot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.voiceChatLoadingDot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes voiceChatLoadingDotBounce {
+  0%, 80%, 100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.voiceChatMessageContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.voiceChatVoiceRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.voiceChatVoiceRowUser {
+  flex-direction: row-reverse;
+}
+
+.voiceChatTextOnly {
+  font-size: 15px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.voiceChatExpandBtn {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.5;
+  transition: opacity 0.15s ease;
+}
+
+.voiceChatExpandBtn:hover {
+  opacity: 0.8;
+}
+
+.voiceChatExpandArrow {
+  font-size: 10px;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.voiceChatExpandArrowUp {
+  transform: rotate(90deg);
+}
+
+.voiceChatExpandedText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  word-break: break-word;
+  animation: voiceChatExpandIn 0.2s ease;
+}
+
+.voiceChatBubbleUser .voiceChatExpandedText {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes voiceChatExpandIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.voiceChatWaveWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.voiceChatWaveWrapperClickable {
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s ease;
+}
+
+.voiceChatWaveWrapperClickable:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.voiceChatWaveWrapperClickable:active {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.voiceChatCountdown {
+  color: #ff4d4f;
+  font-weight: 600;
+  font-size: 14px;
+  margin-left: 4px;
 }

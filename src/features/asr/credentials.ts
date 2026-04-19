@@ -1,3 +1,5 @@
+export type AsrProvider = "tencent" | "volcengine";
+
 export type TencentAsrEnvConfig = {
   appId: string;
   secretId: string;
@@ -5,9 +7,17 @@ export type TencentAsrEnvConfig = {
   engineModelType: string;
 };
 
+export type VolcengineAsrEnvConfig = {
+  wsPath: string;
+};
+
 function readEnvVar(name: string) {
   const v = (import.meta.env as unknown as Record<string, unknown>)[name];
   return typeof v === "string" ? v.trim() : "";
+}
+
+export function readAsrProvider(): AsrProvider {
+  return readEnvVar("VITE_ASR_PROVIDER").toLowerCase() === "volcengine" ? "volcengine" : "tencent";
 }
 
 export function readTencentAsrEnvConfig(): TencentAsrEnvConfig | null {
@@ -20,3 +30,7 @@ export function readTencentAsrEnvConfig(): TencentAsrEnvConfig | null {
   return { appId, secretId, secretKey, engineModelType };
 }
 
+export function readVolcengineAsrEnvConfig(): VolcengineAsrEnvConfig {
+  const wsPath = readEnvVar("VITE_VOLCENGINE_ASR_WS_PATH") || "/api/asr/volcengine/ws";
+  return { wsPath: wsPath.startsWith("/") ? wsPath : "/api/asr/volcengine/ws" };
+}
